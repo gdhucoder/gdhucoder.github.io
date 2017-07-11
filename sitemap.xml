@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/post/pandas_4/</loc>
+    <lastmod>2017-07-12T05:59:47+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/welcome-to-my-site/</loc>
     <lastmod>2017-07-11T03:58:07+08:00</lastmod>
   </url>
@@ -87,6 +92,12 @@
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/tags/python/</loc>
+    <lastmod>2017-07-12T05:59:47+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/tags/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -106,13 +117,13 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2017-07-11T03:58:07+08:00</lastmod>
+    <lastmod>2017-07-12T05:59:47+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/tags/%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2017-07-11T03:58:07+08:00</lastmod>
+    <lastmod>2017-07-12T05:59:47+08:00</lastmod>
     <priority>0</priority>
   </url>
   

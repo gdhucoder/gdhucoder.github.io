@@ -6,10 +6,19 @@
     <description>Recent content in 语言 on Mainroad</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Tue, 11 Jul 2017 03:58:07 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jul 2017 05:59:47 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/tags/%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pandas_4</title>
+      <link>https://gdhucoder.github.io/post/pandas_4/</link>
+      <pubDate>Wed, 12 Jul 2017 05:59:47 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/pandas_4/</guid>
+      <description>import pandas as pd import numpy as np  # read titanic_train.csv titanic_survival = pd.read_csv(&#39;titanic_train.csv&#39;) # print fist 5 rows print(titanic_survival.head())   PassengerId Survived Pclass \ 0 1 0 3 1 2 1 1 2 3 1 3 3 4 1 1 4 5 0 3 Name Sex Age SibSp \ 0 Braund, Mr. Owen Harris male 22.0 1 1 Cumings, Mrs. John Bradley (Florence Briggs Th... female 38.0 1 2 Heikkinen, Miss.</description>
+    </item>
     
     <item>
       <title>Welcome To My Site11</title>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pandas_4</title>
+<meta name="description" content="博客">
+<meta name="generator" content="Hugo 0.25.1" />
+<meta property="og:title" content="Pandas_4" />
+<meta property="og:description" content="import pandas as pd import numpy as np  # read titanic_train.csv titanic_survival = pd.read_csv(&#39;titanic_train.csv&#39;) # print fist 5 rows print(titanic_survival.head())   PassengerId Survived Pclass \ 0 1 0 3 1 2 1 1 2 3 1 3 3 4 1 1 4 5 0 3 Name Sex Age SibSp \ 0 Braund, Mr. Owen Harris male 22.0 1 1 Cumings, Mrs. John Bradley (Florence Briggs Th... female 38.0 1 2 Heikkinen, Miss." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/pandas_4/" />
+
+
+
+<meta property="article:published_time" content="2017-07-12T05:59:47&#43;08:00"/>
+<meta property="article:modified_time" content="2017-07-12T05:59:47&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="Mainroad" rel="home">
+						<h1 class="logo__title">Mainroad</h1>
+						<h2 class="logo__tagline">Just another site</h2>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item "><a class="menu__link" href="/">ABOUT</a></li>
+		<li class="menu__item "><a class="menu__link" href="/post">BLOG</a></li>
+		<li class="menu__item "><a class="menu__link" href="https://git.oschina.net/gdhu">MYGITOSC</a></li>
+		<li class="menu__item "><a class="menu__link" href="/post/migrate-from-jekyll/">JEKYLL MIGRATION</a></li>
+		<li class="menu__item "><a class="menu__link" href="/post/goisforlovers/">(HU)GO TEMPLATE PRIMER</a></li>
+		<li class="menu__item "><a class="menu__link" href="/post/hugoisforlovers/">GETTING STARTED WITH HUGO</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		<header class="post__header clearfix">
+			<h1 class="post__title">Pandas_4</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2017-07-12T05:59:47">July 12, 2017</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a></span>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+			<pre><code class="language-python">import pandas as pd
+import numpy as np
+</code></pre>
+
+<pre><code class="language-python"># read titanic_train.csv
+titanic_survival = pd.read_csv('titanic_train.csv')
+
+# print fist 5 rows
+print(titanic_survival.head())
+</code></pre>
+
+<pre><code>   PassengerId  Survived  Pclass  \
+0            1         0       3   
+1            2         1       1   
+2            3         1       3   
+3            4         1       1   
+4            5         0       3   
+
+                                                Name     Sex   Age  SibSp  \
+0                            Braund, Mr. Owen Harris    male  22.0      1   
+1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1   
+2                             Heikkinen, Miss. Laina  female  26.0      0   
+3       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1   
+4                           Allen, Mr. William Henry    male  35.0      0   
+
+   Parch            Ticket     Fare Cabin Embarked  
+0      0         A/5 21171   7.2500   NaN        S  
+1      0          PC 17599  71.2833   C85        C  
+2      0  STON/O2. 3101282   7.9250   NaN        S  
+3      0            113803  53.1000  C123        S  
+4      0            373450   8.0500   NaN        S  
+</code></pre>
+
+<pre><code class="language-python"># get page column
+# NaN stands for &quot;not a number&quot;, to indicate a missing data
+age = titanic_survival['Age']
+print(age[:10])
+</code></pre>
+
+<pre><code>0    22.0
+1    38.0
+2    26.0
+3    35.0
+4    35.0
+5     NaN
+6    54.0
+7     2.0
+8    27.0
+9    14.0
+Name: Age, dtype: float64
+</code></pre>
+
+<pre><code class="language-python"># we can use the pandas.isnull() function which takes a pandas series
+# and returns a series of True and False values
+age_is_null = pd.isnull(age)
+print(age_is_null[:10])
+</code></pre>
+
+<pre><code>0    False
+1    False
+2    False
+3    False
+4    False
+5     True
+6    False
+7    False
+8    False
+9    False
+Name: Age, dtype: bool
+</code></pre>
+
+<pre><code class="language-python">age_null_true = age[age_is_null]
+print(age_null_true[:10])
+</code></pre>
+
+<pre><code>5    NaN
+17   NaN
+19   NaN
+26   NaN
+28   NaN
+29   NaN
+31   NaN
+32   NaN
+36   NaN
+42   NaN
+Name: Age, dtype: float64
+</code></pre>
+
+<pre><code class="language-python"># print the number of age_null_count
+age_null_count = len(age_null_true)
+print(age_null_count)
+</code></pre>
+
+<pre><code>177
+</code></pre>
+
+<pre><code class="language-python"># The result of this is that mean_age would be NaN.
+# This is because any calculations we do with a null value also result in a null value
+mean_age = sum(titanic_survival['Age']) / len(titanic_survival['Age'])
+print(mean_age)
+</code></pre>
+
+<pre><code>nan
+</code></pre>
+
+<pre><code class="language-python">good_ages = titanic_survival['Age'][age_is_null == False]
+correct_mean_age = sum(good_ages) / len(good_ages)
+print(correct_mean_age)
+</code></pre>
+
+<pre><code>29.6991176471
+</code></pre>
+
+<pre><code class="language-python"># missing data is so common that many pandas methods automatically filter for it
+correct_mean_age = titanic_survival['Age'].mean()
+print(correct_mean_age)
+</code></pre>
+
+<pre><code>29.69911764705882
+</code></pre>
+
+<pre><code class="language-python"># mean fare for each class
+passgenger_class = [1, 2, 3]
+fare = {}
+for each_class in passgenger_class:
+    mean_fee = titanic_survival['Fare'][titanic_survival['Pclass']==each_class].mean()
+    fare[each_class] = mean_fee
+print(fare)
+</code></pre>
+
+<pre><code>{1: 84.15468749999992, 2: 20.66218315217391, 3: 13.675550101832997}
+</code></pre>
+
+<pre><code class="language-python">pclass_survived = titanic_survival.\
+    pivot_table(index='Pclass', values='Survived', aggfunc=np.mean)
+print(pclass_survived)
+</code></pre>
+
+<pre><code>Pclass
+1    0.629630
+2    0.472826
+3    0.242363
+Name: Survived, dtype: float64
+</code></pre>
+
+<pre><code class="language-python">pclass_age = titanic_survival.pivot_table(index='Pclass', values=['Age', 'Survived'])
+print(pclass_age)
+</code></pre>
+
+<pre><code>              Age  Survived
+Pclass                     
+1       38.233441  0.629630
+2       29.877630  0.472826
+3       25.140620  0.242363
+</code></pre>
+
+<pre><code class="language-python">name_row_19 = titanic_survival.loc[19]['Name']
+print(name_row_19)
+</code></pre>
+
+<pre><code>Masselmani, Mrs. Fatima
+</code></pre>
+
+<pre><code class="language-python">new_titanic_survival = titanic_survival.sort_values('Age',ascending=False)
+# print(new_titanic_survival)
+</code></pre>
+
+<pre><code class="language-python">new_titanic_survival = new_titanic_survival.reset_index(level='Pclass', drop=True)
+print(new_titanic_survival.loc[0:2])
+</code></pre>
+
+<pre><code>   level_0  index  PassengerId  Survived  Pclass  \
+0        0    630          631         1       1   
+1        1    851          852         0       3   
+2        2    493          494         0       1   
+
+                                   Name   Sex   Age  SibSp  Parch    Ticket  \
+0  Barkworth, Mr. Algernon Henry Wilson  male  80.0      0      0     27042   
+1                   Svensson, Mr. Johan  male  74.0      0      0    347060   
+2               Artagaveytia, Mr. Ramon  male  71.0      0      0  PC 17609   
+
+      Fare Cabin Embarked  
+0  30.0000   A23        S  
+1   7.7750   NaN        S  
+2  49.5042   NaN        C  
+</code></pre>
+
+<pre><code class="language-python">def hundredth_row(column):
+    # Extract the hundredth item
+    hundredth_item = column.iloc[99]
+    return hundredth_item
+hundredth_row = titanic_survival.apply(hundredth_row)
+print(hundredth_row)
+</code></pre>
+
+<pre><code>PassengerId                  100
+Survived                       0
+Pclass                         2
+Name           Kantor, Mr. Sinai
+Sex                         male
+Age                           34
+SibSp                          1
+Parch                          0
+Ticket                    244367
+Fare                          26
+Cabin                        NaN
+Embarked                       S
+dtype: object
+</code></pre>
+
+<pre><code class="language-python"># By passing in the axis = 1 argument, we can use the DataFrame.apply method
+# to iterate rows instead of columns
+def which_class(row):
+    pclass = row['Pclass']
+    if pd.isnull(pclass):
+        return 'Unknown'
+    elif pclass == 1:
+        return 'First Class'
+    elif pclass == 2:
+        return 'Second Class'
+    elif pclass == 3:
+        return 'ThirdClass'
+classes = titanic_survival.apply(which_class, axis=1)
+print(classes[:10])
+</code></pre>
+
+<pre><code>0      ThirdClass
+1     First Class
+2      ThirdClass
+3     First Class
+4      ThirdClass
+5      ThirdClass
+6     First Class
+7      ThirdClass
+8      ThirdClass
+9    Second Class
+dtype: object
+</code></pre>
+
+<pre><code class="language-python">def is_minor(row):
+    if row['Age'] &lt; 18:
+        return True
+    else:
+        return False
+minors = titanic_survival.apply(is_minor, axis=1)
+print(minors[:5])
+</code></pre>
+
+<pre><code>0    False
+1    False
+2    False
+3    False
+4    False
+dtype: bool
+</code></pre>
+
+<pre><code class="language-python">def generate_age_label(row):
+    age = row['Age']
+    if pd.isnull(age):
+        return 'Unknown'
+    elif age &lt; 18:
+        return 'minor'
+    else:
+        return 'adult'
+age_label = titanic_survival.apply(generate_age_label, axis=1)
+print(age_label[:5])
+</code></pre>
+
+<pre><code>0    adult
+1    adult
+2    adult
+3    adult
+4    adult
+dtype: object
+</code></pre>
+
+<pre><code class="language-python">titanic_survival['age_label'] = age_label
+age_group_survival = titanic_survival.pivot_table(index='age_label', values='Survived')
+print(age_group_survival)
+</code></pre>
+
+<pre><code>age_label
+Unknown    0.293785
+adult      0.381032
+minor      0.539823
+Name: Survived, dtype: float64
+</code></pre>
+
+<pre><code class="language-python">
+</code></pre>
+
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/python/" rel="tag">Python</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/%E8%AF%AD%E8%A8%80/" rel="tag">语言</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="HuGuoDong avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About HuGuoDong</span>
+	</div>
+	<div class="authorbox__description">
+		野生程序员
+	</div>
+</div>
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/welcome-to-my-site/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Welcome To My Site11</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/post/migrate-from-jekyll/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Migrate to Hugo from Jekyll</p></a>
+	</div>
+</nav>
+
+	
+</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://gdhucoder.github.io/" />
+	</form>
+</div>
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/creating-a-new-theme/">Creating a New Theme</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/migrate-from-jekyll/">Migrate to Hugo from Jekyll</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/pandas_4/">Pandas_4</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/welcome-to-my-site/">Welcome To My Site11</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/goisforlovers/">(Hu)go Template Primer</a></li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/development">Development</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/golang">Golang</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e6%8a%80%e6%9c%af">技术</a></li>
+		</ul>
+	</div>
+</div>
+	
+	
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget__link widget__link--taglist" href="/tags/development" title="development">development</a>
+		<a class="widget__link widget__link--taglist" href="/tags/go" title="go">go</a>
+		<a class="widget__link widget__link--taglist" href="/tags/golang" title="golang">golang</a>
+		<a class="widget__link widget__link--taglist" href="/tags/hugo" title="hugo">hugo</a>
+		<a class="widget__link widget__link--taglist" href="/tags/markdown" title="markdown">markdown</a>
+		<a class="widget__link widget__link--taglist" href="/tags/python" title="python">python</a>
+		<a class="widget__link widget__link--taglist" href="/tags/templates" title="templates">templates</a>
+		<a class="widget__link widget__link--taglist" href="/tags/themes" title="themes">themes</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e8%af%ad%e8%a8%80" title="语言">语言</a>
+	</div>
+</div>
+</aside>
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2017 Mainroad. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+</body>
+</html>
