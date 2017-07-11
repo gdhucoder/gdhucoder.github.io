@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Mainroad</title>
+    <link>https://gdhucoder.github.io/categories/</link>
+    <description>Recent content in Categories on Mainroad</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    
+	<atom:link href="https://gdhucoder.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Development</title>
+      <link>https://gdhucoder.github.io/categories/development/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://gdhucoder.github.io/categories/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://gdhucoder.github.io/categories/golang/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://gdhucoder.github.io/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术</title>
+      <link>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Tue, 11 Jul 2017 03:58:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
