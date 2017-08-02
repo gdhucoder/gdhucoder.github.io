@@ -3,13 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://gdhucoder.github.io/post/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gdhucoder.github.io/post/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+    <loc>https://gdhucoder.github.io/post/plt_1/plt_1/</loc>
+    <lastmod>2017-08-03T21:44:30+08:00</lastmod>
   </url>
   
   <url>
@@ -18,13 +13,8 @@
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/blog/plt_1/plt_1/</loc>
-    <lastmod>2017-08-03T21:44:30+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gdhucoder.github.io/post/plt_1/plt_1/</loc>
-    <lastmod>2017-08-03T21:44:30+08:00</lastmod>
+    <loc>https://gdhucoder.github.io/post/creating-a-new-theme/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -38,9 +28,8 @@
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/blog/</loc>
-    <lastmod>2017-08-03T21:44:30+08:00</lastmod>
-    <priority>0</priority>
+    <loc>https://gdhucoder.github.io/post/migrate-from-jekyll/</loc>
+    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -86,7 +75,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/post/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-08-03T21:44:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -128,7 +117,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2017-08-03T21:44:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   

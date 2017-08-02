@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>plt_1</title>
+<title>pyplot的使用之一:折线图、子图</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.25.1" />
-<meta property="og:title" content="plt_1" />
+<meta property="og:title" content="pyplot的使用之一:折线图、子图" />
 <meta property="og:description" content="import pandas as pd  unrate = pd.read_csv(&#39;UNRATE.csv&#39;) unrate[&#39;DATE&#39;] = pd.to_datetime(unrate[&#39;DATE&#39;]) print(unrate.head(12))   DATE VALUE 0 1948-01-01 3.4 1 1948-02-01 3.8 2 1948-03-01 4.0 3 1948-04-01 3.9 4 1948-05-01 3.5 5 1948-06-01 3.6 6 1948-07-01 3.6 7 1948-08-01 3.9 8 1948-09-01 3.8 9 1948-10-01 3.7 10 1948-11-01 3.8 11 1948-12-01 4.0  import matplotlib.pyplot as plt  #Using the different pyplot functions, we can create, customize, and display a plot." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/plt_1/plt_1/" />
@@ -52,9 +52,9 @@
 		<li class="menu__item "><a class="menu__link" href="/">ABOUT</a></li>
 		<li class="menu__item "><a class="menu__link" href="/post">BLOG</a></li>
 		<li class="menu__item "><a class="menu__link" href="https://git.oschina.net/gdhu">MYGITOSC</a></li>
-		<li class="menu__item "><a class="menu__link" href="/post/migrate-from-jekyll/">JEKYLL MIGRATION</a></li>
 		<li class="menu__item "><a class="menu__link" href="/post/goisforlovers/">(HU)GO TEMPLATE PRIMER</a></li>
 		<li class="menu__item "><a class="menu__link" href="/post/hugoisforlovers/">GETTING STARTED WITH HUGO</a></li>
+		<li class="menu__item "><a class="menu__link" href="/post/migrate-from-jekyll/">JEKYLL MIGRATION</a></li>
 	</ul>
 </nav>
 
@@ -64,7 +64,7 @@
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">plt_1</h1>
+			<h1 class="post__title">pyplot的使用之一:折线图、子图</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
 				<time class="post__meta-date" datetime="2017-08-03T21:44:30">August 03, 2017</time>
@@ -103,7 +103,7 @@ plt.show() # 显示
 
 </code></pre>
 
-<p><img src="../../output_3_0.png" alt="png" /></p>
+<p><img src="../output_3_0.png" alt="png" /></p>
 
 <pre><code class="language-python">first_twelve = unrate[0:12]
 plt.plot(first_twelve['DATE'], first_twelve['VALUE'])
@@ -234,10 +234,7 @@ plt.show()
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/goisforlovers/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">(Hu)go Template Primer</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/pandas_4/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Python数据科学之Pandas_4</p></a>
+		<a class="post-nav__link" href="/post/pandas_4/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Python数据科学之Pandas_4</p></a>
 	</div>
 </nav>
 
@@ -261,11 +258,11 @@ plt.show()
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/creating-a-new-theme/">Creating a New Theme</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/migrate-from-jekyll/">Migrate to Hugo from Jekyll</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/plt_1/plt_1/">pyplot的使用之一:折线图、子图</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/pandas_4/">Python数据科学之Pandas_4</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/plt_1/plt_1/">plt_1</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/creating-a-new-theme/">Creating a New Theme</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/goisforlovers/">(Hu)go Template Primer</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/hugoisforlovers/">Getting Started with Hugo</a></li>
 		</ul>
 	</div>
 </div>

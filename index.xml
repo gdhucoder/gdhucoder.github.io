@@ -6,30 +6,18 @@
     <description>Recent content on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sun, 28 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Aug 2017 21:44:30 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Creating a New Theme</title>
-      <link>https://gdhucoder.github.io/post/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <title>pyplot的使用之一:折线图、子图</title>
+      <link>https://gdhucoder.github.io/post/plt_1/plt_1/</link>
+      <pubDate>Thu, 03 Aug 2017 21:44:30 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/post/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>https://gdhucoder.github.io/post/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+      <guid>https://gdhucoder.github.io/post/plt_1/plt_1/</guid>
+      <description>import pandas as pd  unrate = pd.read_csv(&#39;UNRATE.csv&#39;) unrate[&#39;DATE&#39;] = pd.to_datetime(unrate[&#39;DATE&#39;]) print(unrate.head(12))   DATE VALUE 0 1948-01-01 3.4 1 1948-02-01 3.8 2 1948-03-01 4.0 3 1948-04-01 3.9 4 1948-05-01 3.5 5 1948-06-01 3.6 6 1948-07-01 3.6 7 1948-08-01 3.9 8 1948-09-01 3.8 9 1948-10-01 3.7 10 1948-11-01 3.8 11 1948-12-01 4.0  import matplotlib.pyplot as plt  #Using the different pyplot functions, we can create, customize, and display a plot.</description>
     </item>
     
     <item>
@@ -42,21 +30,13 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
-      <title>plt_1</title>
-      <link>https://gdhucoder.github.io/blog/plt_1/plt_1/</link>
-      <pubDate>Thu, 03 Aug 2017 21:44:30 +0800</pubDate>
+      <title>Creating a New Theme</title>
+      <link>https://gdhucoder.github.io/post/creating-a-new-theme/</link>
+      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://gdhucoder.github.io/blog/plt_1/plt_1/</guid>
-      <description>import pandas as pd  unrate = pd.read_csv(&#39;UNRATE.csv&#39;) unrate[&#39;DATE&#39;] = pd.to_datetime(unrate[&#39;DATE&#39;]) print(unrate.head(12))   DATE VALUE 0 1948-01-01 3.4 1 1948-02-01 3.8 2 1948-03-01 4.0 3 1948-04-01 3.9 4 1948-05-01 3.5 5 1948-06-01 3.6 6 1948-07-01 3.6 7 1948-08-01 3.9 8 1948-09-01 3.8 9 1948-10-01 3.7 10 1948-11-01 3.8 11 1948-12-01 4.0  import matplotlib.pyplot as plt  #Using the different pyplot functions, we can create, customize, and display a plot.</description>
-    </item>
-    
-    <item>
-      <title>plt_1</title>
-      <link>https://gdhucoder.github.io/post/plt_1/plt_1/</link>
-      <pubDate>Thu, 03 Aug 2017 21:44:30 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/plt_1/plt_1/</guid>
-      <description>import pandas as pd  unrate = pd.read_csv(&#39;UNRATE.csv&#39;) unrate[&#39;DATE&#39;] = pd.to_datetime(unrate[&#39;DATE&#39;]) print(unrate.head(12))   DATE VALUE 0 1948-01-01 3.4 1 1948-02-01 3.8 2 1948-03-01 4.0 3 1948-04-01 3.9 4 1948-05-01 3.5 5 1948-06-01 3.6 6 1948-07-01 3.6 7 1948-08-01 3.9 8 1948-09-01 3.8 9 1948-10-01 3.7 10 1948-11-01 3.8 11 1948-12-01 4.0  import matplotlib.pyplot as plt  #Using the different pyplot functions, we can create, customize, and display a plot.</description>
+      <guid>https://gdhucoder.github.io/post/creating-a-new-theme/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
     <item>
@@ -87,6 +67,17 @@ More complete instructions are available at installing hugo
 Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
 Follow the following steps:
  Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+    </item>
+    
+    <item>
+      <title>Migrate to Hugo from Jekyll</title>
+      <link>https://gdhucoder.github.io/post/migrate-from-jekyll/</link>
+      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/migrate-from-jekyll/</guid>
+      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
+▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
     </item>
     
   </channel>
