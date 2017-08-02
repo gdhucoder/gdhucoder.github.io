@@ -3,23 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Getting Started with Hugo</title>
+<title>plt_1</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.25.1" />
-<meta property="og:title" content="Getting Started with Hugo" />
-<meta property="og:description" content="Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:" />
+<meta property="og:title" content="plt_1" />
+<meta property="og:description" content="import pandas as pd  unrate = pd.read_csv(&#39;UNRATE.csv&#39;) unrate[&#39;DATE&#39;] = pd.to_datetime(unrate[&#39;DATE&#39;]) print(unrate.head(12))   DATE VALUE 0 1948-01-01 3.4 1 1948-02-01 3.8 2 1948-03-01 4.0 3 1948-04-01 3.9 4 1948-05-01 3.5 5 1948-06-01 3.6 6 1948-07-01 3.6 7 1948-08-01 3.9 8 1948-09-01 3.8 9 1948-10-01 3.7 10 1948-11-01 3.8 11 1948-12-01 4.0  import matplotlib.pyplot as plt  #Using the different pyplot functions, we can create, customize, and display a plot." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/hugoisforlovers/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/plt_1/plt_1/" />
 
 
 
-<meta property="article:published_time" content="2014-04-02T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-04-02T00:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2017-08-03T21:44:30&#43;08:00"/>
+<meta property="article:modified_time" content="2017-08-03T21:44:30&#43;08:00"/>
 
 
 
@@ -59,7 +54,7 @@ Follow the following steps:
 		<li class="menu__item "><a class="menu__link" href="https://git.oschina.net/gdhu">MYGITOSC</a></li>
 		<li class="menu__item "><a class="menu__link" href="/post/migrate-from-jekyll/">JEKYLL MIGRATION</a></li>
 		<li class="menu__item "><a class="menu__link" href="/post/goisforlovers/">(HU)GO TEMPLATE PRIMER</a></li>
-		<li class="menu__item menu__item--active"><a class="menu__link" href="/post/hugoisforlovers/">GETTING STARTED WITH HUGO</a></li>
+		<li class="menu__item "><a class="menu__link" href="/post/hugoisforlovers/">GETTING STARTED WITH HUGO</a></li>
 	</ul>
 </nav>
 
@@ -69,106 +64,159 @@ Follow the following steps:
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">Getting Started with Hugo</h1>
+			<h1 class="post__title">plt_1</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2014-04-02T00:00:00">April 02, 2014</time>
-				<span class="post__meta-categories meta-categories">
-					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/development" rel="category">Development</a>, <a class="meta-categories__link" href="/categories/golang" rel="category">golang</a></span>
+				<time class="post__meta-date" datetime="2017-08-03T21:44:30">August 03, 2017</time>
 			</p>
 		</header>
 		<div class="post__content clearfix">
-			
-
-<h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
-
-<p>Goto <a href="https://github.com/spf13/hugo/releases">hugo releases</a> and download the
-appropriate version for your os and architecture.</p>
-
-<p>Save it somewhere specific as we will be using it in the next step.</p>
-
-<p>More complete instructions are available at <a href="/overview/installing/">installing hugo</a></p>
-
-<h2 id="step-2-build-the-docs">Step 2. Build the Docs</h2>
-
-<p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.</p>
-
-<p>Follow the following steps:</p>
-
-<ol>
-<li>Clone the <a href="http://github.com/spf13/hugo">hugo repository</a></li>
-<li>Go into the repo</li>
-<li>Run hugo in server mode and build the docs</li>
-<li>Open your browser to <a href="http://localhost:1313">http://localhost:1313</a></li>
-</ol>
-
-<p>Corresponding pseudo commands:</p>
-
-<pre><code>git clone https://github.com/spf13/hugo
-cd hugo
-/path/to/where/you/installed/hugo server --source=./docs
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Press ctrl+c to stop
+			<pre><code class="language-python">import pandas as pd
 </code></pre>
 
-<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
-
-<h2 id="step-3-change-the-docs-site">Step 3. Change the docs site</h2>
-
-<p>Stop the Hugo process by hitting ctrl+c.</p>
-
-<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
-
-<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
-&gt; Press ctrl+c to stop
+<pre><code class="language-python">unrate = pd.read_csv('UNRATE.csv')
+unrate['DATE'] = pd.to_datetime(unrate['DATE'])
+print(unrate.head(12))
 </code></pre>
 
-<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
-content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
-
-<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-<code>docs/content/overview/quickstart.md</code>.</p>
-
-<p>Change and save this file.. Notice what happened in your terminal.</p>
-
-<pre><code>&gt; Change detected, rebuilding site
-
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 26 ms
+<pre><code>         DATE  VALUE
+0  1948-01-01    3.4
+1  1948-02-01    3.8
+2  1948-03-01    4.0
+3  1948-04-01    3.9
+4  1948-05-01    3.5
+5  1948-06-01    3.6
+6  1948-07-01    3.6
+7  1948-08-01    3.9
+8  1948-09-01    3.8
+9  1948-10-01    3.7
+10 1948-11-01    3.8
+11 1948-12-01    4.0
 </code></pre>
 
-<p>Refresh the browser and observe that the typo is now fixed.</p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+</code></pre>
 
-<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building.. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
+<pre><code class="language-python">#Using the different pyplot functions, we can create, customize, and display a plot. For example, we can use 2 functions to :
+plt.plot() # 画图操作
+plt.show() # 显示
 
-<h2 id="step-4-have-fun">Step 4. Have fun</h2>
+</code></pre>
 
-<p>The best way to learn something is to play with it.</p>
+<p><img src="output_3_0.png" alt="png" /></p>
+
+<pre><code class="language-python">first_twelve = unrate[0:12]
+plt.plot(first_twelve['DATE'], first_twelve['VALUE'])
+plt.show()
+</code></pre>
+
+<p><img src="output_4_0.png" alt="png" /></p>
+
+<pre><code class="language-python">#While the y-axis looks fine, the x-axis tick labels are too close together and are unreadable
+#We can rotate the x-axis tick labels by 90 degrees so they don't overlap
+#We can specify degrees of rotation using a float or integer value.
+first_twelve = unrate[0:12]
+plt.plot(first_twelve['DATE'], first_twelve['VALUE'])
+#print help(plt.xticks)
+plt.xticks(rotation=45)
+plt.show()
+</code></pre>
+
+<p><img src="output_5_0.png" alt="png" /></p>
+
+<pre><code class="language-python">#xlabel(): accepts a string value, which gets set as the x-axis label.
+#ylabel(): accepts a string value, which is set as the y-axis label.
+#title(): accepts a string value, which is set as the plot title.
+first_twelve = unrate[0:12]
+plt.plot(first_twelve['DATE'], first_twelve['VALUE'])
+plt.xticks(rotation=45)
+plt.xlabel('Month')
+plt.ylabel('Unemployment Rate')
+plt.title('Monthly Unemployment Trends, 1948')
+plt.show()
+</code></pre>
+
+<p><img src="output_6_0.png" alt="png" /></p>
+
+<pre><code class="language-python">fig = plt.figure()
+</code></pre>
+
+<pre><code class="language-python">ax1 = fig.add_subplot(2,2,1)
+ax2 = fig.add_subplot(2,2,2)
+ax4 = fig.add_subplot(2,2,4)
+plt.show()
+</code></pre>
+
+<p><img src="output_8_0.png" alt="png" /></p>
+
+<pre><code class="language-python">import numpy as np
+fig = plt.figure(figsize=(6,5)) #画图区域的大小
+ax1 = fig.add_subplot(2,1,1)
+ax2 = fig.add_subplot(2,1,2)
+ax1.plot(np.random.randint(1,5,5), np.arange(5))
+ax2.plot(np.arange(10)*3, np.arange(10))
+plt.show()
+</code></pre>
+
+<p><img src="output_9_0.png" alt="png" /></p>
+
+<pre><code class="language-python">unrate['MONTH'] = unrate['DATE'].dt.month
+fig = plt.figure(figsize=(6,3))
+plt.plot(unrate[0:12]['MONTH'],unrate[0:12]['VALUE'], c='red')
+plt.plot(unrate[12:24]['MONTH'],unrate[12:24]['VALUE'], c='blue')
+plt.show()
+</code></pre>
+
+<p><img src="output_10_0.png" alt="png" /></p>
+
+<pre><code class="language-python">fig = plt.figure(figsize=(10,6))
+colors = ['red', 'blue', 'green', 'orange', 'black']
+for i in range(5):
+    start_index = i*12
+    end_index = ((i+1))*12
+    sub_set = unrate[start_index:end_index]
+    plt.plot(sub_set['MONTH'], sub_set['VALUE'], c=colors[i])
+plt.show()
+</code></pre>
+
+<p><img src="output_11_0.png" alt="png" /></p>
+
+<pre><code class="language-python">fig = plt.figure(figsize=(10,6))
+colors = ['red', 'blue', 'green', 'orange', 'black']
+for i in range(5):
+    start_index = i*12
+    end_index = ((i+1))*12
+    sub_set = unrate[start_index:end_index]
+    label = str(1948+i)
+    plt.plot(sub_set['MONTH'], sub_set['VALUE'], c=colors[i], label=label)
+plt.legend(loc='upper left')
+#print(help(plt.legend))
+plt.show()
+</code></pre>
+
+<p><img src="output_12_0.png" alt="png" /></p>
+
+<pre><code class="language-python"># 一个完整的折线图就画好了
+fig = plt.figure(figsize=(10,6))
+colors = ['red', 'blue', 'green', 'orange', 'black']
+for i in range(5):
+    start_index = i*12
+    end_index = ((i+1))*12
+    sub_set = unrate[start_index:end_index]
+    label = str(1948+i)
+    plt.plot(sub_set['MONTH'], sub_set['VALUE'], c=colors[i], label=label)
+plt.legend(loc='upper left')
+#print(help(plt.legend))
+plt.xlabel('Month, Integer')
+plt.ylabel('Unemployment Rate, Percent')
+plt.title('Monthly Unemployment Trends, 1948-1952')
+plt.show()
+</code></pre>
+
+<p><img src="output_13_0.png" alt="png" /></p>
 
 		</div>
 		
-<div class="post__tags tags clearfix">
-	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
-	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/go/" rel="tag">go</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/golang/" rel="tag">golang</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/hugo/" rel="tag">hugo</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/development/" rel="tag">development</a></li>
-	</ul>
-</div>
 
 	</article>
 	
@@ -185,8 +233,11 @@ Having nearly instant feedback enables you to have your creativity flow without 
 </div>
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/goisforlovers/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">(Hu)go Template Primer</p></a>
+	</div>
 	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/goisforlovers/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">(Hu)go Template Primer</p></a>
+		<a class="post-nav__link" href="/post/pandas_4/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Python数据科学之Pandas_4</p></a>
 	</div>
 </nav>
 
