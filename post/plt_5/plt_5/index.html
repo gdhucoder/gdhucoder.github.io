@@ -3,23 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Getting Started with Hugo</title>
+<title>matplot的使用之四:细节设置(2/2)</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.25.1" />
-<meta property="og:title" content="Getting Started with Hugo" />
-<meta property="og:description" content="Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:" />
+<meta property="og:title" content="matplot的使用之四:细节设置(2/2)" />
+<meta property="og:description" content="#Color import pandas as pd import matplotlib.pyplot as plt women_degrees = pd.read_csv(&#39;percent-bachelors-degrees-women-usa.csv&#39;) major_cats = [&#39;Biology&#39;, &#39;Computer Science&#39;, &#39;Engineering&#39;, &#39;Math and Statistics&#39;] # RGB颜色的写法 # 关于颜色可以去其他网站上面找 cb_dark_blue = (0/255, 107/255, 164/255) cb_orange = (255/255, 128/255, 14/255) fig = plt.figure(figsize=(12, 12)) for sp in range(0,4): ax = fig.add_subplot(2,2,sp&#43;1) # The color for each line is assigned here. ax.plot(women_degrees[&#39;Year&#39;], women_degrees[major_cats[sp]], c=cb_dark_blue, label=&#39;Women&#39;) ax.plot(women_degrees[&#39;Year&#39;], 100-women_degrees[major_cats[sp]], c=cb_orange, label=&#39;Men&#39;) for key,spine in ax.spines.items(): spine.set_visible(False) ax.set_xlim(1968, 2011) ax." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/hugoisforlovers/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/plt_5/plt_5/" />
 
 
 
-<meta property="article:published_time" content="2014-04-02T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2014-04-02T00:00:00&#43;00:00"/>
+<meta property="article:published_time" content="2017-08-09T21:44:30&#43;08:00"/>
+<meta property="article:modified_time" content="2017-08-09T21:44:30&#43;08:00"/>
 
 
 
@@ -63,7 +58,7 @@ Follow the following steps:
 		<li class="menu__item "><a class="menu__link" href="/post">BLOG</a></li>
 		<li class="menu__item "><a class="menu__link" href="https://git.oschina.net/gdhu">MYGITOSC</a></li>
 		<li class="menu__item "><a class="menu__link" href="/post/goisforlovers/">(HU)GO TEMPLATE PRIMER</a></li>
-		<li class="menu__item menu__item--active"><a class="menu__link" href="/post/hugoisforlovers/">GETTING STARTED WITH HUGO</a></li>
+		<li class="menu__item "><a class="menu__link" href="/post/hugoisforlovers/">GETTING STARTED WITH HUGO</a></li>
 		<li class="menu__item "><a class="menu__link" href="/post/migrate-from-jekyll/">JEKYLL MIGRATION</a></li>
 	</ul>
 </nav>
@@ -74,104 +69,144 @@ Follow the following steps:
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">Getting Started with Hugo</h1>
+			<h1 class="post__title">matplot的使用之四:细节设置(2/2)</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2014-04-02T00:00:00">April 02, 2014</time>
+				<time class="post__meta-date" datetime="2017-08-09T21:44:30">August 09, 2017</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/development" rel="category">Development</a>, <a class="meta-categories__link" href="/categories/golang" rel="category">golang</a></span>
+					<a class="meta-categories__link" href="/categories/%e6%95%b0%e6%8d%ae%e5%8f%af%e8%a7%86%e5%8c%96" rel="category">数据可视化</a></span>
 			</p>
 		</header>
 		<div class="post__content clearfix">
-			
+			<pre><code class="language-python">#Color
+import pandas as pd
+import matplotlib.pyplot as plt
 
-<h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
+women_degrees = pd.read_csv('percent-bachelors-degrees-women-usa.csv')
+major_cats = ['Biology', 'Computer Science', 'Engineering', 'Math and Statistics']
 
-<p>Goto <a href="https://github.com/spf13/hugo/releases">hugo releases</a> and download the
-appropriate version for your os and architecture.</p>
+# RGB颜色的写法
+# 关于颜色可以去其他网站上面找
+cb_dark_blue = (0/255, 107/255, 164/255)
+cb_orange = (255/255, 128/255, 14/255)
 
-<p>Save it somewhere specific as we will be using it in the next step.</p>
+fig = plt.figure(figsize=(12, 12))
 
-<p>More complete instructions are available at <a href="/overview/installing/">installing hugo</a></p>
+for sp in range(0,4):
+    ax = fig.add_subplot(2,2,sp+1)
+    # The color for each line is assigned here.
+    ax.plot(women_degrees['Year'], women_degrees[major_cats[sp]], c=cb_dark_blue, label='Women')
+    ax.plot(women_degrees['Year'], 100-women_degrees[major_cats[sp]], c=cb_orange, label='Men')
+    for key,spine in ax.spines.items():
+        spine.set_visible(False)
+    ax.set_xlim(1968, 2011)
+    ax.set_ylim(0,100)
+    ax.set_title(major_cats[sp])
+    ax.tick_params(bottom=&quot;off&quot;, top=&quot;off&quot;, left=&quot;off&quot;, right=&quot;off&quot;)
 
-<h2 id="step-2-build-the-docs">Step 2. Build the Docs</h2>
-
-<p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.</p>
-
-<p>Follow the following steps:</p>
-
-<ol>
-<li>Clone the <a href="http://github.com/spf13/hugo">hugo repository</a></li>
-<li>Go into the repo</li>
-<li>Run hugo in server mode and build the docs</li>
-<li>Open your browser to <a href="http://localhost:1313">http://localhost:1313</a></li>
-</ol>
-
-<p>Corresponding pseudo commands:</p>
-
-<pre><code>git clone https://github.com/spf13/hugo
-cd hugo
-/path/to/where/you/installed/hugo server --source=./docs
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Press ctrl+c to stop
+plt.legend(loc='upper right')
+plt.show()
 </code></pre>
 
-<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
+<p><img src="../output_0_0.png" alt="png" /></p>
 
-<h2 id="step-3-change-the-docs-site">Step 3. Change the docs site</h2>
+<pre><code class="language-python">#Setting Line Width
+cb_dark_blue = (0/255, 107/255, 164/255)
+cb_orange = (255/255, 128/255, 14/255)
 
-<p>Stop the Hugo process by hitting ctrl+c.</p>
+fig = plt.figure(figsize=(12, 12))
 
-<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
+for sp in range(0,4):
+    ax = fig.add_subplot(2,2,sp+1)
+    # Set the line width when specifying how each line should look.
+    ax.plot(women_degrees['Year'], women_degrees[major_cats[sp]], c=cb_dark_blue, label='Women', linewidth=10)
+    ax.plot(women_degrees['Year'], 100-women_degrees[major_cats[sp]], c=cb_orange, label='Men', linewidth=10)
+    for key,spine in ax.spines.items():
+        spine.set_visible(False)
+    ax.set_xlim(1968, 2011)
+    ax.set_ylim(0,100)
+    ax.set_title(major_cats[sp])
+    ax.tick_params(bottom=&quot;off&quot;, top=&quot;off&quot;, left=&quot;off&quot;, right=&quot;off&quot;)
 
-<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
-&gt; Press ctrl+c to stop
+plt.legend(loc='upper right')
+plt.show()
 </code></pre>
 
-<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
-content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
+<p><img src="../output_1_0.png" alt="png" /></p>
 
-<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-<code>docs/content/overview/quickstart.md</code>.</p>
+<pre><code class="language-python">stem_cats = ['Engineering', 'Computer Science','Physical Sciences', 'Math and Statistics', 'Biology' , 'Psychology']
+fig = plt.figure(figsize=(18, 3))
 
-<p>Change and save this file.. Notice what happened in your terminal.</p>
+for sp in range(0,6):
+    ax = fig.add_subplot(1,6,sp+1)
+    ax.plot(women_degrees['Year'], women_degrees[stem_cats[sp]], c=cb_dark_blue, label='Women', linewidth=3)
+    ax.plot(women_degrees['Year'], 100-women_degrees[stem_cats[sp]], c=cb_orange, label='Men', linewidth=3)
+    for key,spine in ax.spines.items():
+        spine.set_visible(False)
+    ax.set_xlim(1968, 2011)
+    ax.set_ylim(0,100)
+    ax.set_title(stem_cats[sp])
+    ax.tick_params(bottom=&quot;off&quot;, top=&quot;off&quot;, left=&quot;off&quot;, right=&quot;off&quot;)
 
-<pre><code>&gt; Change detected, rebuilding site
-
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 26 ms
+plt.legend(loc='upper right')
+plt.show()
 </code></pre>
 
-<p>Refresh the browser and observe that the typo is now fixed.</p>
+<p><img src="../output_2_0.png" alt="png" /></p>
 
-<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building.. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
+<pre><code class="language-python">fig = plt.figure(figsize=(18, 3))
 
-<h2 id="step-4-have-fun">Step 4. Have fun</h2>
+for sp in range(0,6):
+    ax = fig.add_subplot(1,6,sp+1)
+    ax.plot(women_degrees['Year'], women_degrees[stem_cats[sp]], c=cb_dark_blue, label='Women', linewidth=3)
+    ax.plot(women_degrees['Year'], 100-women_degrees[stem_cats[sp]], c=cb_orange, label='Men', linewidth=3)
+    for key,spine in ax.spines.items():
+        spine.set_visible(False)
+    ax.set_xlim(1968, 2011)
+    ax.set_ylim(0,100)
+    ax.set_title(stem_cats[sp])
+    ax.tick_params(bottom=&quot;off&quot;, top=&quot;off&quot;, left=&quot;off&quot;, right=&quot;off&quot;)
+plt.legend(loc='upper right')
+plt.show()
+fig = plt.figure(figsize=(18, 3))
 
-<p>The best way to learn something is to play with it.</p>
+# add text
+for sp in range(0,6):
+    ax = fig.add_subplot(1,6,sp+1)
+    ax.plot(women_degrees['Year'], women_degrees[stem_cats[sp]], c=cb_dark_blue, label='Women', linewidth=3)
+    ax.plot(women_degrees['Year'], 100-women_degrees[stem_cats[sp]], c=cb_orange, label='Men', linewidth=3)
+    for key,spine in ax.spines.items():
+        spine.set_visible(False)
+    ax.set_xlim(1968, 2011)
+    ax.set_ylim(0,100)
+    ax.set_title(stem_cats[sp])
+    ax.tick_params(bottom=&quot;off&quot;, top=&quot;off&quot;, left=&quot;off&quot;, right=&quot;off&quot;)
+    
+    # 给线添加注释
+    if sp == 0:
+        ax.text(2005, 87, 'Men')
+        ax.text(2002, 8, 'Women')
+    elif sp == 5:
+        ax.text(2005, 62, 'Men')
+        ax.text(2001, 35, 'Women')
+plt.show()
+</code></pre>
+
+<p><img src="../output_3_0.png" alt="png" /></p>
+
+<p><img src="../output_3_1.png" alt="png" /></p>
+
+<pre><code class="language-python">
+</code></pre>
 
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/go/" rel="tag">go</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/golang/" rel="tag">golang</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/hugo/" rel="tag">hugo</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/development/" rel="tag">development</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/python/" rel="tag">Python</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/matplotlib/" rel="tag">Matplotlib</a></li>
 	</ul>
 </div>
 
@@ -191,10 +226,7 @@ Having nearly instant feedback enables you to have your creativity flow without 
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/migrate-from-jekyll/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Migrate to Hugo from Jekyll</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/goisforlovers/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">(Hu)go Template Primer</p></a>
+		<a class="post-nav__link" href="/post/plt_4/plt_4/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">matplot的使用之四:细节设置(1/2)</p></a>
 	</div>
 </nav>
 
