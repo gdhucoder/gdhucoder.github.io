@@ -6,10 +6,20 @@
     <description>Recent content on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Wed, 09 Aug 2017 21:44:30 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 09 Aug 2017 22:44:30 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>matplot的使用之四:细节设置(2/2)</title>
+      <link>https://gdhucoder.github.io/post/seaborn_1_style/seaborn_1_style/</link>
+      <pubDate>Wed, 09 Aug 2017 22:44:30 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/seaborn_1_style/seaborn_1_style/</guid>
+      <description>风格设置 Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.
+Matplotlib is highly customizable, but it can be hard to know what settings to tweak to achieve an attractive plot.</description>
+    </item>
     
     <item>
       <title>matplot的使用之四:细节设置(2/2)</title>
