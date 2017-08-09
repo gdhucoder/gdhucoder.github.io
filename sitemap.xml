@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://gdhucoder.github.io/post/seaborn_1/seaborn_1/</loc>
+    <loc>https://gdhucoder.github.io/post/sns_1/seaborn_1/</loc>
     <lastmod>2017-08-09T22:44:30+08:00</lastmod>
   </url>
   
@@ -63,13 +63,13 @@
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/tags/development/</loc>
+    <loc>https://gdhucoder.github.io/categories/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/categories/development/</loc>
+    <loc>https://gdhucoder.github.io/tags/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -81,13 +81,13 @@
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/tags/golang/</loc>
+    <loc>https://gdhucoder.github.io/categories/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/categories/golang/</loc>
+    <loc>https://gdhucoder.github.io/tags/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

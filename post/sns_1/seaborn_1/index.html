@@ -3,18 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>matplot的使用之二:柱状图、散点图</title>
+<title>Seaborn使用：Controlling figure aesthetics</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.25.1" />
-<meta property="og:title" content="matplot的使用之二:柱状图、散点图" />
-<meta property="og:description" content="import pandas as pd reviews = pd.read_csv(&#39;fandango_scores.csv&#39;) cols = [&#39;FILM&#39;, &#39;RT_user_norm&#39;, &#39;Metacritic_user_nom&#39;, &#39;IMDB_norm&#39;, &#39;Fandango_Ratingvalue&#39;, &#39;Fandango_Stars&#39;] norm_reviews = reviews[cols] print(norm_reviews[:1])   FILM RT_user_norm Metacritic_user_nom \ 0 Avengers: Age of Ultron (2015) 4.3 3.55 IMDB_norm Fandango_Ratingvalue Fandango_Stars 0 3.9 4.5 5.0  import matplotlib.pyplot as plt from numpy import arange #The Axes.bar() method has 2 required parameters, left and height. #We use the left parameter to specify the x coordinates of the left sides of the bar." />
+<meta property="og:title" content="Seaborn使用：Controlling figure aesthetics" />
+<meta property="og:description" content="风格设置 Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.
+Matplotlib is highly customizable, but it can be hard to know what settings to tweak to achieve an attractive plot." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/plt_2/plt_2/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/sns_1/seaborn_1/" />
 
 
 
-<meta property="article:published_time" content="2017-08-08T21:44:30&#43;08:00"/>
-<meta property="article:modified_time" content="2017-08-08T21:44:30&#43;08:00"/>
+<meta property="article:published_time" content="2017-08-09T22:44:30&#43;08:00"/>
+<meta property="article:modified_time" content="2017-08-09T22:44:30&#43;08:00"/>
 
 
 
@@ -69,120 +70,219 @@
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">matplot的使用之二:柱状图、散点图</h1>
+			<h1 class="post__title">Seaborn使用：Controlling figure aesthetics</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-08-08T21:44:30">August 08, 2017</time>
+				<time class="post__meta-date" datetime="2017-08-09T22:44:30">August 09, 2017</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 					<a class="meta-categories__link" href="/categories/%e6%95%b0%e6%8d%ae%e5%8f%af%e8%a7%86%e5%8c%96" rel="category">数据可视化</a></span>
 			</p>
 		</header>
 		<div class="post__content clearfix">
-			<pre><code class="language-python">import pandas as pd
-reviews = pd.read_csv('fandango_scores.csv')
-cols = ['FILM', 'RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue', 'Fandango_Stars']
-norm_reviews = reviews[cols]
-print(norm_reviews[:1])
+			
+
+<h1 id="风格设置">风格设置</h1>
+
+<p>Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.</p>
+
+<p>Matplotlib is highly customizable, but it can be hard to know what settings to tweak to achieve an attractive plot. Seaborn comes with a number of customized themes and a high-level interface for controlling the look of matplotlib figures.</p>
+
+<h3 id="controlling-figure-aesthetics">Controlling figure aesthetics:</h3>
+
+<ol>
+<li>Seaborn figure styles</li>
+<li>Removing axes spines</li>
+<li>Temporarily setting figure style</li>
+<li>Overriding elements of the seaborn styles</li>
+<li>Scaling plot elements</li>
+</ol>
+
+<h3 id="seaborn-figure-styles">Seaborn figure styles</h3>
+
+<pre><code class="language-python">#%matplotlib inline
+import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import seaborn as sns
+np.random.seed(sum(map(ord, &quot;aesthetics&quot;)))
 </code></pre>
 
-<pre><code>                             FILM  RT_user_norm  Metacritic_user_nom  \
-0  Avengers: Age of Ultron (2015)           4.3                 3.55   
-
-   IMDB_norm  Fandango_Ratingvalue  Fandango_Stars  
-0        3.9                   4.5             5.0  
+<pre><code class="language-python">def sinplot(flip=1):
+    x = np.linspace(0, 14, 100)
+    for i in range(1, 7):
+        plt.plot(x, np.sin(x + i * .5) * (7 - i) * flip)
 </code></pre>
 
-<pre><code class="language-python">import matplotlib.pyplot as plt
-from numpy import arange
-#The Axes.bar() method has 2 required parameters, left and height. 
-#We use the left parameter to specify the x coordinates of the left sides of the bar. 
-#We use the height parameter to specify the height of each bar
-num_cols = ['RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue', 'Fandango_Stars']
-bar_heights = norm_reviews.ix[0, num_cols].values
-#print (norm_reviews.dtpye())
-#print(help(norm_reviews.dtpye))
-bar_positions = arange(5) + 0.75
-#print bar_positions
-fig, ax = plt.subplots()
-ax.bar(bar_positions, bar_heights, 0.5)
-plt.show()
-</code></pre>
-
-<p><img src="../output_1_0.png" alt="png" /></p>
-
-<pre><code class="language-python">#By default, matplotlib sets the x-axis tick labels to the integer values the bars 
-#spanned on the x-axis (from 0 to 6). We only need tick labels on the x-axis where the bars are positioned. 
-#We can use Axes.set_xticks() to change the positions of the ticks to [1, 2, 3, 4, 5]:
-
-num_cols = ['RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue', 'Fandango_Stars']
-bar_heights = norm_reviews.ix[0, num_cols].values
-bar_positions = arange(5) + 0.75
-tick_positions = range(1,6)
-fig, ax = plt.subplots()
-
-ax.bar(bar_positions, bar_heights, 0.5)
-ax.set_xticks(tick_positions)
-ax.set_xticklabels(num_cols, rotation=90)
-
-ax.set_xlabel('Rating Source')
-ax.set_ylabel('Average Rating')
-ax.set_title('Average User Rating For Avengers: Age of Ultron (2015)')
-plt.show()
-</code></pre>
-
-<p><img src="../output_2_0.png" alt="png" /></p>
-
-<pre><code class="language-python">import matplotlib.pyplot as plt
-from numpy import arange
-num_cols = ['RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue', 'Fandango_Stars']
-
-bar_widths = norm_reviews.ix[0, num_cols].values
-bar_positions = arange(5)+0.75
-tick_positions = range(1,6)
-fig,ax = plt.subplots()
-ax.barh(bar_positions, bar_widths)
-ax.set_yticks(tick_positions)
-ax.set_yticklabels(num_cols)
-ax.set_ylabel('Rating Source')
-ax.set_xlabel('Average Rating')
-ax.set_title('Average User Rating For Avengers: Age of Ultron (2015)')
-plt.show()
-</code></pre>
-
-<p><img src="../output_3_0.png" alt="png" /></p>
-
-<pre><code class="language-python">#Let's look at a plot that can help us visualize many points.
-fig,ax = plt.subplots()
-ax.scatter(norm_reviews['Fandango_Ratingvalue'], norm_reviews['RT_user_norm'])
-ax.set_xlabel('Fandango')
-ax.set_ylabel('Rotten Tomatoes')
-plt.show()
+<pre><code class="language-python">sinplot()
 </code></pre>
 
 <p><img src="../output_4_0.png" alt="png" /></p>
 
-<pre><code class="language-python"># Switching Aixes
-fig = plt.figure(figsize=(5,10))
-ax1 = fig.add_subplot(2,1,1)
-ax2 = fig.add_subplot(2,1,2)
-ax1.scatter(norm_reviews['Fandango_Ratingvalue'], norm_reviews['RT_user_norm'],color='red')
-ax1.set_xlabel('Fandango')
-ax1.set_ylabel('Rotten Tomatoes')
-ax1.set_xticks(range(0,6))
-ax1.set_yticks(range(0,6))
-ax2.scatter(norm_reviews['RT_user_norm'], norm_reviews['Fandango_Ratingvalue'])
-ax2.set_xlabel('Fandango')
-ax2.set_ylabel('Rotten Tomatoes')
-ax2.set_xticks(range(0,6))
-ax2.set_yticks(range(0,6))
-plt.show()
+<h3 id="to-switch-to-seaborn-defaults-simply-call-the-set-function">To switch to seaborn defaults, simply call the set() function.</h3>
+
+<pre><code class="language-python">sns.set()
+sinplot()
 </code></pre>
 
-<p><img src="../output_5_0.png" alt="png" /></p>
+<p><img src="../output_6_0.png" alt="png" /></p>
 
-<pre><code class="language-python">
+<h3 id="5种主题风格">5种主题风格</h3>
+
+<ul>
+<li>darkgrid</li>
+<li>whitegrid</li>
+<li>dark</li>
+<li>white</li>
+<li>ticks</li>
+</ul>
+
+<pre><code class="language-python">sns.set_style('whitegrid')
+data = np.random.normal(size=(20, 6)) + np.arange(6) / 2
+# print(help(np.random.normal))
+# print(data)
+sns.boxplot(data=data)
 </code></pre>
+
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0xaf23470&gt;
+</code></pre>
+
+<p><img src="../output_8_1.png" alt="png" /></p>
+
+<p>For many plots, (especially for settings like talks, where you primarily want to use figures to provide impressions of patterns in the data), the grid is less necessary.</p>
+
+<pre><code class="language-python">sns.set_style('dark')
+sinplot()
+</code></pre>
+
+<p><img src="../output_10_0.png" alt="png" /></p>
+
+<pre><code class="language-python">sns.set_style('white')
+sinplot()
+</code></pre>
+
+<p><img src="../output_11_0.png" alt="png" /></p>
+
+<p>Sometimes you might want to give a little extra structure to the plots, which is where ticks come in handy:</p>
+
+<pre><code class="language-python">sns.set_style('ticks')
+sinplot()
+</code></pre>
+
+<p><img src="../output_13_0.png" alt="png" /></p>
+
+<h3 id="removing-axes-spines">Removing axes spines</h3>
+
+<pre><code class="language-python">sinplot()
+sns.despine()
+</code></pre>
+
+<p><img src="../output_15_0.png" alt="png" /></p>
+
+<h3 id="violinplot">violinplot</h3>
+
+<p>Some plots benefit from offsetting the spines away from the data, which can also be done when calling <strong><font color='red'>despine()</font></strong>. When the ticks don’t cover the whole range of the axis, the trim parameter will limit the range of the surviving spines.</p>
+
+<pre><code class="language-python">f, ax = plt.subplots()
+ax.set_title('Violinplot')
+sns.violinplot(data=data)
+sns.despine(offset=10, trim=True)
+</code></pre>
+
+<p><img src="../output_18_0.png" alt="png" /></p>
+
+<p>You can also control which spines are removed with additional arguments to despine()</p>
+
+<pre><code class="language-python">sns.set_style(&quot;whitegrid&quot;)
+sns.boxplot(data=data, palette=&quot;deep&quot;)
+sns.despine(left=True)
+</code></pre>
+
+<p><img src="../output_20_0.png" alt="png" /></p>
+
+<h3 id="temporarily-setting-figure-style">Temporarily setting figure style</h3>
+
+<p>Although it’s easy to switch back and forth, you can also use the <em>axes_style()</em> function in a with statement to temporarily set plot parameters. This also allows you to make figures with differently-styled axes:</p>
+
+<pre><code class="language-python">with sns.axes_style(&quot;darkgrid&quot;):
+    plt.subplot(211)
+    sinplot()
+plt.subplot(212)
+sinplot(-1)
+</code></pre>
+
+<p><img src="../output_22_0.png" alt="png" /></p>
+
+<h3 id="overriding-elements-of-the-seaborn-styles">Overriding elements of the seaborn styles</h3>
+
+<pre><code class="language-python">sns.axes_style()
+</code></pre>
+
+<pre><code>{'axes.axisbelow': True,
+ 'axes.edgecolor': '.8',
+ 'axes.facecolor': 'white',
+ 'axes.grid': True,
+ 'axes.labelcolor': '.15',
+ 'axes.linewidth': 1.0,
+ 'figure.facecolor': 'white',
+ 'font.family': ['sans-serif'],
+ 'font.sans-serif': ['Arial',
+  'DejaVu Sans',
+  'Liberation Sans',
+  'Bitstream Vera Sans',
+  'sans-serif'],
+ 'grid.color': '.8',
+ 'grid.linestyle': '-',
+ 'image.cmap': 'rocket',
+ 'legend.frameon': False,
+ 'legend.numpoints': 1,
+ 'legend.scatterpoints': 1,
+ 'lines.solid_capstyle': 'round',
+ 'text.color': '.15',
+ 'xtick.color': '.15',
+ 'xtick.direction': 'out',
+ 'xtick.major.size': 0.0,
+ 'xtick.minor.size': 0.0,
+ 'ytick.color': '.15',
+ 'ytick.direction': 'out',
+ 'ytick.major.size': 0.0,
+ 'ytick.minor.size': 0.0}
+</code></pre>
+
+<p>You can then set different versions of these parameters:</p>
+
+<pre><code class="language-python">sns.set_style(&quot;darkgrid&quot;, {&quot;axes.facecolor&quot;: &quot;.9&quot;})
+sinplot()
+</code></pre>
+
+<p><img src="../output_26_0.png" alt="png" /></p>
+
+<h3 id="scaling-plot-elements">Scaling plot elements</h3>
+
+<pre><code class="language-python">sns.set()
+sns.set_context('paper')
+sinplot()
+</code></pre>
+
+<p><img src="../output_28_0.png" alt="png" /></p>
+
+<pre><code class="language-python">sns.set_context('talk')
+sinplot()
+</code></pre>
+
+<p><img src="../output_29_0.png" alt="png" /></p>
+
+<pre><code class="language-python">sns.set_context('poster')
+sinplot()
+</code></pre>
+
+<p><img src="../output_30_0.png" alt="png" /></p>
+
+<pre><code class="language-python">sns.set_context('notebook', font_scale=1.5 ,rc={&quot;lines.linewidth&quot;: 2.5})
+sinplot()
+</code></pre>
+
+<p><img src="../output_31_0.png" alt="png" /></p>
 
 		</div>
 		
@@ -190,7 +290,7 @@ plt.show()
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
 		<li class="tags__item"><a class="tags__link" href="/tags/python/" rel="tag">Python</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/matplotlib/" rel="tag">Matplotlib</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/seaborn/" rel="tag">Seaborn</a></li>
 	</ul>
 </div>
 
@@ -210,10 +310,7 @@ plt.show()
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/plt_1/plt_1/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">matplot的使用之一:折线图、子图</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/plt_3/plt_3/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">matplot的使用之三:直方图、盒形图</p></a>
+		<a class="post-nav__link" href="/post/plt_5/plt_5/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">matplot的使用之四:细节设置(2/2)</p></a>
 	</div>
 </nav>
 
