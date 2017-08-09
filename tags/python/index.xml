@@ -13,10 +13,10 @@
     
     <item>
       <title>Seaborn使用：Controlling figure aesthetics</title>
-      <link>https://gdhucoder.github.io/post/seaborn_1_style/seaborn_1_style/</link>
+      <link>https://gdhucoder.github.io/post/seaborn_1/seaborn_1/</link>
       <pubDate>Wed, 09 Aug 2017 22:44:30 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/post/seaborn_1_style/seaborn_1_style/</guid>
+      <guid>https://gdhucoder.github.io/post/seaborn_1/seaborn_1/</guid>
       <description>风格设置 Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.
 Matplotlib is highly customizable, but it can be hard to know what settings to tweak to achieve an attractive plot.</description>
     </item>
