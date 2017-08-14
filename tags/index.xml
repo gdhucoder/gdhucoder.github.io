@@ -6,44 +6,26 @@
     <description>Recent content in Tags on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Aug 2017 03:58:07 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Development</title>
-      <link>https://gdhucoder.github.io/tags/development/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>Books</title>
+      <link>https://gdhucoder.github.io/tags/books/</link>
+      <pubDate>Mon, 14 Aug 2017 03:58:07 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/tags/development/</guid>
+      <guid>https://gdhucoder.github.io/tags/books/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Go</title>
-      <link>https://gdhucoder.github.io/tags/go/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>Markdown</title>
+      <link>https://gdhucoder.github.io/tags/markdown/</link>
+      <pubDate>Mon, 14 Aug 2017 03:58:07 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>https://gdhucoder.github.io/tags/golang/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://gdhucoder.github.io/tags/hugo/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/hugo/</guid>
+      <guid>https://gdhucoder.github.io/tags/markdown/</guid>
       <description></description>
     </item>
     
@@ -53,6 +35,15 @@
       <pubDate>Wed, 09 Aug 2017 21:44:30 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/tags/matplotlib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mind</title>
+      <link>https://gdhucoder.github.io/tags/mind/</link>
+      <pubDate>Mon, 14 Aug 2017 03:58:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/mind/</guid>
       <description></description>
     </item>
     
@@ -75,27 +66,18 @@
     </item>
     
     <item>
-      <title>Templates</title>
-      <link>https://gdhucoder.github.io/tags/templates/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>数据可视化</title>
+      <link>https://gdhucoder.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
+      <pubDate>Wed, 09 Aug 2017 22:44:30 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/tags/templates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Themes</title>
-      <link>https://gdhucoder.github.io/tags/themes/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/themes/</guid>
+      <guid>https://gdhucoder.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</guid>
       <description></description>
     </item>
     
     <item>
       <title>语言</title>
       <link>https://gdhucoder.github.io/tags/%E8%AF%AD%E8%A8%80/</link>
-      <pubDate>Wed, 12 Jul 2017 05:59:47 +0800</pubDate>
+      <pubDate>Mon, 14 Aug 2017 03:58:07 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/tags/%E8%AF%AD%E8%A8%80/</guid>
       <description></description>

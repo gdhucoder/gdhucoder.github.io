@@ -6,18 +6,54 @@
     <description>Recent content in 技术 on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Wed, 12 Jul 2017 05:59:47 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 09 Aug 2017 21:44:30 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Python数据科学之Pandas_4</title>
-      <link>https://gdhucoder.github.io/post/pandas_4/</link>
-      <pubDate>Wed, 12 Jul 2017 05:59:47 +0800</pubDate>
+      <title>matplot的使用之四:细节设置(2/2)</title>
+      <link>https://gdhucoder.github.io/post/plt_5/plt_5/</link>
+      <pubDate>Wed, 09 Aug 2017 21:44:30 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/post/pandas_4/</guid>
-      <description>关于pandas的使用 import pandas as pd import numpy as np  # read titanic_train.csv titanic_survival = pd.read_csv(&#39;titanic_train.csv&#39;) # print fist 5 rows print(titanic_survival.head())   PassengerId Survived Pclass \ 0 1 0 3 1 2 1 1 2 3 1 3 3 4 1 1 4 5 0 3 Name Sex Age SibSp \ 0 Braund, Mr. Owen Harris male 22.0 1 1 Cumings, Mrs. John Bradley (Florence Briggs Th... female 38.</description>
+      <guid>https://gdhucoder.github.io/post/plt_5/plt_5/</guid>
+      <description>#Color import pandas as pd import matplotlib.pyplot as plt women_degrees = pd.read_csv(&#39;percent-bachelors-degrees-women-usa.csv&#39;) major_cats = [&#39;Biology&#39;, &#39;Computer Science&#39;, &#39;Engineering&#39;, &#39;Math and Statistics&#39;] # RGB颜色的写法 # 关于颜色可以去其他网站上面找 cb_dark_blue = (0/255, 107/255, 164/255) cb_orange = (255/255, 128/255, 14/255) fig = plt.figure(figsize=(12, 12)) for sp in range(0,4): ax = fig.add_subplot(2,2,sp+1) # The color for each line is assigned here. ax.plot(women_degrees[&#39;Year&#39;], women_degrees[major_cats[sp]], c=cb_dark_blue, label=&#39;Women&#39;) ax.plot(women_degrees[&#39;Year&#39;], 100-women_degrees[major_cats[sp]], c=cb_orange, label=&#39;Men&#39;) for key,spine in ax.spines.items(): spine.set_visible(False) ax.set_xlim(1968, 2011) ax.</description>
+    </item>
+    
+    <item>
+      <title>matplot的使用之四:细节设置(1/2)</title>
+      <link>https://gdhucoder.github.io/post/plt_4/plt_4/</link>
+      <pubDate>Wed, 09 Aug 2017 20:44:30 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/plt_4/plt_4/</guid>
+      <description>import pandas as pd import matplotlib.pyplot as plt  women_degrees = pd.read_csv(&#39;percent-bachelors-degrees-women-usa.csv&#39;) plt.plot(women_degrees[&#39;Year&#39;], women_degrees[&#39;Agriculture&#39;]) plt.show()  # 100 - women_degrees means men plt.plot(women_degrees[&#39;Year&#39;], women_degrees[&#39;Agriculture&#39;], c=&#39;blue&#39;,label=&#39;Women&#39;) plt.plot(women_degrees[&#39;Year&#39;], 100-women_degrees[&#39;Agriculture&#39;], c=&#39;green&#39;,label=&#39;Men&#39;) plt.legend(loc=&#39;upper right&#39;) plt.title(&#39;Percentage of Agriculture Degrees Awarded By Gender&#39;) plt.show()  # 100 - women_degrees means men # 去掉坐标轴上面的刻度 plt.plot(women_degrees[&#39;Year&#39;], women_degrees[&#39;Agriculture&#39;], c=&#39;blue&#39;,label=&#39;Women&#39;) plt.plot(women_degrees[&#39;Year&#39;], 100-women_degrees[&#39;Agriculture&#39;], c=&#39;green&#39;,label=&#39;Men&#39;) plt.legend(loc=&#39;upper right&#39;) plt.tick_params(bottom=&#39;off&#39;, top=&#39;off&#39;, left=&#39;off&#39;, right=&#39;off&#39;) plt.title(&#39;Percentage of Agriculture Degrees Awarded By Gender&#39;) plt.show()  fig, ax = plt.</description>
+    </item>
+    
+    <item>
+      <title>matplot的使用之三:直方图、盒形图</title>
+      <link>https://gdhucoder.github.io/post/plt_3/plt_3/</link>
+      <pubDate>Wed, 09 Aug 2017 19:44:30 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/plt_3/plt_3/</guid>
+      <description>import pandas as pd import matplotlib.pyplot as plt  reviews = pd.read_csv(&#39;fandango_scores.csv&#39;) cols = [&#39;FILM&#39;, &#39;RT_user_norm&#39;, &#39;Metacritic_user_nom&#39;, &#39;IMDB_norm&#39;, &#39;Fandango_Ratingvalue&#39;] norm_reviews = reviews[cols] print(norm_reviews[:5])   FILM RT_user_norm Metacritic_user_nom \ 0 Avengers: Age of Ultron (2015) 4.3 3.55 1 Cinderella (2015) 4.0 3.75 2 Ant-Man (2015) 4.5 4.05 3 Do You Believe? (2015) 4.2 2.35 4 Hot Tub Time Machine 2 (2015) 1.4 1.70 IMDB_norm Fandango_Ratingvalue 0 3.90 4.5 1 3.55 4.</description>
+    </item>
+    
+    <item>
+      <title>matplot的使用之二:柱状图、散点图</title>
+      <link>https://gdhucoder.github.io/post/plt_2/plt_2/</link>
+      <pubDate>Tue, 08 Aug 2017 21:44:30 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/plt_2/plt_2/</guid>
+      <description>import pandas as pd reviews = pd.read_csv(&#39;fandango_scores.csv&#39;) cols = [&#39;FILM&#39;, &#39;RT_user_norm&#39;, &#39;Metacritic_user_nom&#39;, &#39;IMDB_norm&#39;, &#39;Fandango_Ratingvalue&#39;, &#39;Fandango_Stars&#39;] norm_reviews = reviews[cols] print(norm_reviews[:1])   FILM RT_user_norm Metacritic_user_nom \ 0 Avengers: Age of Ultron (2015) 4.3 3.55 IMDB_norm Fandango_Ratingvalue Fandango_Stars 0 3.9 4.5 5.0  import matplotlib.pyplot as plt from numpy import arange #The Axes.bar() method has 2 required parameters, left and height. #We use the left parameter to specify the x coordinates of the left sides of the bar.</description>
+    </item>
+    
+    <item>
+      <title>matplot的使用之一:折线图、子图</title>
+      <link>https://gdhucoder.github.io/post/plt_1/plt_1/</link>
+      <pubDate>Thu, 03 Aug 2017 21:44:30 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/plt_1/plt_1/</guid>
+      <description>import pandas as pd  unrate = pd.read_csv(&#39;UNRATE.csv&#39;) unrate[&#39;DATE&#39;] = pd.to_datetime(unrate[&#39;DATE&#39;]) print(unrate.head(12))   DATE VALUE 0 1948-01-01 3.4 1 1948-02-01 3.8 2 1948-03-01 4.0 3 1948-04-01 3.9 4 1948-05-01 3.5 5 1948-06-01 3.6 6 1948-07-01 3.6 7 1948-08-01 3.9 8 1948-09-01 3.8 9 1948-10-01 3.7 10 1948-11-01 3.8 11 1948-12-01 4.0  import matplotlib.pyplot as plt  #Using the different pyplot functions, we can create, customize, and display a plot.</description>
     </item>
     
   </channel>
