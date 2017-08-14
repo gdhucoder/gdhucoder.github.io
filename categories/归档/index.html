@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-08-14T03:58:07&#43;08:00"/>
+<meta property="og:updated_time" content="2017-08-14T18:44:30&#43;08:00"/>
 
 
 
@@ -70,6 +70,36 @@
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
+				<a href="/post/sns_2/seaborn_2_color_palettes/" rel="bookmark">Seaborn使用(2)：Choosing color palettes</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2017-08-14T18:44:30">August 14, 2017</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			<h1 id="调色板">调色板</h1>
+
+<p>颜色很重要，如果使用的好，就会帮助你突出数据的特征。</p>
+
+<ul>
+<li>color_palette()能传入任何Matplotlib所支持的颜色</li>
+<li>color_palette()不写参数则默认颜色</li>
+<li>set_palette()设置所有图的颜色</li>
+</ul>
+
+<p>下面是使用seaborn的color palettes的一些例子，这些例子官网上面都已经有详细的介绍。</p>
+
+<p>网址为：<a href="http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial">http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial</a></p>
+
+<p></p>
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
 				<a href="/about/rd_0/" rel="bookmark">Welcome To My Site</a>
 			</h3>
 			<div class="list__meta meta">
@@ -102,7 +132,23 @@
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/sns_1/seaborn_1/" rel="bookmark">Seaborn使用：Controlling figure aesthetics</a>
+				<a href="/reading/rd_0/" rel="bookmark">读书</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2017-08-14T03:58:07">August 14, 2017</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			好书将要推荐在这里！
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/sns_1/seaborn_1/" rel="bookmark">Seaborn使用(1)：Controlling figure aesthetics</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
@@ -110,8 +156,11 @@
 			</div>
 		</header>
 		<div class="list__excerpt">
-			风格设置 Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.
-Matplotlib is highly customizable, but it can be hard to know what settings to tweak to achieve an attractive plot.
+			<h1 id="风格设置">风格设置</h1>
+
+<p>Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.</p>
+
+<p></p>
 		</div>
 	</div>
 </article>
@@ -127,7 +176,12 @@ Matplotlib is highly customizable, but it can be hard to know what settings to t
 			</div>
 		</header>
 		<div class="list__excerpt">
-			#Color import pandas as pd import matplotlib.pyplot as plt women_degrees = pd.read_csv('percent-bachelors-degrees-women-usa.csv') major_cats = ['Biology', 'Computer Science', 'Engineering', 'Math and Statistics'] # RGB颜色的写法 # 关于颜色可以去其他网站上面找 cb_dark_blue = (0/255, 107/255, 164/255) cb_orange = (255/255, 128/255, 14/255) fig = plt.figure(figsize=(12, 12)) for sp in range(0,4): ax = fig.add_subplot(2,2,sp+1) # The color for each line is assigned here. ax.plot(women_degrees['Year'], women_degrees[major_cats[sp]], c=cb_dark_blue, label='Women') ax.plot(women_degrees['Year'], 100-women_degrees[major_cats[sp]], c=cb_orange, label='Men') for key,spine in ax.spines.items(): spine.set_visible(False) ax.set_xlim(1968, 2011) ax.
+			<pre><code class="language-python">#Color
+import pandas as pd
+import matplotlib.pyplot as plt
+
+women_degrees = pd.read_csv('percent-bachelors-degrees-women-usa.csv')
+major_cats = ['Biology', 'Computer Science', 'Engineering', 'Math and Statistics']
 		</div>
 	</div>
 </article>
@@ -143,7 +197,11 @@ Matplotlib is highly customizable, but it can be hard to know what settings to t
 			</div>
 		</header>
 		<div class="list__excerpt">
-			import pandas as pd import matplotlib.pyplot as plt  women_degrees = pd.read_csv('percent-bachelors-degrees-women-usa.csv') plt.plot(women_degrees['Year'], women_degrees['Agriculture']) plt.show()  # 100 - women_degrees means men plt.plot(women_degrees['Year'], women_degrees['Agriculture'], c='blue',label='Women') plt.plot(women_degrees['Year'], 100-women_degrees['Agriculture'], c='green',label='Men') plt.legend(loc='upper right') plt.title('Percentage of Agriculture Degrees Awarded By Gender') plt.show()  # 100 - women_degrees means men # 去掉坐标轴上面的刻度 plt.plot(women_degrees['Year'], women_degrees['Agriculture'], c='blue',label='Women') plt.plot(women_degrees['Year'], 100-women_degrees['Agriculture'], c='green',label='Men') plt.legend(loc='upper right') plt.tick_params(bottom='off', top='off', left='off', right='off') plt.title('Percentage of Agriculture Degrees Awarded By Gender') plt.show()  fig, ax = plt.
+			<pre><code class="language-python">import pandas as pd
+import matplotlib.pyplot as plt
+</code></pre>
+
+<p></p>
 		</div>
 	</div>
 </article>
@@ -159,7 +217,11 @@ Matplotlib is highly customizable, but it can be hard to know what settings to t
 			</div>
 		</header>
 		<div class="list__excerpt">
-			import pandas as pd import matplotlib.pyplot as plt  reviews = pd.read_csv('fandango_scores.csv') cols = ['FILM', 'RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue'] norm_reviews = reviews[cols] print(norm_reviews[:5])   FILM RT_user_norm Metacritic_user_nom \ 0 Avengers: Age of Ultron (2015) 4.3 3.55 1 Cinderella (2015) 4.0 3.75 2 Ant-Man (2015) 4.5 4.05 3 Do You Believe? (2015) 4.2 2.35 4 Hot Tub Time Machine 2 (2015) 1.4 1.70 IMDB_norm Fandango_Ratingvalue 0 3.90 4.5 1 3.55 4.
+			<pre><code class="language-python">import pandas as pd
+import matplotlib.pyplot as plt
+</code></pre>
+
+<p></p>
 		</div>
 	</div>
 </article>
@@ -175,7 +237,14 @@ Matplotlib is highly customizable, but it can be hard to know what settings to t
 			</div>
 		</header>
 		<div class="list__excerpt">
-			import pandas as pd reviews = pd.read_csv('fandango_scores.csv') cols = ['FILM', 'RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue', 'Fandango_Stars'] norm_reviews = reviews[cols] print(norm_reviews[:1])   FILM RT_user_norm Metacritic_user_nom \ 0 Avengers: Age of Ultron (2015) 4.3 3.55 IMDB_norm Fandango_Ratingvalue Fandango_Stars 0 3.9 4.5 5.0  import matplotlib.pyplot as plt from numpy import arange #The Axes.bar() method has 2 required parameters, left and height. #We use the left parameter to specify the x coordinates of the left sides of the bar.
+			<pre><code class="language-python">import pandas as pd
+reviews = pd.read_csv('fandango_scores.csv')
+cols = ['FILM', 'RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue', 'Fandango_Stars']
+norm_reviews = reviews[cols]
+print(norm_reviews[:1])
+</code></pre>
+
+<p></p>
 		</div>
 	</div>
 </article>
@@ -191,7 +260,15 @@ Matplotlib is highly customizable, but it can be hard to know what settings to t
 			</div>
 		</header>
 		<div class="list__excerpt">
-			import pandas as pd  unrate = pd.read_csv('UNRATE.csv') unrate['DATE'] = pd.to_datetime(unrate['DATE']) print(unrate.head(12))   DATE VALUE 0 1948-01-01 3.4 1 1948-02-01 3.8 2 1948-03-01 4.0 3 1948-04-01 3.9 4 1948-05-01 3.5 5 1948-06-01 3.6 6 1948-07-01 3.6 7 1948-08-01 3.9 8 1948-09-01 3.8 9 1948-10-01 3.7 10 1948-11-01 3.8 11 1948-12-01 4.0  import matplotlib.pyplot as plt  #Using the different pyplot functions, we can create, customize, and display a plot.
+			<pre><code class="language-python">import pandas as pd
+</code></pre>
+
+<pre><code class="language-python">unrate = pd.read_csv('UNRATE.csv')
+unrate['DATE'] = pd.to_datetime(unrate['DATE'])
+print(unrate.head(12))
+</code></pre>
+
+<p></p>
 		</div>
 	</div>
 </article>
@@ -217,11 +294,11 @@ Matplotlib is highly customizable, but it can be hard to know what settings to t
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/sns_1/seaborn_1/">Seaborn使用：Controlling figure aesthetics</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sns_2/seaborn_2_color_palettes/">Seaborn使用(2)：Choosing color palettes</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sns_1/seaborn_1/">Seaborn使用(1)：Controlling figure aesthetics</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_5/plt_5/">matplot的使用之四:细节设置(2/2)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_4/plt_4/">matplot的使用之四:细节设置(1/2)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_3/plt_3/">matplot的使用之三:直方图、盒形图</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/plt_2/plt_2/">matplot的使用之二:柱状图、散点图</a></li>
 		</ul>
 	</div>
 </div>

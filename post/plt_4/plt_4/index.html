@@ -7,7 +7,11 @@
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.25.1" />
 <meta property="og:title" content="matplot的使用之四:细节设置(1/2)" />
-<meta property="og:description" content="import pandas as pd import matplotlib.pyplot as plt  women_degrees = pd.read_csv(&#39;percent-bachelors-degrees-women-usa.csv&#39;) plt.plot(women_degrees[&#39;Year&#39;], women_degrees[&#39;Agriculture&#39;]) plt.show()  # 100 - women_degrees means men plt.plot(women_degrees[&#39;Year&#39;], women_degrees[&#39;Agriculture&#39;], c=&#39;blue&#39;,label=&#39;Women&#39;) plt.plot(women_degrees[&#39;Year&#39;], 100-women_degrees[&#39;Agriculture&#39;], c=&#39;green&#39;,label=&#39;Men&#39;) plt.legend(loc=&#39;upper right&#39;) plt.title(&#39;Percentage of Agriculture Degrees Awarded By Gender&#39;) plt.show()  # 100 - women_degrees means men # 去掉坐标轴上面的刻度 plt.plot(women_degrees[&#39;Year&#39;], women_degrees[&#39;Agriculture&#39;], c=&#39;blue&#39;,label=&#39;Women&#39;) plt.plot(women_degrees[&#39;Year&#39;], 100-women_degrees[&#39;Agriculture&#39;], c=&#39;green&#39;,label=&#39;Men&#39;) plt.legend(loc=&#39;upper right&#39;) plt.tick_params(bottom=&#39;off&#39;, top=&#39;off&#39;, left=&#39;off&#39;, right=&#39;off&#39;) plt.title(&#39;Percentage of Agriculture Degrees Awarded By Gender&#39;) plt.show()  fig, ax = plt." />
+<meta property="og:description" content="import pandas as pd
+import matplotlib.pyplot as plt
+
+
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/plt_4/plt_4/" />
 
@@ -81,6 +85,8 @@
 			<pre><code class="language-python">import pandas as pd
 import matplotlib.pyplot as plt
 </code></pre>
+
+<p></p>
 
 <pre><code class="language-python">women_degrees = pd.read_csv('percent-bachelors-degrees-women-usa.csv')
 plt.plot(women_degrees['Year'], women_degrees['Agriculture'])
@@ -161,7 +167,6 @@ plt.show()
 
 <pre><code class="language-python">
 </code></pre>
-
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -216,11 +221,11 @@ plt.show()
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/sns_1/seaborn_1/">Seaborn使用：Controlling figure aesthetics</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sns_2/seaborn_2_color_palettes/">Seaborn使用(2)：Choosing color palettes</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sns_1/seaborn_1/">Seaborn使用(1)：Controlling figure aesthetics</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_5/plt_5/">matplot的使用之四:细节设置(2/2)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_4/plt_4/">matplot的使用之四:细节设置(1/2)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_3/plt_3/">matplot的使用之三:直方图、盒形图</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/plt_2/plt_2/">matplot的使用之二:柱状图、散点图</a></li>
 		</ul>
 	</div>
 </div>

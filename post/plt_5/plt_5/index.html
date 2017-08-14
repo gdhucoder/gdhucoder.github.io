@@ -7,7 +7,12 @@
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.25.1" />
 <meta property="og:title" content="matplot的使用之四:细节设置(2/2)" />
-<meta property="og:description" content="#Color import pandas as pd import matplotlib.pyplot as plt women_degrees = pd.read_csv(&#39;percent-bachelors-degrees-women-usa.csv&#39;) major_cats = [&#39;Biology&#39;, &#39;Computer Science&#39;, &#39;Engineering&#39;, &#39;Math and Statistics&#39;] # RGB颜色的写法 # 关于颜色可以去其他网站上面找 cb_dark_blue = (0/255, 107/255, 164/255) cb_orange = (255/255, 128/255, 14/255) fig = plt.figure(figsize=(12, 12)) for sp in range(0,4): ax = fig.add_subplot(2,2,sp&#43;1) # The color for each line is assigned here. ax.plot(women_degrees[&#39;Year&#39;], women_degrees[major_cats[sp]], c=cb_dark_blue, label=&#39;Women&#39;) ax.plot(women_degrees[&#39;Year&#39;], 100-women_degrees[major_cats[sp]], c=cb_orange, label=&#39;Men&#39;) for key,spine in ax.spines.items(): spine.set_visible(False) ax.set_xlim(1968, 2011) ax." />
+<meta property="og:description" content="#Color
+import pandas as pd
+import matplotlib.pyplot as plt
+
+women_degrees = pd.read_csv(&#39;percent-bachelors-degrees-women-usa.csv&#39;)
+major_cats = [&#39;Biology&#39;, &#39;Computer Science&#39;, &#39;Engineering&#39;, &#39;Math and Statistics&#39;]" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/plt_5/plt_5/" />
 
@@ -84,6 +89,8 @@ import matplotlib.pyplot as plt
 
 women_degrees = pd.read_csv('percent-bachelors-degrees-women-usa.csv')
 major_cats = ['Biology', 'Computer Science', 'Engineering', 'Math and Statistics']
+
+
 
 # RGB颜色的写法
 # 关于颜色可以去其他网站上面找
@@ -198,7 +205,6 @@ plt.show()
 
 <pre><code class="language-python">
 </code></pre>
-
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -229,7 +235,7 @@ plt.show()
 		<a class="post-nav__link" href="/post/plt_4/plt_4/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">matplot的使用之四:细节设置(1/2)</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/sns_1/seaborn_1/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Seaborn使用：Controlling figure aesthetics</p></a>
+		<a class="post-nav__link" href="/post/sns_1/seaborn_1/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Seaborn使用(1)：Controlling figure aesthetics</p></a>
 	</div>
 </nav>
 
@@ -253,11 +259,11 @@ plt.show()
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/sns_1/seaborn_1/">Seaborn使用：Controlling figure aesthetics</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sns_2/seaborn_2_color_palettes/">Seaborn使用(2)：Choosing color palettes</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sns_1/seaborn_1/">Seaborn使用(1)：Controlling figure aesthetics</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_5/plt_5/">matplot的使用之四:细节设置(2/2)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_4/plt_4/">matplot的使用之四:细节设置(1/2)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_3/plt_3/">matplot的使用之三:直方图、盒形图</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/plt_2/plt_2/">matplot的使用之二:柱状图、散点图</a></li>
 		</ul>
 	</div>
 </div>

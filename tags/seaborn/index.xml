@@ -6,19 +6,45 @@
     <description>Recent content in Seaborn on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Wed, 09 Aug 2017 22:44:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 Aug 2017 18:44:30 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/tags/seaborn/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Seaborn使用：Controlling figure aesthetics</title>
+      <title>Seaborn使用(2)：Choosing color palettes</title>
+      <link>https://gdhucoder.github.io/post/sns_2/seaborn_2_color_palettes/</link>
+      <pubDate>Mon, 14 Aug 2017 18:44:30 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/sns_2/seaborn_2_color_palettes/</guid>
+      <description>&lt;h1 id=&#34;调色板&#34;&gt;调色板&lt;/h1&gt;
+
+&lt;p&gt;颜色很重要，如果使用的好，就会帮助你突出数据的特征。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;color_palette()能传入任何Matplotlib所支持的颜色&lt;/li&gt;
+&lt;li&gt;color_palette()不写参数则默认颜色&lt;/li&gt;
+&lt;li&gt;set_palette()设置所有图的颜色&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;下面是使用seaborn的color palettes的一些例子，这些例子官网上面都已经有详细的介绍。&lt;/p&gt;
+
+&lt;p&gt;网址为：&lt;a href=&#34;http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial&#34;&gt;http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Seaborn使用(1)：Controlling figure aesthetics</title>
       <link>https://gdhucoder.github.io/post/sns_1/seaborn_1/</link>
       <pubDate>Wed, 09 Aug 2017 22:44:30 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/sns_1/seaborn_1/</guid>
-      <description>风格设置 Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.
-Matplotlib is highly customizable, but it can be hard to know what settings to tweak to achieve an attractive plot.</description>
+      <description>&lt;h1 id=&#34;风格设置&#34;&gt;风格设置&lt;/h1&gt;
+
+&lt;p&gt;Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

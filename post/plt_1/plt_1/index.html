@@ -7,7 +7,15 @@
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.25.1" />
 <meta property="og:title" content="matplot的使用之一:折线图、子图" />
-<meta property="og:description" content="import pandas as pd  unrate = pd.read_csv(&#39;UNRATE.csv&#39;) unrate[&#39;DATE&#39;] = pd.to_datetime(unrate[&#39;DATE&#39;]) print(unrate.head(12))   DATE VALUE 0 1948-01-01 3.4 1 1948-02-01 3.8 2 1948-03-01 4.0 3 1948-04-01 3.9 4 1948-05-01 3.5 5 1948-06-01 3.6 6 1948-07-01 3.6 7 1948-08-01 3.9 8 1948-09-01 3.8 9 1948-10-01 3.7 10 1948-11-01 3.8 11 1948-12-01 4.0  import matplotlib.pyplot as plt  #Using the different pyplot functions, we can create, customize, and display a plot." />
+<meta property="og:description" content="import pandas as pd
+
+
+unrate = pd.read_csv(&#39;UNRATE.csv&#39;)
+unrate[&#39;DATE&#39;] = pd.to_datetime(unrate[&#39;DATE&#39;])
+print(unrate.head(12))
+
+
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/plt_1/plt_1/" />
 
@@ -85,6 +93,8 @@
 unrate['DATE'] = pd.to_datetime(unrate['DATE'])
 print(unrate.head(12))
 </code></pre>
+
+<p></p>
 
 <pre><code>         DATE  VALUE
 0  1948-01-01    3.4
@@ -221,7 +231,6 @@ plt.show()
 </code></pre>
 
 <p><img src="../output_13_0.png" alt="png" /></p>
-
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -273,11 +282,11 @@ plt.show()
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/sns_1/seaborn_1/">Seaborn使用：Controlling figure aesthetics</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sns_2/seaborn_2_color_palettes/">Seaborn使用(2)：Choosing color palettes</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sns_1/seaborn_1/">Seaborn使用(1)：Controlling figure aesthetics</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_5/plt_5/">matplot的使用之四:细节设置(2/2)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_4/plt_4/">matplot的使用之四:细节设置(1/2)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_3/plt_3/">matplot的使用之三:直方图、盒形图</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/plt_2/plt_2/">matplot的使用之二:柱状图、散点图</a></li>
 		</ul>
 	</div>
 </div>

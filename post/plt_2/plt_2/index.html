@@ -7,7 +7,14 @@
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.25.1" />
 <meta property="og:title" content="matplot的使用之二:柱状图、散点图" />
-<meta property="og:description" content="import pandas as pd reviews = pd.read_csv(&#39;fandango_scores.csv&#39;) cols = [&#39;FILM&#39;, &#39;RT_user_norm&#39;, &#39;Metacritic_user_nom&#39;, &#39;IMDB_norm&#39;, &#39;Fandango_Ratingvalue&#39;, &#39;Fandango_Stars&#39;] norm_reviews = reviews[cols] print(norm_reviews[:1])   FILM RT_user_norm Metacritic_user_nom \ 0 Avengers: Age of Ultron (2015) 4.3 3.55 IMDB_norm Fandango_Ratingvalue Fandango_Stars 0 3.9 4.5 5.0  import matplotlib.pyplot as plt from numpy import arange #The Axes.bar() method has 2 required parameters, left and height. #We use the left parameter to specify the x coordinates of the left sides of the bar." />
+<meta property="og:description" content="import pandas as pd
+reviews = pd.read_csv(&#39;fandango_scores.csv&#39;)
+cols = [&#39;FILM&#39;, &#39;RT_user_norm&#39;, &#39;Metacritic_user_nom&#39;, &#39;IMDB_norm&#39;, &#39;Fandango_Ratingvalue&#39;, &#39;Fandango_Stars&#39;]
+norm_reviews = reviews[cols]
+print(norm_reviews[:1])
+
+
+" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/plt_2/plt_2/" />
 
@@ -84,6 +91,8 @@ cols = ['FILM', 'RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ra
 norm_reviews = reviews[cols]
 print(norm_reviews[:1])
 </code></pre>
+
+<p></p>
 
 <pre><code>                             FILM  RT_user_norm  Metacritic_user_nom  \
 0  Avengers: Age of Ultron (2015)           4.3                 3.55   
@@ -182,7 +191,6 @@ plt.show()
 
 <pre><code class="language-python">
 </code></pre>
-
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -237,11 +245,11 @@ plt.show()
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/sns_1/seaborn_1/">Seaborn使用：Controlling figure aesthetics</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sns_2/seaborn_2_color_palettes/">Seaborn使用(2)：Choosing color palettes</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/sns_1/seaborn_1/">Seaborn使用(1)：Controlling figure aesthetics</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_5/plt_5/">matplot的使用之四:细节设置(2/2)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_4/plt_4/">matplot的使用之四:细节设置(1/2)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/plt_3/plt_3/">matplot的使用之三:直方图、盒形图</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/plt_2/plt_2/">matplot的使用之二:柱状图、散点图</a></li>
 		</ul>
 	</div>
 </div>
