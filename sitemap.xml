@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gdhucoder.github.io/post/ml/20170905/</loc>
+    <lastmod>2017-09-07T21:25:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/post/ml_ex1/ex1/</loc>
+    <lastmod>2017-08-24T16:50:30+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/sns_2/seaborn_2_color_palettes/</loc>
     <lastmod>2017-08-14T18:44:30+08:00</lastmod>
   </url>
@@ -88,8 +98,14 @@
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/tags/ml/</loc>
+    <lastmod>2017-09-07T21:25:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/</loc>
-    <lastmod>2017-08-14T18:44:30+08:00</lastmod>
+    <lastmod>2017-09-07T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -125,13 +141,13 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</loc>
-    <lastmod>2017-08-14T18:44:30+08:00</lastmod>
+    <lastmod>2017-09-07T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
+    <lastmod>2017-09-07T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -161,7 +177,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/</loc>
-    <lastmod>2017-08-14T18:44:30+08:00</lastmod>
+    <lastmod>2017-09-07T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   

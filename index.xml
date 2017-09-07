@@ -6,10 +6,32 @@
     <description>Recent content on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Mon, 14 Aug 2017 18:44:30 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 Sep 2017 21:25:07 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>关于logistic regression</title>
+      <link>https://gdhucoder.github.io/post/ml/20170905/</link>
+      <pubDate>Thu, 07 Sep 2017 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/ml/20170905/</guid>
+      <description>逻辑回归适用于Binary Classification, Multi-class Classification问题。
+例如判断是否是垃圾邮件就属于Binary Classification问题； 手写数字识别属于Multi-class Classification问题。
+one-vs-all分类器的选择，选出可信度最高的，那么就认为是正确的分类。</description>
+    </item>
+    
+    <item>
+      <title>Mechine Learning：线性回归</title>
+      <link>https://gdhucoder.github.io/post/ml_ex1/ex1/</link>
+      <pubDate>Thu, 24 Aug 2017 16:50:30 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/ml_ex1/ex1/</guid>
+      <description>前些天开始学习机器学习相关的基础知识。 首先我们要问的问题就是机器学习是什么： Tom Mitchell提出： 一个程序能被认为从经验E中学习，解决任务T，达到性能度量值P，当且仅当，有了经验E后，经过P评判，程序在处理T时系能有所提升。 监督学习 无监督学习
+单变量线性回归 多变量线性回归 多项式回归也可以转化为线性回归 梯度下降 特征缩放 学习率 正规方程
+Octatve代码实现</description>
+    </item>
     
     <item>
       <title>Seaborn使用(2)：Choosing color palettes</title>

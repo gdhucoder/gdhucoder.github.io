@@ -6,10 +6,21 @@
     <description>Recent content in 思考 on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Mon, 14 Aug 2017 03:58:07 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 Sep 2017 21:25:07 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/categories/%E6%80%9D%E8%80%83/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>关于logistic regression</title>
+      <link>https://gdhucoder.github.io/post/ml/20170905/</link>
+      <pubDate>Thu, 07 Sep 2017 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/ml/20170905/</guid>
+      <description>逻辑回归适用于Binary Classification, Multi-class Classification问题。
+例如判断是否是垃圾邮件就属于Binary Classification问题； 手写数字识别属于Multi-class Classification问题。
+one-vs-all分类器的选择，选出可信度最高的，那么就认为是正确的分类。</description>
+    </item>
     
     <item>
       <title>思考</title>
