@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>技术 on 野生程序员</title>
-    <link>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
-    <description>Recent content in 技术 on 野生程序员</description>
+    <title>Planning on 野生程序员</title>
+    <link>https://gdhucoder.github.io/tags/planning/</link>
+    <description>Recent content in Planning on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Fri, 20 Oct 2017 21:25:07 +0800</lastBuildDate>
     
-	<atom:link href="https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gdhucoder.github.io/tags/planning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -48,79 +48,6 @@ $$P(B,E,A,J,M)=P(B)P(E)P(A|B,E)P(J|A)P(M|A)$$
  朴素贝叶斯模型(naive Bayes model)，又称为朴素贝叶斯分类器(naive Bayes classifier)，是一个包含一个根节点，多个叶节点的树状贝叶斯网。朴素贝叶斯模型包含了一个所谓的局部独立(local independence)假设，即给定类别变量C，个属性变量Ai相互条件独立。
  TAN模型 朴素贝叶斯模型的局部独立的假设在实际应用中往往不成立，为了使模型更贴近实际，可以在各个叶节点之间加上一些必要的边，以表示各变量之间的依赖关系，这种树状结构模型就称为加树朴素贝叶斯模型(tree augmented naive Bayes model)，简称TAN模型。
   动态贝叶斯网 为了能够对动态随机过程进行表达和推理，人们引入了动态贝叶斯网(dynamic Bayesian networks, DBN)的概念，它又称为时变贝叶斯网(temporal Bayesian networks)。 动态贝叶斯网包含了两个假设：一是一阶马尔可夫假设，二是时齐性或者齐次性。</description>
-    </item>
-    
-    <item>
-      <title>matplot的使用之四:细节设置(2/2)</title>
-      <link>https://gdhucoder.github.io/post/plt_5/plt_5/</link>
-      <pubDate>Wed, 09 Aug 2017 21:44:30 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/plt_5/plt_5/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#Color
-import pandas as pd
-import matplotlib.pyplot as plt
-
-women_degrees = pd.read_csv(&#39;percent-bachelors-degrees-women-usa.csv&#39;)
-major_cats = [&#39;Biology&#39;, &#39;Computer Science&#39;, &#39;Engineering&#39;, &#39;Math and Statistics&#39;]</description>
-    </item>
-    
-    <item>
-      <title>matplot的使用之四:细节设置(1/2)</title>
-      <link>https://gdhucoder.github.io/post/plt_4/plt_4/</link>
-      <pubDate>Wed, 09 Aug 2017 20:44:30 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/plt_4/plt_4/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-import matplotlib.pyplot as plt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>matplot的使用之三:直方图、盒形图</title>
-      <link>https://gdhucoder.github.io/post/plt_3/plt_3/</link>
-      <pubDate>Wed, 09 Aug 2017 19:44:30 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/plt_3/plt_3/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-import matplotlib.pyplot as plt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>matplot的使用之二:柱状图、散点图</title>
-      <link>https://gdhucoder.github.io/post/plt_2/plt_2/</link>
-      <pubDate>Tue, 08 Aug 2017 21:44:30 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/plt_2/plt_2/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-reviews = pd.read_csv(&#39;fandango_scores.csv&#39;)
-cols = [&#39;FILM&#39;, &#39;RT_user_norm&#39;, &#39;Metacritic_user_nom&#39;, &#39;IMDB_norm&#39;, &#39;Fandango_Ratingvalue&#39;, &#39;Fandango_Stars&#39;]
-norm_reviews = reviews[cols]
-print(norm_reviews[:1])
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>matplot的使用之一:折线图、子图</title>
-      <link>https://gdhucoder.github.io/post/plt_1/plt_1/</link>
-      <pubDate>Thu, 03 Aug 2017 21:44:30 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/plt_1/plt_1/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;unrate = pd.read_csv(&#39;UNRATE.csv&#39;)
-unrate[&#39;DATE&#39;] = pd.to_datetime(unrate[&#39;DATE&#39;])
-print(unrate.head(12))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

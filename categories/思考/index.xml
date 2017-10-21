@@ -23,6 +23,24 @@ one-vs-all分类器的选择，选出可信度最高的，那么就认为是正�
     </item>
     
     <item>
+      <title>机器学习的一些概念</title>
+      <link>https://gdhucoder.github.io/post/ml/20170907/</link>
+      <pubDate>Thu, 07 Sep 2017 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/ml/20170907/</guid>
+      <description>中英文对照
+neural networks 神经网络
+activation function 激活函数
+hyperbolic tangent 双曲正切函数
+bias units 偏置项
+activation 激活值
+forward propagation 前向传播
+feedforward neural network 前馈神经网络(参照Mitchell的《机器学习》的翻译)
+Unsupervised Feature Learning and Deep Learning
+深度学习的入门知识介绍 http://deeplearning.stanford.edu/wiki/index.php/Main_Page</description>
+    </item>
+    
+    <item>
       <title>思考</title>
       <link>https://gdhucoder.github.io/thinking/rd_0/</link>
       <pubDate>Mon, 14 Aug 2017 03:58:07 +0800</pubDate>
