@@ -7,11 +7,6 @@
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/post/scala/20171022/</loc>
-    <lastmod>2017-10-22T21:25:07+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gdhucoder.github.io/post/skill/how_to_build_blog/</loc>
     <lastmod>2017-10-22T21:25:07+08:00</lastmod>
   </url>
@@ -165,12 +160,6 @@
   <url>
     <loc>https://gdhucoder.github.io/reading/</loc>
     <lastmod>2017-08-14T03:58:07+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://gdhucoder.github.io/tags/scala/</loc>
-    <lastmod>2017-10-22T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   

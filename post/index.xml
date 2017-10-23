@@ -27,21 +27,6 @@
     </item>
     
     <item>
-      <title>Scala之退出sbt shell console</title>
-      <link>https://gdhucoder.github.io/post/scala/20171022/</link>
-      <pubDate>Sun, 22 Oct 2017 21:25:07 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/scala/20171022/</guid>
-      <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;scala version： Scala 2.12.3 (Java HotSpot&amp;trade; 64-Bit Server VM, Java 1.8.0_144)&lt;/p&gt;
-
-&lt;p&gt;1.如何退出scala的SBT shell console?&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>如何建立自己的博客</title>
       <link>https://gdhucoder.github.io/post/skill/how_to_build_blog/</link>
       <pubDate>Sun, 22 Oct 2017 21:25:07 +0800</pubDate>
