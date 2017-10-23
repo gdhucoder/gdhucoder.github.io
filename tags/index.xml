@@ -6,19 +6,10 @@
     <description>Recent content in Tags on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sat, 21 Oct 2017 21:25:07 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 Aug 2017 03:58:07 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Bayes</title>
-      <link>https://gdhucoder.github.io/tags/bayes/</link>
-      <pubDate>Sat, 21 Oct 2017 21:25:07 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/bayes/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Books</title>
@@ -77,7 +68,7 @@
     <item>
       <title>Planning</title>
       <link>https://gdhucoder.github.io/tags/planning/</link>
-      <pubDate>Sat, 21 Oct 2017 21:25:07 +0800</pubDate>
+      <pubDate>Fri, 20 Oct 2017 21:25:07 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/tags/planning/</guid>
       <description></description>
