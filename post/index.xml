@@ -27,22 +27,6 @@
     </item>
     
     <item>
-      <title>如何建立自己的博客</title>
-      <link>https://gdhucoder.github.io/post/skill/how_to_build_blog/</link>
-      <pubDate>Sun, 22 Oct 2017 21:25:07 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/skill/how_to_build_blog/</guid>
-      <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;本篇介绍如何建立个人博客。
-- 适用于想自己建立免费个人博客以及想尝试md语言写作的朋友。
-- 不需要编程基础：您不需要学习java、python等等建立动态网站，将博客文章内容保存在数据库中。
-- 只需要几条命令就可以生成博客及托管至github或gitosc。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>贝叶斯引论（一）</title>
       <link>https://gdhucoder.github.io/post/planning/pln_1/pln_1/</link>
       <pubDate>Fri, 20 Oct 2017 21:25:07 +0800</pubDate>
