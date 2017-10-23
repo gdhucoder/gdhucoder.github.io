@@ -6,10 +6,69 @@
     <description>Recent content in Posts on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Fri, 20 Oct 2017 21:25:07 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Oct 2017 21:25:07 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何使用gitee作为免费图床</title>
+      <link>https://gdhucoder.github.io/post/tech_details/gitee_as_pic_storage/</link>
+      <pubDate>Mon, 23 Oct 2017 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/tech_details/gitee_as_pic_storage/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;本篇文章是一个启发，介绍如何使用gitee作为免费图床。
+没有使用github的原因是因为github国内访问有些慢。
+另外，还有其他优秀的云存储，例如7niu。朋友们可以试一下。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Scala之退出sbt shell console</title>
+      <link>https://gdhucoder.github.io/post/scala/20171022/</link>
+      <pubDate>Sun, 22 Oct 2017 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/scala/20171022/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;scala version： Scala 2.12.3 (Java HotSpot&amp;trade; 64-Bit Server VM, Java 1.8.0_144)&lt;/p&gt;
+
+&lt;p&gt;1.如何退出scala的SBT shell console?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何建立自己的博客</title>
+      <link>https://gdhucoder.github.io/post/skill/how_to_build_blog/</link>
+      <pubDate>Sun, 22 Oct 2017 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/skill/how_to_build_blog/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;本篇介绍如何建立个人博客。
+- 适用于想自己建立免费个人博客以及想尝试md语言写作的朋友。
+- 不需要编程基础：您不需要学习java、python等等建立动态网站，将博客文章内容保存在数据库中。
+- 只需要几条命令就可以生成博客及托管至github或gitosc。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>贝叶斯引论（二）</title>
+      <link>https://gdhucoder.github.io/post/planning/pln_1/pln_2/</link>
+      <pubDate>Sat, 21 Oct 2017 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/planning/pln_1/pln_2/</guid>
+      <description>[TOC]
+Probabilistic models and probabilistic programs A probabilistic model is a formal representation of a probability distribution over possible worlds.
+The goal of probabilistic inference algorithms is to answer queries efficiently.
+KEY DEFINITIONS Possible worlds—All states you consider possible Probability distribution—An assignment of a probability between 0 and 1 to each possible world, such that all of the probabilities add up to 1
+Probabilistic model—A formal representation of a probability distribution over possible worlds Evidence—Knowledge that you have about a specific situation Prior probability distribution—The probability distribution before seeing any evidence Conditioning on the evidence—The process of applying evidence to a probability distribution Posterior probability distribution—The probability distribution after seeing the evidence; the result of conditioning Normalizing—The process of proportionally adjusting a set of numbers so they add up to 1</description>
+    </item>
     
     <item>
       <title>贝叶斯引论（一）</title>

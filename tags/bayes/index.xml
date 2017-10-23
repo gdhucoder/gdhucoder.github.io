@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bayes on 野生程序员</title>
+    <link>https://gdhucoder.github.io/tags/bayes/</link>
+    <description>Recent content in Bayes on 野生程序员</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Sat, 21 Oct 2017 21:25:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://gdhucoder.github.io/tags/bayes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>贝叶斯引论（二）</title>
+      <link>https://gdhucoder.github.io/post/planning/pln_1/pln_2/</link>
+      <pubDate>Sat, 21 Oct 2017 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/planning/pln_1/pln_2/</guid>
+      <description>[TOC]
+Probabilistic models and probabilistic programs A probabilistic model is a formal representation of a probability distribution over possible worlds.
+The goal of probabilistic inference algorithms is to answer queries efficiently.
+KEY DEFINITIONS Possible worlds—All states you consider possible Probability distribution—An assignment of a probability between 0 and 1 to each possible world, such that all of the probabilities add up to 1
+Probabilistic model—A formal representation of a probability distribution over possible worlds Evidence—Knowledge that you have about a specific situation Prior probability distribution—The probability distribution before seeing any evidence Conditioning on the evidence—The process of applying evidence to a probability distribution Posterior probability distribution—The probability distribution after seeing the evidence; the result of conditioning Normalizing—The process of proportionally adjusting a set of numbers so they add up to 1</description>
+    </item>
+    
+  </channel>
+</rss>

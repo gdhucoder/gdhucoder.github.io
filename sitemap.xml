@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gdhucoder.github.io/post/tech_details/gitee_as_pic_storage/</loc>
+    <lastmod>2017-10-23T21:25:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/post/scala/20171022/</loc>
+    <lastmod>2017-10-22T21:25:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/post/skill/how_to_build_blog/</loc>
+    <lastmod>2017-10-22T21:25:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/post/planning/pln_1/pln_2/</loc>
+    <lastmod>2017-10-21T21:25:07+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/planning/pln_1/pln_1/</loc>
     <lastmod>2017-10-20T21:25:07+08:00</lastmod>
   </url>
@@ -78,6 +98,12 @@
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/tags/bayes/</loc>
+    <lastmod>2017-10-21T21:25:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/tags/books/</loc>
     <lastmod>2017-08-14T03:58:07+08:00</lastmod>
     <priority>0</priority>
@@ -85,6 +111,12 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/tags/git/</loc>
+    <lastmod>2017-10-23T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -114,13 +146,13 @@
   
   <url>
     <loc>https://gdhucoder.github.io/tags/planning/</loc>
-    <lastmod>2017-10-20T21:25:07+08:00</lastmod>
+    <lastmod>2017-10-21T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/post/</loc>
-    <lastmod>2017-10-20T21:25:07+08:00</lastmod>
+    <lastmod>2017-10-23T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -137,14 +169,26 @@
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/tags/scala/</loc>
+    <lastmod>2017-10-22T21:25:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/tags/seaborn/</loc>
     <lastmod>2017-08-14T18:44:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/tags/skill/</loc>
+    <lastmod>2017-10-22T21:25:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/tags/</loc>
-    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
+    <lastmod>2017-10-21T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -156,7 +200,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</loc>
-    <lastmod>2017-10-20T21:25:07+08:00</lastmod>
+    <lastmod>2017-10-23T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -168,7 +212,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2017-10-20T21:25:07+08:00</lastmod>
+    <lastmod>2017-10-23T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -192,7 +236,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/</loc>
-    <lastmod>2017-10-20T21:25:07+08:00</lastmod>
+    <lastmod>2017-10-23T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   

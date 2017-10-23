@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scala on 野生程序员</title>
+    <link>https://gdhucoder.github.io/tags/scala/</link>
+    <description>Recent content in Scala on 野生程序员</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Sun, 22 Oct 2017 21:25:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://gdhucoder.github.io/tags/scala/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Scala之退出sbt shell console</title>
+      <link>https://gdhucoder.github.io/post/scala/20171022/</link>
+      <pubDate>Sun, 22 Oct 2017 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/scala/20171022/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;scala version： Scala 2.12.3 (Java HotSpot&amp;trade; 64-Bit Server VM, Java 1.8.0_144)&lt;/p&gt;
+
+&lt;p&gt;1.如何退出scala的SBT shell console?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
