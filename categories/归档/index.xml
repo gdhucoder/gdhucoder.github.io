@@ -13,22 +13,6 @@
     
     <item>
       <title>如何使用gitee作为免费图床</title>
-      <link>https://gdhucoder.github.io/post/planning/pln_1/how_to_use_gitee_as_pic_storage/</link>
-      <pubDate>Mon, 23 Oct 2017 21:25:07 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/planning/pln_1/how_to_use_gitee_as_pic_storage/</guid>
-      <description> [TOC]
-Ust Gitee as public pictures storage. Step 1  Create a project as your picture storage submit you pictures  Step 2 How to use it?
-This is a sample:
- change blob in is link into raw!
-https://gitee.com/gdhu/prvpic/*blob*/master/Image_001.png
- Into:
-https://gitee.com/gdhu/prvpic/*raw*/master/Image_001.png
-  </description>
-    </item>
-    
-    <item>
-      <title>如何使用gitee作为免费图床</title>
       <link>https://gdhucoder.github.io/post/tech_details/gitee_as_pic_storage/</link>
       <pubDate>Mon, 23 Oct 2017 21:25:07 +0800</pubDate>
       
