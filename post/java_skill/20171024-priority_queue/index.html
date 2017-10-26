@@ -3,23 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>matplot的使用之四:细节设置(1/2)</title>
+<title>Priority Queues</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.30" />
-<meta property="og:title" content="matplot的使用之四:细节设置(1/2)" />
-<meta property="og:description" content="import pandas as pd
-import matplotlib.pyplot as plt
+<meta property="og:title" content="Priority Queues" />
+<meta property="og:description" content="[TOC]
 
+本篇文章主要介绍优先队列(Priority Queue)和嵌套类(nested class)的基本用法。
+接下来的文章会介绍在实现例如Greedy Best First Search和AStar搜索算法中使用priority queue。
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/plt_4/plt_4/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/java_skill/20171024-priority_queue/" />
 
 
 
-<meta property="article:published_time" content="2017-08-09T20:44:30&#43;08:00"/>
+<meta property="article:published_time" content="2017-10-24T21:25:07&#43;08:00"/>
 
-<meta property="article:modified_time" content="2017-08-09T20:44:30&#43;08:00"/>
+<meta property="article:modified_time" content="2017-10-24T21:25:07&#43;08:00"/>
 
 
 
@@ -77,109 +78,168 @@ import matplotlib.pyplot as plt
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">matplot的使用之四:细节设置(1/2)</h1>
+			<h1 class="post__title">Priority Queues</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-08-09T20:44:30">August 09, 2017</time>
+				<time class="post__meta-date" datetime="2017-10-24T21:25:07">October 24, 2017</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
 			</p>
 		</header>
 		<div class="post__content clearfix">
-			<pre><code class="language-python">import pandas as pd
-import matplotlib.pyplot as plt
-</code></pre>
+			<p>[TOC]</p>
+
+<p>本篇文章主要介绍优先队列(Priority Queue)和嵌套类(nested class)的基本用法。
+接下来的文章会介绍在实现例如Greedy Best First Search和AStar搜索算法中使用priority queue。</p>
 
 <p></p>
 
-<pre><code class="language-python">women_degrees = pd.read_csv('percent-bachelors-degrees-women-usa.csv')
-plt.plot(women_degrees['Year'], women_degrees['Agriculture'])
-plt.show()
+<h3 id="priority-queue">Priority Queue</h3>
+
+<ul>
+<li><p>In priority queue:</p></li>
+
+<li><p>The order of the queue is controlled by implementing <strong>Comparable</strong>.</p></li>
+</ul>
+
+<h3 id="nested-class-java嵌套类">Nested Class: Java嵌套类</h3>
+
+<ul>
+<li><p>if you make an inner class <strong>static</strong>, this is commonly called <strong>a nested class</strong>.</p></li>
+
+<li><p>create an inner class, you don&rsquo;t need an outer-class object.</p></li>
+
+<li><p>you can not access a non-static outer-class object from an object of a nested class.</p></li>
+</ul>
+
+<h3 id="example-1-without-nested-class">Example 1 (without nested class)</h3>
+
+<ul>
+<li>Here is an example to show how we can specify order using Priority Queue.</li>
+</ul>
+
+<!--more-->
+
+<pre><code class="language-java">
+/**
+ * an example of Priority Queue
+ * Created by HuGuodong on 2017/10/25.
+ */
+
+public class ToDoList extends PriorityQueue&lt;ToDoList.ToDoItem&gt;{
+     class ToDoItem implements Comparable&lt;ToDoItem&gt; {
+            private char primary;
+            private int secondary;
+            private String item;
+            public ToDoItem(char pri, int sec, String i) {
+                this.primary = pri;
+                this.secondary = sec;
+                this.item = i;
+            }
+
+         /**
+          * order by the first arg, then the second arg
+          * @param o
+          * @return
+          */
+         @Override
+            public int compareTo(ToDoItem o) {
+                if (primary &gt; o.primary) {
+                    return 1;
+                }
+                if (primary == o.primary) {
+                    if (secondary &gt; o.secondary) {
+
+                        return 1;
+                    } else if (secondary == o.secondary) {
+                        return 0;
+                    }
+                }
+                return -1;
+            }
+            public String toString() {
+                return Character.toString(primary) + secondary + &quot;: &quot; + item;
+            }
+        }
+        public void add(char pri, int sec, String item){
+            super.add(new ToDoItem(pri, sec, item));
+        }
+
+    public static void main(String[] args){
+        ToDoList toDoList = new ToDoList();
+        toDoList.add('c', 16,&quot;Fog&quot;);
+        toDoList.add('c', 3,&quot;Dog&quot;);
+        toDoList.add('a', 2,&quot;Aog&quot;);
+        while(!toDoList.isEmpty()){
+            // remove is the same as poll, except its throw Exception, when it's empty.
+            System.out.println(toDoList.remove());
+            //System.out.println(toDoList.poll());
+        }
+//            result:
+//            a2: Aog
+//            c3: Dog
+//            c16: Fog
+    }
+}
+
 </code></pre>
 
-<p><img src="../output_1_0.png" alt="png" /></p>
+<h3 id="example-2-nested-class">Example 2 (nested class)</h3>
 
-<pre><code class="language-python"># 100 - women_degrees means men
-plt.plot(women_degrees['Year'], women_degrees['Agriculture'], c='blue',label='Women')
-plt.plot(women_degrees['Year'], 100-women_degrees['Agriculture'], c='green',label='Men')
-plt.legend(loc='upper right')
-plt.title('Percentage of Agriculture Degrees Awarded By Gender')
-plt.show()
-</code></pre>
+<ul>
+<li>Here is an example of using static inner class to implement PriorityQueue.</li>
+</ul>
 
-<p><img src="../output_2_0.png" alt="png" /></p>
+<pre><code class="language-java">public class MyPriorityQueue extends PriorityQueue&lt;MyPriorityQueue.Student&gt;{
 
-<pre><code class="language-python"># 100 - women_degrees means men
-# 去掉坐标轴上面的刻度
-plt.plot(women_degrees['Year'], women_degrees['Agriculture'], c='blue',label='Women')
-plt.plot(women_degrees['Year'], 100-women_degrees['Agriculture'], c='green',label='Men')
-plt.legend(loc='upper right')
-plt.tick_params(bottom='off', top='off', left='off', right='off')
-plt.title('Percentage of Agriculture Degrees Awarded By Gender')
-plt.show()
-</code></pre>
+    public static void main(String[] args){
+        MyPriorityQueue que = new MyPriorityQueue();
+        que.add(new Student(100, &quot;guodong_hu&quot;));
+        que.add(new Student(99, &quot;xie&quot;));
+        que.add(new Student(1, &quot;lin&quot;));
+        while (!que.isEmpty()){
+            System.out.println(que.poll());
+        }
+    }
 
-<p><img src="../output_3_0.png" alt="png" /></p>
+    static class Student implements Comparable&lt;Student&gt;{
+        Integer no;
+        String name;
+        public Student(Integer no, String name){
+            this.no = no;
+            this.name = name;
+        }
 
-<pre><code class="language-python">fig, ax = plt.subplots()
-ax.plot(women_degrees['Year'], women_degrees['Biology'], c='blue', label='Women')
-ax.plot(women_degrees['Year'], 100-women_degrees['Biology'], c='green', label='Men')
-ax.tick_params(bottom=&quot;off&quot;, top=&quot;off&quot;, left=&quot;off&quot;, right=&quot;off&quot;)
+        @Override
+        public int compareTo(Student stu) {
+            int result;
+            if(no &gt; stu.no){
+                result = 1;
+            }else if(no == stu.no){
+                result = 0;
+            }else{
+                result = -1;
+            }
+            return result;
+        }
 
-# 去掉四周方框
-for key,spine in ax.spines.items():
-    spine.set_visible(False)
-
-ax.legend(loc='upper right')
-plt.show()
-</code></pre>
-
-<p><img src="../output_4_0.png" alt="png" /></p>
-
-<pre><code class="language-python"># 生成四个图
-major_cats = ['Biology', 'Computer Science', 'Engineering', 'Math and Statistics']
-fig = plt.figure(figsize=(12,12))
-
-for sp in range(0,4):
-    ax = fig.add_subplot(2, 2, sp+1)
-    ax.plot(women_degrees['Year'], women_degrees[major_cats[sp]], c='blue', label='Women')
-    ax.plot(women_degrees['Year'], 100-women_degrees[major_cats[sp]], c='green', label='Men')
-plt.legend(loc='upper right')
-plt.show()
-
-major_cats = ['Biology', 'Computer Science', 'Engineering', 'Math and Statistics']
-fig = plt.figure(figsize=(12,12))
-
-# 四个没有边框的图
-for sp in range(0,4):
-    ax = fig.add_subplot(2, 2, sp+1)
-    ax.plot(women_degrees['Year'], women_degrees[major_cats[sp]], c='blue', label='Women')
-    ax.plot(women_degrees['Year'], 100-women_degrees[major_cats[sp]], c='green', label='Men')
-    ax.tick_params(bottom=&quot;off&quot;, top=&quot;off&quot;, left=&quot;off&quot;, right=&quot;off&quot;)
-    for key,spine in ax.spines.items():
-        spine.set_visible(False)
-    ax.set_xlim(1968, 2011)
-    ax.set_ylim(0, 100)
-plt.legend(loc='upper right')
-plt.show()
-
-</code></pre>
-
-<p><img src="../output_5_0.png" alt="png" /></p>
-
-<p><img src="../output_5_1.png" alt="png" /></p>
-
-<pre><code class="language-python">
+        @Override
+        public String toString() {
+            return &quot;Student{&quot; +
+                    &quot;no=&quot; + no +
+                    &quot;, name='&quot; + name + '\'' +
+                    '}';
+        }
+    }
+}
 </code></pre>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/python/" rel="tag">Python</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/matplotlib/" rel="tag">Matplotlib</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">数据可视化</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/java/" rel="tag">JAVA</a></li>
 	</ul>
 </div>
 
@@ -199,10 +259,10 @@ plt.show()
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/plt_3/plt_3/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">matplot的使用之三:直方图、盒形图</p></a>
+		<a class="post-nav__link" href="/post/tech_details/gitee_as_pic_storage/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">如何使用gitee作为免费图床</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/plt_5/plt_5/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">matplot的使用之四:细节设置(2/2)</p></a>
+		<a class="post-nav__link" href="/post/java_skill/20171025-heuristic_search_gbfs/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Heuristic Search之Greedy Best First Search</p></a>
 	</div>
 </nav>
 

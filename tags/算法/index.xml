@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on 野生程序员</title>
+    <link>https://gdhucoder.github.io/tags/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on 野生程序员</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Wed, 25 Oct 2017 21:25:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://gdhucoder.github.io/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Heuristic Search之Greedy Best First Search</title>
+      <link>https://gdhucoder.github.io/post/java_skill/20171025-heuristic_search_gbfs/</link>
+      <pubDate>Wed, 25 Oct 2017 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/java_skill/20171025-heuristic_search_gbfs/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;本篇文章介绍Greedy Best Fisrt Search算法。实现GBFS算法时使用了上篇文章介绍的优先队列。上篇文章介绍了如何使用优先队列。
+下篇文章将尝试介绍著名的A star算法。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

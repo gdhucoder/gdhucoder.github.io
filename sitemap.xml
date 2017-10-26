@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://gdhucoder.github.io/post/java_skill/20171025-heuristic_search_gbfs/</loc>
+    <lastmod>2017-10-25T21:25:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/post/java_skill/20171024-priority_queue/</loc>
+    <lastmod>2017-10-24T21:25:07+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/tech_details/gitee_as_pic_storage/</loc>
     <lastmod>2017-10-23T21:25:07+08:00</lastmod>
   </url>
@@ -100,6 +110,12 @@
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/tags/java/</loc>
+    <lastmod>2017-10-24T21:25:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/tags/markdown/</loc>
     <lastmod>2017-08-14T03:58:07+08:00</lastmod>
     <priority>0</priority>
@@ -131,7 +147,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/post/</loc>
-    <lastmod>2017-10-23T21:25:07+08:00</lastmod>
+    <lastmod>2017-10-25T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -167,7 +183,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</loc>
-    <lastmod>2017-10-23T21:25:07+08:00</lastmod>
+    <lastmod>2017-10-25T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -179,13 +195,19 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2017-10-23T21:25:07+08:00</lastmod>
+    <lastmod>2017-10-25T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</loc>
     <lastmod>2017-08-14T18:44:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2017-10-25T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -203,7 +225,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/</loc>
-    <lastmod>2017-10-23T21:25:07+08:00</lastmod>
+    <lastmod>2017-10-25T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
