@@ -19,7 +19,7 @@
       <guid>https://gdhucoder.github.io/post/java_skill/20171025-heuristic_search_gbfs/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
 
-&lt;p&gt;本篇文章介绍Greedy Best Fisrt Search算法。实现GBFS算法时使用了上篇文章介绍的优先队列。上篇文章介绍了如何使用优先队列。
+&lt;p&gt;本篇文章介绍Greedy Best Fisrt Search算法。实现GBFS算法时使用了上篇文章介绍的优先队列。
 下篇文章将尝试介绍著名的A star算法。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
