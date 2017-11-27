@@ -3,24 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Priority Queues</title>
+<title>什么是蒙特卡罗</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.30" />
-<meta property="og:title" content="Priority Queues" />
+<meta property="og:title" content="什么是蒙特卡罗" />
 <meta property="og:description" content="[TOC]
 
-本篇文章主要介绍优先队列(Priority Queue)和嵌套类(nested class)的基本用法。
-接下来的文章会介绍在实现例如Greedy Best First Search和AStar搜索算法中使用priority queue。
+乍一听“蒙特卡罗”这个词，完全不知所云，我感到很奇怪，一个搜索算法Monte Carlo Tree Search为什么叫蒙特卡罗。
+于是，就有了下面的文字。
+
+本篇文章主要介绍MonteCarlo方法的由来，及简单的一个应用-求π的值。
+下篇将会介绍：什么是Monte Carlo Tree Search算法。
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/java_skill/20171024-priority_queue/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/planning/montecarlo/monte_carlo/" />
 
 
 
-<meta property="article:published_time" content="2017-10-24T21:25:07&#43;08:00"/>
+<meta property="article:published_time" content="2017-11-26T21:25:07&#43;08:00"/>
 
-<meta property="article:modified_time" content="2017-10-24T21:25:07&#43;08:00"/>
+<meta property="article:modified_time" content="2017-11-26T21:25:07&#43;08:00"/>
 
 
 
@@ -78,10 +81,10 @@
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">Priority Queues</h1>
+			<h1 class="post__title">什么是蒙特卡罗</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-10-24T21:25:07">October 24, 2017</time>
+				<time class="post__meta-date" datetime="2017-11-26T21:25:07">November 26, 2017</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
@@ -90,156 +93,72 @@
 		<div class="post__content clearfix">
 			<p>[TOC]</p>
 
-<p>本篇文章主要介绍优先队列(Priority Queue)和嵌套类(nested class)的基本用法。
-接下来的文章会介绍在实现例如Greedy Best First Search和AStar搜索算法中使用priority queue。</p>
+<p>乍一听“蒙特卡罗”这个词，完全不知所云，我感到很奇怪，一个搜索算法Monte Carlo Tree Search为什么叫蒙特卡罗。
+于是，就有了下面的文字。</p>
+
+<p>本篇文章主要介绍MonteCarlo方法的由来，及简单的一个应用-求π的值。
+下篇将会介绍：什么是Monte Carlo Tree Search算法。</p>
 
 <p></p>
 
-<h3 id="priority-queue">Priority Queue</h3>
+<h3 id="蒙特卡罗方法概述">蒙特卡罗方法概述</h3>
+
+<p>蒙特卡罗方法又称统计模拟法、随机抽样技术，是一种随机模拟方法，以概率和统计理论方法为基础的一种计算方法，是使用随机数（或更常见的伪随机数）来解决很多计算问题的方法。将所求解的问题同一定的概率模型相联系，用电子计算机实现统计模拟或抽样，以获得问题的近似解。为象征性地表明这一方法的概率统计特征，故借用赌城蒙特卡罗命名。</p>
+
+<p>让我们看看蒙特卡罗赌城。</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/4800606-ca8ec6986883110e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="赌城夜景" /></p>
+
+<p>赌城的标志。</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/4800606-f3f9bed551a7d351.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Casino" /></p>
+
+<p>赌城内部非常豪华，金碧辉煌。</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/4800606-614b4a625407154d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="赌城内部" /></p>
+
+<h3 id="蒙特卡罗方法的提出">蒙特卡罗方法的提出</h3>
+
+<p>蒙特卡罗方法于20世纪40年代美国在第二次世界大战中研制原子弹的“曼哈顿计划”计划的成员S.M.乌拉姆和J.冯·诺伊曼首先提出。数学家冯·诺伊曼用驰名世界的赌城—摩纳哥的Monte Carlo—来命名这种方法，为它蒙上了一层神秘色彩。在这之前，蒙特卡罗方法就已经存在。1777年，法国Buffon提出用投针实验的方法求圆周率∏。这被认为是蒙特卡罗方法的起源。</p>
+
+<h3 id="例子-π的计算">例子：π的计算</h3>
+
+<p>如何用蒙特卡罗方法计算圆周率π。正方形内部有一个相切的圆，它们的面积之比是π/4。现在，在这个正方形内部，随机产生10000个点（即10000个坐标对 (x, y)），计算它们与中心点的距离，从而判断是否落在圆的内部。如果这些点均匀分布，那么圆内的点应该占到所有点的 π/4，因此将这个比值乘以4，就是π的值。</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/4800606-384999767a54a361.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例1-1" /></p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/4800606-f6b6fc7aa77736bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例1-2：圆面积/正方形面积" /></p>
+
+<p>使用R语言模拟抽样10000次的结果，估计π结果如下：</p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/4800606-4e9d1109abb2e9f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例1-3：抽样计算结果" /></p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/4800606-dae258e365af2434.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例1-4：R代码" /></p>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/4800606-29c37454a4920f86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图例1-5：抽检区间1-2000次后估计π的误差" /></p>
+
+<p>从上图我们可以看出，随着抽样次数的增加，估计的π值和真实值越来越接近。</p>
+
+<h3 id="结语">结语</h3>
+
+<p>关于什么是蒙特卡罗就介绍到这里。抽样的思想已在各个领域产生深刻的影响。</p>
+
+<h3 id="参考资料">参考资料</h3>
+
+<p>将部分参考资料列出如下，感谢前人的工作！</p>
 
 <ul>
-<li><p>In priority queue:</p></li>
+<li><p><a href="http://wiki.mbalib.com/wiki/%E8%92%99%E7%89%B9%E5%8D%A1%E7%BD%97%E6%96%B9%E6%B3%95">mbalib中的部分介绍</a></p></li>
 
-<li><p>The order of the queue is controlled by implementing <strong>Comparable</strong>.</p></li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2015/07/monte-carlo-method.html">阮一峰的博客</a></p></li>
 </ul>
-
-<h3 id="nested-class-java嵌套类">Nested Class: Java嵌套类</h3>
-
-<ul>
-<li><p>if you make an inner class <strong>static</strong>, this is commonly called <strong>a nested class</strong>.</p></li>
-
-<li><p>create an inner class, you don&rsquo;t need an outer-class object.</p></li>
-
-<li><p>you can not access a non-static outer-class object from an object of a nested class.</p></li>
-</ul>
-
-<h3 id="example-1-without-nested-class">Example 1 (without nested class)</h3>
-
-<ul>
-<li>Here is an example to show how we can specify order using Priority Queue.</li>
-</ul>
-
-<!--more-->
-
-<pre><code class="language-java">
-/**
- * an example of Priority Queue
- * Created by HuGuodong on 2017/10/25.
- */
-
-public class ToDoList extends PriorityQueue&lt;ToDoList.ToDoItem&gt;{
-     class ToDoItem implements Comparable&lt;ToDoItem&gt; {
-            private char primary;
-            private int secondary;
-            private String item;
-            public ToDoItem(char pri, int sec, String i) {
-                this.primary = pri;
-                this.secondary = sec;
-                this.item = i;
-            }
-
-         /**
-          * order by the first arg, then the second arg
-          * @param o
-          * @return
-          */
-         @Override
-            public int compareTo(ToDoItem o) {
-                if (primary &gt; o.primary) {
-                    return 1;
-                }
-                if (primary == o.primary) {
-                    if (secondary &gt; o.secondary) {
-
-                        return 1;
-                    } else if (secondary == o.secondary) {
-                        return 0;
-                    }
-                }
-                return -1;
-            }
-            public String toString() {
-                return Character.toString(primary) + secondary + &quot;: &quot; + item;
-            }
-        }
-        public void add(char pri, int sec, String item){
-            super.add(new ToDoItem(pri, sec, item));
-        }
-
-    public static void main(String[] args){
-        ToDoList toDoList = new ToDoList();
-        toDoList.add('c', 16,&quot;Fog&quot;);
-        toDoList.add('c', 3,&quot;Dog&quot;);
-        toDoList.add('a', 2,&quot;Aog&quot;);
-        while(!toDoList.isEmpty()){
-            // remove is the same as poll, except its throw Exception, when it's empty.
-            System.out.println(toDoList.remove());
-            //System.out.println(toDoList.poll());
-        }
-//            result:
-//            a2: Aog
-//            c3: Dog
-//            c16: Fog
-    }
-}
-
-</code></pre>
-
-<h3 id="example-2-nested-class">Example 2 (nested class)</h3>
-
-<ul>
-<li>Here is an example of using static inner class to implement PriorityQueue.</li>
-</ul>
-
-<pre><code class="language-java">public class MyPriorityQueue extends PriorityQueue&lt;MyPriorityQueue.Student&gt;{
-
-    public static void main(String[] args){
-        MyPriorityQueue que = new MyPriorityQueue();
-        que.add(new Student(100, &quot;guodong_hu&quot;));
-        que.add(new Student(99, &quot;xie&quot;));
-        que.add(new Student(1, &quot;lin&quot;));
-        while (!que.isEmpty()){
-            System.out.println(que.poll());
-        }
-    }
-
-    static class Student implements Comparable&lt;Student&gt;{
-        Integer no;
-        String name;
-        public Student(Integer no, String name){
-            this.no = no;
-            this.name = name;
-        }
-
-        @Override
-        public int compareTo(Student stu) {
-            int result;
-            if(no &gt; stu.no){
-                result = 1;
-            }else if(no == stu.no){
-                result = 0;
-            }else{
-                result = -1;
-            }
-            return result;
-        }
-
-        @Override
-        public String toString() {
-            return &quot;Student{&quot; +
-                    &quot;no=&quot; + no +
-                    &quot;, name='&quot; + name + '\'' +
-                    '}';
-        }
-    }
-}
-</code></pre>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/java/" rel="tag">JAVA</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/planning/" rel="tag">PLANNING</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/mc/" rel="tag">MC</a></li>
 	</ul>
 </div>
 
@@ -259,10 +178,7 @@ public class ToDoList extends PriorityQueue&lt;ToDoList.ToDoItem&gt;{
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/tech_details/gitee_as_pic_storage/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">如何使用gitee作为免费图床</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/java_skill/20171025-heuristic_search_gbfs/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Heuristic Search之Greedy Best First Search</p></a>
+		<a class="post-nav__link" href="/post/java_skill/20171025-heuristic_search_gbfs/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Heuristic Search之Greedy Best First Search</p></a>
 	</div>
 </nav>
 
