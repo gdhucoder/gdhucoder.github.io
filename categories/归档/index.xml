@@ -6,10 +6,24 @@
     <description>Recent content in 归档 on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sun, 26 Nov 2017 21:25:07 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jan 2018 21:25:07 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>基于试验的启发式树搜索</title>
+      <link>https://gdhucoder.github.io/post/planning/kellerthesis/2018-01-05/</link>
+      <pubDate>Thu, 04 Jan 2018 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/planning/kellerthesis/2018-01-05/</guid>
+      <description>[TOC]
+概念： 给定一个MDP，一个agent可以访问：
+ 环境先验模型（a-priori model of environment） 在agent与环境交互之前就呈现给他了。 &amp;gt;which is revealed to the agent before its interaction with the environment starts.
+ 生成模型（a generative model） 输入一个状态和动作，输出奖励和根据转移函数的到的随机下一个状态。
+   声明模型（a declarative model） 声明模型提供了MDP的描述，对于所有的状态、后继状态和动作提供了概率转移和奖励函数。  我们在此处区分学习agents （未提供先验模型）和规划agents（可以访问生成模型或者声明模型）
+多臂赌博机问题（MAB）  Figuratively, the agent faces a slot machine (a bandit) with multiple arms, and it has to decide which arm to pull based only on the payouts it received so far. Each arm provides a random reward according to a probability distribution that is specific to the arm and constant over time, but the agent has no initial information on the distribution.</description>
+    </item>
     
     <item>
       <title>什么是蒙特卡罗</title>
