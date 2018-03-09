@@ -136,6 +136,39 @@ git add --all
 git commit -m &quot;commit&quot;
 git push -f origin master
 </code></pre>
+
+<h3 id="step-4-使用python自动生成图片链接">Step 4, 使用Python自动生成图片链接</h3>
+
+<pre><code>import os
+
+# windows下命令之间使用&amp;连接。
+# 如cd C:\&amp;dir
+
+# 执行提交代码到git操作
+cmd = 'E:&amp;cd E:\gitpic&amp;git add --all&amp;git commit -m &quot;update&quot;&amp;git push -f origin master'
+# cmd = 'ipconfig'
+result = os.popen(cmd)
+print(result.read())
+
+# 遍历目录，生成引用的图片链接
+file_dir = 'E:\gitpic'
+file_list = os.listdir(file_dir)
+images = []
+
+# 最近的20张图片
+for f in file_list[-20:]:
+    if f.endswith('.png'):
+        img = &quot;![&quot; + f.split('.')[0] +&quot;](https://gitee.com/gdhu/prvpic/raw/master/&quot; + f +&quot;)\n&quot;;
+        print(img)
+        images.append(img)
+
+# 写文件
+with open('C:/Users/x1c/Desktop/图片地址.txt', 'w') as f:
+    f.writelines(images)
+
+</code></pre>
+
+<h3 id="step-5-生成链接后的文档直接拿来复制使用">Step 5, 生成链接后的文档直接拿来复制使用</h3>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -169,6 +202,29 @@ git push -f origin master
 </nav>
 
 	
+<div class="comments">
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guodonghu" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
 </div>
 
 <aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
