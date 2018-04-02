@@ -3,28 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>机器学习的一些概念</title>
+<title>基于试验的启发式树搜索</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.30" />
-<meta property="og:title" content="机器学习的一些概念" />
-<meta property="og:description" content="中英文对照
-neural networks 神经网络
-activation function 激活函数
-hyperbolic tangent 双曲正切函数
-bias units 偏置项
-activation 激活值
-forward propagation 前向传播
-feedforward neural network 前馈神经网络(参照Mitchell的《机器学习》的翻译)
-Unsupervised Feature Learning and Deep Learning
-深度学习的入门知识介绍 http://deeplearning.stanford.edu/wiki/index.php/Main_Page" />
+<meta property="og:title" content="基于试验的启发式树搜索" />
+<meta property="og:description" content="[TOC]
+
+概念
+
+给定一个MDP，一个agent可以访问：
+
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/ml/20170907/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/note/2018-01-05/" />
 
 
 
-<meta property="article:published_time" content="2017-09-07T21:25:07&#43;08:00"/>
+<meta property="article:published_time" content="2018-01-04T21:25:07&#43;08:00"/>
 
-<meta property="article:modified_time" content="2017-09-07T21:25:07&#43;08:00"/>
+<meta property="article:modified_time" content="2018-01-04T21:25:07&#43;08:00"/>
 
 
 
@@ -82,43 +79,80 @@ Unsupervised Feature Learning and Deep Learning
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">机器学习的一些概念</h1>
+			<h1 class="post__title">基于试验的启发式树搜索</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-09-07T21:25:07">September 07, 2017</time>
+				<time class="post__meta-date" datetime="2018-01-04T21:25:07">January 04, 2018</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/%e6%80%9d%e8%80%83" rel="category">思考</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
 			</p>
 		</header>
 		<div class="post__content clearfix">
-			<p>中英文对照</p>
+			<p>[TOC]</p>
 
-<p>neural networks 神经网络</p>
+<h3 id="概念">概念</h3>
 
-<p>activation function 激活函数</p>
+<p>给定一个MDP，一个agent可以访问：</p>
 
-<p>hyperbolic tangent 双曲正切函数</p>
+<p></p>
 
-<p>bias units 偏置项</p>
+<ul>
+<li><p>环境先验模型（a-priori model of environment）</p>
 
-<p>activation 激活值</p>
+<p>在agent与环境交互之前就呈现给他了。</p></li>
+</ul>
 
-<p>forward propagation 前向传播</p>
+<blockquote>
+<p>which is revealed to the agent before its interaction with the environment starts.</p>
+</blockquote>
 
-<p>feedforward neural network 前馈神经网络(参照Mitchell的《机器学习》的翻译)</p>
+<ul>
+<li><p>生成模型（a generative model）</p>
 
-<p>Unsupervised Feature Learning and Deep Learning</p>
+<p>输入一个状态和动作，输出奖励和根据转移函数的到的随机下一个状态。</p></li>
 
-<p>深度学习的入门知识介绍
-<a href="http://deeplearning.stanford.edu/wiki/index.php/Main_Page">http://deeplearning.stanford.edu/wiki/index.php/Main_Page</a></p>
+<li><p>声明模型（a declarative model）</p>
 
+<p>声明模型提供了MDP的描述，对于所有的状态、后继状态和动作提供了概率转移和奖励函数。</p></li>
+</ul>
+
+<p>我们在此处区分<strong>学习agents</strong> （未提供先验模型）和<strong>规划agents</strong>（可以访问生成模型或者声明模型）</p>
+
+<!--more-->
+
+<h3 id="多臂赌博机问题-mab">多臂赌博机问题（MAB）</h3>
+
+<blockquote>
+<p>Figuratively, the agent faces a slot machine (a bandit) with multiple arms, and it has to decide which arm to pull based only on the payouts it received so far. Each arm provides a random reward according to a probability distribution that is specific to the arm and constant over time, but the agent has no initial information on the distribution.</p>
+</blockquote>
+
+<h4 id="探索和获取收益的窘境-exploration-exploitation-dilemma">探索和获取收益的窘境（exploration-exploitation dilemma）</h4>
+
+<p>简单的说就是：agent要探索尝试各种动作，牺牲一部分收益来寻找到最好的动作，但又不能牺牲的太多。要平衡探索时牺牲的收益和获取最大的收益。</p>
+
+<blockquote>
+<p>on the one hand, since the agent has no a-priori knowledge of the environment, it has to explore its possibilities to learn from the feedback the environment provides. And on the other, since it aims to maximize the accumulated reward over all runs, it has an incentive to exploit the knowledge it has gathered by executing the action it believes to be best. In other words, the agent learns from its trial-and-error interaction with the environment, and it has to make sure that the balance between exploration and exploitation is such that it learns the best action without sacrificing too much reward in early decisions.</p>
+</blockquote>
+
+<p><img src="http://upload-images.jianshu.io/upload_images/4800606-33b52f5c1785e6ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" /></p>
+
+<p>一个三臂的例子MAB问题。 边缘用转移概率p和奖励r标记为p：r。</p>
+
+<p>一个MAB问题有三个拉杆al，am，ar（分别代表左、中、右拉杆）。拉动左拉杆可以获得20或者0的奖励，概率分别为0.5。拉动右拉杆分别或者70或者30的奖励，概率分别为0.5。拉动中间的拉杆，有0.1的概率获得100的奖励，0.5的概率获得60的奖励，0.4的概率获得30的奖励。我们可以通过访问声明模型计算出3个拉杆的期望奖励分别为：Q*(al) = 10, Q*(am) = 52, Q*(ar) = 50。最好的选择是拉动中间的拉杆。</p>
+
+<p>但是，即使模型可以被访问计算的期望值是微不足道的，因为agent没有关于定义回报的分布的先验知识，所以MAB是具有挑战性的问题。 因此，它必须探索机器的拉杆，以获得分布（或期望的奖励）的是什么样的，并在其信念充分确定的情况下利用其知识。 如果它放弃探索太早，它可能永远也找不到最好的拉杆 - 例如，考虑到中间选项在前几次运行中不能获得100的奖励的不太可能的情况。 在这种情况下，它的行动价值估计Qk（am）可以预计低于50，并且可能ar看起来更有前景。 因此，如果agent过早相信信念，即使am是更好的，也会继续选择右侧的拉杆。 另一方面，如果它继续探索太久，它往往会拉下左或者右拉杆更多次，牺牲的收益。</p>
+
+<p>ETE strategy: Explore-then-Exploit strategy 探索开发策略
+exploration phase of length <em>l</em>, aims to deciside the best arm with high probability.
+action selection: uniform action selection 一致动作选择，意思是随机选择一个拉杆*l*次。
+exploitation phase: greedy action, choose action with highest Q value</p>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/ml/" rel="tag">ML</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/planning/" rel="tag">PLANNING</a></li>
 	</ul>
 </div>
 
@@ -138,10 +172,7 @@ Unsupervised Feature Learning and Deep Learning
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/ml_ex1/ex1/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Mechine Learning：线性回归</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/ml/20170905/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">关于logistic regression</p></a>
+		<a class="post-nav__link" href="/post/planning/montecarlo/monte_carlo/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">什么是蒙特卡罗</p></a>
 	</div>
 </nav>
 
