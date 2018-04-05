@@ -13,10 +13,10 @@
     
     <item>
       <title>HuGo中文章加入目录</title>
-      <link>https://gdhucoder.github.io/post/note/2018-04-05/</link>
+      <link>https://gdhucoder.github.io/post/note/how-to-add-table-of-contents-in-hugo/</link>
       <pubDate>Wed, 04 Apr 2018 09:00:00 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/post/note/2018-04-05/</guid>
+      <guid>https://gdhucoder.github.io/post/note/how-to-add-table-of-contents-in-hugo/</guid>
       <description>&lt;p&gt;本文介绍如何在template中加入TOC目录。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
