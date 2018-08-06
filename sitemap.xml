@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://gdhucoder.github.io/post/note/2018-04-06-rl-note/</loc>
-    <lastmod>2018-04-06T07:00:00+08:00</lastmod>
+    <loc>https://gdhucoder.github.io/post/alg4/chapter2/chapter2-1-12/</loc>
+    <lastmod>2018-08-06T08:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/post/note/2018-04-16-java-note/</loc>
+    <loc>https://gdhucoder.github.io/post/alg4/chapter1/chapter1-1/</loc>
+    <lastmod>2018-05-15T08:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/post/note/2018-05-15/</loc>
+    <lastmod>2018-05-15T07:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/post/note/2018-05-10-note/</loc>
+    <lastmod>2018-05-14T07:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/post/note/2018-04-06-rl-note/</loc>
     <lastmod>2018-04-06T07:00:00+08:00</lastmod>
   </url>
   
@@ -128,6 +143,16 @@
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/tags/</loc>
+    <lastmod>2018-08-06T08:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/post/rl/rl-intro-ch5/</loc>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/aima/chp2/</loc>
   </url>
   
@@ -160,7 +185,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/tags/java/</loc>
-    <lastmod>2017-10-24T21:25:07+08:00</lastmod>
+    <lastmod>2018-05-15T07:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -220,13 +245,19 @@
   
   <url>
     <loc>https://gdhucoder.github.io/post/</loc>
-    <lastmod>2018-04-06T07:00:00+08:00</lastmod>
+    <lastmod>2018-08-06T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/tags/python/</loc>
     <lastmod>2017-08-14T18:44:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/tags/rddl/</loc>
+    <lastmod>2018-05-14T07:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -250,7 +281,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/tags/</loc>
-    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
+    <lastmod>2018-08-06T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -274,7 +305,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</loc>
-    <lastmod>2018-04-06T07:00:00+08:00</lastmod>
+    <lastmod>2018-08-06T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -286,7 +317,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2018-04-06T07:00:00+08:00</lastmod>
+    <lastmod>2018-08-06T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -316,7 +347,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/</loc>
-    <lastmod>2018-04-06T07:00:00+08:00</lastmod>
+    <lastmod>2018-08-06T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   

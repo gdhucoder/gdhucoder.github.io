@@ -6,10 +6,64 @@
     <description>Recent content on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Fri, 06 Apr 2018 07:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Aug 2018 08:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>算法4习题 2.1.12</title>
+      <link>https://gdhucoder.github.io/post/alg4/chapter2/chapter2-1-12/</link>
+      <pubDate>Mon, 06 Aug 2018 08:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/chapter2/chapter2-1-12/</guid>
+      <description>算法4习题 2.1.12 问题 Instrument shellsort to print the number of compares divided by the array size for each increment. Write a test client that tests the hypothesis that this number is a small constant, by sorting arrays of random Double values, using array sizes that are increasing powers of 10, starting at 100.
+打印希尔排序中每个增量带来的比较次数和数组大小的比值。 验证该值是一个小常数。
+思路 统计每个增量对应的比较次数。
+private static boolean less(Comparable v, Comparable w) { count ++ ; return v.</description>
+    </item>
+    
+    <item>
+      <title>算法4 chp 1-1</title>
+      <link>https://gdhucoder.github.io/post/alg4/chapter1/chapter1-1/</link>
+      <pubDate>Tue, 15 May 2018 08:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/chapter1/chapter1-1/</guid>
+      <description>1.1.1 7, 200.0000002, true
+1.1.2 a. double 1.618 b. double 10.0 c. boolean true d. String &amp;ldquo;33&amp;rdquo;
+执行Java 采用输入命令的形式：
+目录：
+E:\GDUT\Dropbox\Alg4\algs4\target\classes
+执行：
+java edu.princeton.cs.myalg.u1.Ex_1_1_3 1 1 2
+$ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]</description>
+    </item>
+    
+    <item>
+      <title>java问题</title>
+      <link>https://gdhucoder.github.io/post/note/2018-05-15/</link>
+      <pubDate>Tue, 15 May 2018 07:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/note/2018-05-15/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;学习过程中遇到的一些技术问题。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>java问题</title>
+      <link>https://gdhucoder.github.io/post/note/2018-05-10-note/</link>
+      <pubDate>Mon, 14 May 2018 07:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/note/2018-05-10-note/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;学习过程中遇到的一些技术问题。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Optimistic Initial Values</title>
@@ -17,19 +71,6 @@
       <pubDate>Fri, 06 Apr 2018 07:00:00 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/note/2018-04-06-rl-note/</guid>
-      <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Multi-armed Bandits 本篇主要介绍多臂赌博机问题的相关算法。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Optimistic Initial Values</title>
-      <link>https://gdhucoder.github.io/post/note/2018-04-16-java-note/</link>
-      <pubDate>Fri, 06 Apr 2018 07:00:00 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/note/2018-04-16-java-note/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
 
 &lt;p&gt;Multi-armed Bandits 本篇主要介绍多臂赌博机问题的相关算法。&lt;/p&gt;
@@ -353,6 +394,15 @@ print(unrate.head(12))
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://gdhucoder.github.io/post/rl/rl-intro-ch5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/rl/rl-intro-ch5/</guid>
+      <description></description>
     </item>
     
     <item>

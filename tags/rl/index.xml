@@ -24,18 +24,5 @@
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
-    <item>
-      <title>Optimistic Initial Values</title>
-      <link>https://gdhucoder.github.io/post/note/2018-04-16-java-note/</link>
-      <pubDate>Fri, 06 Apr 2018 07:00:00 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/note/2018-04-16-java-note/</guid>
-      <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Multi-armed Bandits 本篇主要介绍多臂赌博机问题的相关算法。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
   </channel>
 </rss>
