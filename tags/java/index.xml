@@ -6,10 +6,22 @@
     <description>Recent content in Java on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Tue, 15 May 2018 07:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Aug 2018 08:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>算法4习题 2.1.12</title>
+      <link>https://gdhucoder.github.io/post/alg4/chapter2/chapter2-1-12/</link>
+      <pubDate>Mon, 06 Aug 2018 08:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/chapter2/chapter2-1-12/</guid>
+      <description>算法4习题 2.1.12 问题 Instrument shellsort to print the number of compares divided by the array size for each increment. Write a test client that tests the hypothesis that this number is a small constant, by sorting arrays of random Double values, using array sizes that are increasing powers of 10, starting at 100.
+打印希尔排序中每个增量带来的比较次数和数组大小的比值。 验证该值是一个小常数。
+思路 统计每个增量对应的比较次数。
+private static boolean less(Comparable v, Comparable w) { count ++ ; return v.</description>
+    </item>
     
     <item>
       <title>java问题</title>
