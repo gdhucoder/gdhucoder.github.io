@@ -406,10 +406,8 @@ if __name__ == '__main__':
     imgdir = 'E:\gitpic'
     if len(sys.argv) &gt; 1:
         imgdir = sys.argv[1]
-        subdir = imgdir.split('\\',-1)
-        print(subdir)
     if os.path.exists(imgdir):
-        mainwin = viewThumbs(imgdir, kind=Tk,numcols=5, )
+        mainwin = viewThumbs(imgdir, kind=Tk,numcols=5)
     else:
         mainwin = Tk()
         mainwin.title(appname + 'Open')
