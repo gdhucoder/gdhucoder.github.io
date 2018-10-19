@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Thinkings on 野生程序员</title>
-    <link>https://gdhucoder.github.io/thinking/</link>
-    <description>Recent content in Thinkings on 野生程序员</description>
+    <title>思考 on 野生程序员</title>
+    <link>https://gdhucoder.github.io/tags/%E6%80%9D%E8%80%83/</link>
+    <description>Recent content in 思考 on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Fri, 19 Oct 2018 08:00:00 +0800</lastBuildDate>
     
-	<atom:link href="https://gdhucoder.github.io/thinking/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://gdhucoder.github.io/tags/%E6%80%9D%E8%80%83/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://gdhucoder.github.io/thinking/2018-10-19/</guid>
       <description>2018-10-19 随笔 已经有两个多月没有更新过博客了。 有几个原因吧。一直没有找到顺手的工具。 现在使用的工具有： Hugo+Sublime 支持的功能主要包括：markdown格式的文档，公式支持latex，图库使用gitee。 目前正在想办法自己写一个图片预览工具，本地图片生成预览，选中图片时自动复制图库连接。</description>
-    </item>
-    
-    <item>
-      <title>思考</title>
-      <link>https://gdhucoder.github.io/thinking/rd_0/</link>
-      <pubDate>Mon, 14 Aug 2017 03:58:07 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/thinking/rd_0/</guid>
-      <description>思考类的文章将会发布在这里。</description>
     </item>
     
   </channel>
