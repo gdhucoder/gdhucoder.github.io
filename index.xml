@@ -32,9 +32,27 @@ Hugo+Sublime
       
       <guid>https://gdhucoder.github.io/post/skill/2018-10-19/</guid>
       <description>[TOC]
-终于解决了Markdown写博客的图片问题 使用python写了个脚本，生成文件的缩略图。
+里程碑 今天是一个里程碑，断断续续一年多，自己搭建的博客遇到的各种问题基本得到解决。
+现在整理一下解决问题的思路：
+博客用到的东西：Github(托管静态网页)、Hugo、Sublime、Markdown、MathJax、免费图床(gitee)、留言(需要翻墙)
+遇到的问题主要有： 图床问题： 使用免费图床是个大问题：目前的解决方案是将图片上床到gitee上，这样国内访问图片速度较快。
+图片链接插入问题： 之前我写了自动生成链接的脚本，但是结果输出到了文本文件中，对于图片预览实时性的要求就无法满足。
+平台不通用问题： 通用性的问题一直没有解决：对于Latex公式的支持，图床的支持
+以前由于各个平台不通用的问题，导致我们一直只能在一个平台上写作。而各大平台又各有优缺点，总有令人不满意的地方。
+这样下来在本地写的Markdown，不需要做修改可以支持CSDN博客（或者简书）了，直接复制过去就可以。
+在未来不久印象笔记windows版本也会支持Markdown，真是个令人振奋的消息。
+甚至我还使用过马克飞象，但是它只能配合印象笔记使用，对于跨平台的需求无法满足。
+我的github 页面托管到了github上，有兴趣的话可以试着自己搭建一个静态博客。
+https://gdhucoder.github.io/
+图片本地预览、链接 大家都知道Markdown使用图片需要插入图片链接。
+我们使用python写了个脚本，生成文件的缩略图，自动上传gitee，点击图片缩略图，获取链接到剪切板。
 接下来我又添加的每次打开Helper时，自动提交git，得到最新的图片
-使用方法：  upload your pictures to github or gitee this script can generate latest 100 picture links click the thumb picture, then the link is clipped into you clipboard then use Ctrl+V in your own Markdown Enjoy!  &amp;quot;&amp;quot;&amp;quot; ############################################################################ Introduction: please upload your local picture folder as a repo in github or gitee(China). then we can use the image link in our own markdown file It&#39;s really helpful when you regularly write a blog use Markdown.</description>
+然后点击图片缩略图，图片的git地址（可供外网访问的地址）就被拷贝到了剪切板中，在使用的时候我们直接Ctrl+V就可以复制地址到Markdown文档中。
+这个脚本还支持子目录的打开预览。
+因为如果我们只用一个文件夹管理所有的博客图片势必会没有层级结构，导致最后图片混乱。
+我们可以建立子文件夹，存放各个主题的图片文件。
+Picture Helper使用方法：  upload your pictures to github or gitee this script can generate latest 100 picture links click the thumb picture, then the link is clipped into you clipboard then use Ctrl+V in your own Markdown Enjoy!  另附代码 主要参考了PP4E的pyphoto的代码。
+各位改改可以用到的地方： 1、自动提交git脚本 2、生成缩略图（PIL的使用）</description>
     </item>
     
     <item>
