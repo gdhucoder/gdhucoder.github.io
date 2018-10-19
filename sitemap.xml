@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/post/skill/2018-10-19/</loc>
+    <lastmod>2018-10-19T03:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/alg4/chapter2/chapter2-1-12/</loc>
     <lastmod>2018-08-06T08:00:00+08:00</lastmod>
   </url>
@@ -108,11 +113,6 @@
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/thinking/rd_0/</loc>
-    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gdhucoder.github.io/reading/rd_0/</loc>
     <lastmod>2017-08-14T03:58:07+08:00</lastmod>
   </url>
@@ -148,12 +148,6 @@
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/tags/</loc>
-    <lastmod>2018-05-15T08:00:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://gdhucoder.github.io/post/rl/rl-intro-ch5/</loc>
   </url>
   
@@ -163,6 +157,10 @@
   
   <url>
     <loc>https://gdhucoder.github.io/post/skill/how_to_use_virtualbox/</loc>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/thinking/rd_0/</loc>
   </url>
   
   <url>
@@ -225,12 +223,6 @@
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/tags/mind/</loc>
-    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://gdhucoder.github.io/tags/ml/</loc>
     <lastmod>2017-09-07T21:25:07+08:00</lastmod>
     <priority>0</priority>
@@ -250,7 +242,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/post/</loc>
-    <lastmod>2018-08-06T08:00:00+08:00</lastmod>
+    <lastmod>2018-10-19T03:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -286,13 +278,13 @@
   
   <url>
     <loc>https://gdhucoder.github.io/tags/</loc>
-    <lastmod>2018-05-15T08:00:00+08:00</lastmod>
+    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/tags/tech/</loc>
-    <lastmod>2018-04-04T09:00:00+08:00</lastmod>
+    <lastmod>2018-10-19T03:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -315,20 +307,20 @@
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/tags/%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2018-10-19T08:00:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://gdhucoder.github.io/categories/%E6%80%9D%E8%80%83/</loc>
     <lastmod>2017-09-07T21:25:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/tags/%E6%80%9D%E8%80%83/</loc>
+    <lastmod>2018-10-19T08:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2018-08-06T08:00:00+08:00</lastmod>
+    <lastmod>2018-10-19T03:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   

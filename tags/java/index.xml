@@ -24,6 +24,22 @@ private static boolean less(Comparable v, Comparable w) { count ++ ; return v.</
     </item>
     
     <item>
+      <title>算法4 chp 1-1</title>
+      <link>https://gdhucoder.github.io/post/alg4/chapter1/chapter1-1/</link>
+      <pubDate>Tue, 15 May 2018 08:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/chapter1/chapter1-1/</guid>
+      <description>1.1.1 7, 200.0000002, true
+1.1.2 a. double 1.618 b. double 10.0 c. boolean true d. String &amp;ldquo;33&amp;rdquo;
+执行Java 采用输入命令的形式：
+目录：
+E:\GDUT\Dropbox\Alg4\algs4\target\classes
+执行：
+java edu.princeton.cs.myalg.u1.Ex_1_1_3 1 1 2
+$ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]</description>
+    </item>
+    
+    <item>
       <title>java问题</title>
       <link>https://gdhucoder.github.io/post/note/2018-05-15/</link>
       <pubDate>Tue, 15 May 2018 07:00:00 +0800</pubDate>

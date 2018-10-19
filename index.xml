@@ -17,12 +17,24 @@
       <pubDate>Fri, 19 Oct 2018 08:00:00 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/thinking/2018-10-19/</guid>
-      <description>2018-10-19 随笔 已经有两个多月没有更新过博客了。
+      <description>随笔 已经有两个多月没有更新过博客了。
 有几个原因吧。一直没有找到顺手的工具。
 现在使用的工具有：
 Hugo+Sublime
 支持的功能主要包括：markdown格式的文档，公式支持latex，图库使用gitee。
 目前正在想办法自己写一个图片预览工具，本地图片生成预览，选中图片时自动复制图库连接。</description>
+    </item>
+    
+    <item>
+      <title>2018-10-19 解决Markdown图片问题</title>
+      <link>https://gdhucoder.github.io/post/skill/2018-10-19/</link>
+      <pubDate>Fri, 19 Oct 2018 03:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/skill/2018-10-19/</guid>
+      <description>[TOC]
+终于解决了Markdown写博客的图片问题 使用python写了个脚本，生成文件的缩略图。
+接下来我又添加的每次打开Helper时，自动提交git，得到最新的图片
+使用方法：  upload your pictures to github or gitee this script can generate latest 100 picture links click the thumb picture, then the link is clipped into you clipboard then use Ctrl+V in your own Markdown Enjoy!  &amp;quot;&amp;quot;&amp;quot; ############################################################################ Introduction: please upload your local picture folder as a repo in github or gitee(China). then we can use the image link in our own markdown file It&#39;s really helpful when you regularly write a blog use Markdown.</description>
     </item>
     
     <item>
@@ -307,15 +319,6 @@ Octatve代码实现</description>
     </item>
     
     <item>
-      <title>思考</title>
-      <link>https://gdhucoder.github.io/thinking/rd_0/</link>
-      <pubDate>Mon, 14 Aug 2017 03:58:07 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/thinking/rd_0/</guid>
-      <description>思考类的文章将会发布在这里。</description>
-    </item>
-    
-    <item>
       <title>读书</title>
       <link>https://gdhucoder.github.io/reading/rd_0/</link>
       <pubDate>Mon, 14 Aug 2017 03:58:07 +0800</pubDate>
@@ -436,6 +439,16 @@ print(unrate.head(12))
       
       <guid>https://gdhucoder.github.io/post/skill/how_to_use_virtualbox/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://gdhucoder.github.io/thinking/rd_0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/rd_0/</guid>
+      <description>title: &amp;ldquo;思考&amp;rdquo; date: 2017-08-14T03:58:07+08:00 draft: false tags: - Mind categories: - 思考
+- 归档 思考类的文章将会发布在这里。</description>
     </item>
     
   </channel>
