@@ -6,10 +6,22 @@
     <description>Recent content in Posts on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sat, 27 Oct 2018 06:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 28 Oct 2018 05:30:00 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>算法4 Java解答 2.4.19</title>
+      <link>https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_19/</link>
+      <pubDate>Sun, 28 Oct 2018 05:30:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_19/</guid>
+      <description>2.4.19 问题： 2.4.19 Implement the constructor for MaxPQ that takes an array of items as argument, using the bottom-up heap construction method described on page 323 in the text.
+实现一个MaxPQ的构造函数，接受一个数组做为参数，使用323页中描述的自底向上的方法构建堆。
+分析： 将数组做为参数构建堆，可以选择从左到右扫描，使用swim()方法。 但更明智的方法是使用从右往左扫描的方式，sink()。 这个方法的想法是如果一个结点的两个子结点的树都是堆的话，sink(k)之后，两个子树就合并成了以k为根结点的子树
+public MaxPQ(Key[] a){ N = a.length; pq = (Key[]) new Comparable[N+1]; for(int i=0; i&amp;lt;a.length; i++){ pq[i+1] = a[i]; } int k = N / 2; while (k &amp;gt;= 1){ sink(k); k --; } assert isMaxHeap(); show(); }  参考： 课本官网的实现MaxPQ</description>
+    </item>
     
     <item>
       <title>算法4 Java解答 2.4.18</title>
