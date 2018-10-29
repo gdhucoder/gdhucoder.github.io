@@ -6,10 +6,27 @@
     <description>Recent content in Posts on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sun, 28 Oct 2018 05:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 28 Oct 2018 06:10:00 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>算法4 Java解答 2.4.20</title>
+      <link>https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_20/</link>
+      <pubDate>Sun, 28 Oct 2018 06:10:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_20/</guid>
+      <description>2.4.20 问题： Prove that sink-based heap construction uses fewer than 2N compares and fewer than N exchanges.
+证明基于下沉方法建立堆使用少于2N次的比较和N次交换。
+分析： 官方网站解答：https://algs4.cs.princeton.edu/24pq/
+假设为堆是完美的。
+我们将树中节点的高度定义为以该节点为根的子树的高度。
+一个高度为k的节点，下沉最多交换k次，对于每一层，有：
+$$ \begin{eqnarray} h + 2(h-1) + 4(h-2) + 8(h-3) + \ldots + 2^h (0) &amp;amp; = &amp;amp; 2^{h+1} - h - 2 &amp;amp; = &amp;amp; n - (h+1) &amp;amp; \le &amp;amp; n \end{eqnarray} $$
+第一项使用等比数列求和公式，第二项错位相减法。
+参考： 沈星繁</description>
+    </item>
     
     <item>
       <title>算法4 Java解答 2.4.19</title>
