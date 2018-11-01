@@ -3,19 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>读书</title>
+<title>算法4 Java解答 2.4.22</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="读书" />
-<meta property="og:description" content="好书将要推荐在这里！" />
+<meta property="og:title" content="算法4 Java解答 2.4.22" />
+<meta property="og:description" content="2.4.2 问题： 2.4.22 Array resizing. Add array resizing to MaxPQ, and prove bounds like those of Proposition Q for array accesses, in an amortized sense.
+调整数组的大小。在MaxPQ中加入调整数组大小的代码，并和命题Q一样证明对于一般性长度为N的队列数组访问的上限。
+分析： 在MaxHeap类中新增方法 resize(int max)，当堆的中元素个数等于key数组容量满的时候，key数组增大两倍，当堆的元素个数等于key数组长度的1/4时，key数组长度变为原来的1/2.
+public _MaxMQ(){ this(1); } private void resize(int max){ assert max &gt; N; Comparable[] temp = new Comparable[max]; for(int i=1; i&lt;=N; i&#43;&#43;){ temp[i] = pq[i]; } pq = (Key[]) temp; } public Key delMax(){ Key max = pq[1]; pq[1] = pq[N--]; // 使用 pq[N] 作为哨兵 sink(1); pq[N &#43; 1] = null; if(N==(pq." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/reading/rd_0/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_22/" />
 
 
 
-<meta property="article:published_time" content="2017-08-14T03:58:07&#43;08:00"/>
+<meta property="article:published_time" content="2018-10-31T08:00:00&#43;08:00"/>
 
-<meta property="article:modified_time" content="2017-08-14T03:58:07&#43;08:00"/>
+<meta property="article:modified_time" content="2018-10-31T08:00:00&#43;08:00"/>
 
 
 
@@ -78,25 +81,134 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">读书</h1>
+			<h1 class="post__title">算法4 Java解答 2.4.22</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-08-14T03:58:07">August 14, 2017</time>
+				<time class="post__meta-date" datetime="2018-10-31T08:00:00">October 31, 2018</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/%e8%af%bb%e4%b9%a6" rel="category">读书</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
 			</p>
 		</header>
 		<div class="post__content clearfix">
 			
-			<p>好书将要推荐在这里！</p>
+<aside>
+    <header>
+    <h2>算法4 Java解答 2.4.22</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#2-4-2">2.4.2</a>
+<ul>
+<li><a href="#问题">问题：</a></li>
+<li><a href="#分析">分析：</a></li>
+<li><a href="#参考">参考：</a></li>
+</ul></li>
+</ul>
+</nav>
+</aside>
+
+			
+
+<h1 id="2-4-2">2.4.2</h1>
+
+<h2 id="问题">问题：</h2>
+
+<p>2.4.22 Array resizing. Add array resizing to MaxPQ, and prove bounds like those of Proposition Q for array accesses, in an amortized sense.</p>
+
+<p>调整数组的大小。在MaxPQ中加入调整数组大小的代码，并和命题Q一样证明对于一般性长度为N的队列数组访问的上限。</p>
+
+<h2 id="分析">分析：</h2>
+
+<p>在MaxHeap类中新增方法 resize(int max)，当堆的中元素个数等于key数组容量满的时候，key数组增大两倍，当堆的元素个数等于key数组长度的1/4时，key数组长度变为原来的1/2.</p>
+
+<pre><code class="language-java">
+  public _MaxMQ(){
+    this(1);
+  }
+
+  private void resize(int max){
+    assert max &gt; N;
+    Comparable[] temp = new Comparable[max];
+    for(int i=1; i&lt;=N; i++){
+      temp[i] = pq[i];
+    }
+    pq = (Key[]) temp;
+  }
+
+    public Key delMax(){
+      Key max = pq[1];
+      pq[1] = pq[N--];  // 使用 pq[N] 作为哨兵
+      sink(1);
+      pq[N + 1] = null;
+
+      if(N==(pq.length-1)/4) resize(pq.length/2);
+
+      assert isMaxHeap();
+      return max;
+    }
+
+    public void insert(Key v){
+      // double size of array is necessary
+      if(N==(pq.length-1)) resize(pq.length*2);
+
+      pq[++N] = v;
+      swim(N);
+    }
+
+  public static void main(String[] args) {
+    for(int i=0; i&lt;3; i++){
+      _MaxMQ&lt;Integer&gt; pq = new _MaxMQ&lt;&gt;();
+      Integer[] a = ascIntArray(10*i);
+      for(int j=0; j&lt;a.length; j++){
+        pq.insert(j);
+      }
+
+      while (!pq.isEmpty()){
+        StdOut.printf(&quot;%5d\t&quot;, pq.delMax());
+      }
+
+      StdOut.println();
+    }
+  }
+//    9     8       7       6       5       4       3       2       1       0
+//        19       18      17      16      15      14      13      12      11      10       9       8       7       6       5       4       3       2       1       0
+
+</code></pre>
+
+<p>Proposition Q.</p>
+
+<p>In an N-key priority queue,</p>
+
+<p>the heap algorithms require no more than 1 + lg N compares for insert</p>
+
+<p>and no more than 2 lg N compares for remove the maximum.</p>
+
+<p>统计插入一个元素需要访问的数组次数，包括比较和交换
+(2+3)lgN + 1</p>
+
+<p>使用resize，统计插入一个元素均摊下来数组的访问次数</p>
+
+<p>总的数组访问次数，2+4+8+&hellip;+2^lgN = 2^(lgN + 2)-1 = 4N - 1</p>
+
+<p>对于一次插入：为 4-1/N</p>
+
+<p>所以对于插入，需要的数组访问次数上限为 5lgN + 5 - 1/N</p>
+
+<h2 id="参考">参考：</h2>
+
+<p><a href="https://algs4.cs.princeton.edu/24pq/MaxPQ.java.html">https://algs4.cs.princeton.edu/24pq/MaxPQ.java.html</a></p>
+
+<p><a href="https://alg4.ikesnowy.com/2-4-22/">https://alg4.ikesnowy.com/2-4-22/</a></p>
+
+<p><a href="https://github.com/YangXiaoHei/Algorithms/blob/master/Ch_2_4_Priority_Queues/Practise_2_4_22.java">https://github.com/YangXiaoHei/Algorithms/blob/master/Ch_2_4_Priority_Queues/Practise_2_4_22.java</a></p>
 
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/books/" rel="tag">Books</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/java/" rel="tag">JAVA</a></li>
 	</ul>
 </div>
 
@@ -114,6 +226,11 @@ MathJax.Hub.Config({
 	</div>
 </div>
 	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/alg4/chapter2/ex_2_4_21/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">算法4 Java解答 2.4.21</p></a>
+	</div>
+</nav>
 
 	
 <div class="comments">

@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-10-29T19:10:00&#43;08:00"/>
+<meta property="og:updated_time" content="2018-10-31T08:00:00&#43;08:00"/>
 
 
 
@@ -76,6 +76,52 @@ MathJax.Hub.Config({
 		<header class="page-header">
 			<h1 class="page-header__title">归档</h1>
 		</header><article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_22/" rel="bookmark">算法4 Java解答 2.4.22</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-31T08:00:00">October 31, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.2 问题： 2.4.22 Array resizing. Add array resizing to MaxPQ, and prove bounds like those of Proposition Q for array accesses, in an amortized sense.
+调整数组的大小。在MaxPQ中加入调整数组大小的代码，并和命题Q一样证明对于一般性长度为N的队列数组访问的上限。
+分析： 在MaxHeap类中新增方法 resize(int max)，当堆的中元素个数等于key数组容量满的时候，key数组增大两倍，当堆的元素个数等于key数组长度的1/4时，key数组长度变为原来的1/2.
+public _MaxMQ(){ this(1); } private void resize(int max){ assert max &gt; N; Comparable[] temp = new Comparable[max]; for(int i=1; i&lt;=N; i++){ temp[i] = pq[i]; } pq = (Key[]) temp; } public Key delMax(){ Key max = pq[1]; pq[1] = pq[N--]; // 使用 pq[N] 作为哨兵 sink(1); pq[N + 1] = null; if(N==(pq.
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_21/" rel="bookmark">算法4 Java解答 2.4.21</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-31T06:00:00">October 31, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.21 问题： 2.4.21 Elementary data structures. Explain how to use a priority queue to implement the stack, queue, and randomized queue data types from Chapter 1
+分析： 题目要求使一个优先队列。
+假设使用MaxPQ优先队列的操作有 insert delMax isEmpty size
+Stack：
+那么对于Stack LIFO 的实现我们需要指定被后插入的元素的priority比之前插入的元素priority大。
+Queue:
+对于Queue FIFO 的实现，需要后插入元素的priority小于之前插入元素的priority。
+randomized queue：
+随机队列需要指定一个随机的priority，其余实现和处理Queue的方法一样。
+问题是怎么样生成一个不重复的随机数呢？我的思路是使用一个Set保存随机数。
+public int random() { int num = 0; while (!numSet.contains(num)) { num = StdRandom.uniform(1, Integer.MAX_VALUE); numSet.add(num); break; } return num; }  另外要提到的是对于使用MaxPQ实现的Stack和Queue，插入删除元素的时间复杂度都是lgN。
+class IKey implements Comparable&lt;IKey&gt;{ Key value; int priority; @Override public int compareTo(IKey another) { return compare(this.
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
@@ -249,49 +295,6 @@ private static boolean less(Comparable v, Comparable w) { count ++ ; return v.
 		</div>
 	</div>
 </article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/alg4/chapter1/chapter1-1/" rel="bookmark">算法4 chp 1-1</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-05-15T08:00:00">May 15, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			1.1.1 7, 200.0000002, true
-1.1.2 a. double 1.618 b. double 10.0 c. boolean true d. String &ldquo;33&rdquo;
-执行Java 采用输入命令的形式：
-目录：
-E:\GDUT\Dropbox\Alg4\algs4\target\classes
-执行：
-java edu.princeton.cs.myalg.u1.Ex_1_1_3 1 1 2
-$ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-05-15/" rel="bookmark">java问题</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-05-15T07:00:00">May 15, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-
-<p>学习过程中遇到的一些技术问题。</p>
-
-<p></p>
-		</div>
-	</div>
-</article>
 
 
 		
@@ -319,11 +322,11 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/alg4/chapter2/ex_2_4_22/">算法4 Java解答 2.4.22</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/alg4/chapter2/ex_2_4_21/">算法4 Java解答 2.4.21</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/alg4/chapter2/ex_2_4_20/">算法4 Java解答 2.4.20</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/alg4/chapter2/ex_2_4_19/">算法4 Java解答 2.4.19</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/alg4/chapter2/ex_2_4_18/">算法4 Java解答 2.4.18</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/alg4/chapter2/ex_2_4_17/">算法4习题 2.4.17</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/alg4/chapter2/ex_2_4_10/">算法4习题 2.4.10</a></li>
 		</ul>
 	</div>
 </div>

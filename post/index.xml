@@ -6,10 +6,42 @@
     <description>Recent content in Posts on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Mon, 29 Oct 2018 19:10:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 31 Oct 2018 08:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>算法4 Java解答 2.4.22</title>
+      <link>https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_22/</link>
+      <pubDate>Wed, 31 Oct 2018 08:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_22/</guid>
+      <description>2.4.2 问题： 2.4.22 Array resizing. Add array resizing to MaxPQ, and prove bounds like those of Proposition Q for array accesses, in an amortized sense.
+调整数组的大小。在MaxPQ中加入调整数组大小的代码，并和命题Q一样证明对于一般性长度为N的队列数组访问的上限。
+分析： 在MaxHeap类中新增方法 resize(int max)，当堆的中元素个数等于key数组容量满的时候，key数组增大两倍，当堆的元素个数等于key数组长度的1/4时，key数组长度变为原来的1/2.
+public _MaxMQ(){ this(1); } private void resize(int max){ assert max &amp;gt; N; Comparable[] temp = new Comparable[max]; for(int i=1; i&amp;lt;=N; i++){ temp[i] = pq[i]; } pq = (Key[]) temp; } public Key delMax(){ Key max = pq[1]; pq[1] = pq[N--]; // 使用 pq[N] 作为哨兵 sink(1); pq[N + 1] = null; if(N==(pq.</description>
+    </item>
+    
+    <item>
+      <title>算法4 Java解答 2.4.21</title>
+      <link>https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_21/</link>
+      <pubDate>Wed, 31 Oct 2018 06:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_21/</guid>
+      <description>2.4.21 问题： 2.4.21 Elementary data structures. Explain how to use a priority queue to implement the stack, queue, and randomized queue data types from Chapter 1
+分析： 题目要求使一个优先队列。
+假设使用MaxPQ优先队列的操作有 insert delMax isEmpty size
+Stack：
+那么对于Stack LIFO 的实现我们需要指定被后插入的元素的priority比之前插入的元素priority大。
+Queue:
+对于Queue FIFO 的实现，需要后插入元素的priority小于之前插入元素的priority。
+randomized queue：
+随机队列需要指定一个随机的priority，其余实现和处理Queue的方法一样。
+问题是怎么样生成一个不重复的随机数呢？我的思路是使用一个Set保存随机数。
+public int random() { int num = 0; while (!numSet.contains(num)) { num = StdRandom.uniform(1, Integer.MAX_VALUE); numSet.add(num); break; } return num; }  另外要提到的是对于使用MaxPQ实现的Stack和Queue，插入删除元素的时间复杂度都是lgN。
+class IKey implements Comparable&amp;lt;IKey&amp;gt;{ Key value; int priority; @Override public int compareTo(IKey another) { return compare(this.</description>
+    </item>
     
     <item>
       <title>算法4 Java解答 2.4.20</title>
