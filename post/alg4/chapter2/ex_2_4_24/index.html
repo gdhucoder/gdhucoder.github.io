@@ -3,28 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>机器学习的一些概念</title>
+<title>算法4 Java解答 2.4.24</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="机器学习的一些概念" />
-<meta property="og:description" content="中英文对照
-neural networks 神经网络
-activation function 激活函数
-hyperbolic tangent 双曲正切函数
-bias units 偏置项
-activation 激活值
-forward propagation 前向传播
-feedforward neural network 前馈神经网络(参照Mitchell的《机器学习》的翻译)
-Unsupervised Feature Learning and Deep Learning
-深度学习的入门知识介绍 http://deeplearning.stanford.edu/wiki/index.php/Main_Page" />
+<meta property="og:title" content="算法4 Java解答 2.4.24" />
+<meta property="og:description" content="2.4.24 问题： Priority queue with explicit links. Implement a priority queue using a heap- ordered binary tree, but use a triply linked structure instead of an array. You will need three links per node: two to traverse down the tree and one to traverse up the tree. Your implementation should guarantee logarithmic running time per operation, even if no maximum priority-queue size is known ahead of time.
+使用链表的优先队列。使用二叉树实现一个优先队列。每个结点都需要三个链接：两个向下，一个向上。你的实现需要保证在无法预知队列大小的情况下也能保证优先队列的基本操作所需要的时间为对数级别。
+分析： 插入\删除 ：" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/ml/20170907/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_24/" />
 
 
 
-<meta property="article:published_time" content="2017-09-07T21:25:07&#43;08:00"/>
+<meta property="article:published_time" content="2018-11-04T06:00:00&#43;08:00"/>
 
-<meta property="article:modified_time" content="2017-09-07T21:25:07&#43;08:00"/>
+<meta property="article:modified_time" content="2018-11-04T06:00:00&#43;08:00"/>
 
 
 
@@ -87,51 +80,254 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">机器学习的一些概念</h1>
+			<h1 class="post__title">算法4 Java解答 2.4.24</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-09-07T21:25:07">September 07, 2017</time>
+				<time class="post__meta-date" datetime="2018-11-04T06:00:00">November 04, 2018</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/%e6%80%9d%e8%80%83" rel="category">思考</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
 			</p>
 		</header>
 		<div class="post__content clearfix">
 			
 <aside>
     <header>
-    <h2>机器学习的一些概念</h2>
+    <h2>算法4 Java解答 2.4.24</h2>
     </header>
-    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#2-4-24">2.4.24</a>
+<ul>
+<li><a href="#问题">问题：</a></li>
+<li><a href="#分析">分析：</a></li>
+<li><a href="#参考">参考：</a></li>
+</ul></li>
+</ul>
+</nav>
 </aside>
 
-			<p>中英文对照</p>
+			
 
-<p>neural networks 神经网络</p>
+<h1 id="2-4-24">2.4.24</h1>
 
-<p>activation function 激活函数</p>
+<h2 id="问题">问题：</h2>
 
-<p>hyperbolic tangent 双曲正切函数</p>
+<p>Priority queue with explicit links. Implement a priority queue using a heap- ordered binary tree, but use a triply linked structure instead of an array. You will need three links per node: two to traverse down the tree and one to traverse up the tree. Your implementation should guarantee logarithmic running time per operation, even if no maximum priority-queue size is known ahead of time.</p>
 
-<p>bias units 偏置项</p>
+<p>使用链表的优先队列。使用二叉树实现一个优先队列。每个结点都需要三个链接：两个向下，一个向上。你的实现需要保证在无法预知队列大小的情况下也能保证优先队列的基本操作所需要的时间为对数级别。</p>
 
-<p>activation 激活值</p>
+<h2 id="分析">分析：</h2>
 
-<p>forward propagation 前向传播</p>
+<p>插入\删除 ：</p>
 
-<p>feedforward neural network 前馈神经网络(参照Mitchell的《机器学习》的翻译)</p>
+<p>1、需要寻找对应的位置，时间复杂度为2lgN
+2、sink swim 时间复杂度lgN</p>
 
-<p>Unsupervised Feature Learning and Deep Learning</p>
+<pre><code class="language-java">public class Ex_2_4_24 {
 
-<p>深度学习的入门知识介绍
-<a href="http://deeplearning.stanford.edu/wiki/index.php/Main_Page">http://deeplearning.stanford.edu/wiki/index.php/Main_Page</a></p>
+  static final class LinkedMaxPQ&lt;Key extends Comparable&lt;Key&gt;&gt;{
+    Item root;
+    Item last;
+    int N;
+
+    public void insert(Key v){
+      Item item = new Item();
+      item.v = v;
+      Item prev;
+      if(last==null){ // 开始堆为空 0 个结点
+        root = item;
+      }else if(root == last){ // 已经有1个结点
+        root.left = item;
+        item.parent = root;
+      }else{
+        prev = last.parent; // 最后一个结点的父节点
+        if(prev.right==null){ // 非满二叉树，最后一个结点所在的右子树为空
+          prev.right = item;
+          item.parent = prev;
+        }else{ // 最后一个结点所在的右子树已满
+          while (prev!=root) { // 自底向上，沿着右子树回溯
+            if (prev != prev.parent.right) {
+              break;
+            }
+            prev = prev.parent;
+          }
+          if(prev!=root){ // 非满二叉树：prev为根节点的子树已满
+            prev = prev.parent.right; // 沿着prev父结点右子树向左下走
+          }else{ // 满二叉树
+            prev = root; // 沿着结点左子树一路向下
+          }
+          while(prev.left!=null){
+            prev = prev.left;
+          }
+          prev.left = item;
+          item.parent = prev;
+        }
+      }
+      N++;
+      last = item;
+      swim(item);
+    }
+
+    public Key delMax(){
+      Key max = root.v;
+      exch(root,last); // 根结点和最后一个结点交换
+      if(N==1){ // 结点个数为1
+        root = null;
+        last = null;
+      }else if(N==2){ // 结点个数为2
+        root.left = null;
+        last = root;
+      }else{
+        Item newLast = last;
+        if(newLast == newLast.parent.right){ // 删除一个结点后，右子树为空，左子树为last结点
+          newLast = last.parent.left;
+        }else{
+          while (newLast!=root){
+            if(newLast == newLast.parent.right){
+              break;
+            }
+            newLast = newLast.parent;
+          }
+          if(newLast==root){ // 删除一个结点后，为满二叉树
+          }else{
+            newLast = newLast.parent.left; // 删除一个结点后，为非满二叉树
+          }
+          while(newLast.right!=null){
+            newLast = newLast.right;
+          }
+        }
+
+        // 删除最后一个结点
+        if(last.parent.right!=null){
+          last.parent.right = null;
+        }else if(last.parent.left!=null){
+          last.parent.left = null;
+        }
+        // 更新最后一个结点
+        last = newLast;
+        // 下沉到正确的位置
+        sink(root);
+      }
+      N--;
+
+      return max;
+    }
+
+    private void swim(Item v){
+      while (v.parent!=null &amp;&amp; less(v.parent, v)){
+        exch(v, v.parent);
+        v = v.parent;
+      }
+    }
+
+    private void sink(Item v){
+      Item toExch = null;
+      while (v.left!=null || v.right!=null){
+        if(v.left!=null &amp;&amp; v.right!=null){ // v存在左右结点
+          if(less(v.left, v.right)){
+            toExch = v.right;
+          }else{
+            toExch = v.left;
+          }
+        }else if(v.left!=null){ // 只有一个结点
+          toExch = v.left;
+        }else{
+          toExch = v.right;
+        }
+        if(!less(v,toExch)) break;
+        exch(v, toExch);
+        // sink(toExch) // 使用递归也可以
+        v = toExch;
+      }
+    }
+
+    private void exch(Item a, Item b){
+      Key swap = a.v;
+      a.v = b.v;
+      b.v = swap;
+    }
+
+
+
+    private boolean less(Item a, Item b){
+      return a.v.compareTo(b.v) &lt; 0;
+    }
+
+    public int size(){
+      return N;
+    }
+
+    public boolean isEmpty(){
+      return N==0;
+    }
+
+    public void show(){
+      show(root);
+    }
+
+    public void show(Item item){
+      if(item==null) return;
+      if(item.left==null &amp;&amp; item.parent==null) {
+        return;
+      }
+      StdOut.println(item.v.toString());
+      show(item.left);
+      show(item.right);
+    }
+
+    public class Item{
+      Key v;
+      Item parent;
+      Item left;
+      Item right;
+
+      @Override
+      public String toString() {
+        return &quot;{&quot;+v.toString()+&quot;}&quot;;
+      }
+    }
+  }
+
+
+  public static void main(String[] args) {
+    Integer[] a = randomIntArray(1,10);
+    LinkedMaxPQ pq = new LinkedMaxPQ();
+    for(int i=0; i&lt;a.length; i++){
+      pq.insert(a[i]);
+    }
+    pq.show();
+    StdOut.println(&quot;====================================&quot;);
+    for(int i=0; i&lt;a.length; i++){
+      StdOut.println(pq.delMax());
+    }
+  }
+
+//10
+//9
+//8
+//7
+//6
+//5
+//4
+//3
+//2
+//1
+
+
+}
+</code></pre>
+
+<h2 id="参考">参考：</h2>
+
+<p><a href="https://alg4.ikesnowy.com/2-4-24/">https://alg4.ikesnowy.com/2-4-24/</a></p>
 
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/ml/" rel="tag">ML</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/java/" rel="tag">JAVA</a></li>
 	</ul>
 </div>
 
@@ -151,10 +347,7 @@ MathJax.Hub.Config({
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/ml_ex1/ex1/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Mechine Learning：线性回归</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/ml/20170905/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">关于logistic regression</p></a>
+		<a class="post-nav__link" href="/post/alg4/chapter2/ex_2_4_22/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">算法4 Java解答 2.4.22</p></a>
 	</div>
 </nav>
 
