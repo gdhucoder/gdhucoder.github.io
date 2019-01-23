@@ -3,22 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>算法4习题 2.1.12</title>
+<title>2019-01-23随笔</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="算法4习题 2.1.12" />
-<meta property="og:description" content="算法4习题 2.1.12 问题 Instrument shellsort to print the number of compares divided by the array size for each increment. Write a test client that tests the hypothesis that this number is a small constant, by sorting arrays of random Double values, using array sizes that are increasing powers of 10, starting at 100.
-打印希尔排序中每个增量带来的比较次数和数组大小的比值。 验证该值是一个小常数。
-思路 统计每个增量对应的比较次数。
-private static boolean less(Comparable v, Comparable w) { count &#43;&#43; ; return v." />
+<meta property="og:title" content="2019-01-23随笔" />
+<meta property="og:description" content="&ldquo;坚持&rdquo; &ldquo;努力&rdquo; 今年希望把 &ldquo;坚持&rdquo; &ldquo;努力&rdquo; 这两个词从我的字典中删掉。
+通过坚持和努力才能做的事情是做不好的。因为需要坚持的事情，我们从心里是不愿意做的。 不愿意做的事情怎么能够做的好呢？
+解决这个问题的技巧有三个：
+1、 赋予这件事崇高的意义
+2、如果不做这件事，我会失去什么
+3、加入一个社群" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter2/chapter2-1-12/" />
+<meta property="og:url" content="https://gdhucoder.github.io/thinking/2019-01-23/" />
 
 
 
-<meta property="article:published_time" content="2018-08-06T08:00:00&#43;08:00"/>
+<meta property="article:published_time" content="2019-01-23T08:00:00&#43;08:00"/>
 
-<meta property="article:modified_time" content="2018-08-06T08:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-01-23T08:00:00&#43;08:00"/>
 
 
 
@@ -81,115 +83,51 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">算法4习题 2.1.12</h1>
+			<h1 class="post__title">2019-01-23随笔</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2018-08-06T08:00:00">August 06, 2018</time>
+				<time class="post__meta-date" datetime="2019-01-23T08:00:00">January 23, 2019</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+					<a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
 			</p>
 		</header>
 		<div class="post__content clearfix">
 			
 <aside>
     <header>
-    <h2>算法4习题 2.1.12</h2>
+    <h2>2019-01-23随笔</h2>
     </header>
     <nav id="TableOfContents">
 <ul>
-<li><a href="#算法4习题-2-1-12">算法4习题 2.1.12</a>
-<ul>
-<li><a href="#问题">问题</a></li>
-<li><a href="#思路">思路</a></li>
-<li><a href="#解答">解答</a></li>
-</ul></li>
+<li><a href="#坚持-努力">&ldquo;坚持&rdquo; &ldquo;努力&rdquo;</a></li>
 </ul>
 </nav>
 </aside>
 
 			
 
-<h1 id="算法4习题-2-1-12">算法4习题 2.1.12</h1>
+<h1 id="坚持-努力">&ldquo;坚持&rdquo; &ldquo;努力&rdquo;</h1>
 
-<h2 id="问题">问题</h2>
+<p>今年希望把 &ldquo;坚持&rdquo; &ldquo;努力&rdquo; 这两个词从我的字典中删掉。</p>
 
-<p>Instrument shellsort to print the number of compares divided by the array size for each increment. Write a test client that tests the hypothesis that this number is a small constant, by sorting arrays of random Double values, using array sizes that are increasing powers of 10, starting at 100.</p>
+<p>通过坚持和努力才能做的事情是做不好的。因为需要坚持的事情，我们从心里是不愿意做的。
+不愿意做的事情怎么能够做的好呢？</p>
 
-<p>打印希尔排序中每个增量带来的比较次数和数组大小的比值。
-验证该值是一个小常数。</p>
+<p>解决这个问题的技巧有三个：</p>
 
-<h2 id="思路">思路</h2>
+<p>1、 赋予这件事崇高的意义</p>
 
-<p>统计每个增量对应的比较次数。</p>
+<p>2、如果不做这件事，我会失去什么</p>
 
-<pre><code class="language-java">  private static boolean less(Comparable v, Comparable w) {
-    count ++ ;
-    return v.compareTo(w) &lt; 0;
-  }
-</code></pre>
-
-<h2 id="解答">解答</h2>
-
-<p>Extensive experiments suggest that the average number of compares per increment might be N^(<sup>1</sup>&frasl;<sub>5</sub>)
-大量实验表明每个增量的比较次数约为N的1/5次方。</p>
-
-<p>这个结果，我觉得是有点怪的。题目中说是一个小常数，我理解是不变的常数。但是结果看下来，发现数值是变的。</p>
-
-<pre><code class="language-java">For array length =       1000, N^(1/5): 3.98 
-h:        364          0.81 
-h:        121          1.67 
-h:         40          2.26 
-h:         13          2.80 
-h:          4          3.57 
-h:          1          2.70 
-
-For array length =      10000, N^(1/5): 6.31 
-h:       9841          0.02 
-h:       3280          0.90 
-h:       1093          1.71 
-h:        364          2.36 
-h:        121          2.96 
-h:         40          3.70 
-h:         13          4.35 
-h:          4          3.75 
-h:          1          2.74 
-
-For array length =     100000, N^(1/5): 10.00 
-h:      88573          0.11 
-h:      29524          0.98 
-h:       9841          1.76 
-h:       3280          2.40 
-h:       1093          2.98 
-h:        364          3.67 
-h:        121          4.98 
-h:         40          6.49 
-h:         13          8.70 
-h:          4          4.72 
-h:          1          2.74 
-
-For array length =    1000000, N^(1/5): 15.85 
-h:     797161          0.20 
-h:     265720          1.05 
-h:      88573          1.83 
-h:      29524          2.45 
-h:       9841          3.07 
-h:       3280          3.84 
-h:       1093          5.00 
-h:        364          6.48 
-h:        121          8.78 
-h:         40         13.68 
-h:         13         10.22 
-h:          4          4.85 
-h:          1          2.75 
-</code></pre>
+<p>3、加入一个社群</p>
 
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/java/" rel="tag">JAVA</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/%E6%80%9D%E8%80%83/" rel="tag">思考</a></li>
 	</ul>
 </div>
 
@@ -209,10 +147,7 @@ h:          1          2.75
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/alg4/chapter1/chapter1-1/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">算法4 chp 1-1</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/skill/2018-10-19/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">2018-10-19 解决Markdown图片问题</p></a>
+		<a class="post-nav__link" href="/thinking/2018-10-19/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">2018-10-19随笔</p></a>
 	</div>
 </nav>
 

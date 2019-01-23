@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gdhucoder.github.io/thinking/2019-01-23/</loc>
+    <lastmod>2019-01-23T08:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_24/</loc>
     <lastmod>2018-11-04T06:00:00+08:00</lastmod>
   </url>
@@ -153,6 +158,11 @@
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/thinking/about/</loc>
+    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/reading/rd_0/</loc>
     <lastmod>2017-08-14T03:58:07+08:00</lastmod>
   </url>
@@ -197,10 +207,6 @@
   
   <url>
     <loc>https://gdhucoder.github.io/post/skill/how_to_use_virtualbox/</loc>
-  </url>
-  
-  <url>
-    <loc>https://gdhucoder.github.io/thinking/rd_0/</loc>
   </url>
   
   <url>
@@ -259,6 +265,12 @@
   <url>
     <loc>https://gdhucoder.github.io/tags/mc/</loc>
     <lastmod>2017-11-26T21:25:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/tags/mind/</loc>
+    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -330,7 +342,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/thinking/</loc>
-    <lastmod>2018-10-19T08:00:00+08:00</lastmod>
+    <lastmod>2019-01-23T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -342,19 +354,19 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</loc>
-    <lastmod>2018-11-04T06:00:00+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://gdhucoder.github.io/tags/%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2018-10-19T08:00:00+08:00</lastmod>
+    <lastmod>2019-01-23T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E6%80%9D%E8%80%83/</loc>
     <lastmod>2017-09-07T21:25:07+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/tags/%E6%80%9D%E8%80%83/</loc>
+    <lastmod>2019-01-23T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -390,7 +402,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/</loc>
-    <lastmod>2018-11-04T06:00:00+08:00</lastmod>
+    <lastmod>2019-01-23T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
