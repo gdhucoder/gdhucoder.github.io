@@ -6,10 +6,26 @@
     <description>Recent content in 技术 on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sun, 04 Nov 2018 06:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jan 2019 06:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>算法4 Java解答 5.1.2</title>
+      <link>https://gdhucoder.github.io/post/alg4/chapter5/ex_5_1_02/</link>
+      <pubDate>Thu, 24 Jan 2019 06:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/chapter5/ex_5_1_02/</guid>
+      <description>5.1.2 问题： 给出使用地位优先的字符串排序算法处理下面这些键的轨迹
+no is th ti fo al go pe to co to th ai of th pa
+Give a trace for LSD string sort for the keys:
+no is th ti fo al go pe to co to th ai of th pa
+分析： LSD 适用于字符等长的数组排序。
+从右往左，依次数组中每个元素对位置d的字符使用key-indexed counting排序。
+平均数组访问次数7WN+3WR。额外空间N+R。 N 对应aux数组，R对应count数组。 对于一般的应用LSD线性时间复杂度。
+public static void sort(String[] a, int w) { int N = a.length; int R = 256; String[] aux = new String[N]; for (int d = w - 1; d &amp;gt;= 0; d--) { // sort by key-indexed counting on dth char show(a); int[] count = new int[R + 1]; for (int i = 0; i &amp;lt; N; i++) { count[a[i].</description>
+    </item>
     
     <item>
       <title>算法4 Java解答 2.4.24</title>
