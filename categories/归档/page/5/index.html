@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>读书</title>
+<title>归档</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="读书" />
+<meta property="og:title" content="归档" />
 <meta property="og:description" content="博客" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://gdhucoder.github.io/categories/%E8%AF%BB%E4%B9%A6/" />
+<meta property="og:url" content="https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/" />
 
 
 
-<meta property="og:updated_time" content="2019-01-27T07:00:00&#43;08:00"/>
+<meta property="og:updated_time" content="2017-08-08T21:44:30&#43;08:00"/>
 
 
 
@@ -40,7 +40,7 @@ MathJax.Hub.Config({
 });
 </script>
 
-<link rel="alternate" type="application/rss+xml" title="野生程序员 Feed" href="https://gdhucoder.github.io/categories/%E8%AF%BB%E4%B9%A6/index.xml">
+<link rel="alternate" type="application/rss+xml" title="野生程序员 Feed" href="https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/index.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
 <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 <script type="text/javascript" src="/js/scripts.js"></script>
@@ -74,28 +74,27 @@ MathJax.Hub.Config({
 
 	<div class="main-content list content" role="main">
 		<header class="page-header">
-			<h1 class="page-header__title">读书</h1>
+			<h1 class="page-header__title">归档</h1>
 		</header><article class="list__item post clearfix">
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/reading/time_is_your_friend/" rel="bookmark">把时间当做朋友</a>
+				<a href="/post/plt_2/plt_2/" rel="bookmark">matplot的使用之二:柱状图、散点图</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2019-01-27T07:00:00">January 27, 2019</time>
+				<time class="list__meta-date" datetime="2017-08-08T21:44:30">August 08, 2017</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
-			生命中，我们经常会有这样的时刻，在某个时候脑中&rdquo;叮&rdquo;的一声，那时你发现自己之前浪费了很多时光。
-时间的流逝是单向的。
-这周末看了李笑来的《把时间当做朋友》，里面讲了做事情不要着急，要相信时间的力量。
-其实我就是一个做事情很急的人。由于这种心态导致很多事情没有做好。接下来自己要做出一些改变。
-关于&rdquo;规划&rdquo;和&rdquo;计划&rdquo;的区别：我是一个做事情之前要做好计划的人。实际执行过程中，发现&rdquo;计划赶不上变化&rdquo;，那计划和现实冲突时我们怎么办呢？是根据现实改变还是坚持计划？ 坚持计划的话，那么按照我的&rdquo;职业规划&rdquo; 我应该是一名石油工程师。而我现在是一名程序猿。我时常为坚持计划还是调整计划而苦恼。
-plan在Collins词典中的解释是：A plan is a method of achieving something that you have worked out in detail beforehand. 计划按照应该是一些列详细的解决问题的步骤，最后达到目标。
-但在我学了MDP（马尔可夫决策过程）后，深刻的体会到了世界是动态的，概率的。面对概率的世界，我们应该怎么办呢？有一个plan，这个plan的目标和人生幸福有关，但能根据现实的情形（世界）做出不同的反应，这就是规划！
-2019-01-27
-于深圳市人民医院病理科
+			<pre><code class="language-python">import pandas as pd
+reviews = pd.read_csv('fandango_scores.csv')
+cols = ['FILM', 'RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue', 'Fandango_Stars']
+norm_reviews = reviews[cols]
+print(norm_reviews[:1])
+</code></pre>
+
+<p></p>
 		</div>
 	</div>
 </article>
@@ -103,21 +102,34 @@ plan在Collins词典中的解释是：A plan is a method of achieving something 
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/reading/rd_0/" rel="bookmark">读书</a>
+				<a href="/post/plt_1/plt_1/" rel="bookmark">matplot的使用之一:折线图、子图</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-08-14T03:58:07">August 14, 2017</time>
+				<time class="list__meta-date" datetime="2017-08-03T21:44:30">August 03, 2017</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
-			好书将要推荐在这里！
+			<pre><code class="language-python">import pandas as pd
+</code></pre>
+
+<pre><code class="language-python">unrate = pd.read_csv('UNRATE.csv')
+unrate['DATE'] = pd.to_datetime(unrate['DATE'])
+print(unrate.head(12))
+</code></pre>
+
+<p></p>
 		</div>
 	</div>
 </article>
 
 
 		
+<div class="pagination clearfix">
+	<a class="pagination__item pagination__item--prev" href="/categories/%E5%BD%92%E6%A1%A3/page/4/">«</a>
+	<span class="pagination__item pagination__item--current">5/5</span>
+</div>
+
 	</div>
 
 <aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">

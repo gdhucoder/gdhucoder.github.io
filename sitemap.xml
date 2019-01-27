@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gdhucoder.github.io/reading/time_is_your_friend/</loc>
+    <lastmod>2019-01-27T07:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/thinking/2019-01-26/</loc>
+    <lastmod>2019-01-26T08:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/alg4/chapter5/ex_5_1_02/</loc>
     <lastmod>2019-01-24T06:00:00+08:00</lastmod>
   </url>
@@ -222,7 +232,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/tags/books/</loc>
-    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
+    <lastmod>2019-01-27T07:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -317,7 +327,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/reading/</loc>
-    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
+    <lastmod>2019-01-27T07:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -335,7 +345,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/tags/</loc>
-    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
+    <lastmod>2019-01-27T07:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -347,7 +357,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/thinking/</loc>
-    <lastmod>2019-01-23T08:00:00+08:00</lastmod>
+    <lastmod>2019-01-26T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -359,13 +369,13 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</loc>
-    <lastmod>2019-01-24T06:00:00+08:00</lastmod>
+    <lastmod>2019-01-27T07:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/tags/%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2019-01-23T08:00:00+08:00</lastmod>
+    <lastmod>2019-01-26T08:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -401,13 +411,13 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E8%AF%BB%E4%B9%A6/</loc>
-    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
+    <lastmod>2019-01-27T07:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/</loc>
-    <lastmod>2019-01-24T06:00:00+08:00</lastmod>
+    <lastmod>2019-01-27T07:00:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
