@@ -6,10 +6,19 @@
     <description>Recent content in Tags on 野生程序员</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sun, 27 Jan 2019 07:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 30 Jan 2019 21:08:33 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Book</title>
+      <link>https://gdhucoder.github.io/tags/book/</link>
+      <pubDate>Wed, 30 Jan 2019 21:08:33 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/book/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Books</title>
