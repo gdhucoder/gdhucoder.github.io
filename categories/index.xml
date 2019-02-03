@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on 野生程序员</title>
+    <title>Categories on 程序员的自我修养</title>
     <link>https://gdhucoder.github.io/categories/</link>
-    <description>Recent content in Categories on 野生程序员</description>
+    <description>Recent content in Categories on 程序员的自我修养</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     
@@ -13,7 +13,7 @@
     <item>
       <title>归档</title>
       <link>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</link>
-      <pubDate>Fri, 01 Feb 2019 13:32:20 +0800</pubDate>
+      <pubDate>Sun, 03 Feb 2019 09:50:04 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</guid>
       <description></description>
@@ -31,7 +31,7 @@
     <item>
       <title>技术</title>
       <link>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
-      <pubDate>Fri, 01 Feb 2019 13:32:20 +0800</pubDate>
+      <pubDate>Sun, 03 Feb 2019 09:50:04 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
