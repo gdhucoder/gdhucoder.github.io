@@ -3,25 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>基于试验的启发式树搜索</title>
+<title>用十年时间自学编程</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="基于试验的启发式树搜索" />
+<meta property="og:title" content="用十年时间自学编程" />
 <meta property="og:description" content="[TOC]
 
-概念
+业余时间翻译经典的博文。
 
-给定一个MDP，一个agent可以访问：
+Teach yourself programming in ten years
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/note/2018-01-05/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/timefriend/ten-years/" />
 
 
 
-<meta property="article:published_time" content="2018-01-04T21:25:07&#43;08:00"/>
+<meta property="article:published_time" content="2019-02-17T21:26:41&#43;08:00"/>
 
-<meta property="article:modified_time" content="2018-01-04T21:25:07&#43;08:00"/>
+<meta property="article:modified_time" content="2019-02-17T21:26:41&#43;08:00"/>
 
 
 
@@ -84,10 +84,10 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">基于试验的启发式树搜索</h1>
+			<h1 class="post__title">用十年时间自学编程</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2018-01-04T21:25:07">January 04, 2018</time>
+				<time class="post__meta-date" datetime="2019-02-17T21:26:41">February 17, 2019</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
@@ -97,20 +97,17 @@ MathJax.Hub.Config({
 			
 <aside>
     <header>
-    <h2>基于试验的启发式树搜索</h2>
+    <h2>用十年时间自学编程</h2>
     </header>
     <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#teach-yourself-programming-in-ten-years">Teach yourself programming in ten years</a>
 <ul>
-<li>
-<ul>
-<li><a href="#概念">概念</a></li>
-<li><a href="#多臂赌博机问题-mab">多臂赌博机问题（MAB）</a>
-<ul>
-<li><a href="#探索和获取收益的窘境-exploration-exploitation-dilemma">探索和获取收益的窘境（exploration-exploitation dilemma）</a></li>
-</ul></li>
-</ul></li>
+<li><a href="#teach-yourself-programming-in-ten-years-1">Teach Yourself Programming in Ten Years</a></li>
+<li><a href="#so-you-want-to-be-a-programmer">So You Want to be a Programmer</a></li>
+<li><a href="#答案">答案</a></li>
+<li><a href="#附录-语言的选择">附录：语言的选择</a></li>
+<li><a href="#收获">收获</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -118,68 +115,120 @@ MathJax.Hub.Config({
 
 			<p>[TOC]</p>
 
-<h3 id="概念">概念</h3>
+<p>业余时间翻译经典的博文。</p>
 
-<p>给定一个MDP，一个agent可以访问：</p>
+<p>Teach yourself programming in ten years</p>
 
 <p></p>
 
-<ul>
-<li><p>环境先验模型（a-priori model of environment）</p>
+<h1 id="teach-yourself-programming-in-ten-years">Teach yourself programming in ten years</h1>
 
-<p>在agent与环境交互之前就呈现给他了。</p></li>
+<p>用十年时间自学编程</p>
+
+<p>为什么每个人都这么急功近利？</p>
+
+<p>走进任意一个书店，你将会看到《24小时自学java》和类似的C，SQL，Ruby，算法等类的书籍，花上几天甚至几小时你就能掌握它们。使用亚马逊高级搜索：[title: teach, yourself, hours, since: 2000 ，你会发现有512本这样的书。前十种中，有九本是编程书籍，剩下的一本是关于记账的。将&rdquo;teach yourself&rdquo;替换成&rdquo;learn&rdquo;或者将&rdquo;hours&rdquo;替换成&rdquo;days&rdquo;。</p>
+
+<p>结论要么是每个人都急着想学编程或者是编程要比学习其他东西简单。Felleisen 等人在他们著作《how to design programs》也承认这种趋势，他在书中说：糟糕的编程很容易，白痴都可以在21天内学会它，即使他们是傻瓜。Abtruse Goose漫画也有他们的看法。</p>
+
+<p>让我们分析一下《24小时掌握C++》这样的书名是什么意思：</p>
+
+<p><strong>自学</strong>：24小时内，你没有时间写几个重要的程序，不能从你的成功或者失败中学习。你没有时间和有经验的程序员一起工作，也无法理解生活在C++环境的感受。简而言之，你没有足够的时间学到很多东西。书中谈到只能谈到肤浅的东西，而不是深刻的理解。正如亚历山大.波普所说，一知半解是危险的。</p>
+
+<p><strong>C++</strong>：在24小时中，你可能学习到一些C++的语法（如果你对其他编程语言有了解的话），但是你不能学到更多的关于语言使用方面的知识。总之，如果你是一个初级程序员，你可以学会写C++风格基础的程序，但是你无法了解到C++到底好在什么地方（有哪些不足）。这么说有什么意义呢？Alan Perlis曾说过，如果一种编程语言不能影响到你对编程的认识，那么它是不值得学习的。一种可能的观点是，你必须学一点C++（或者更可能像JavaScript或者Processing）因为你需要使用先用的工具进行交互以完成特定的任务。但是，那么你学习的就不是编程，而是完成一项任务。</p>
+
+<p><strong>24小时内</strong>：悲催的是，24小时远远不够，请看下面。</p>
+
+<h2 id="teach-yourself-programming-in-ten-years-1">Teach Yourself Programming in Ten Years</h2>
+
+<p>研究表明很多领域例如象棋，音乐创作，绘画，游泳等等都需要大概十年时间学习。关键在于<strong>刻意练习</strong>，刻意练习并不是简单的重复，而是一次一次的通过任务挑战自己，分析任务执行的成败原因和你的表现。重复重复，没有捷径。</p>
+
+<p>Malcolm Gladwell提出一个观点10000小时天才理论。</p>
+
+<h2 id="so-you-want-to-be-a-programmer">So You Want to be a Programmer</h2>
+
+<ul>
+<li><p>对编程感兴趣，你要足够感兴趣，才能肯花费10年或者10000小时。</p></li>
+
+<li><p>编程：最好的学习方式是<strong>通过做学习， learning by doing</strong>。</p></li>
 </ul>
 
 <blockquote>
-<p>which is revealed to the agent before its interaction with the environment starts.</p>
+<p>the most effective learning requires a well-defined task with an appropriate difficulty level for the particular individual, informative feedback, and opportunities for repetition and corrections of errors.</p>
 </blockquote>
 
 <ul>
-<li><p>生成模型（a generative model）</p>
+<li><p>和其他程序员交流，阅读代码。这比任何书或者课程都有效。</p></li>
 
-<p>输入一个状态和动作，输出奖励和根据转移函数的到的随机下一个状态。</p></li>
-
-<li><p>声明模型（a declarative model）</p>
-
-<p>声明模型提供了MDP的描述，对于所有的状态、后继状态和动作提供了概率转移和奖励函数。</p></li>
+<li><p>如果你想的话，可以上4年大学。</p></li>
 </ul>
 
-<p>我们在此处区分<strong>学习agents</strong> （未提供先验模型）和<strong>规划agents</strong>（可以访问生成模型或者声明模型）</p>
-
-<!--more-->
-
-<h3 id="多臂赌博机问题-mab">多臂赌博机问题（MAB）</h3>
-
 <blockquote>
-<p>Figuratively, the agent faces a slot machine (a bandit) with multiple arms, and it has to decide which arm to pull based only on the payouts it received so far. Each arm provides a random reward according to a probability distribution that is specific to the arm and constant over time, but the agent has no initial information on the distribution.</p>
+<p>Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter</p>
 </blockquote>
 
-<h4 id="探索和获取收益的窘境-exploration-exploitation-dilemma">探索和获取收益的窘境（exploration-exploitation dilemma）</h4>
+<ul>
+<li>和其他程序员一同工作。在某些项目上成为最好的程序员，在某些项目上成为最差的程序员。</li>
+</ul>
 
-<p>简单的说就是：agent要探索尝试各种动作，牺牲一部分收益来寻找到最好的动作，但又不能牺牲的太多。要平衡探索时牺牲的收益和获取最大的收益。</p>
+<p>当你是最牛的人时，尝试领导项目，鼓励他人。当你是最差的人时，从大师身上学习，学习他们不喜欢做什么（因为他们会让你做这些事情）。</p>
+
+<ul>
+<li><p>在其他程序员之后开展项目。理解其他人写的程序。了解理解程序需要什么知识，当最初的程序员不在时，修复bug。考虑如何设计你的程序，是其他人在你之后更容易维护。</p></li>
+
+<li><p>学习至少5-6们编程语言。包括关注类抽象的 java或者c++，函数式编程的 lisp ml haskell，语法抽象的 lisp，支持声明式规范的 Prolog C++ templates，支持并行的例如Clojure Go。</p></li>
+
+<li><p>记住计算机科学这个词中有个&rdquo;计算机&rdquo;。知道多长时间执行一条指令。。。</p></li>
+
+<li><p>参与语言标准化。</p></li>
+</ul>
+
+<p>通过书籍你能学多少东西是不确定的。当我第一个孩子出生时，我读了所有关于&rdquo;如何做&rdquo;的数据，但是仍然感觉自己是个新手。30个月后，我第二个孩子出生后，我又回去看书了么？没有，我依靠我自己的经验，事实上比专家写的几千页的书都有用。</p>
 
 <blockquote>
-<p>on the one hand, since the agent has no a-priori knowledge of the environment, it has to explore its possibilities to learn from the feedback the environment provides. And on the other, since it aims to maximize the accumulated reward over all runs, it has an incentive to exploit the knowledge it has gathered by executing the action it believes to be best. In other words, the agent learns from its trial-and-error interaction with the environment, and it has to make sure that the balance between exploration and exploitation is such that it learns the best action without sacrificing too much reward in early decisions.</p>
+<p>Gusteau&rsquo;s critic, Anton Ego, says: &ldquo;Not everyone can become a great artist, but a great artist can come from anywhere.&rdquo;</p>
 </blockquote>
 
-<p><img src="http://upload-images.jianshu.io/upload_images/4800606-33b52f5c1785e6ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" /></p>
+<h2 id="答案">答案</h2>
 
-<p>一个三臂的例子MAB问题。 边缘用转移概率p和奖励r标记为p：r。</p>
+<p>Approximate timing for various operations on a typical PC:</p>
 
-<p>一个MAB问题有三个拉杆al，am，ar（分别代表左、中、右拉杆）。拉动左拉杆可以获得20或者0的奖励，概率分别为0.5。拉动右拉杆分别或者70或者30的奖励，概率分别为0.5。拉动中间的拉杆，有0.1的概率获得100的奖励，0.5的概率获得60的奖励，0.4的概率获得30的奖励。我们可以通过访问声明模型计算出3个拉杆的期望奖励分别为：Q*(al) = 10, Q*(am) = 52, Q*(ar) = 50。最好的选择是拉动中间的拉杆。</p>
+<p>execute typical instruction <sup>1</sup>&frasl;<sub>1</sub>,000,000,000 sec = 1 nanosec</p>
 
-<p>但是，即使模型可以被访问计算的期望值是微不足道的，因为agent没有关于定义回报的分布的先验知识，所以MAB是具有挑战性的问题。 因此，它必须探索机器的拉杆，以获得分布（或期望的奖励）的是什么样的，并在其信念充分确定的情况下利用其知识。 如果它放弃探索太早，它可能永远也找不到最好的拉杆 - 例如，考虑到中间选项在前几次运行中不能获得100的奖励的不太可能的情况。 在这种情况下，它的行动价值估计Qk（am）可以预计低于50，并且可能ar看起来更有前景。 因此，如果agent过早相信信念，即使am是更好的，也会继续选择右侧的拉杆。 另一方面，如果它继续探索太久，它往往会拉下左或者右拉杆更多次，牺牲的收益。</p>
+<p>fetch from L1 cache memory  0.5 nanosec</p>
 
-<p>ETE strategy: Explore-then-Exploit strategy 探索开发策略
-exploration phase of length <em>l</em>, aims to deciside the best arm with high probability.
-action selection: uniform action selection 一致动作选择，意思是随机选择一个拉杆*l*次。
-exploitation phase: greedy action, choose action with highest Q value</p>
+<p>branch misprediction    5 nanosec</p>
+
+<p>fetch from L2 cache memory  7 nanosec</p>
+
+<p>Mutex lock/unlock   25 nanosec</p>
+
+<p>fetch from main memory  100 nanosec</p>
+
+<p>send 2K bytes over 1Gbps network    20,000 nanosec</p>
+
+<p>read 1MB sequentially from memory   250,000 nanosec</p>
+
+<p>fetch from new disk location (seek) 8,000,000 nanosec</p>
+
+<p>read 1MB sequentially from disk 20,000,000 nanosec</p>
+
+<p>send packet US to Europe and back   150 milliseconds = 150,000,000 nanosec</p>
+
+<h2 id="附录-语言的选择">附录：语言的选择</h2>
+
+<p>第一门语言：Python。</p>
+
+<h2 id="收获">收获</h2>
+
+<p>&ldquo;刻意练习&rdquo;才能成为一名好的程序员。
+关于如何刻意练习，待以后分析。</p>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/planning/" rel="tag">PLANNING</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/book/" rel="tag">BOOK</a></li>
 	</ul>
 </div>
 
@@ -199,10 +248,7 @@ exploitation phase: greedy action, choose action with highest Q value</p>
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/planning/montecarlo/monte_carlo/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">什么是蒙特卡罗</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/note/2018-03-29/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">废弃不用的链接</p></a>
+		<a class="post-nav__link" href="/post/alg4/geekbang/04/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">04 | 复杂度分析（下）：浅析最好、最坏、平均、均摊时间复杂度</p></a>
 	</div>
 </nav>
 
