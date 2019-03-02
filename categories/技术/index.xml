@@ -23,12 +23,6 @@
 
 &lt;p&gt;推荐注册返佣金这个功能一般来说不陌生吧？用户A推荐用户B来注册，用户B又推荐了用户C来注册。我们可以说C的“最终推荐人”为用户A，B的“最终推荐人”也为用户A，而用户A没有“最终推荐人”。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-02-001.png&#34; alt=&#34;2019-03-02-001&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;一般来说，我们会通过数据库来记录这种推荐关系。在数据库表中，我们可以记录两行数据，其中actor_id，表示用户id，referrer_id表示推荐人。&lt;/p&gt;
-
-&lt;p&gt;基于这个场景，我们的问题是，给定一个用户ID，如何查找这个用户的“最终推荐人”？&lt;/p&gt;
-
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
     
