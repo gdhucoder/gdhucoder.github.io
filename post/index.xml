@@ -6,10 +6,23 @@
     <description>Recent content in Posts on 程序员的自我修养</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sat, 02 Mar 2019 09:39:55 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 02 Mar 2019 19:26:09 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MarkDown内嵌标签</title>
+      <link>https://gdhucoder.github.io/post/tech_details/markdown_use/</link>
+      <pubDate>Sat, 02 Mar 2019 19:26:09 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/tech_details/markdown_use/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;关于Markdown支持html标签&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>10 | 递归：如何用三行代码找到“最终推荐人”？</title>
