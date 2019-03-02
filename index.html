@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2019-02-17T21:26:41&#43;08:00"/>
+<meta property="og:updated_time" content="2019-03-02T09:39:55&#43;08:00"/>
 
 
 
@@ -73,6 +73,34 @@ MathJax.Hub.Config({
 		<div class="wrapper clearfix">
 
 	<div class="main-content list content" role="main"><article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/geekbang/10/" rel="bookmark">10 | 递归：如何用三行代码找到“最终推荐人”？</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2019-03-02T09:39:55">March 02, 2019</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			<p>[TOC]</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-02-003.png" alt="2019-03-02-003" /></p>
+
+<p>推荐注册返佣金这个功能一般来说不陌生吧？用户A推荐用户B来注册，用户B又推荐了用户C来注册。我们可以说C的“最终推荐人”为用户A，B的“最终推荐人”也为用户A，而用户A没有“最终推荐人”。</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-02-001.png" alt="2019-03-02-001" /></p>
+
+<p>一般来说，我们会通过数据库来记录这种推荐关系。在数据库表中，我们可以记录两行数据，其中actor_id，表示用户id，referrer_id表示推荐人。</p>
+
+<p>基于这个场景，我们的问题是，给定一个用户ID，如何查找这个用户的“最终推荐人”？</p>
+
+<p></p>
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
@@ -267,25 +295,6 @@ $$ \begin{eqnarray} h + 2(h-1) + 4(h-2) + 8(h-3) + \ldots + 2^h (0) &amp; = &amp
 		</div>
 	</div>
 </article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/alg4/chapter2/ex_2_4_19/" rel="bookmark">算法4 Java解答 2.4.19</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-10-28T05:30:00">October 28, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			2.4.19 问题： 2.4.19 Implement the constructor for MaxPQ that takes an array of items as argument, using the bottom-up heap construction method described on page 323 in the text.
-实现一个MaxPQ的构造函数，接受一个数组做为参数，使用323页中描述的自底向上的方法构建堆。
-分析： 将数组做为参数构建堆，可以选择从左到右扫描，使用swim()方法。 但更明智的方法是使用从右往左扫描的方式，sink()。 这个方法的想法是如果一个结点的两个子结点的树都是堆的话，sink(k)之后，两个子树就合并成了以k为根结点的子树
-public MaxPQ(Key[] a){ N = a.length; pq = (Key[]) new Comparable[N+1]; for(int i=0; i&lt;a.length; i++){ pq[i+1] = a[i]; } int k = N / 2; while (k &gt;= 1){ sink(k); k --; } assert isMaxHeap(); show(); }  参考： 课本官网的实现MaxPQ
-		</div>
-	</div>
-</article>
 
 		
 
@@ -314,11 +323,11 @@ public MaxPQ(Key[] a){ N = a.length; pq = (Key[]) new Comparable[N+1]; for(int i
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/10/">10 | 递归：如何用三行代码找到“最终推荐人”？</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/timefriend/ten-years/">用十年时间自学编程</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/04/">04 | 复杂度分析（下）：浅析最好、最坏、平均、均摊时间复杂度</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/alg4/chapter5/stringsortssummary/">String SortsSummary 字符串排序总结</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/timefriend/2019-01-30/">Problems</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/alg4/chapter5/ex_5_1_02/">算法4 Java解答 5.1.2</a></li>
 		</ul>
 	</div>
 </div>
