@@ -93,13 +93,90 @@ MathJax.Hub.Config({
 		</header>
 		<div class="post__content clearfix">
 			
+<aside>
+    <header>
+    <h2>11 | 排序（上）：为什么插入排序比冒泡排序更受欢迎？</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#排序">排序</a>
+<ul>
+<li><a href="#冒泡排序">冒泡排序</a></li>
+</ul></li>
+</ul>
+</nav>
+</aside>
+
 			<p>[TOC]</p>
 
 <p>Abstract Part</p>
 
 <p></p>
 
-<h1 id="enter-your-title">Enter your title</h1>
+<h1 id="排序">排序</h1>
+
+<p>一些列对象按照逻辑排序。例如账单按照消费日期倒序排列。</p>
+
+<h2 id="冒泡排序">冒泡排序</h2>
+
+<p>每次冒泡操作都会对相邻的元素进行两两比较，看是否满足大小关系要求。如果不满足就让它俩互换。一次冒泡会让至少一个元素移动到它应该在的位置，重复n次，就完成了n个数据的排序操作。</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-04-001.png" alt="2019-03-04-001" /></p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-04-002.png" alt="2019-03-04-002" /></p>
+
+<p><font color="green"><strong>优化：可以提前结束冒泡排序</strong></font></p>
+
+<pre><code class="language-java">public static void bubbleSort(int[] a) {
+      if(a==null || a.length == 0){
+        throw new IllegalArgumentException(&quot;array is null or no element!&quot;);
+      }
+      int n = a.length;
+      for (int i = 0; i &lt; n; i++) {
+        boolean flag = false; // 提前退出冒泡循环的标志位
+        for (int j = 0; j &lt; n - 1 - i; j++) {
+          if (a[j] &gt; a[j + 1]) {
+            exch(a, j, j + 1);
+            flag = true; // 表示有数据交换
+          }
+        }
+        if (!flag){
+          StdOut.println(&quot;提前退出&quot;);
+          break; // 没有数据交换，提前退出。
+        }
+      }
+    }
+  }
+</code></pre>
+
+<p>有三个问题：</p>
+
+<p><font color="Darkorange"><strong>第一、冒泡排序是原地排序算法么？</strong></font></p>
+
+<p>冒泡的排序过程只涉及相邻数据的交换操作，只需要常量级别的临时空间，所以它的空间复杂度为O(1)，是一个原地排序算法。</p>
+
+<p><font color="Darkorange"><strong>第二、冒泡排序算法是稳定排序算法么？</strong></font></p>
+
+<p>在冒泡排序中，只有一个元素大于相邻的元素时才做交换，相等的相邻元素不做交换。相同大小的数据在排序前后不会改变顺序，所以冒泡排序是稳定的排序算法。</p>
+
+<p><font color="Darkorange"><strong>第三、冒泡排序的时间复杂度是多少？</strong></font></p>
+
+<p>最好情况：123456 1次冒泡 时间复杂度O(n)</p>
+
+<p>最坏情况：654321 5次冒泡 时间复杂度O(n^2)</p>
+
+<p>平均时间复杂度就是加权平均期望时间复杂度，简单的说是O(n^2)</p>
+
+<p>这里涉及到几个概念：有序度，满有序度，逆序度 = 满有序度 - 有序度。</p>
+
+<p>平均情况下要进行 n*(n-1)/4 次交换操作。</p>
+
+<blockquote>
+<p>冒泡排序包含两个操作原子，比较和交换。每交换一次，有序度就加 1。不管算法怎么改进，交换次数总是确定的，即为逆序度，也就是n<em>(n-1)/2–初始有序度。此例中就是 15–3=12，要进行 12 次交换操作。
+对于包含 n 个数据的数组进行冒泡排序，平均交换次数是多少呢？最坏情况下，初始状态的有序度是 0，所以要进行 n</em>(n-1)/2 次交换。最好情况下，初始状态的有序度是 n*(n-1)/2，就不需要进行交换。我们可以取个中间值 n*(n-1)/4，来表示初始有序度既不是很高也不是很低的平均情况。
+换句话说，平均情况下，需要 n*(n-1)/4 次交换操作，比较操作肯定要比交换操作多，而复杂度的上限是 O(n2)，所以平均情况下的时间复杂度就是 O(n2)。
+这个平均时间复杂度推导过程其实并不严格，但是很多时候很实用，毕竟概率论的定量分析太复杂，不太好用。等我们讲到快排的时候，我还会再次用这种“不严格”的方法来分析平均时间复杂度。</p>
+</blockquote>
 		</div>
 		
 <div class="post__tags tags clearfix">
