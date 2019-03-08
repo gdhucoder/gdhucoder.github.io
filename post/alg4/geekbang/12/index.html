@@ -3,17 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tag</title>
+<title>12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="Tag" />
-<meta property="og:description" content="博客" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://gdhucoder.github.io/tags/tag/" />
+<meta property="og:title" content="12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？" />
+<meta property="og:description" content="[TOC]
+
+12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？
 
 
 
-<meta property="og:updated_time" content="2019-02-03T09:50:04&#43;08:00"/>
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/alg4/geekbang/12/" />
+
+
+
+<meta property="article:published_time" content="2019-03-06T22:15:22&#43;08:00"/>
+
+<meta property="article:modified_time" content="2019-03-06T22:15:22&#43;08:00"/>
+
 
 
 
@@ -40,7 +49,7 @@ MathJax.Hub.Config({
 });
 </script>
 
-<link rel="alternate" type="application/rss+xml" title="程序员的自我修养 Feed" href="https://gdhucoder.github.io/tags/tag/index.xml">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
 <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 <script type="text/javascript" src="/js/scripts.js"></script>
@@ -72,33 +81,141 @@ MathJax.Hub.Config({
 		</header>
 		<div class="wrapper clearfix">
 
-	<div class="main-content list content" role="main">
-		<header class="page-header">
-			<h1 class="page-header__title">Tag</h1>
-		</header><article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/alg4/geekbang/04/" rel="bookmark">04 | 复杂度分析（下）：浅析最好、最坏、平均、均摊时间复杂度</a>
-			</h3>
-			<div class="list__meta meta">
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		<header class="post__header clearfix">
+			<h1 class="post__title">12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</h1>
+			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2019-02-03T09:50:04">February 03, 2019</time>
-			</div>
+				<time class="post__meta-date" datetime="2019-03-06T22:15:22">March 06, 2019</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+			</p>
 		</header>
-		<div class="list__excerpt">
+		<div class="post__content clearfix">
+			
+<aside>
+    <header>
+    <h2>12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#归并排序的原理">归并排序的原理</a>
+<ul>
+<li><a href="#快速排序的原理">快速排序的原理</a></li>
+<li><a href="#课后思考">课后思考</a></li>
+</ul></li>
+</ul>
+</nav>
+</aside>
+
 			<p>[TOC]</p>
 
-<p>浅析最好、最坏、平均、均摊时间复杂度</p>
+<p>12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-006.png" alt="2019-03-06-006" /></p>
 
 <p></p>
+
+<h1 id="归并排序的原理">归并排序的原理</h1>
+
+<p>归并排序的核心还是蛮简单的。如果要排序一个数组，我们先把数组中间分成前后两部分，然后对前后两部分分别排序，再将排好序的两部分合并在一起，这样整个数组就有序了。</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-007.png" alt="2019-03-06-007" /></p>
+
+<p>归并排序使用的就是分治思想。分治，顾名思义，就是分而治之，将一个大问题分解成小的子问题来解决。小的子问题解决了，大问题也解决了。</p>
+
+<p>从我刚才的描述，你有没有感觉到，分治思想跟我们前面讲的递归思想很像。是的，分治算法一般都是用递归来实现的。
+<font color="Darkorange"><strong>分治是一种解决问题的处理思想，递归是一种编程技巧</strong></font>，
+这两者并不冲突。</p>
+
+<p><font color="Darkorange"><strong>如何用递归代码来实现归并排序。</strong></font></p>
+
+<pre><code class="language-java">递推公式：
+meger_sort(p...r) = merge(meger_sort(p...q), meger_sort(q+1,r))
+
+终止条件
+p&gt;=r 不用再继续分解
+</code></pre>
+
+<p>merge_sort(p&hellip;r)表示，给下标p到r之间的数组排序。</p>
+
+<p>同样三个问题：</p>
+
+<p><font color="Darkorange"><strong>第一、归并排序是稳定的排序算法么？</strong></font></p>
+
+<p>结合图和代码，应该能发现归并排序稳不稳关键要看merge()函数。也就是将两个有序子数组合并成一个有序数组的那部分代码。</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-008.png" alt="2019-03-06-008" /></p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-009.png" alt="2019-03-06-009" /></p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-010.png" alt="2019-03-06-010" /></p>
+
+<h2 id="快速排序的原理">快速排序的原理</h2>
+
+<h2 id="课后思考">课后思考</h2>
+
+<p>现在你有 10 个接口访问日志文件，每个日志文件大小约 300MB，每个文件里的日志都是按照时间戳从小到大排序的。你希望将这 10 个较小的日志文件，合并为 1 个日志文件，合并之后的日志仍然按照时间戳从小到大排列。如果处理上述排序任务的机器内存只有 1GB，你有什么好的解决思路，能“快速”地将这 10 个日志文件合并吗？</p>
+
+<blockquote>
+<p>先构建十条io流，分别指向十个文件，每条io流读取对应文件的第一条数据，然后比较时间戳，选择出时间戳最小的那条数据，将其写入一个新的文件，然后指向该时间戳的io流读取下一行数据，然后继续刚才的操作，比较选出最小的时间戳数据，写入新文件，io流读取下一行数据，以此类推，完成文件的合并， 这种处理方式，日志文件有n个数据就要比较n次，每次比较选出一条数据来写入，时间复杂度是O（n），空间复杂度是O（1）,几乎不占用内存，这是我想出的认为最好的操作了。</p>
+</blockquote>
 		</div>
-	</div>
-</article>
-
-
 		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="HuGuoDong avatar" src="/img/head.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About HuGuoDong</span>
 	</div>
+	<div class="authorbox__description">
+		gdong.hu[at]gmail.com
+	</div>
+</div>
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/alg4/geekbang/11/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">11 | 排序（上）：为什么插入排序比冒泡排序更受欢迎？</p></a>
+	</div>
+</nav>
+
+	
+<div class="comments">
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guodonghu" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</div>
 
 <aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
 	

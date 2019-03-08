@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2019-03-02T19:31:55&#43;08:00"/>
+<meta property="og:updated_time" content="2019-03-06T22:15:22&#43;08:00"/>
 
 
 
@@ -73,6 +73,28 @@ MathJax.Hub.Config({
 		<div class="wrapper clearfix">
 
 	<div class="main-content list content" role="main"><article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/geekbang/12/" rel="bookmark">12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2019-03-06T22:15:22">March 06, 2019</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			<p>[TOC]</p>
+
+<p>12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-006.png" alt="2019-03-06-006" /></p>
+
+<p></p>
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
@@ -263,25 +285,6 @@ public static void sort(String[] a, int w) { int N = a.length; int R = 256; Stri
 		</div>
 	</div>
 </article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/alg4/chapter2/ex_2_4_22/" rel="bookmark">算法4 Java解答 2.4.22</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-10-31T08:00:00">October 31, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			2.4.2 问题： 2.4.22 Array resizing. Add array resizing to MaxPQ, and prove bounds like those of Proposition Q for array accesses, in an amortized sense.
-调整数组的大小。在MaxPQ中加入调整数组大小的代码，并和命题Q一样证明对于一般性长度为N的队列数组访问的上限。
-分析： 在MaxHeap类中新增方法 resize(int max)，当堆的中元素个数等于key数组容量满的时候，key数组增大两倍，当堆的元素个数等于key数组长度的1/4时，key数组长度变为原来的1/2.
-public _MaxMQ(){ this(1); } private void resize(int max){ assert max &gt; N; Comparable[] temp = new Comparable[max]; for(int i=1; i&lt;=N; i++){ temp[i] = pq[i]; } pq = (Key[]) temp; } public Key delMax(){ Key max = pq[1]; pq[1] = pq[N--]; // 使用 pq[N] 作为哨兵 sink(1); pq[N + 1] = null; if(N==(pq.
-		</div>
-	</div>
-</article>
 
 		
 
@@ -310,11 +313,11 @@ public _MaxMQ(){ this(1); } private void resize(int max){ assert max &gt; N; Com
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/12/">12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/11/">11 | 排序（上）：为什么插入排序比冒泡排序更受欢迎？</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/tech_details/markdown_use/">MarkDown内嵌标签</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/10/">10 | 递归：如何用三行代码找到“最终推荐人”？</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/timefriend/ten-years/">用十年时间自学编程</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/04/">04 | 复杂度分析（下）：浅析最好、最坏、平均、均摊时间复杂度</a></li>
 		</ul>
 	</div>
 </div>
