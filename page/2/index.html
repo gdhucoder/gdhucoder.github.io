@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2019-01-24T06:00:00&#43;08:00"/>
+<meta property="og:updated_time" content="2019-01-30T21:08:33&#43;08:00"/>
 
 
 
@@ -27,8 +27,10 @@
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/agate.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <script type="text/javascript" async
@@ -73,6 +75,26 @@ MathJax.Hub.Config({
 		<div class="wrapper clearfix">
 
 	<div class="main-content list content" role="main"><article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/timefriend/2019-01-30/" rel="bookmark">Problems</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2019-01-30T21:08:33">January 30, 2019</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			<p>[TOC]</p>
+
+<p>Today let&rsquo;s talk about our problems.</p>
+
+<p></p>
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
@@ -256,43 +278,6 @@ N=10, 元素为：0,2,4,6,8,1,3,5,7,9 k=3， qp = 0 2 4 N-k = 10 - 3 = 7，将�
 		</div>
 	</div>
 </article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/skill/2018-10-19/" rel="bookmark">2018-10-19 解决Markdown图片问题</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-10-19T03:00:00">October 19, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			[TOC]
-里程碑 今天是一个里程碑，断断续续一年多，自己搭建的博客遇到的各种问题基本得到解决。
-现在整理一下解决问题的思路：
-博客用到的东西：Github(托管静态网页)、Hugo、Sublime、Markdown、MathJax、免费图床(gitee)、留言(需要翻墙)
-遇到的问题主要有： 图床问题： 使用免费图床是个大问题：目前的解决方案是将图片上床到gitee上，这样国内访问图片速度较快。
-图片链接插入问题： 之前我写了自动生成链接的脚本，但是结果输出到了文本文件中，对于图片预览实时性的要求就无法满足。
-平台不通用问题： 通用性的问题一直没有解决：对于Latex公式的支持，图床的支持
-以前由于各个平台不通用的问题，导致我们一直只能在一个平台上写作。而各大平台又各有优缺点，总有令人不满意的地方。
-这样下来在本地写的Markdown，不需要做修改可以支持CSDN博客（或者简书）了，直接复制过去就可以。
-在未来不久印象笔记windows版本也会支持Markdown，真是个令人振奋的消息。
-甚至我还使用过马克飞象，但是它只能配合印象笔记使用，对于跨平台的需求无法满足。
-我的github 页面托管到了github上，有兴趣的话可以试着自己搭建一个静态博客。
-https://gdhucoder.github.io/
-图片本地预览、链接 大家都知道Markdown使用图片需要插入图片链接。
-我们使用python写了个脚本，生成文件的缩略图，自动上传gitee，点击图片缩略图，获取链接到剪切板。
-接下来我又添加的每次打开Helper时，自动提交git，得到最新的图片
-然后点击图片缩略图，图片的git地址（可供外网访问的地址）就被拷贝到了剪切板中，在使用的时候我们直接Ctrl+V就可以复制地址到Markdown文档中。
-这个脚本还支持子目录的打开预览。
-因为如果我们只用一个文件夹管理所有的博客图片势必会没有层级结构，导致最后图片混乱。
-我们可以建立子文件夹，存放各个主题的图片文件。
-Picture Helper使用方法：  upload your pictures to github or gitee this script can generate latest 100 picture links click the thumb picture, then the link is clipped into you clipboard then use Ctrl+V in your own Markdown Enjoy!  另附代码 主要参考了PP4E的pyphoto的代码。
-各位改改可以用到的地方： 1、自动提交git脚本 2、生成缩略图（PIL的使用）
-		</div>
-	</div>
-</article>
 
 		
 
@@ -322,11 +307,11 @@ Picture Helper使用方法：  upload your pictures to github or gitee this scri
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/golang/02/">Golang not highlighting?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/golang/01/">Go Programming Language</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/13/">13 | 线性排序：如何根据年龄给100万用户数据排序？</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/12/">12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/11/">11 | 排序（上）：为什么插入排序比冒泡排序更受欢迎？</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/tech_details/markdown_use/">MarkDown内嵌标签</a></li>
 		</ul>
 	</div>
 </div>
