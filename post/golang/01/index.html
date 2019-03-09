@@ -102,6 +102,12 @@ MathJax.Hub.Config({
 <li><a href="#go-language-getting-started">Go Language Getting Started</a>
 <ul>
 <li><a href="#开发环境搭建">开发环境搭建</a></li>
+<li><a href="#调试工具">调试工具</a></li>
+<li><a href="#golang语言特性">golang语言特性</a>
+<ul>
+<li><a href="#1-垃圾回收">1、垃圾回收</a></li>
+<li><a href="#2-天然并发">2、天然并发</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -166,6 +172,24 @@ func main() {
 </code></pre>
 
 <p>编译不会通过，因为go追求简洁，没有用到的变量c，不会编译通过。</p>
+
+<h2 id="调试工具">调试工具</h2>
+
+<p>delve</p>
+
+<p><a href="https://github.com/derekparker/delve/tree/master/Documentation/installation">https://github.com/derekparker/delve/tree/master/Documentation/installation</a></p>
+
+<h2 id="golang语言特性">golang语言特性</h2>
+
+<h3 id="1-垃圾回收">1、垃圾回收</h3>
+
+<p>a.内存自动回收，再也不需要开发人员管理内存</p>
+
+<p>b.开发人员专注业务实现，降低了心智负担</p>
+
+<p>c.只需要new分配内存，不需要释放。</p>
+
+<h3 id="2-天然并发">2、天然并发</h3>
 		</div>
 		
 <div class="post__tags tags clearfix">
