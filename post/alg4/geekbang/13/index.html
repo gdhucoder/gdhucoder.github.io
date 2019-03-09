@@ -3,17 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech</title>
+<title>13 | 线性排序：如何根据年龄给100万用户数据排序？</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="Tech" />
-<meta property="og:description" content="博客" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://gdhucoder.github.io/tags/tech/" />
+<meta property="og:title" content="13 | 线性排序：如何根据年龄给100万用户数据排序？" />
+<meta property="og:description" content="[TOC]
 
 
 
-<meta property="og:updated_time" content="2018-10-19T03:00:00&#43;08:00"/>
+本篇介绍线性时间排序。
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/alg4/geekbang/13/" />
+
+
+
+<meta property="article:published_time" content="2019-03-09T08:53:01&#43;08:00"/>
+
+<meta property="article:modified_time" content="2019-03-09T08:53:01&#43;08:00"/>
+
 
 
 
@@ -40,7 +49,7 @@ MathJax.Hub.Config({
 });
 </script>
 
-<link rel="alternate" type="application/rss+xml" title="程序员的自我修养 Feed" href="https://gdhucoder.github.io/tags/tech/index.xml">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
 <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 <script type="text/javascript" src="/js/scripts.js"></script>
@@ -72,68 +81,95 @@ MathJax.Hub.Config({
 		</header>
 		<div class="wrapper clearfix">
 
-	<div class="main-content list content" role="main">
-		<header class="page-header">
-			<h1 class="page-header__title">Tech</h1>
-		</header><article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/skill/2018-10-19/" rel="bookmark">2018-10-19 解决Markdown图片问题</a>
-			</h3>
-			<div class="list__meta meta">
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		<header class="post__header clearfix">
+			<h1 class="post__title">13 | 线性排序：如何根据年龄给100万用户数据排序？</h1>
+			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-10-19T03:00:00">October 19, 2018</time>
-			</div>
+				<time class="post__meta-date" datetime="2019-03-09T08:53:01">March 09, 2019</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+			</p>
 		</header>
-		<div class="list__excerpt">
-			[TOC]
-里程碑 今天是一个里程碑，断断续续一年多，自己搭建的博客遇到的各种问题基本得到解决。
-现在整理一下解决问题的思路：
-博客用到的东西：Github(托管静态网页)、Hugo、Sublime、Markdown、MathJax、免费图床(gitee)、留言(需要翻墙)
-遇到的问题主要有： 图床问题： 使用免费图床是个大问题：目前的解决方案是将图片上床到gitee上，这样国内访问图片速度较快。
-图片链接插入问题： 之前我写了自动生成链接的脚本，但是结果输出到了文本文件中，对于图片预览实时性的要求就无法满足。
-平台不通用问题： 通用性的问题一直没有解决：对于Latex公式的支持，图床的支持
-以前由于各个平台不通用的问题，导致我们一直只能在一个平台上写作。而各大平台又各有优缺点，总有令人不满意的地方。
-这样下来在本地写的Markdown，不需要做修改可以支持CSDN博客（或者简书）了，直接复制过去就可以。
-在未来不久印象笔记windows版本也会支持Markdown，真是个令人振奋的消息。
-甚至我还使用过马克飞象，但是它只能配合印象笔记使用，对于跨平台的需求无法满足。
-我的github 页面托管到了github上，有兴趣的话可以试着自己搭建一个静态博客。
-https://gdhucoder.github.io/
-图片本地预览、链接 大家都知道Markdown使用图片需要插入图片链接。
-我们使用python写了个脚本，生成文件的缩略图，自动上传gitee，点击图片缩略图，获取链接到剪切板。
-接下来我又添加的每次打开Helper时，自动提交git，得到最新的图片
-然后点击图片缩略图，图片的git地址（可供外网访问的地址）就被拷贝到了剪切板中，在使用的时候我们直接Ctrl+V就可以复制地址到Markdown文档中。
-这个脚本还支持子目录的打开预览。
-因为如果我们只用一个文件夹管理所有的博客图片势必会没有层级结构，导致最后图片混乱。
-我们可以建立子文件夹，存放各个主题的图片文件。
-Picture Helper使用方法：  upload your pictures to github or gitee this script can generate latest 100 picture links click the thumb picture, then the link is clipped into you clipboard then use Ctrl+V in your own Markdown Enjoy!  另附代码 主要参考了PP4E的pyphoto的代码。
-各位改改可以用到的地方： 1、自动提交git脚本 2、生成缩略图（PIL的使用）
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/how-to-add-table-of-contents-in-hugo/" rel="bookmark">HuGo中文章加入目录</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-04T09:00:00">April 04, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>本文介绍如何在template中加入TOC目录。</p>
+		<div class="post__content clearfix">
+			
+			<p>[TOC]</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-09-001.png" alt="cover" /></p>
+
+<p>本篇介绍线性时间排序。</p>
 
 <p></p>
+
+<p>前两节中，我们着重分析了集中常见排序算法的原理、时间复杂度、空间复杂度、稳定性等。今天介绍三种时间复杂度是O(n)的排序算法：桶排序，计数排序、基数排序。因为这些排序算法的时间复杂度是线性的，所以我们把这类排序算法叫做
+<font color="green"><strong>线性排序</strong></font>
+(Linear sort)。之所以能到线性时间的复杂度，主要原因是，这三个算法是非基于比较的排序算法，都不涉及元素之间的比较操作。</p>
+
+<h1 id="线性时间排序">线性时间排序</h1>
+
+<h2 id="桶排序">桶排序</h2>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-09-002.png" alt="桶排序" /></p>
+
+<h2 id="计数排序">计数排序</h2>
+
+<h2 id="基数排序">基数排序</h2>
 		</div>
-	</div>
-</article>
-
-
 		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="HuGuoDong avatar" src="/img/head.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About HuGuoDong</span>
 	</div>
+	<div class="authorbox__description">
+		gdong.hu[at]gmail.com
+	</div>
+</div>
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/alg4/geekbang/12/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</p></a>
+	</div>
+</nav>
+
+	
+<div class="comments">
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guodonghu" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</div>
 
 <aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
 	
