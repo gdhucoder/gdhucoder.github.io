@@ -9,7 +9,7 @@
 <meta property="og:title" content="Go Programming Language" />
 <meta property="og:description" content="[TOC]
 
-Go语言入门学习。
+Go语言深入学习。
 
 " />
 <meta property="og:type" content="article" />
@@ -117,7 +117,7 @@ MathJax.Hub.Config({
 
 			<p>[TOC]</p>
 
-<p>Go语言入门学习。</p>
+<p>Go语言深入学习。</p>
 
 <p></p>
 
@@ -192,6 +192,22 @@ func main() {
 <p>c.只需要new分配内存，不需要释放。</p>
 
 <h3 id="2-天然并发">2、天然并发</h3>
+
+<p>goroutine 轻量级线程，创建千万个goroutine可能。</p>
+
+<p>基于CSP (Communicating Sequential Process)模型成为可能</p>
+
+<p>通信序列进程。每个goroutine都是独立的单位。简单的理解是轻量级的线程。上万个goroutine是可能的。比操作系统的线程轻量。</p>
+
+<p>感觉一下并发^_^</p>
+
+<pre><code class="language-golang">    for i := 0; i &lt; 100; i++ {
+        go print(i) // go routine
+    }
+    time.Sleep(time.Second)
+</code></pre>
+
+<p>启动100个并发的goroutine</p>
 		</div>
 		
 <div class="post__tags tags clearfix">
