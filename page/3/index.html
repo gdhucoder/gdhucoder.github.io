@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-10-27T06:00:00&#43;08:00"/>
+<meta property="og:updated_time" content="2018-10-31T06:00:00&#43;08:00"/>
 
 
 
@@ -78,6 +78,76 @@ MathJax.Hub.Config({
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_21/" rel="bookmark">算法4 Java解答 2.4.21</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-31T06:00:00">October 31, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.21 问题： 2.4.21 Elementary data structures. Explain how to use a priority queue to implement the stack, queue, and randomized queue data types from Chapter 1
+分析： 题目要求使一个优先队列。
+假设使用MaxPQ优先队列的操作有 insert delMax isEmpty size
+Stack：
+那么对于Stack LIFO 的实现我们需要指定被后插入的元素的priority比之前插入的元素priority大。
+Queue:
+对于Queue FIFO 的实现，需要后插入元素的priority小于之前插入元素的priority。
+randomized queue：
+随机队列需要指定一个随机的priority，其余实现和处理Queue的方法一样。
+问题是怎么样生成一个不重复的随机数呢？我的思路是使用一个Set保存随机数。
+public int random() { int num = 0; while (!numSet.contains(num)) { num = StdRandom.uniform(1, Integer.MAX_VALUE); numSet.add(num); break; } return num; }  另外要提到的是对于使用MaxPQ实现的Stack和Queue，插入删除元素的时间复杂度都是lgN。
+class IKey implements Comparable&lt;IKey&gt;{ Key value; int priority; @Override public int compareTo(IKey another) { return compare(this.
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_20/" rel="bookmark">算法4 Java解答 2.4.20</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-29T19:10:00">October 29, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.20 问题： Prove that sink-based heap construction uses fewer than 2N compares and fewer than N exchanges.
+证明基于下沉方法建立堆使用少于2N次的比较和N次交换。
+分析： 官方网站解答：https://algs4.cs.princeton.edu/24pq/
+假设为堆是完美的。
+我们将树中节点的高度定义为以该节点为根的子树的高度。
+一个高度为k的节点，下沉最多交换k次，对于每一层，有：
+$$ \begin{eqnarray} h + 2(h-1) + 4(h-2) + 8(h-3) + \ldots + 2^h (0) &amp; = &amp; 2^{h+1} - h - 2 &amp; = &amp; n - (h+1) &amp; \le &amp; n \end{eqnarray} $$
+第一项使用等比数列求和公式，第二项错位相减法。
+参考： 沈星繁
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_19/" rel="bookmark">算法4 Java解答 2.4.19</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-28T05:30:00">October 28, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.19 问题： 2.4.19 Implement the constructor for MaxPQ that takes an array of items as argument, using the bottom-up heap construction method described on page 323 in the text.
+实现一个MaxPQ的构造函数，接受一个数组做为参数，使用323页中描述的自底向上的方法构建堆。
+分析： 将数组做为参数构建堆，可以选择从左到右扫描，使用swim()方法。 但更明智的方法是使用从右往左扫描的方式，sink()。 这个方法的想法是如果一个结点的两个子结点的树都是堆的话，sink(k)之后，两个子树就合并成了以k为根结点的子树
+public MaxPQ(Key[] a){ N = a.length; pq = (Key[]) new Comparable[N+1]; for(int i=0; i&lt;a.length; i++){ pq[i+1] = a[i]; } int k = N / 2; while (k &gt;= 1){ sink(k); k --; } assert isMaxHeap(); show(); }  参考： 课本官网的实现MaxPQ
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
 				<a href="/post/alg4/chapter2/ex_2_4_18/" rel="bookmark">算法4 Java解答 2.4.18</a>
 			</h3>
 			<div class="list__meta meta">
@@ -125,6 +195,27 @@ N=10, 元素为：0,2,4,6,8,1,3,5,7,9 k=3， qp = 0 2 4 N-k = 10 - 3 = 7，将�
 分析： 略
 答案： 子节点：$ 2k+1, 2k+2 $，父节点： $ \lfloor \frac{k-1}{2} \rfloor $
 参考： 
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/thinking/2018-10-19/" rel="bookmark">2018-10-19随笔</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-19T08:00:00">October 19, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			随笔 已经有两个多月没有更新过博客了。
+有几个原因吧。一直没有找到顺手的工具。
+现在使用的工具有：
+Hugo+Sublime
+支持的功能主要包括：markdown格式的文档，公式支持latex，图库使用gitee。
+目前正在想办法自己写一个图片预览工具，本地图片生成预览，选中图片时自动复制图库连接。
 		</div>
 	</div>
 </article>
@@ -207,86 +298,6 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 		</div>
 	</div>
 </article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-05-15/" rel="bookmark">java问题</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-05-15T07:00:00">May 15, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-
-<p>学习过程中遇到的一些技术问题。</p>
-
-<p></p>
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-05-10-note/" rel="bookmark">java问题</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-05-14T07:00:00">May 14, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-
-<p>学习过程中遇到的一些技术问题。</p>
-
-<p></p>
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-04-06-rl-note/" rel="bookmark">Optimistic Initial Values</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-06T07:00:00">April 06, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-
-<p>Multi-armed Bandits 本篇主要介绍多臂赌博机问题的相关算法。</p>
-
-<p></p>
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/markdown-preview-mathjax/" rel="bookmark">MarkDown Preview MathJax</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-05T07:00:00">April 05, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-
-<h1 id="关于markdown中的公式">关于MarkDown中的公式</h1>
-
-<p></p>
-		</div>
-	</div>
-</article>
 
 		
 
@@ -318,8 +329,8 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/post/golang/01/">Go Programming Language</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/golang/03/">读书笔记</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/a-book-one-day/02/">成功与运气</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/a-book-one-day/01/">清单革命</a></li>
+			<li class="widget__item"><a class="widget__link" href="/reading/a-book-one-day/02/">成功与运气</a></li>
+			<li class="widget__item"><a class="widget__link" href="/reading/a-book-one-day/01/">清单革命</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/golang/02/">Golang not highlighting?</a></li>
 		</ul>
 	</div>
