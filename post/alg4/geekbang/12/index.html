@@ -105,9 +105,15 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="#归并排序的原理">归并排序的原理</a>
 <ul>
+<li><a href="#复杂度分析">复杂度分析</a>
+<ul>
+<li><a href="#font-color-darkorange-第一-归并排序是稳定的排序算法么-font"><font color="Darkorange"><strong>第一、归并排序是稳定的排序算法么？</strong></font></a></li>
+<li><a href="#font-color-darkorange-第二-归并排序的时间复杂度是多少-font"><font color="Darkorange"><strong>第二、归并排序的时间复杂度是多少？</strong></font></a></li>
+<li><a href="#font-color-darkorange-第三-归并排序的空间复杂度是多少-font"><font color="Darkorange"><strong>第三、归并排序的空间复杂度是多少？</strong></font></a></li>
+</ul></li>
+</ul></li>
 <li><a href="#快速排序的原理">快速排序的原理</a></li>
 <li><a href="#课后思考">课后思考</a></li>
-</ul></li>
 </ul>
 </nav>
 </aside>
@@ -143,11 +149,54 @@ p&gt;=r 不用再继续分解
 
 <p>merge_sort(p&hellip;r)表示，给下标p到r之间的数组排序。</p>
 
+<h2 id="复杂度分析">复杂度分析</h2>
+
 <p>同样三个问题：</p>
 
-<p><font color="Darkorange"><strong>第一、归并排序是稳定的排序算法么？</strong></font></p>
+<h3 id="font-color-darkorange-第一-归并排序是稳定的排序算法么-font"><font color="Darkorange"><strong>第一、归并排序是稳定的排序算法么？</strong></font></h3>
 
 <p>结合图和代码，应该能发现归并排序稳不稳关键要看merge()函数。也就是将两个有序子数组合并成一个有序数组的那部分代码。</p>
+
+<p>在合并过程中，如果A[p&hellip;q]和A[q+1&hellip;r]之间有值相同的元素，归并后元素的相对位置是不变的。所以，归并排序是一个稳定的排序算法。</p>
+
+<h3 id="font-color-darkorange-第二-归并排序的时间复杂度是多少-font"><font color="Darkorange"><strong>第二、归并排序的时间复杂度是多少？</strong></font></h3>
+
+<p>归并排序涉及递归，时间复杂度稍微有点复杂。我们正好借此机会来学习一下，如何分析递归代码的时间复杂度。</p>
+
+<p>递归的适用场景是，一个问题a可以分解成多个子问题b、c，那求解问题a就可以分解成求解问题b、c。问题b、c解决之后，我们再把b、c的结果合并成a的结果。</p>
+
+<p>如果我们定义求解问题a的时间是T(a)，求解问题b、c的时间分别是T(b)和T(c)，那我们就可以得到这样的递推关系公式：</p>
+
+<pre><code class="language-java">T(a) = T(b) + T(c) + K
+</code></pre>
+
+<p>其中K等于将两个子问题b、c的结果合并成问题a的结果说消耗的时间。</p>
+
+<p>从刚刚的分析，我们可以得到一个重要的结论：
+<font color="green"><strong>不仅递归求解的问题可以写成递推公式，递归代码的时间复杂度也可以写成递推公式。</strong></font></p>
+
+<p>套用这个公式，如何来求解T(N)呢？还不够直观？那我们再进一步分解一下计算过程。</p>
+
+<pre><code class="language-code">T(n) = 2*T(n/2) + n
+     = 2*(2*T(n/4) + n/2) + n = 4*T(n/4) + 2*n
+     = 4*(2*T(n/8) + n/4) + 2*n = 8*T(n/8) + 3*n
+     = 8*(2*T(n/16) + n/8) + 3*n = 16*T(n/16) + 4*n
+     ......
+     = 2^k * T(n/2^k) + k * n
+     ......
+</code></pre>
+
+<p>通过这样一步一步分解推导，我们可以达到 T(n) = 2^kT(n/2^k)+kn。</p>
+
+<p>当T(n/2^k) = T(1)时，也就是n/2^k = 1，我们得到k=$log_2n$。将k值带入上面的懂事，得到$T(n)=Cn+nlog_2n$。如果用大O法标记来表示的话，$T(n)=O(nlogn)$。所以归并排序的时间复杂度是$O(nlogn)$。</p>
+
+<p>从我们原理的分析和伪代码可以看出，归并排序的执行效率与要排序的数组的有序程度无关，所以其时间复杂度是非常稳定的，不管是最好情况、最坏情况，还是平均情况，时间复杂度都是$O(nlogn)$。</p>
+
+<h3 id="font-color-darkorange-第三-归并排序的空间复杂度是多少-font"><font color="Darkorange"><strong>第三、归并排序的空间复杂度是多少？</strong></font></h3>
+
+<p>从伪代码中可以看出，空间复杂度是O(n)。算法的实现可以在merge函数中定义临时数组，也可以在一开始就定义一个临时数组。如果在merge函数中定义临时数组，按照递归的时间复杂度分析方法，空间复杂度就是nlog(n)，但实际不是这样的。</p>
+
+<p>实际上，递归代码的工具复杂度并不能像时间复杂度那样累加。刚刚我们忘记了最重要的一点，那就是，尽管每次合并操作都需要申请额外的内存空间，但在合并完成之后，临时开辟的空间就被释放掉了。任意时刻，CPU只会有一个函数在执行，也就是只会有一个零食的内存空间在使用。临时内存空间最大也不会超过n个数据的大小，所以空间复杂度是O(n)。</p>
 
 <p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-008.png" alt="2019-03-06-008" /></p>
 
@@ -155,9 +204,9 @@ p&gt;=r 不用再继续分解
 
 <p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-010.png" alt="2019-03-06-010" /></p>
 
-<h2 id="快速排序的原理">快速排序的原理</h2>
+<h1 id="快速排序的原理">快速排序的原理</h1>
 
-<h2 id="课后思考">课后思考</h2>
+<h1 id="课后思考">课后思考</h1>
 
 <p>现在你有 10 个接口访问日志文件，每个日志文件大小约 300MB，每个文件里的日志都是按照时间戳从小到大排序的。你希望将这 10 个较小的日志文件，合并为 1 个日志文件，合并之后的日志仍然按照时间戳从小到大排列。如果处理上述排序任务的机器内存只有 1GB，你有什么好的解决思路，能“快速”地将这 10 个日志文件合并吗？</p>
 
@@ -239,11 +288,11 @@ p&gt;=r 不用再继续分解
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/golang/04/">Go Basic</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/golang/01/">Go Programming Language</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/golang/03/">读书笔记</a></li>
 			<li class="widget__item"><a class="widget__link" href="/reading/a-book-one-day/02/">成功与运气</a></li>
 			<li class="widget__item"><a class="widget__link" href="/reading/a-book-one-day/01/">清单革命</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/golang/02/">Golang not highlighting?</a></li>
 		</ul>
 	</div>
 </div>
