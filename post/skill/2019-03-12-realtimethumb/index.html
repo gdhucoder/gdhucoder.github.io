@@ -3,30 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>算法4 Java解答 2.4.21</title>
+<title>写博客缩略图实时预览与上传</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="算法4 Java解答 2.4.21" />
-<meta property="og:description" content="2.4.21 问题： 2.4.21 Elementary data structures. Explain how to use a priority queue to implement the stack, queue, and randomized queue data types from Chapter 1
-分析： 题目要求使一个优先队列。
-假设使用MaxPQ优先队列的操作有 insert delMax isEmpty size
-Stack：
-那么对于Stack LIFO 的实现我们需要指定被后插入的元素的priority比之前插入的元素priority大。
-Queue:
-对于Queue FIFO 的实现，需要后插入元素的priority小于之前插入元素的priority。
-randomized queue：
-随机队列需要指定一个随机的priority，其余实现和处理Queue的方法一样。
-问题是怎么样生成一个不重复的随机数呢？我的思路是使用一个Set保存随机数。
-public int random() { int num = 0; while (!numSet.contains(num)) { num = StdRandom.uniform(1, Integer.MAX_VALUE); numSet.add(num); break; } return num; }  另外要提到的是对于使用MaxPQ实现的Stack和Queue，插入删除元素的时间复杂度都是lgN。
-class IKey implements Comparable&lt;IKey&gt;{ Key value; int priority; @Override public int compareTo(IKey another) { return compare(this." />
+<meta property="og:title" content="写博客缩略图实时预览与上传" />
+<meta property="og:description" content="[TOC]
+
+最近一个问题一直困扰我：写博客时的截图生成图片链接的脚本不好用，没有实时性。
+
+每次都需要我重新关闭打开一下。
+
+思路是
+
+a.每次新截图，保存到指定文件夹
+
+b.上传到git
+
+c.显示缩略图
+
+d.下次再截图，或者对图片有修改的时候。就需要我重新打开脚本文件。
+
+这个问题一直没解决
+
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_21/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/skill/2019-03-12-realtimethumb/" />
 
 
 
-<meta property="article:published_time" content="2018-10-31T06:00:00&#43;08:00"/>
+<meta property="article:published_time" content="2019-03-12T10:50:18&#43;08:00"/>
 
-<meta property="article:modified_time" content="2018-10-31T06:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-03-12T10:50:18&#43;08:00"/>
 
 
 
@@ -91,10 +98,10 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">算法4 Java解答 2.4.21</h1>
+			<h1 class="post__title">写博客缩略图实时预览与上传</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2018-10-31T06:00:00">October 31, 2018</time>
+				<time class="post__meta-date" datetime="2019-03-12T10:50:18">March 12, 2019</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
@@ -104,88 +111,136 @@ MathJax.Hub.Config({
 			
 <aside>
     <header>
-    <h2>算法4 Java解答 2.4.21</h2>
+    <h2>写博客缩略图实时预览与上传</h2>
     </header>
     <nav id="TableOfContents">
 <ul>
-<li><a href="#2-4-21">2.4.21</a>
+<li><a href="#文件修改实时监测">文件修改实时监测</a>
 <ul>
-<li><a href="#问题">问题：</a></li>
-<li><a href="#分析">分析：</a></li>
-<li><a href="#参考">参考：</a></li>
+<li><a href="#参考">参考</a></li>
 </ul></li>
 </ul>
 </nav>
 </aside>
 
-			
+			<p>[TOC]</p>
 
-<h1 id="2-4-21">2.4.21</h1>
+<p>最近一个问题一直困扰我：写博客时的截图生成图片链接的脚本不好用，没有实时性。</p>
 
-<h2 id="问题">问题：</h2>
+<p>每次都需要我重新关闭打开一下。</p>
 
-<p>2.4.21 Elementary data structures. Explain how to use a priority queue to implement the stack, queue, and randomized queue data types from Chapter 1</p>
+<p>思路是</p>
 
-<h2 id="分析">分析：</h2>
+<p>a.每次新截图，保存到指定文件夹</p>
 
-<p>题目要求使<strong>一个优先队列</strong>。</p>
+<p>b.上传到git</p>
 
-<p>假设使用MaxPQ优先队列的操作有 insert delMax isEmpty size</p>
+<p>c.显示缩略图</p>
 
-<p>Stack：</p>
+<p><font color="Darkorange"><strong>d.下次再截图，或者对图片有修改的时候。就需要我重新打开脚本文件。</strong></font></p>
 
-<p>那么对于Stack LIFO 的实现我们需要指定被后插入的元素的priority比之前插入的元素priority大。</p>
+<p>这个问题一直没解决</p>
 
-<p>Queue:</p>
+<p></p>
 
-<p>对于Queue FIFO 的实现，需要后插入元素的priority小于之前插入元素的priority。</p>
+<h1 id="文件修改实时监测">文件修改实时监测</h1>
 
-<p>randomized queue：</p>
+<p>解决这个问题的的方法是使用python3 的 <font color="green"><strong>watchdog</strong></font></p>
 
-<p>随机队列需要指定一个随机的priority，其余实现和处理Queue的方法一样。</p>
+<p>每次对图片有修改或者新建图片时，重新执行 a b c 三部的那个脚本就可以了。</p>
 
-<p>问题是怎么样生成一个不重复的随机数呢？我的思路是使用一个Set保存随机数。</p>
+<p>以上代码适用于检测文件修改，然后执行另一个操作。</p>
 
-<pre><code class="language-java">    public int random() {
-      int num = 0;
-      while (!numSet.contains(num)) {
-        num = StdRandom.uniform(1, Integer.MAX_VALUE);
-        numSet.add(num);
-        break;
-      }
-      return num;
-    }
+<p>在一个py程序中调用另一个cmd</p>
+
+<pre><code class="language-python">process = subprocess.Popen(command, stdin=sys.stdin, stdout=sys.stdout, stderr=sys.stderr)
 </code></pre>
 
-<p>另外要提到的是对于使用MaxPQ实现的Stack和Queue，插入删除元素的时间复杂度都是lgN。</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+# -*- coding: utf-8 -*
+# @FileName: PngMonitor
+# @Date: 2019-03-12 10:14
+# @Author: HuGuodong gdong.hu[at]gmail.com
 
-<pre><code class="language-java">    class IKey implements Comparable&lt;IKey&gt;{
-      Key value;
-      int priority;
-      @Override
-      public int compareTo(IKey another) {
-        return compare(this.priority, another.priority);
-      }
-      public int compare(int x, int y) {
-        return (x &lt; y) ? -1 : ((x == y) ? 0 : 1);
-      }
-    }
+import os, sys, time, subprocess
+
+from watchdog.observers import Observer
+from watchdog.events import FileSystemEventHandler
+
+
+def log(s):
+    print('[Monitor] %s' % s)
+
+
+class MyFileSystemEventHander(FileSystemEventHandler):
+    def __init__(self, fn):
+        super(MyFileSystemEventHander, self).__init__()
+        self.restart = fn
+
+    def on_any_event(self, event):
+        if event.src_path.endswith('.png'):
+            log('file changed: %s' % event.src_path)
+            self.restart()
+
+
+command = ['echo', 'ok']
+process = None
+
+
+def kill_process():
+    global process
+    if process:
+        log('Kill process [%s]...' % process.pid)
+        process.kill()
+        process.wait()
+        log('Process ended with code %s.' % process.returncode)
+        process = None
+
+
+def start_process():
+    global process, command
+    log('Start process %s...' % ''.join(command))
+    process = subprocess.Popen(command, stdin=sys.stdin, stdout=sys.stdout, stderr=sys.stderr)
+
+
+def restart_process():
+    kill_process()
+    start_process()
+
+
+def start_watch(path, callback):
+    observer = Observer()
+    observer.schedule(MyFileSystemEventHander(restart_process), path, recursive=False)
+    observer.start()
+    log('Watching directory %s...' % path)
+    start_process()
+    try:
+        while True:
+            time.sleep(10)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
+
+
+if __name__ == '__main__':
+    print(sys.argv)
+    command = 'D:\ProgramData\Anaconda2\envs\py36\python.exe E:/gitspace/x1c/PythonProjects/PP4E/Examples/PP4ELearn/GUI/PIL/MyPhoto.py'
+    path = 'E:\gitpic'
+    start_watch(path, None)
+
 </code></pre>
 
-<h2 id="参考">参考：</h2>
+<h2 id="参考">参考</h2>
 
-<p><a href="https://stackoverflow.com/questions/4873472/how-to-implement-stack-using-priority-queue">https://stackoverflow.com/questions/4873472/how-to-implement-stack-using-priority-queue</a></p>
+<p><a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001432339228196a8eb6fb8832b48b5aa0d740346536ead000">廖大神</a></p>
 
-<p><a href="https://alg4.ikesnowy.com/2-4-21/">https://alg4.ikesnowy.com/2-4-21/</a></p>
-
-<p><a href="https://www.jianshu.com/p/79a7179f69d1">https://www.jianshu.com/p/79a7179f69d1</a></p>
-
+<p><a href="https://github.com/gorakhargosh/watchdog">watchdog github</a></p>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/java/" rel="tag">JAVA</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/tech/" rel="tag">TECH</a></li>
 	</ul>
 </div>
 
@@ -205,10 +260,7 @@ MathJax.Hub.Config({
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/alg4/chapter2/ex_2_4_20/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">算法4 Java解答 2.4.20</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/alg4/chapter2/ex_2_4_22/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">算法4 Java解答 2.4.22</p></a>
+		<a class="post-nav__link" href="/post/golang/04/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Go Basic</p></a>
 	</div>
 </nav>
 

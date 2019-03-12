@@ -6,10 +6,37 @@
     <description>Recent content on 程序员的自我修养</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Mon, 11 Mar 2019 21:02:15 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2019 10:50:18 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>写博客缩略图实时预览与上传</title>
+      <link>https://gdhucoder.github.io/post/skill/2019-03-12-realtimethumb/</link>
+      <pubDate>Tue, 12 Mar 2019 10:50:18 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/skill/2019-03-12-realtimethumb/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;最近一个问题一直困扰我：写博客时的截图生成图片链接的脚本不好用，没有实时性。&lt;/p&gt;
+
+&lt;p&gt;每次都需要我重新关闭打开一下。&lt;/p&gt;
+
+&lt;p&gt;思路是&lt;/p&gt;
+
+&lt;p&gt;a.每次新截图，保存到指定文件夹&lt;/p&gt;
+
+&lt;p&gt;b.上传到git&lt;/p&gt;
+
+&lt;p&gt;c.显示缩略图&lt;/p&gt;
+
+&lt;p&gt;&lt;font color=&#34;Darkorange&#34;&gt;&lt;strong&gt;d.下次再截图，或者对图片有修改的时候。就需要我重新打开脚本文件。&lt;/strong&gt;&lt;/font&gt;&lt;/p&gt;
+
+&lt;p&gt;这个问题一直没解决&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Go Basic</title>
