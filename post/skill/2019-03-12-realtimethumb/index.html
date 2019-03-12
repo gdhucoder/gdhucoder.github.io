@@ -119,6 +119,7 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="#文件修改实时监测">文件修改实时监测</a>
 <ul>
+<li><a href="#又一个坑">又一个坑</a></li>
 <li><a href="#效果">效果</a></li>
 <li><a href="#参考">参考</a></li>
 </ul></li>
@@ -160,6 +161,18 @@ MathJax.Hub.Config({
 
 <pre><code class="language-code">process = subprocess.Popen(command, stdin=sys.stdin, stdout=sys.stdout, stderr=sys.stderr)
 </code></pre>
+
+<h2 id="又一个坑">又一个坑</h2>
+
+<p>图片的大小影响网页的加载速度。</p>
+
+<p>png的格式的文件要更大。使用jpg格式的文件，降低图片质量，整体不影响效果的前提下，使用jpg文件。</p>
+
+<p><font color="Darkorange"><strong>picpick</strong></font>使用jpg保存截图，将截图的质量调到10%。</p>
+
+<p>这样一张图只有几十kb。</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-12-003.jpg" alt="这个图片就很小" /></p>
 
 <h2 id="效果">效果</h2>
 
