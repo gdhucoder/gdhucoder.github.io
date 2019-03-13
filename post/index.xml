@@ -6,10 +6,23 @@
     <description>Recent content in Posts on 程序员的自我修养</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Tue, 12 Mar 2019 10:50:18 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 13 Mar 2019 20:07:35 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>数据压缩算法</title>
+      <link>https://gdhucoder.github.io/post/alg4/chapter5/note/</link>
+      <pubDate>Wed, 13 Mar 2019 20:07:35 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/chapter5/note/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;介绍经典的数据压缩算法&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>写博客缩略图实时预览与上传</title>
@@ -745,6 +758,22 @@ print(unrate.head(12))
       <guid>https://gdhucoder.github.io/post/aima/chp2/</guid>
       <description>chp2
 • An agent is something that perceives and acts in an environment. The agent function for an agent specifies the action taken by the agent in response to any percept sequence. • The performance measure evaluates the behavior of the agent in an environment. A rational agent acts so as to maximize the expected value of the performance measure, given the percept sequence it has seen so far. • A task environment specification includes the performance measure, the external en- vironment, the actuators, and the sensors.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://gdhucoder.github.io/post/note/2019-03-13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/note/2019-03-13/</guid>
+      <description>Roadmap $G=(V,E)$ 是一个有向图
+$\Gamma : R \rightarrow V $ ，汽车初始的位置
+$\Phi : R \rightarrow V ​$，汽车终止位置
+对于每个车$path_i &amp;copy; : Z \rightarrow E $，每个车的路线。
+问题是：
+对于每个车$c_i (i=1,&amp;hellip;,n)$，找到可行的路线 $P={p_1,&amp;hellip;,p_n}$
+避免任意两条路线出现: 死锁。
+目标： 最小化系统调度时间，即每辆车到达终点的累计总用时。</description>
     </item>
     
     <item>

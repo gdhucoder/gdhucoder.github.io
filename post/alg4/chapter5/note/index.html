@@ -3,26 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>算法4 chp 1-1</title>
+<title>数据压缩算法</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="算法4 chp 1-1" />
-<meta property="og:description" content="1.1.1 7, 200.0000002, true
-1.1.2 a. double 1.618 b. double 10.0 c. boolean true d. String &ldquo;33&rdquo;
-执行Java 采用输入命令的形式：
-目录：
-E:\GDUT\Dropbox\Alg4\algs4\target\classes
-执行：
-java edu.princeton.cs.myalg.u1.Ex_1_1_3 1 1 2
-$ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]" />
+<meta property="og:title" content="数据压缩算法" />
+<meta property="og:description" content="[TOC]
+
+介绍经典的数据压缩算法
+
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter1/chapter1-1/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter5/note/" />
 
 
 
-<meta property="article:published_time" content="2018-05-15T08:00:00&#43;08:00"/>
+<meta property="article:published_time" content="2019-03-13T20:07:35&#43;08:00"/>
 
-<meta property="article:modified_time" content="2018-05-15T08:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-03-13T20:07:35&#43;08:00"/>
 
 
 
@@ -87,10 +84,10 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">算法4 chp 1-1</h1>
+			<h1 class="post__title">数据压缩算法</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2018-05-15T08:00:00">May 15, 2018</time>
+				<time class="post__meta-date" datetime="2019-03-13T20:07:35">March 13, 2019</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
@@ -100,60 +97,98 @@ MathJax.Hub.Config({
 			
 <aside>
     <header>
-    <h2>算法4 chp 1-1</h2>
+    <h2>数据压缩算法</h2>
     </header>
     <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#data-compression">Data Compression</a>
 <ul>
-<li>
-<ul>
-<li><a href="#1-1-1">1.1.1</a></li>
-<li><a href="#1-1-2">1.1.2</a></li>
-<li><a href="#执行java">执行Java</a></li>
-</ul></li>
+<li><a href="#算法思想">算法思想</a></li>
+<li><a href="#算法实现">算法实现</a></li>
+<li><a href="#游程编码算法不明白的地方">游程编码算法不明白的地方：</a></li>
+<li><a href="#游程编码的问题">游程编码的问题</a></li>
 </ul></li>
 </ul>
 </nav>
 </aside>
 
-			
+			<p>[TOC]</p>
 
-<h3 id="1-1-1">1.1.1</h3>
+<p>介绍经典的数据压缩算法</p>
 
-<p>7, 200.0000002,  true</p>
+<p></p>
 
-<h3 id="1-1-2">1.1.2</h3>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-006.jpg" alt="2019-03-13-006" /></p>
 
-<p>a. double 1.618
-b. double 10.0
-c. boolean true
-d. String &ldquo;33&rdquo;</p>
+<h1 id="data-compression">Data Compression</h1>
 
-<h3 id="执行java">执行Java</h3>
+<p>空字符为 &lsquo;\0&rsquo;, NUL</p>
 
-<p>采用输入命令的形式：</p>
+<h2 id="算法思想">算法思想</h2>
 
-<p>目录：</p>
+<p>算法介绍：</p>
 
-<p>E:\GDUT\Dropbox\Alg4\algs4\target\classes</p>
+<blockquote>
+<p>runs of data (that is, sequences in which the same data value occurs in many consecutive data elements) are stored as a single data value and count, rather than as the original run.</p>
+</blockquote>
 
-<p>执行：</p>
+<p><a href="https://en.wikipedia.org/wiki/Run-length_encoding">https://en.wikipedia.org/wiki/Run-length_encoding</a></p>
 
-<p>java edu.princeton.cs.myalg.u1.Ex_1_1_3 1 1 2</p>
+<h2 id="算法实现">算法实现</h2>
 
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/Image_606.png" alt="Image_606" /></p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-005.jpg" alt="2019-03-13-005" /></p>
 
-<p>$ab=bc$
-$$ab=cd$$
-[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]</p>
+<p>黑白图像素越高，压缩比例越高。</p>
 
+<p>最早用于传播电视信号。</p>
+
+<p>而图片压缩格式，例如JPEG，属于有损失的压缩。</p>
+
+<p><a href="https://en.wikipedia.org/wiki/JPEG">https://en.wikipedia.org/wiki/JPEG</a></p>
+
+<h2 id="游程编码算法不明白的地方">游程编码算法不明白的地方：</h2>
+
+<p>为什么要写一个重新计数0呢？</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-003.jpg" alt="2019-03-13-003" /></p>
+
+<pre><code class="language-java">    public static void compress() { 
+        char run = 0; 
+        boolean old = false;
+        while (!BinaryStdIn.isEmpty()) { 
+            boolean b = BinaryStdIn.readBoolean();
+            if (b != old) {
+                BinaryStdOut.write(run, LG_R);
+                run = 1;
+                old = !old;
+            }
+            else { 
+                if (run == R-1) { 
+                    BinaryStdOut.write(run, LG_R);
+                    run = 0;
+                    BinaryStdOut.write(run, LG_R); // 为什么要计数0呢？
+                }
+                run++;
+            } 
+        } 
+        BinaryStdOut.write(run, LG_R);
+        BinaryStdOut.close();
+    }
+</code></pre>
+
+<h2 id="游程编码的问题">游程编码的问题</h2>
+
+<p>尽管游程编码算法很高效，但是在处理<font color="Darkorange"><strong>文本压缩</strong></font>就没那么高效了。我们需要其他的算法。</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-007.jpg" alt="2019-03-13-007" /></p>
+
+<p>从图中可以看出 416 / 96 = 433% ，文件越压缩越大了。</p>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/java/" rel="tag">JAVA</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/alg/" rel="tag">ALG</a></li>
 	</ul>
 </div>
 
@@ -173,10 +208,7 @@ $$ab=cd$$
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/note/2018-05-15/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">java问题</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/alg4/chapter2/chapter2-1-12/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">算法4习题 2.1.12</p></a>
+		<a class="post-nav__link" href="/post/skill/2019-03-12-realtimethumb/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">写博客缩略图实时预览与上传</p></a>
 	</div>
 </nav>
 

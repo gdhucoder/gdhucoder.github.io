@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gdhucoder.github.io/post/alg4/chapter5/note/</loc>
+    <lastmod>2019-03-13T20:07:35+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/skill/2019-03-12-realtimethumb/</loc>
     <lastmod>2019-03-12T10:50:18+08:00</lastmod>
   </url>
@@ -301,6 +306,10 @@
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/post/note/2019-03-13/</loc>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/skill/how_to_use_virtualbox/</loc>
   </url>
   
@@ -312,7 +321,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/tags/alg/</loc>
-    <lastmod>2019-02-01T13:32:20+08:00</lastmod>
+    <lastmod>2019-03-13T20:07:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -407,7 +416,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/post/</loc>
-    <lastmod>2019-03-12T10:50:18+08:00</lastmod>
+    <lastmod>2019-03-13T20:07:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -449,7 +458,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/tags/</loc>
-    <lastmod>2019-02-01T13:32:20+08:00</lastmod>
+    <lastmod>2019-03-13T20:07:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -473,7 +482,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</loc>
-    <lastmod>2019-03-12T10:50:18+08:00</lastmod>
+    <lastmod>2019-03-13T20:07:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -491,7 +500,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2019-03-12T10:50:18+08:00</lastmod>
+    <lastmod>2019-03-13T20:07:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -503,7 +512,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/</loc>
-    <lastmod>2019-03-12T10:50:18+08:00</lastmod>
+    <lastmod>2019-03-13T20:07:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
