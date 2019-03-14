@@ -3,22 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>算法4习题 2.4.10</title>
+<title>图相关的算法</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="算法4习题 2.4.10" />
-<meta property="og:description" content=" 2.4.10 问题： 2.4.10 Suppose that we wish to avoid wasting one position in a heap-ordered array pq[], putting the largest value in pq[0], its children in pq[1] and pq[2], and so forth, proceeding in level order. Where are the parents and children of pq[k]?
-分析： 略
-答案： 子节点：$ 2k&#43;1, 2k&#43;2 $，父节点： $ \lfloor \frac{k-1}{2} \rfloor $
-参考： " />
+<meta property="og:title" content="图相关的算法" />
+<meta property="og:description" content="[TOC]
+
+突击学习一下。
+
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_10/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/note/2019-03-14/" />
 
 
 
-<meta property="article:published_time" content="2018-10-20T08:00:00&#43;08:00"/>
+<meta property="article:published_time" content="2019-03-14T22:34:45&#43;08:00"/>
 
-<meta property="article:modified_time" content="2018-10-20T08:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-03-14T22:34:45&#43;08:00"/>
 
 
 
@@ -83,10 +84,10 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">算法4习题 2.4.10</h1>
+			<h1 class="post__title">图相关的算法</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2018-10-20T08:00:00">October 20, 2018</time>
+				<time class="post__meta-date" datetime="2019-03-14T22:34:45">March 14, 2019</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
@@ -96,45 +97,43 @@ MathJax.Hub.Config({
 			
 <aside>
     <header>
-    <h2>算法4习题 2.4.10</h2>
+    <h2>图相关的算法</h2>
     </header>
     <nav id="TableOfContents">
 <ul>
-<li><a href="#2-4-10">2.4.10</a>
-<ul>
-<li><a href="#问题">问题：</a></li>
-<li><a href="#分析">分析：</a></li>
-<li><a href="#答案">答案：</a></li>
-<li><a href="#参考">参考：</a></li>
-</ul></li>
+<li><a href="#maximum-flow-problem">Maximum flow problem</a></li>
+<li><a href="#max-flow-min-cut-theorem">Max-flow min-cut theorem</a></li>
 </ul>
 </nav>
 </aside>
 
-			
+			<p>[TOC]</p>
 
-<h1 id="2-4-10">2.4.10</h1>
+<p>突击学习一下。</p>
 
-<h2 id="问题">问题：</h2>
+<p></p>
 
-<p>2.4.10 Suppose that we wish to avoid wasting one position in a heap-ordered array pq[], putting the largest value in pq[0], its children in pq[1] and pq[2], and so forth, proceeding in level order. Where are the parents and children of pq[k]?</p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-14-001.jpg" alt="2019-03-14-001" /></p>
 
-<h2 id="分析">分析：</h2>
+<h1 id="maximum-flow-problem">Maximum flow problem</h1>
 
-<p>略</p>
+<p>最大流问题是在单源单汇的网络流中找到最大的流。</p>
 
-<h2 id="答案">答案：</h2>
+<p>Multi-source multi-sink maximum flow problem equals to maximu flow prblem.</p>
 
-<p>子节点：$ 2k+1, 2k+2 $，父节点： $ \lfloor \frac{k-1}{2} \rfloor $</p>
+<p><a href="https://en.wikipedia.org/wiki/Maximum_flow_problem">https://en.wikipedia.org/wiki/Maximum_flow_problem</a></p>
 
-<h2 id="参考">参考：</h2>
+<h1 id="max-flow-min-cut-theorem">Max-flow min-cut theorem</h1>
 
+<p>最大流等于最小切（割）。</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem">https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem</a></p>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/java/" rel="tag">JAVA</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/alg/" rel="tag">ALG</a></li>
 	</ul>
 </div>
 
@@ -154,10 +153,7 @@ MathJax.Hub.Config({
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/skill/2018-10-19/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">2018-10-19 解决Markdown图片问题</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/alg4/chapter2/ex_2_4_17/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">算法4习题 2.4.17</p></a>
+		<a class="post-nav__link" href="/post/alg4/chapter5/note/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">数据压缩算法</p></a>
 	</div>
 </nav>
 
