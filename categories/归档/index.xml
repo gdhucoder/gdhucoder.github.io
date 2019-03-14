@@ -161,10 +161,10 @@
     
     <item>
       <title>12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</title>
-      <link>https://gdhucoder.github.io/post/alg4/geekbang/12/</link>
+      <link>https://gdhucoder.github.io/post/alg4/geekbang/12_mergeandquicksort/</link>
       <pubDate>Wed, 06 Mar 2019 22:15:22 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/post/alg4/geekbang/12/</guid>
+      <guid>https://gdhucoder.github.io/post/alg4/geekbang/12_mergeandquicksort/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
 
 &lt;p&gt;12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？&lt;/p&gt;

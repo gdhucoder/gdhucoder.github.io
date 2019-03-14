@@ -3,23 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>数据压缩算法</title>
+<title>12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="数据压缩算法" />
+<meta property="og:title" content="12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？" />
 <meta property="og:description" content="[TOC]
 
-介绍经典的数据压缩算法
+12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？
+
+
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter5/note/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/alg4/geekbang/12_mergeandquicksort/" />
 
 
 
-<meta property="article:published_time" content="2019-03-13T20:07:35&#43;08:00"/>
+<meta property="article:published_time" content="2019-03-06T22:15:22&#43;08:00"/>
 
-<meta property="article:modified_time" content="2019-03-13T20:07:35&#43;08:00"/>
+<meta property="article:modified_time" content="2019-03-06T22:15:22&#43;08:00"/>
 
 
 
@@ -84,10 +86,10 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">数据压缩算法</h1>
+			<h1 class="post__title">12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2019-03-13T20:07:35">March 13, 2019</time>
+				<time class="post__meta-date" datetime="2019-03-06T22:15:22">March 06, 2019</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
@@ -97,110 +99,126 @@ MathJax.Hub.Config({
 			
 <aside>
     <header>
-    <h2>数据压缩算法</h2>
+    <h2>12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</h2>
     </header>
     <nav id="TableOfContents">
 <ul>
-<li><a href="#data-compression">Data Compression</a>
+<li><a href="#归并排序的原理">归并排序的原理</a>
 <ul>
-<li><a href="#例子-基因组学">例子 基因组学</a></li>
-<li><a href="#runlength算法思想">RunLength算法思想</a>
+<li><a href="#复杂度分析">复杂度分析</a>
 <ul>
-<li><a href="#算法实现">算法实现</a></li>
-<li><a href="#游程编码算法不明白的地方">游程编码算法不明白的地方：</a></li>
-<li><a href="#游程编码的问题">游程编码的问题</a></li>
+<li><a href="#font-color-darkorange-第一-归并排序是稳定的排序算法么-font"><font color="Darkorange"><strong>第一、归并排序是稳定的排序算法么？</strong></font></a></li>
+<li><a href="#font-color-darkorange-第二-归并排序的时间复杂度是多少-font"><font color="Darkorange"><strong>第二、归并排序的时间复杂度是多少？</strong></font></a></li>
+<li><a href="#font-color-darkorange-第三-归并排序的空间复杂度是多少-font"><font color="Darkorange"><strong>第三、归并排序的空间复杂度是多少？</strong></font></a></li>
 </ul></li>
-<li><a href="#huffman-compression">Huffman Compression</a></li>
 </ul></li>
+<li><a href="#快速排序的原理">快速排序的原理</a></li>
+<li><a href="#课后思考">课后思考</a></li>
 </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
 
-<p>介绍经典的数据压缩算法</p>
+<p>12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-006.png" alt="2019-03-06-006" /></p>
 
 <p></p>
 
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-006.jpg" alt="cover" /></p>
+<h1 id="归并排序的原理">归并排序的原理</h1>
 
-<h1 id="data-compression">Data Compression</h1>
+<p>归并排序的核心还是蛮简单的。如果要排序一个数组，我们先把数组中间分成前后两部分，然后对前后两部分分别排序，再将排好序的两部分合并在一起，这样整个数组就有序了。</p>
 
-<h2 id="例子-基因组学">例子 基因组学</h2>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-007.png" alt="2019-03-06-007" /></p>
 
-<p>genomic data : ATCGATCGATCG&hellip;</p>
+<p>归并排序使用的就是分治思想。分治，顾名思义，就是分而治之，将一个大问题分解成小的子问题来解决。小的子问题解决了，大问题也解决了。</p>
 
-<p>如果用字符表示的话，一个字符是8bit。但实际一个基因片段中只有四个字母出现。使用2个bit就能表示这四个字母。</p>
+<p>从我刚才的描述，你有没有感觉到，分治思想跟我们前面讲的递归思想很像。是的，分治算法一般都是用递归来实现的。
+<font color="Darkorange"><strong>分治是一种解决问题的处理思想，递归是一种编程技巧</strong></font>，
+这两者并不冲突。</p>
 
-<p>空字符为 &lsquo;\0&rsquo;, NUL</p>
+<p><font color="Darkorange"><strong>如何用递归代码来实现归并排序。</strong></font></p>
 
-<h2 id="runlength算法思想">RunLength算法思想</h2>
+<pre><code class="language-java">递推公式：
+meger_sort(p...r) = merge(meger_sort(p...q), meger_sort(q+1,r))
 
-<p>算法介绍：</p>
-
-<blockquote>
-<p>runs of data (that is, sequences in which the same data value occurs in many consecutive data elements) are stored as a single data value and count, rather than as the original run.</p>
-</blockquote>
-
-<p><a href="https://en.wikipedia.org/wiki/Run-length_encoding">https://en.wikipedia.org/wiki/Run-length_encoding</a></p>
-
-<h3 id="算法实现">算法实现</h3>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-005.jpg" alt="2019-03-13-005" /></p>
-
-<p>黑白图像素越高，压缩比例越高。</p>
-
-<p>最早用于传播电视信号。</p>
-
-<p>而图片压缩格式，例如JPEG，属于有损失的压缩。</p>
-
-<p><a href="https://en.wikipedia.org/wiki/JPEG">https://en.wikipedia.org/wiki/JPEG</a></p>
-
-<h3 id="游程编码算法不明白的地方">游程编码算法不明白的地方：</h3>
-
-<p>为什么要写一个重新计数0呢？</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-003.jpg" alt="2019-03-13-003" /></p>
-
-<pre><code class="language-java">    public static void compress() { 
-        char run = 0; 
-        boolean old = false;
-        while (!BinaryStdIn.isEmpty()) { 
-            boolean b = BinaryStdIn.readBoolean();
-            if (b != old) {
-                BinaryStdOut.write(run, LG_R);
-                run = 1;
-                old = !old;
-            }
-            else { 
-                if (run == R-1) { 
-                    BinaryStdOut.write(run, LG_R);
-                    run = 0;
-                    BinaryStdOut.write(run, LG_R); // 为什么要计数0呢？
-                }
-                run++;
-            } 
-        } 
-        BinaryStdOut.write(run, LG_R);
-        BinaryStdOut.close();
-    }
+终止条件
+p&gt;=r 不用再继续分解
 </code></pre>
 
-<h3 id="游程编码的问题">游程编码的问题</h3>
+<p>merge_sort(p&hellip;r)表示，给下标p到r之间的数组排序。</p>
 
-<p>尽管游程编码算法很高效，但是在处理<font color="Darkorange"><strong>文本压缩</strong></font>就没那么高效了。我们需要其他的算法。</p>
+<h2 id="复杂度分析">复杂度分析</h2>
 
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-007.jpg" alt="2019-03-13-007" /></p>
+<p>同样三个问题：</p>
 
-<p>从图中可以看出 416 / 96 = 433% ，文件越压缩越大了。</p>
+<h3 id="font-color-darkorange-第一-归并排序是稳定的排序算法么-font"><font color="Darkorange"><strong>第一、归并排序是稳定的排序算法么？</strong></font></h3>
 
-<h2 id="huffman-compression">Huffman Compression</h2>
+<p>结合图和代码，应该能发现归并排序稳不稳关键要看merge()函数。也就是将两个有序子数组合并成一个有序数组的那部分代码。</p>
+
+<p>在合并过程中，如果A[p&hellip;q]和A[q+1&hellip;r]之间有值相同的元素，归并后元素的相对位置是不变的。所以，归并排序是一个稳定的排序算法。</p>
+
+<h3 id="font-color-darkorange-第二-归并排序的时间复杂度是多少-font"><font color="Darkorange"><strong>第二、归并排序的时间复杂度是多少？</strong></font></h3>
+
+<p>归并排序涉及递归，时间复杂度稍微有点复杂。我们正好借此机会来学习一下，如何分析递归代码的时间复杂度。</p>
+
+<p>递归的适用场景是，一个问题a可以分解成多个子问题b、c，那求解问题a就可以分解成求解问题b、c。问题b、c解决之后，我们再把b、c的结果合并成a的结果。</p>
+
+<p>如果我们定义求解问题a的时间是T(a)，求解问题b、c的时间分别是T(b)和T(c)，那我们就可以得到这样的递推关系公式：</p>
+
+<pre><code class="language-java">T(a) = T(b) + T(c) + K
+</code></pre>
+
+<p>其中K等于将两个子问题b、c的结果合并成问题a的结果说消耗的时间。</p>
+
+<p>从刚刚的分析，我们可以得到一个重要的结论：
+<font color="green"><strong>不仅递归求解的问题可以写成递推公式，递归代码的时间复杂度也可以写成递推公式。</strong></font></p>
+
+<p>套用这个公式，如何来求解T(N)呢？还不够直观？那我们再进一步分解一下计算过程。</p>
+
+<pre><code class="language-code">T(n) = 2*T(n/2) + n
+     = 2*(2*T(n/4) + n/2) + n = 4*T(n/4) + 2*n
+     = 4*(2*T(n/8) + n/4) + 2*n = 8*T(n/8) + 3*n
+     = 8*(2*T(n/16) + n/8) + 3*n = 16*T(n/16) + 4*n
+     ......
+     = 2^k * T(n/2^k) + k * n
+     ......
+</code></pre>
+
+<p>通过这样一步一步分解推导，我们可以达到 T(n) = 2^kT(n/2^k)+kn。</p>
+
+<p>当T(n/2^k) = T(1)时，也就是n/2^k = 1，我们得到k=$log_2n$。将k值带入上面的懂事，得到$T(n)=Cn+nlog_2n$。如果用大O法标记来表示的话，$T(n)=O(nlogn)$。所以归并排序的时间复杂度是$O(nlogn)$。</p>
+
+<p>从我们原理的分析和伪代码可以看出，归并排序的执行效率与要排序的数组的有序程度无关，所以其时间复杂度是非常稳定的，不管是最好情况、最坏情况，还是平均情况，时间复杂度都是$O(nlogn)$。</p>
+
+<h3 id="font-color-darkorange-第三-归并排序的空间复杂度是多少-font"><font color="Darkorange"><strong>第三、归并排序的空间复杂度是多少？</strong></font></h3>
+
+<p>从伪代码中可以看出，空间复杂度是O(n)。算法的实现可以在merge函数中定义临时数组，也可以在一开始就定义一个临时数组。如果在merge函数中定义临时数组，按照递归的时间复杂度分析方法，空间复杂度就是nlog(n)，但实际不是这样的。</p>
+
+<p>实际上，递归代码的工具复杂度并不能像时间复杂度那样累加。刚刚我们忘记了最重要的一点，那就是，尽管每次合并操作都需要申请额外的内存空间，但在合并完成之后，临时开辟的空间就被释放掉了。任意时刻，CPU只会有一个函数在执行，也就是只会有一个零食的内存空间在使用。临时内存空间最大也不会超过n个数据的大小，所以空间复杂度是O(n)。</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-008.png" alt="2019-03-06-008" /></p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-009.png" alt="2019-03-06-009" /></p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-010.png" alt="2019-03-06-010" /></p>
+
+<h1 id="快速排序的原理">快速排序的原理</h1>
+
+<h1 id="课后思考">课后思考</h1>
+
+<p>现在你有 10 个接口访问日志文件，每个日志文件大小约 300MB，每个文件里的日志都是按照时间戳从小到大排序的。你希望将这 10 个较小的日志文件，合并为 1 个日志文件，合并之后的日志仍然按照时间戳从小到大排列。如果处理上述排序任务的机器内存只有 1GB，你有什么好的解决思路，能“快速”地将这 10 个日志文件合并吗？</p>
+
+<blockquote>
+<p>先构建十条io流，分别指向十个文件，每条io流读取对应文件的第一条数据，然后比较时间戳，选择出时间戳最小的那条数据，将其写入一个新的文件，然后指向该时间戳的io流读取下一行数据，然后继续刚才的操作，比较选出最小的时间戳数据，写入新文件，io流读取下一行数据，以此类推，完成文件的合并， 这种处理方式，日志文件有n个数据就要比较n次，每次比较选出一条数据来写入，时间复杂度是O（n），空间复杂度是O（1）,几乎不占用内存，这是我想出的认为最好的操作了。</p>
+</blockquote>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/alg/" rel="tag">ALG</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li>
 	</ul>
 </div>
 
@@ -220,10 +238,10 @@ MathJax.Hub.Config({
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/skill/2019-03-12-realtimethumb/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">写博客缩略图实时预览与上传</p></a>
+		<a class="post-nav__link" href="/post/alg4/geekbang/11/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">11 | 排序（上）：为什么插入排序比冒泡排序更受欢迎？</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/note/2019-03-14/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">图相关的算法</p></a>
+		<a class="post-nav__link" href="/post/alg4/geekbang/13/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">13 | 线性排序：如何根据年龄给100万用户数据排序？</p></a>
 	</div>
 </nav>
 
