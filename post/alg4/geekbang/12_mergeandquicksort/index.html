@@ -19,9 +19,9 @@
 
 
 
-<meta property="article:published_time" content="2019-03-06T22:15:22&#43;08:00"/>
+<meta property="article:published_time" content="2019-03-20T23:38:56&#43;08:00"/>
 
-<meta property="article:modified_time" content="2019-03-06T22:15:22&#43;08:00"/>
+<meta property="article:modified_time" content="2019-03-20T23:38:56&#43;08:00"/>
 
 
 
@@ -89,7 +89,7 @@ MathJax.Hub.Config({
 			<h1 class="post__title">12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2019-03-06T22:15:22">March 06, 2019</time>
+				<time class="post__meta-date" datetime="2019-03-20T23:38:56">March 20, 2019</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
@@ -196,13 +196,7 @@ p&gt;=r 不用再继续分解
 
 <p>从伪代码中可以看出，空间复杂度是O(n)。算法的实现可以在merge函数中定义临时数组，也可以在一开始就定义一个临时数组。如果在merge函数中定义临时数组，按照递归的时间复杂度分析方法，空间复杂度就是nlog(n)，但实际不是这样的。</p>
 
-<p>实际上，递归代码的工具复杂度并不能像时间复杂度那样累加。刚刚我们忘记了最重要的一点，那就是，尽管每次合并操作都需要申请额外的内存空间，但在合并完成之后，临时开辟的空间就被释放掉了。任意时刻，CPU只会有一个函数在执行，也就是只会有一个零食的内存空间在使用。临时内存空间最大也不会超过n个数据的大小，所以空间复杂度是O(n)。</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-008.png" alt="2019-03-06-008" /></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-009.png" alt="2019-03-06-009" /></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-010.png" alt="2019-03-06-010" /></p>
+<p>实际上，递归代码的工具复杂度并不能像时间复杂度那样累加。刚刚我们忘记了最重要的一点，那就是，尽管每次合并操作都需要申请额外的内存空间，但在合并完成之后，临时开辟的空间就被释放掉了。任意时刻，CPU只会有一个函数在执行，也就是只会有一个临时的内存空间在使用。临时内存空间最大也不会超过n个数据的大小，所以空间复杂度是O(n)。</p>
 
 <h1 id="快速排序的原理">快速排序的原理</h1>
 
@@ -211,6 +205,14 @@ p&gt;=r 不用再继续分解
 <p>快排的思想是这样的：如果要排序数组中下标从p到r之间一组数据，我们选择p到r之间的任意一个数据作为pivot（分区点）。</p>
 
 <p>我们遍历p到r之间的数据，将小于pivot的放到左边，将大于pivot的放到右边，将pivot放到中间。经过这一步骤之后，数组的p到r中间的数据就被分成了三部分，前面p到q-1中间都是小于pivot的，中间是pivot，后面的q+1到r之间的是大于pivot的。</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-009.png" alt="2019-03-06-009" /></p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-008.png" alt="2019-03-06-008" /></p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-010.png" alt="2019-03-06-010" /></p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-20-002.jpg" alt="2019-03-20-002" /></p>
 
 <h1 id="课后思考">课后思考</h1>
 
@@ -244,7 +246,7 @@ p&gt;=r 不用再继续分解
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/alg4/geekbang/11/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">11 | 排序（上）：为什么插入排序比冒泡排序更受欢迎？</p></a>
+		<a class="post-nav__link" href="/post/note/2019-03-14/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">图相关的算法</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next col-1-2">
 		<a class="post-nav__link" href="/post/alg4/geekbang/13/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">13 | 线性排序：如何根据年龄给100万用户数据排序？</p></a>
@@ -294,11 +296,11 @@ p&gt;=r 不用再继续分解
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/13/">13 | 线性排序：如何根据年龄给100万用户数据排序？</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/12_mergeandquicksort/">12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</a></li>
 			<li class="widget__item"><a class="widget__link" href="/reading/a-book-one-day/2019-03-20beautyofalgo/">算法之美</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/note/2019-03-14/">图相关的算法</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/alg4/chapter5/note/">数据压缩算法</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/skill/2019-03-12-realtimethumb/">写博客缩略图实时预览与上传</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/golang/04/">Go Basic</a></li>
 		</ul>
 	</div>
 </div>
