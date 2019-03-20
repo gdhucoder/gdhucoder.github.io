@@ -3,24 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>java问题</title>
+<title>归档</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="java问题" />
-<meta property="og:description" content="[TOC]
-
-学习过程中遇到的一些技术问题。
-
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/note/2018-05-15/" />
+<meta property="og:title" content="归档" />
+<meta property="og:description" content="博客" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/" />
 
 
 
-<meta property="article:published_time" content="2018-05-15T07:00:00&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-05-15T07:00:00&#43;08:00"/>
-
+<meta property="og:updated_time" content="2017-08-03T21:44:30&#43;08:00"/>
 
 
 
@@ -49,7 +42,7 @@ MathJax.Hub.Config({
 });
 </script>
 
-
+<link rel="alternate" type="application/rss+xml" title="程序员的自我修养 Feed" href="https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/index.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
 <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 <script type="text/javascript" src="/js/scripts.js"></script>
@@ -81,99 +74,42 @@ MathJax.Hub.Config({
 		</header>
 		<div class="wrapper clearfix">
 
-<div class="main-content content" role="main" itemprop="mainContentOfPage">
-	<article class="post">
-		<header class="post__header clearfix">
-			<h1 class="post__title">java问题</h1>
-			<p class="post__meta meta">
+	<div class="main-content list content" role="main">
+		<header class="page-header">
+			<h1 class="page-header__title">归档</h1>
+		</header><article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/plt_1/plt_1/" rel="bookmark">matplot的使用之一:折线图、子图</a>
+			</h3>
+			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2018-05-15T07:00:00">May 15, 2018</time>
-				<span class="post__meta-categories meta-categories">
-					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
-			</p>
+				<time class="list__meta-date" datetime="2017-08-03T21:44:30">August 03, 2017</time>
+			</div>
 		</header>
-		<div class="post__content clearfix">
-			
-<aside>
-    <header>
-    <h2>java问题</h2>
-    </header>
-    
-</aside>
+		<div class="list__excerpt">
+			<pre><code class="language-python">import pandas as pd
+</code></pre>
 
-			<p>[TOC]</p>
-
-<p>学习过程中遇到的一些技术问题。</p>
+<pre><code class="language-python">unrate = pd.read_csv('UNRATE.csv')
+unrate['DATE'] = pd.to_datetime(unrate['DATE'])
+print(unrate.head(12))
+</code></pre>
 
 <p></p>
-
-<p>Q. What is the result of division and remainder for negative integers?</p>
-
-<p>A. The quotient a/b rounds toward 0; the remainder a % b is defined such that (a / b) * b + a % b is always equal to a. For example, -<sup>14</sup>&frasl;<sub>3</sub> and 14/-3 are both -4, but -14 % 3 is -2 and 14 % -3 is 2</p>
-
-<p>Q. Some Java programmers use int a[] instead of int[] a to declare arrays. What’s the difference?</p>
-
-<p>A. In Java, both are legal and equivalent. The former is how arrays are declared in C. The latter is the preferred style in Java since the type of the variable int[] more clearly indicates that it is an array of integers.</p>
-
-<p>java中使用int[]的形式声明数组。</p>
 		</div>
+	</div>
+</article>
+
+
 		
-<div class="post__tags tags clearfix">
-	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
-	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/java/" rel="tag">Java</a></li>
-	</ul>
+<div class="pagination clearfix">
+	<a class="pagination__item pagination__item--prev" href="/categories/%E5%BD%92%E6%A1%A3/page/6/">«</a>
+	<span class="pagination__item pagination__item--current">7/7</span>
 </div>
 
-	</article>
-	
-<div class="authorbox clearfix">
-	<figure class="authorbox__avatar">
-		<img alt="HuGuoDong avatar" src="/img/head.jpg" class="avatar" height="90" width="90">
-	</figure>
-	<div class="authorbox__header">
-		<span class="authorbox__name">About HuGuoDong</span>
 	</div>
-	<div class="authorbox__description">
-		gdong.hu[at]gmail.com
-	</div>
-</div>
-	
-<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/note/2018-05-10-note/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">java问题</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/alg4/chapter1/chapter1-1/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">算法4 chp 1-1</p></a>
-	</div>
-</nav>
-
-	
-<div class="comments">
-	<div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "guodonghu" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-</div>
 
 <aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
 	
