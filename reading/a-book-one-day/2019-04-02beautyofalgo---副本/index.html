@@ -3,27 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>matplot的使用之一:折线图、子图</title>
+<title>夜脑</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="matplot的使用之一:折线图、子图" />
-<meta property="og:description" content="import pandas as pd
+<meta property="og:title" content="夜脑" />
+<meta property="og:description" content="[TOC]
 
-
-unrate = pd.read_csv(&#39;UNRATE.csv&#39;)
-unrate[&#39;DATE&#39;] = pd.to_datetime(unrate[&#39;DATE&#39;])
-print(unrate.head(12))
-
+夜脑：在睡眠中自动学习的秘密
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/plt_1/plt_1/" />
+<meta property="og:url" content="https://gdhucoder.github.io/reading/a-book-one-day/2019-04-02beautyofalgo---%E5%89%AF%E6%9C%AC/" />
 
 
 
-<meta property="article:published_time" content="2017-08-03T21:44:30&#43;08:00"/>
+<meta property="article:published_time" content="2019-04-02T08:06:34&#43;08:00"/>
 
-<meta property="article:modified_time" content="2017-08-03T21:44:30&#43;08:00"/>
+<meta property="article:modified_time" content="2019-04-02T08:06:34&#43;08:00"/>
 
 
 
@@ -88,177 +84,65 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">matplot的使用之一:折线图、子图</h1>
+			<h1 class="post__title">夜脑</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-08-03T21:44:30">August 03, 2017</time>
+				<time class="post__meta-date" datetime="2019-04-02T08:06:34">April 02, 2019</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+					<a class="meta-categories__link" href="/categories/%e8%af%bb%e4%b9%a6" rel="category">读书</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
 			</p>
 		</header>
 		<div class="post__content clearfix">
 			
 <aside>
     <header>
-    <h2>matplot的使用之一:折线图、子图</h2>
+    <h2>夜脑</h2>
     </header>
-    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#夜脑">夜脑</a>
+<ul>
+<li><a href="#关于作者">关于作者</a></li>
+<li><a href="#关于本书">关于本书</a></li>
+<li><a href="#核心内容">核心内容</a></li>
+</ul></li>
+</ul>
+</nav>
 </aside>
 
-			<pre><code class="language-python">import pandas as pd
-</code></pre>
+			<p>[TOC]</p>
 
-<pre><code class="language-python">unrate = pd.read_csv('UNRATE.csv')
-unrate['DATE'] = pd.to_datetime(unrate['DATE'])
-print(unrate.head(12))
-</code></pre>
+<p>夜脑：在睡眠中自动学习的秘密</p>
 
 <p></p>
 
-<pre><code>         DATE  VALUE
-0  1948-01-01    3.4
-1  1948-02-01    3.8
-2  1948-03-01    4.0
-3  1948-04-01    3.9
-4  1948-05-01    3.5
-5  1948-06-01    3.6
-6  1948-07-01    3.6
-7  1948-08-01    3.9
-8  1948-09-01    3.8
-9  1948-10-01    3.7
-10 1948-11-01    3.8
-11 1948-12-01    4.0
-</code></pre>
+<h1 id="夜脑">夜脑</h1>
 
-<pre><code class="language-python">import matplotlib.pyplot as plt
-</code></pre>
+<h2 id="关于作者">关于作者</h2>
 
-<pre><code class="language-python">#Using the different pyplot functions, we can create, customize, and display a plot. For example, we can use 2 functions to :
-plt.plot() # 画图操作
-plt.show() # 显示
+<p>理查德·怀斯曼是英国著名实验心理学家。
+他的心理学授课视频在YouTube上点击量超过1.5亿次，被誉为“当今世界最具创新性的实验心理学家”。
+我们中国读者认识他，主要是通过他的知名畅销书《怪诞心理学》和《正能量》。</p>
 
-</code></pre>
+<h2 id="关于本书">关于本书</h2>
 
-<p><img src="../output_3_0.png" alt="png" /></p>
+<p>在这本书里，作者依托大量科学实验，讨论了很多跟睡眠和梦境有关的问题。
+比如，如何利用睡眠提高记忆力，如何从科学的角度认识和避免噩梦，如何通过操控梦境治疗心理疾病，等等。但这本书最值得介绍的，是我们的大脑会在睡眠时自动学习这个观点。</p>
 
-<pre><code class="language-python">first_twelve = unrate[0:12]
-plt.plot(first_twelve['DATE'], first_twelve['VALUE'])
-plt.show()
-</code></pre>
+<h2 id="核心内容">核心内容</h2>
 
-<p><img src="../output_4_0.png" alt="png" /></p>
+<p>过去我们认为，人的大脑和身体在白天工作，在晚上休息。但这本书指出，人的大脑是24小时连续运转的。睡觉时，大脑会将我们在白天的所思、所感和所为自动分析、归类并储存，从而形成我们的认知结构。如果我们能够利用好大脑的这一特性，就会提高我们的睡眠和学习效率。</p>
 
-<pre><code class="language-python">#While the y-axis looks fine, the x-axis tick labels are too close together and are unreadable
-#We can rotate the x-axis tick labels by 90 degrees so they don't overlap
-#We can specify degrees of rotation using a float or integer value.
-first_twelve = unrate[0:12]
-plt.plot(first_twelve['DATE'], first_twelve['VALUE'])
-#print help(plt.xticks)
-plt.xticks(rotation=45)
-plt.show()
-</code></pre>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-04-02-001.jpg" alt="2019-04-02-001" /></p>
 
-<p><img src="../output_5_0.png" alt="png" /></p>
-
-<pre><code class="language-python">#xlabel(): accepts a string value, which gets set as the x-axis label.
-#ylabel(): accepts a string value, which is set as the y-axis label.
-#title(): accepts a string value, which is set as the plot title.
-first_twelve = unrate[0:12]
-plt.plot(first_twelve['DATE'], first_twelve['VALUE'])
-plt.xticks(rotation=45)
-plt.xlabel('Month')
-plt.ylabel('Unemployment Rate')
-plt.title('Monthly Unemployment Trends, 1948')
-plt.show()
-</code></pre>
-
-<p><img src="../output_6_0.png" alt="png" /></p>
-
-<pre><code class="language-python">fig = plt.figure()
-</code></pre>
-
-<pre><code class="language-python">ax1 = fig.add_subplot(2,2,1)
-ax2 = fig.add_subplot(2,2,2)
-ax4 = fig.add_subplot(2,2,4)
-plt.show()
-</code></pre>
-
-<p><img src="../output_8_0.png" alt="png" /></p>
-
-<pre><code class="language-python">import numpy as np
-fig = plt.figure(figsize=(6,5)) #画图区域的大小
-ax1 = fig.add_subplot(2,1,1)
-ax2 = fig.add_subplot(2,1,2)
-ax1.plot(np.random.randint(1,5,5), np.arange(5))
-ax2.plot(np.arange(10)*3, np.arange(10))
-plt.show()
-</code></pre>
-
-<p><img src="../output_9_0.png" alt="png" /></p>
-
-<pre><code class="language-python">unrate['MONTH'] = unrate['DATE'].dt.month
-fig = plt.figure(figsize=(6,3))
-plt.plot(unrate[0:12]['MONTH'],unrate[0:12]['VALUE'], c='red')
-plt.plot(unrate[12:24]['MONTH'],unrate[12:24]['VALUE'], c='blue')
-plt.show()
-</code></pre>
-
-<p><img src="../output_10_0.png" alt="png" /></p>
-
-<pre><code class="language-python">fig = plt.figure(figsize=(10,6))
-colors = ['red', 'blue', 'green', 'orange', 'black']
-for i in range(5):
-    start_index = i*12
-    end_index = ((i+1))*12
-    sub_set = unrate[start_index:end_index]
-    plt.plot(sub_set['MONTH'], sub_set['VALUE'], c=colors[i])
-plt.show()
-</code></pre>
-
-<p><img src="../output_11_0.png" alt="png" /></p>
-
-<pre><code class="language-python">fig = plt.figure(figsize=(10,6))
-colors = ['red', 'blue', 'green', 'orange', 'black']
-for i in range(5):
-    start_index = i*12
-    end_index = ((i+1))*12
-    sub_set = unrate[start_index:end_index]
-    label = str(1948+i)
-    plt.plot(sub_set['MONTH'], sub_set['VALUE'], c=colors[i], label=label)
-plt.legend(loc='upper left')
-#print(help(plt.legend))
-plt.show()
-</code></pre>
-
-<p><img src="../output_12_0.png" alt="png" /></p>
-
-<pre><code class="language-python"># 一个完整的折线图就画好了
-fig = plt.figure(figsize=(10,6))
-colors = ['red', 'blue', 'green', 'orange', 'black']
-for i in range(5):
-    start_index = i*12
-    end_index = ((i+1))*12
-    sub_set = unrate[start_index:end_index]
-    label = str(1948+i)
-    plt.plot(sub_set['MONTH'], sub_set['VALUE'], c=colors[i], label=label)
-plt.legend(loc='upper left')
-#print(help(plt.legend))
-plt.xlabel('Month, Integer')
-plt.ylabel('Unemployment Rate, Percent')
-plt.title('Monthly Unemployment Trends, 1948-1952')
-plt.show()
-</code></pre>
-
-<p><img src="../output_13_0.png" alt="png" /></p>
+<p>注：个人学习笔记。侵权请联系。</p>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/python/" rel="tag">Python</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/matplotlib/" rel="tag">Matplotlib</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">数据可视化</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/book/" rel="tag">BOOK</a></li>
 	</ul>
 </div>
 
@@ -278,10 +162,7 @@ plt.show()
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/rl/rl-intro-ch5/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title"></p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/plt_2/plt_2/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">matplot的使用之二:柱状图、散点图</p></a>
+		<a class="post-nav__link" href="/reading/a-book-one-day/2019-04-02/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">夜脑：在睡眠中自动学习的秘密</p></a>
 	</div>
 </nav>
 
