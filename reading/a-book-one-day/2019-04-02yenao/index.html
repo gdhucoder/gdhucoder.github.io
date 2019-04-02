@@ -3,27 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>贝叶斯引论（一）</title>
+<title>夜脑</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="贝叶斯引论（一）" />
+<meta property="og:title" content="夜脑" />
 <meta property="og:description" content="[TOC]
 
-本篇开始，逐一介绍一些概率编程相关内容。首先介绍贝叶斯网的相关基础知识和应用。
-
-本篇导读：
-
-本篇主要介绍了贝叶斯定理，贝叶斯网以及相关应用：
+夜脑：在睡眠中自动学习的秘密
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/planning/pln_1/pln_1/" />
+<meta property="og:url" content="https://gdhucoder.github.io/reading/a-book-one-day/2019-04-02yenao/" />
 
 
 
-<meta property="article:published_time" content="2017-10-20T21:25:07&#43;08:00"/>
+<meta property="article:published_time" content="2019-04-02T08:06:34&#43;08:00"/>
 
-<meta property="article:modified_time" content="2017-10-20T21:25:07&#43;08:00"/>
+<meta property="article:modified_time" content="2019-04-02T08:06:34&#43;08:00"/>
 
 
 
@@ -88,31 +84,28 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">贝叶斯引论（一）</h1>
+			<h1 class="post__title">夜脑</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-10-20T21:25:07">October 20, 2017</time>
+				<time class="post__meta-date" datetime="2019-04-02T08:06:34">April 02, 2019</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+					<a class="meta-categories__link" href="/categories/%e8%af%bb%e4%b9%a6" rel="category">读书</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
 			</p>
 		</header>
 		<div class="post__content clearfix">
 			
 <aside>
     <header>
-    <h2>贝叶斯引论（一）</h2>
+    <h2>夜脑</h2>
     </header>
     <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#夜脑">夜脑</a>
 <ul>
-<li><a href="#概率的解释">概率的解释</a></li>
-<li><a href="#贝叶斯定理">贝叶斯定理</a></li>
-<li><a href="#贝叶斯网">贝叶斯网</a></li>
-<li><a href="#贝叶斯网的构造">贝叶斯网的构造</a></li>
-<li><a href="#贝叶斯网的应用">贝叶斯网的应用</a></li>
-<li><a href="#动态贝叶斯网">动态贝叶斯网</a></li>
+<li><a href="#关于作者">关于作者</a></li>
+<li><a href="#关于本书">关于本书</a></li>
+<li><a href="#核心内容">核心内容</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -120,124 +113,36 @@ MathJax.Hub.Config({
 
 			<p>[TOC]</p>
 
-<p>本篇开始，逐一介绍一些概率编程相关内容。首先介绍贝叶斯网的相关基础知识和应用。</p>
-
-<p>本篇导读：</p>
-
-<p>本篇主要介绍了贝叶斯定理，贝叶斯网以及相关应用：</p>
+<p>夜脑：在睡眠中自动学习的秘密</p>
 
 <p></p>
 
-<ol>
-<li>概率的解释</li>
-<li>贝叶斯定理</li>
-<li>贝叶斯网</li>
-<li>贝叶斯网的构造</li>
-<li>贝叶斯网的应用</li>
-<li>动态贝叶斯网</li>
-</ol>
+<h1 id="夜脑">夜脑</h1>
 
-<h2 id="概率的解释">概率的解释</h2>
+<h2 id="关于作者">关于作者</h2>
 
-<p>首先介绍一下<strong>贝叶斯引论</strong>中概率的解释：</p>
+<p>理查德·怀斯曼是英国著名实验心理学家。
+他的心理学授课视频在YouTube上点击量超过1.5亿次，被誉为“当今世界最具创新性的实验心理学家”。
+我们中国读者认识他，主要是通过他的知名畅销书《怪诞心理学》和《正能量》。</p>
 
-<p>这里主要介绍主要的概率的三种解释：</p>
+<h2 id="关于本书">关于本书</h2>
 
-<p><strong>古典解释</strong>：P(A) = 事件A包含的样本数/样本空间的总样本数= m/n 。
-前提条件等可能性，这个条件在实际应用中很难满足，应用范围有限。</p>
+<p>在这本书里，作者依托大量科学实验，讨论了很多跟睡眠和梦境有关的问题。
+比如，如何利用睡眠提高记忆力，如何从科学的角度认识和避免噩梦，如何通过操控梦境治疗心理疾病，等等。但这本书最值得介绍的，是我们的大脑会在睡眠时自动学习这个观点。</p>
 
-<p><strong>频率解释</strong>：概率近似等于频率。符合大数定律。
-按照频率解释，概率只有当试验可以在同等条件下无限次重复时才有意义。然而，在实际应用中人们往往要研究一些不可能重复的事件发生的概率，例如竞选总统和体育比赛的结果。
-频率解释对这些一次性事件无法处理。</p>
+<h2 id="核心内容">核心内容</h2>
 
-<p><strong>主观解释</strong>：主观解释又称贝叶斯解释，它认为概率即合理信度，反映的是个体的知识状态和主观信念。在这种意义下的概率称为主观概率。</p>
+<p>过去我们认为，人的大脑和身体在白天工作，在晚上休息。但这本书指出，人的大脑是24小时连续运转的。睡觉时，大脑会将我们在白天的所思、所感和所为自动分析、归类并储存，从而形成我们的认知结构。如果我们能够利用好大脑的这一特性，就会提高我们的睡眠和学习效率。</p>
 
-<p>相对于频率解释，主观解释的长处是它允许对一次性事件也进行概率评估。</p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-04-02-001.jpg" alt="2019-04-02-001" /></p>
 
-<p>贝叶斯网所依赖的一个核心就是<strong>条件独立</strong>，而概率的主观解释为直观理解条件概率和条件独立提供了一个自然的角度。</p>
-
-<h2 id="贝叶斯定理">贝叶斯定理</h2>
-
-<p><strong>先验概率</strong>和<strong>后验概率</strong>这两个概念是相对于某组证据而言的，设H和E为两个随机变量，H=h为某一假设，E=e为一组证据。在考虑证据E=e之前，对事件H=h的概率估计P(H=h)称为先验概率。而在考虑证据之后，对H=h的概率估计P(H=h|E=e)称为后验概率。贝叶斯定理描述了先验概率和后验概率之间的关系：</p>
-
-<p>$$P(H=h|E=e) = P(H=h)*P(E=e|H=h)/P(E=e)$$</p>
-
-<p>这又称为<strong>贝叶斯规则</strong>，或<strong>贝叶斯公式</strong>。
-在贝叶斯定理中，P(E=e|H=h)称为<strong>似然度</strong>，有时即为$L(H=h|E=e)$。
-<strong>贝叶斯定理之所以有用是因为似然度往往容易获得，而后验概率则不然</strong>。</p>
-
-<h2 id="贝叶斯网">贝叶斯网</h2>
-
-<p>贝叶斯网是一个<strong>有向无圈图</strong>，其中节点代表随机变量，节点间的边代表变量之间的直接依赖关系，每个节点都附有一个概率分布，根节点X所附的是它的边缘分布P(X)，而非根节点X所附的是条件概率分布。
-贝叶斯网可以从定性和定量两个层面来理解。在定性层面，它用一个有向无圈图描述了变量之间的依赖和独立关系。在语义上，贝叶斯网是联合概率分布的分解的一种表示。</p>
-
-<p>例如<strong>Alarm</strong>问题的联合概率分布，可以使用链规则和条件独立，分解成复杂度较低的概率分布乘积。</p>
-
-<p>$$P(B,E,A,J,M)=P(B)P(E)P(A|B,E)P(J|A)P(M|A)$$</p>
-
-<p>联合概率分布的分解降低了概率模型的复杂度。贝叶斯网的引入虽然没有进一步降低复杂度，但它为概率推理提供了很大的方便。主要是因为贝叶斯网一方面是严格的数学语言，适合计算机的处理；另一方面，它直观易懂，方便人们讨论交流和建立模型。</p>
-
-<h2 id="贝叶斯网的构造">贝叶斯网的构造</h2>
-
-<p>贝叶斯网的构造方法有两种，一种是通过咨询专家手工构造，另一种是通过数据分析来获得。</p>
-
-<p>实际应用中，人们往往利用因果关系来确定贝叶斯网的结构。例如Alarm问题的贝叶斯网的构造。Pearl(2000)提出概率利用因果关系来决定变量顺序。实际应用效果上，因果关系往往使得网络结构简单，概率分布易于评估。</p>
-
-<p>如何来判断因果关系呢？在实际应用中，对于变量X和Y，如果知道X的状态被改变会影响你对Y的信度，而反过来Y的状态被改变并不影响你对X的信度，那么就说X是Y的原因。</p>
-
-<h2 id="贝叶斯网的应用">贝叶斯网的应用</h2>
-
-<p>贝叶斯网的图论语言简单易懂，能够帮助人们理清问题的结构，同时它是严格的数学语言，可以直接用计算机来处理，这些特点使得贝叶斯网络成为许多问题的研究工具。例如贝叶斯网有以下应用：</p>
-
-<ul>
-<li><p><strong>医疗诊断</strong>：如疾病诊断。</p></li>
-
-<li><p><strong>工业应用</strong>：如故障诊断。</p></li>
-
-<li><p><strong>金融分析</strong>：石油价格预测，证券风险评与回报，风险投资决策。</p></li>
-
-<li><p><strong>计算机系统</strong>：垃圾邮件过滤，计算机系统故障诊断。</p></li>
-
-<li><p><strong>军事应用</strong>：战场推理，身份识别。</p></li>
-
-<li><p><strong>机器学习</strong>：</p>
-
-<p>机器学习是人工智能的一个子领域，它研究的是怎样让计算机模拟实现人的学习行为，从经验数据出发，通过学习不断提高自己完成某种任务的能力。分类(classification)和聚类(clustering)是机器学习中的两个主要问题，<strong>分类</strong>是从一系列给定类别的数据出发，为下一个未知类别的数据归类。<strong>聚类</strong>是从一个未知类别的数据出发，分析他们可以聚成哪几个类，以及那些数据属于哪一个类。</p></li>
-</ul>
-
-<p><strong>两个常见的分类模型：</strong></p>
-
-<ul>
-<li><p><strong>朴素贝叶斯模型</strong>(naive Bayes model)，又称为朴素贝叶斯分类器(naive Bayes classifier)，是一个包含一个根节点，多个叶节点的树状贝叶斯网。朴素贝叶斯模型包含了一个所谓的局部独立(local independence)假设，即给定类别变量C，个属性变量Ai相互条件独立。</p></li>
-
-<li><p><strong>TAN模型</strong>
-朴素贝叶斯模型的局部独立的假设在实际应用中往往不成立，为了使模型更贴近实际，可以在各个叶节点之间加上一些必要的边，以表示各变量之间的依赖关系，这种树状结构模型就称为加树朴素贝叶斯模型(tree augmented naive Bayes model)，简称TAN模型。</p></li>
-</ul>
-
-<h2 id="动态贝叶斯网">动态贝叶斯网</h2>
-
-<p>为了能够对动态随机过程进行表达和推理，人们引入了动态贝叶斯网(dynamic Bayesian networks, DBN)的概念，它又称为时变贝叶斯网(temporal Bayesian networks)。
-动态贝叶斯网包含了两个假设：一是一阶马尔可夫假设，二是时齐性或者齐次性。</p>
-
-<p>常见的两个动态贝叶斯网的特列为隐马尔可夫模型和卡尔曼滤波器。</p>
-
-<p><strong>隐马尔科夫模型</strong>：是一个简单的时间序列模型，它的每个时间片由一个隐状态变量Xi和一个观测变量Yi组成，它们都是离散变量。</p>
-
-<p><strong>卡尔曼滤波器(KFM)</strong>，又称线性动态系统(linear dynamic system)，由Kalman(1960)提出，KFM涉及一个随时间变化的连续变量x，x随时间的变化对x的观测结果y都符合线性高斯分布。</p>
-
-<p>参考资料：</p>
-
-<ol>
-<li>贝叶斯网引论 张连文 郭海鹏 著</li>
-<li>贝叶斯统计 韦来生 编</li>
-<li>Practical Probabilistic Programming - Avi Pfeffer 著</li>
-</ol>
+<p>注：个人学习笔记。侵权请联系。</p>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/planning/" rel="tag">PLANNING</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/book/" rel="tag">BOOK</a></li>
 	</ul>
 </div>
 
@@ -257,10 +162,7 @@ MathJax.Hub.Config({
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/ml/20170905/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">关于logistic regression</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/java_skill/20171024-priority_queue/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Priority Queues</p></a>
+		<a class="post-nav__link" href="/reading/a-book-one-day/2019-03-20beautyofalgo/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">算法之美</p></a>
 	</div>
 </nav>
 
