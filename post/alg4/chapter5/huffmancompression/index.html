@@ -107,6 +107,7 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="#压缩的步骤如下">压缩的步骤如下：</a></li>
 </ul></li>
+<li><a href="#特殊字符含义">特殊字符含义</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -119,6 +120,8 @@ MathJax.Hub.Config({
 <p></p>
 
 <h1 id="huffman-compression">Huffman Compression</h1>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-04-03-001.jpg" alt="构建霍夫曼树的过程" /></p>
 
 <h2 id="压缩">压缩</h2>
 
@@ -137,6 +140,20 @@ MathJax.Hub.Config({
 <p>将输入的字符总数做为比特字符串写入输出流</p>
 
 <p>使用编译表将输入的每个字符写入到输出流</p>
+
+<h2 id="特殊字符含义">特殊字符含义</h2>
+
+<pre><code class="language-code">ASCII码的含义
+\0 表示 NUL 字符串结束
+10 表示 LF line feed 换行键
+13 表示 CR  carriage return 回车键
+</code></pre>
+
+<p>Mac，以<CR>做为文本文件行尾的标识符</p>
+
+<p>UNIX，以<LF>做为文本文件行尾的标识符</p>
+
+<p>WINDOWS，以<CR><LF>为行尾的标志.</p>
 		</div>
 		
 <div class="post__tags tags clearfix">
