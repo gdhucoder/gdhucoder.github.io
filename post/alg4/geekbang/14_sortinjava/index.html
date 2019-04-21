@@ -3,17 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Markdown</title>
+<title>工业级的排序算法</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="Markdown" />
-<meta property="og:description" content="博客" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://gdhucoder.github.io/tags/markdown/" />
+<meta property="og:title" content="工业级的排序算法" />
+<meta property="og:description" content="[TOC]
+
+你所熟悉的语言中，排序算法是如何实现的？
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/alg4/geekbang/14_sortinjava/" />
 
 
 
-<meta property="og:updated_time" content="2019-03-02T19:26:09&#43;08:00"/>
+<meta property="article:published_time" content="2019-04-21T16:15:56&#43;08:00"/>
+
+<meta property="article:modified_time" content="2019-04-21T16:15:56&#43;08:00"/>
+
 
 
 
@@ -42,7 +49,7 @@ MathJax.Hub.Config({
 });
 </script>
 
-<link rel="alternate" type="application/rss+xml" title="程序员的自我修养 Feed" href="https://gdhucoder.github.io/tags/markdown/index.xml">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
 <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 <script type="text/javascript" src="/js/scripts.js"></script>
@@ -74,53 +81,128 @@ MathJax.Hub.Config({
 		</header>
 		<div class="wrapper clearfix">
 
-	<div class="main-content list content" role="main">
-		<header class="page-header">
-			<h1 class="page-header__title">Markdown</h1>
-		</header><article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/tech_details/markdown_use/" rel="bookmark">MarkDown内嵌标签</a>
-			</h3>
-			<div class="list__meta meta">
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		<header class="post__header clearfix">
+			<h1 class="post__title">工业级的排序算法</h1>
+			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2019-03-02T19:26:09">March 02, 2019</time>
-			</div>
+				<time class="post__meta-date" datetime="2019-04-21T16:15:56">April 21, 2019</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+			</p>
 		</header>
-		<div class="list__excerpt">
+		<div class="post__content clearfix">
+			
+<aside>
+    <header>
+    <h2>工业级的排序算法</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#工业级的排序算法">工业级的排序算法</a>
+<ul>
+<li><a href="#java中排序的实现">java中排序的实现</a>
+<ul>
+<li><a href="#基本数据类型">基本数据类型</a></li>
+<li><a href="#对象类型">对象类型</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</aside>
+
 			<p>[TOC]</p>
 
-<p>关于Markdown支持html标签</p>
+<p>你所熟悉的语言中，排序算法是如何实现的？</p>
 
 <p></p>
+
+<h1 id="工业级的排序算法">工业级的排序算法</h1>
+
+<p>java 1.7 中排序按照排序的内容可以分为基本类型和对象类型。</p>
+
+<h2 id="java中排序的实现">java中排序的实现</h2>
+
+<h3 id="基本数据类型">基本数据类型</h3>
+
+<p>Arrays.sort()中</p>
+
+<p>byte数组使用插入排序和计数排序(待排序数组元素个数大于29)结合。</p>
+
+<p>short,char , int, long, float, double 小规模数组使用插入排序，大规模数组使用双轴快排。</p>
+
+<p><a href="https://www.geeksforgeeks.org/dual-pivot-quicksort/">dual-pivot-quicksort_geeksforgeeks</a></p>
+
+<h3 id="对象类型">对象类型</h3>
+
+<p>从源代码中看使用的是TimSort(为了兼容，保留到了归并排序)</p>
+
+<pre><code class="language-java">    public static void sort(Object[] a, int fromIndex, int toIndex) {
+        rangeCheck(a.length, fromIndex, toIndex);
+        if (LegacyMergeSort.userRequested)
+            legacyMergeSort(a, fromIndex, toIndex);
+        else
+            ComparableTimSort.sort(a, fromIndex, toIndex, null, 0, 0);
+    }
+</code></pre>
+
+<p><a href="https://en.wikipedia.org/wiki/Timsort">TimSort</a></p>
 		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/about/about_me/" rel="bookmark">Welcome To My Site</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-08-14T03:58:07">August 14, 2017</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<h3 id="about-me">About Me</h3>
-
-<p>在这里和您分享技术，记录成长。</p>
-
-<p></p>
-		</div>
-	</div>
-</article>
-
-
 		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="HuGuoDong avatar" src="/img/head.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About HuGuoDong</span>
 	</div>
+	<div class="authorbox__description">
+		gdong.hu[at]gmail.com
+	</div>
+</div>
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/alg4/geekbang/13_radix_counting_bucket_sort/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">13 | 线性排序：如何根据年龄给100万用户数据排序？</p></a>
+	</div>
+</nav>
+
+	
+<div class="comments">
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guodonghu" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</div>
 
 <aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
 	
