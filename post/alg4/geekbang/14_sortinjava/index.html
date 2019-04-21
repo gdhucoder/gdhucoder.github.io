@@ -107,6 +107,7 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="#基本数据类型">基本数据类型</a></li>
 <li><a href="#对象类型">对象类型</a></li>
+<li><a href="#collections排序">Collections排序</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -131,7 +132,7 @@ MathJax.Hub.Config({
 
 <p>byte数组使用插入排序和计数排序(待排序数组元素个数大于29)结合。</p>
 
-<p>short,char , int, long, float, double 小规模数组使用插入排序，大规模数组使用双轴快排。</p>
+<p>short,char , int, long, float, double 小规模数组(元素个数46以下)使用插入排序，大规模数组使用双轴快排。long 小规模使用的quicksort</p>
 
 <p><a href="https://www.geeksforgeeks.org/dual-pivot-quicksort/">dual-pivot-quicksort_geeksforgeeks</a></p>
 
@@ -149,6 +150,21 @@ MathJax.Hub.Config({
 </code></pre>
 
 <p><a href="https://en.wikipedia.org/wiki/Timsort">TimSort</a></p>
+
+<h3 id="collections排序">Collections排序</h3>
+
+<p>Collections.sort()将集合转成数组进行排序。</p>
+
+<pre><code class="language-java">    default void sort(Comparator&lt;? super E&gt; c) {
+        Object[] a = this.toArray();
+        Arrays.sort(a, (Comparator) c);
+        ListIterator&lt;E&gt; i = this.listIterator();
+        for (Object e : a) {
+            i.next();
+            i.set((E) e);
+        }
+    }
+</code></pre>
 		</div>
 		
 <div class="post__tags tags clearfix">
