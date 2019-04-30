@@ -3,19 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>思考</title>
+<title>Hashing with Salt</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="思考" />
-<meta property="og:description" content="思考类的文章将会发布在这里。" />
+<meta property="og:title" content="Hashing with Salt" />
+<meta property="og:description" content="[TOC]
+
+如何防止被&rdquo;脱裤&rdquo;
+
+" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/thinking/about/" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/note/2019-04-30-hashing-with-salt/" />
 
 
 
-<meta property="article:published_time" content="2017-08-14T03:58:07&#43;08:00"/>
+<meta property="article:published_time" content="2019-04-30T17:39:06&#43;08:00"/>
 
-<meta property="article:modified_time" content="2017-08-14T03:58:07&#43;08:00"/>
+<meta property="article:modified_time" content="2019-04-30T17:39:06&#43;08:00"/>
 
 
 
@@ -80,25 +84,139 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">思考</h1>
+			<h1 class="post__title">Hashing with Salt</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-08-14T03:58:07">August 14, 2017</time>
+				<time class="post__meta-date" datetime="2019-04-30T17:39:06">April 30, 2019</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/%e6%80%9d%e8%80%83" rel="category">思考</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
 			</p>
 		</header>
 		<div class="post__content clearfix">
 			
-			<p>思考类的文章将会发布在这里。</p>
+<aside>
+    <header>
+    <h2>Hashing with Salt</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#加盐">&ldquo;加盐&rdquo;</a>
+<ul>
+<li><a href="#hashing-with-salt">Hashing with salt</a></li>
+<li><a href="#making-password-cracking-harder-slow-hash-functions">Making Password Cracking Harder: Slow Hash Functions</a></li>
+<li><a href="#what-hash-algorithm-should-i-use">What hash algorithm should I use?</a></li>
+<li><a href="#伪码">伪码</a></li>
+<li><a href="#参考">参考</a></li>
+</ul></li>
+</ul>
+</nav>
+</aside>
 
+			<p>[TOC]</p>
+
+<p>如何防止被&rdquo;脱裤&rdquo;</p>
+
+<p></p>
+
+<h1 id="加盐">&ldquo;加盐&rdquo;</h1>
+
+<p>在密码前面后者后面加一个随机字符串，叫做&rdquo;盐salt&rdquo;</p>
+
+<h2 id="hashing-with-salt">Hashing with salt</h2>
+
+<p>Salt should be generated using a Cryptographically Secure Pseudo-Random Number Generator (CSPRNG).</p>
+
+<p>To Store a Password</p>
+
+<ul>
+<li>Generate a long random salt using a CSPRNG.</li>
+<li>Prepend the salt to the password and hash it with a standard password hashing function like Argon2, bcrypt, scrypt, or PBKDF2.</li>
+<li>Save both the salt and the hash in the user&rsquo;s database record.</li>
+</ul>
+
+<p>To Validate a Password</p>
+
+<ul>
+<li>Retrieve the user&rsquo;s salt and hash from the database.</li>
+<li>Prepend the salt to the given password and hash it using the same hash function.</li>
+<li>Compare the hash of the given password with the hash from the database. If they match, the password is correct. Otherwise, the password is incorrect.</li>
+</ul>
+
+<h2 id="making-password-cracking-harder-slow-hash-functions">Making Password Cracking Harder: Slow Hash Functions</h2>
+
+<p>增加hash函数计算的时间，例如0.5s计算一次hash值。以防止字典或者暴力破解。</p>
+
+<h2 id="what-hash-algorithm-should-i-use">What hash algorithm should I use?</h2>
+
+<p>使用<a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a> 算法</p>
+
+<p>不要使用fast cryptographic hash functions such as MD5, SHA1, SHA256, SHA512, RipeMD, WHIRLPOOL, SHA3, etc.</p>
+
+<h2 id="伪码">伪码</h2>
+
+<pre><code class="language-java">package geekbang.u17;
+
+import edu.princeton.cs.algs4.StdOut;
+import java.security.SecureRandom;
+import java.util.Base64;
+
+/**
+ * Created by HuGuodong on 2019/4/30.
+ */
+
+public class TestSalt {
+
+  public static final int SALT_BYTE_SIZE = 24;
+
+  public static void main(String[] args) {
+    SecureRandom random = new SecureRandom();
+    byte[] salt = new byte[SALT_BYTE_SIZE];
+    random.nextBytes(salt);
+
+    String toBase64 = toBase64(salt);
+    StdOut.printf(&quot;toBase64Salt: %s\n&quot;, toBase64);
+
+  }
+
+  private static byte[] fromBase64(String hex){
+    return Base64.getDecoder().decode(hex);
+  }
+
+  private static String toBase64(byte[] array) {
+    return Base64.getEncoder().encodeToString(array);
+  }
+
+  public boolean verifyPassword(String testHash, String correctHash){
+
+  // testHash: password + hash(from database)
+  // correctHash: hash
+
+    return slowEquals(fromBase64(testHash), fromBase64(correctHash));
+  }
+
+  private static boolean slowEquals(byte[] a, byte[] b)
+  {
+    int diff = a.length ^ b.length;
+    for(int i = 0; i &lt; a.length &amp;&amp; i &lt; b.length; i++)
+      diff |= a[i] ^ b[i];
+    return diff == 0;
+  }
+}
+
+</code></pre>
+
+<h2 id="参考">参考</h2>
+
+<p><a href="https://crackstation.net/hashing-security.htm">hashing-security</a></p>
+
+<p><a href="https://github.com/defuse/password-hashing">PBKDF2-github</a></p>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/mind/" rel="tag">Mind</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/tag/" rel="tag">TAG</a></li>
 	</ul>
 </div>
 
@@ -117,8 +235,8 @@ MathJax.Hub.Config({
 </div>
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/thinking/2018-10-19/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">2018-10-19随笔</p></a>
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/alg4/geekbang/18_hashmap_part1/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">哈希表(1)</p></a>
 	</div>
 </nav>
 
