@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gdhucoder.github.io/post/alg4/geekbang/23_binarytree_part1/</loc>
+    <lastmod>2019-05-01T15:57:17+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/note/2019-04-30-hashing-with-salt/</loc>
     <lastmod>2019-04-30T17:39:06+08:00</lastmod>
   </url>
@@ -491,7 +496,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/post/</loc>
-    <lastmod>2019-04-30T17:39:06+08:00</lastmod>
+    <lastmod>2019-05-01T15:57:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -557,7 +562,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</loc>
-    <lastmod>2019-04-30T17:39:06+08:00</lastmod>
+    <lastmod>2019-05-01T15:57:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -575,7 +580,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2019-04-30T17:39:06+08:00</lastmod>
+    <lastmod>2019-05-01T15:57:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -587,13 +592,13 @@
   
   <url>
     <loc>https://gdhucoder.github.io/</loc>
-    <lastmod>2019-04-30T17:39:06+08:00</lastmod>
+    <lastmod>2019-05-01T15:57:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2019-04-27T22:00:00+08:00</lastmod>
+    <lastmod>2019-05-01T15:57:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
