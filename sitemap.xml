@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://gdhucoder.github.io/post/note/2019-05-02-kafka/</loc>
+    <lastmod>2019-05-02T15:38:48+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/post/alg4/geekbang/23_binarytree_part1/</loc>
     <lastmod>2019-05-01T15:57:17+08:00</lastmod>
   </url>
@@ -496,7 +501,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/post/</loc>
-    <lastmod>2019-05-01T15:57:17+08:00</lastmod>
+    <lastmod>2019-05-02T15:38:48+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -562,7 +567,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</loc>
-    <lastmod>2019-05-01T15:57:17+08:00</lastmod>
+    <lastmod>2019-05-02T15:38:48+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -579,8 +584,14 @@
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2019-05-02T15:38:48+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2019-05-01T15:57:17+08:00</lastmod>
+    <lastmod>2019-05-02T15:38:48+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -592,7 +603,7 @@
   
   <url>
     <loc>https://gdhucoder.github.io/</loc>
-    <lastmod>2019-05-01T15:57:17+08:00</lastmod>
+    <lastmod>2019-05-02T15:38:48+08:00</lastmod>
     <priority>0</priority>
   </url>
   
