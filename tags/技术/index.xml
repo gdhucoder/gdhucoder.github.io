@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>技术 on 程序员的自我修养</title>
+    <title>技术 on Huguodong</title>
     <link>https://gdhucoder.github.io/tags/%E6%8A%80%E6%9C%AF/</link>
-    <description>Recent content in 技术 on 程序员的自我修养</description>
+    <description>Recent content in 技术 on Huguodong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Thu, 02 May 2019 15:38:48 +0800</lastBuildDate>
@@ -12,14 +12,14 @@
     
     
     <item>
-      <title>Kafa</title>
+      <title>Kafa介绍</title>
       <link>https://gdhucoder.github.io/post/note/2019-05-02-kafka/</link>
       <pubDate>Thu, 02 May 2019 15:38:48 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/note/2019-05-02-kafka/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
 
-&lt;p&gt;玩玩kafka&lt;/p&gt;
+&lt;p&gt;玩玩Kafka。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

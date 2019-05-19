@@ -1,25 +1,64 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>归档 on 程序员的自我修养</title>
+    <title>归档 on Huguodong</title>
     <link>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</link>
-    <description>Recent content in 归档 on 程序员的自我修养</description>
+    <description>Recent content in 归档 on Huguodong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Thu, 02 May 2019 15:38:48 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 May 2019 15:51:46 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Kafa</title>
+      <title>The Bitter Lesson</title>
+      <link>https://gdhucoder.github.io/thinking/2019-05-18-bitter-lesson/</link>
+      <pubDate>Sun, 19 May 2019 15:51:46 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/2019-05-18-bitter-lesson/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;分享&lt;a href=&#34;https://en.wikipedia.org/wiki/Richard_S._Sutton&#34;&gt;Sutton&lt;/a&gt;的一篇博客。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Kafa介绍</title>
       <link>https://gdhucoder.github.io/post/note/2019-05-02-kafka/</link>
       <pubDate>Thu, 02 May 2019 15:38:48 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/note/2019-05-02-kafka/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
 
-&lt;p&gt;玩玩kafka&lt;/p&gt;
+&lt;p&gt;玩玩Kafka。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>二叉树(2):有了如此高效的散列表，为什么还需要二叉树？</title>
+      <link>https://gdhucoder.github.io/post/alg4/geekbang/24_binarytree_part2/</link>
+      <pubDate>Wed, 01 May 2019 16:50:40 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/geekbang/24_binarytree_part2/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;二叉查找树，其最大的特点就是，支持动态数据集合的快速插入，删除，查找操作。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>二叉树</title>
+      <link>https://gdhucoder.github.io/post/alg4/geekbang/23_binarytree/</link>
+      <pubDate>Wed, 01 May 2019 15:57:17 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/geekbang/23_binarytree/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;介绍二叉树基础。&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>

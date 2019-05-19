@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Thinkings on 程序员的自我修养</title>
+    <title>Thinkings on Huguodong</title>
     <link>https://gdhucoder.github.io/thinking/</link>
-    <description>Recent content in Thinkings on 程序员的自我修养</description>
+    <description>Recent content in Thinkings on Huguodong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sat, 20 Apr 2019 00:58:22 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 May 2019 15:51:46 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/thinking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Bitter Lesson</title>
+      <link>https://gdhucoder.github.io/thinking/2019-05-18-bitter-lesson/</link>
+      <pubDate>Sun, 19 May 2019 15:51:46 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/2019-05-18-bitter-lesson/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;分享&lt;a href=&#34;https://en.wikipedia.org/wiki/Richard_S._Sutton&#34;&gt;Sutton&lt;/a&gt;的一篇博客。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>阿里电话面试</title>
