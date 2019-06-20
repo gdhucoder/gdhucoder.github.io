@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>什么是Docker？</title>
+<meta name="description" content="博客">
+<meta name="generator" content="Hugo 0.37" />
+<meta property="og:title" content="什么是Docker？" />
+<meta property="og:description" content="[TOC]
+
+关于Docker。
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/note/2019-06-17-docker/" />
+
+
+
+<meta property="article:published_time" content="2019-06-18T08:10:35&#43;08:00"/>
+
+<meta property="article:modified_time" content="2019-06-18T08:10:35&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="Huguodong" rel="home">
+						<h1 class="logo__title">Huguodong</h1>
+						<h2 class="logo__tagline">A Programmer&#39;s self-cultivation</h2>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item "><a class="menu__link" href="/post">技术文章</a></li>
+		<li class="menu__item "><a class="menu__link" href="/reading">读书</a></li>
+		<li class="menu__item "><a class="menu__link" href="/thinking">思考</a></li>
+		<li class="menu__item "><a class="menu__link" href="/about">关于我</a></li>
+		<li class="menu__item "><a class="menu__link" href="https://github.com/gdhucoder">TOMYGIT</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		<header class="post__header clearfix">
+			<h1 class="post__title">什么是Docker？</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2019-06-18T08:10:35">June 18, 2019</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+			
+<aside>
+    <header>
+    <h2>什么是Docker？</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#what-is-docker">What is docker?</a>
+<ul>
+<li><a href="#1-1-docker-images">1.1 Docker Images</a></li>
+<li><a href="#1-2-container-isolation">1.2 Container Isolation</a></li>
+<li><a href="#1-3-terminology">1.3 Terminology</a></li>
+<li><a href="#1-4-image-creation">1.4 Image Creation</a>
+<ul>
+<li><a href="#what-just-happend">what just happend?</a></li>
+<li><a href="#terminology">Terminology</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</aside>
+
+			<p>[TOC]</p>
+
+<p>关于Docker。</p>
+
+<p></p>
+
+<h1 id="what-is-docker">What is docker?</h1>
+
+<h2 id="1-1-docker-images">1.1 Docker Images</h2>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-001.jpg" alt="2019-06-18-001" /></p>
+
+<h2 id="1-2-container-isolation">1.2 Container Isolation</h2>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-002.jpg" alt="2019-06-18-002" /></p>
+
+<p>container id 可以简写前几个字母 只要唯一即可。</p>
+
+<h2 id="1-3-terminology">1.3 Terminology</h2>
+
+<ul>
+<li><p>Images - the file system and configuration of our application.</p></li>
+
+<li><p>Containers - Running instances of Dokcer images. Containers run the actual applications. A container includes an application and all of its dependencies. It shares the kernel wiht other containers, and run as isolated process in user space on the host OS. <code>docker container ls</code> a list of running containers.</p></li>
+
+<li><p>Docker caemon - the background service running on the host that manages building, running and distributing Docker containers.</p></li>
+
+<li><p>Docker client - command line tool that allows the user to interact with the Docker daemon.</p></li>
+
+<li><p>Docker Store - a directory of all availiable Docker images.</p></li>
+</ul>
+
+<h2 id="1-4-image-creation">1.4 Image Creation</h2>
+
+<pre><code class="language-shell">running an interative shell in a ubuntu container
+docker container run -ti ubuntu bash
+</code></pre>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-003.jpg" alt="2019-06-18-003" /></p>
+
+<p>新建一个文件 index.js</p>
+
+<pre><code class="language-js">var os = require(&quot;os&quot;);
+var hostname = os.hostname();
+console.log(&quot;hello from &quot; + hostname);
+</code></pre>
+
+<p>建立一个Dockerfile文件</p>
+
+<pre><code>FROM alpine
+RUN apk update &amp;&amp; apk add nodejs
+COPY . /app
+WORKDIR /app
+CMD [&quot;node&quot;,&quot;index.js&quot;]
+</code></pre>
+
+<p>构建镜像</p>
+
+<pre><code>docker image build -t hello:v0.1 .
+</code></pre>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-005.jpg" alt="2019-06-18-005" /></p>
+
+<p>启动容器</p>
+
+<pre><code>docker container run hello:v0.1
+</code></pre>
+
+<h3 id="what-just-happend">what just happend?</h3>
+
+<ol>
+<li><p><code>FROM alpine</code>specifies a base image to pull <font color="green"><strong>FROM</strong></font> alpine image we used in earlier labs.</p></li>
+
+<li><p><code>RUN apk update &amp;&amp; apk add nodejs</code> <font color="green"><strong>RUN</strong></font> two commands(apk update and apk add) inside that container which installs the Node.js server.</p></li>
+
+<li><p><code>COPY . /app</code> <font color="green"><strong>COPY</strong></font> files from our dircetory in to the container. e.g. index.js we just created.</p></li>
+
+<li><p><code>WORKDIR /app</code> <font color="green"><strong>WORKDIR</strong></font> specify the WORKDIR the directory the container should use when it starts up.</p></li>
+
+<li><p>And finally, we gave our container a command(<font color="green"><strong>CMD</strong></font>) to run when the container starts.</p></li>
+</ol>
+
+<p>With <font color="Darkorange"><strong>Dockerfile</strong></font> we can specify preceise commands to run for everyone who uses this container.  Other users do not have to build the container themselves once you push your container up to a repository (which we will cover later) or even know what commands are used.</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-006.jpg" alt="2019-06-18-006" /></p>
+
+<h3 id="terminology">Terminology</h3>
+
+<ul>
+<li><p>Layers - A Docker image is built up a series of layers.</p></li>
+
+<li><p>Dockerfile - A text file contains all the commands, in order, needed to build a given image.</p></li>
+
+<li><p>Volumes - A special Docker container layer that allows data to persist and be shared separately from container itself.</p></li>
+</ul>
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="HuGuoDong avatar" src="/img/head.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About HuGuoDong</span>
+	</div>
+	<div class="authorbox__description">
+		gdong.hu[at]gmail.com
+	</div>
+</div>
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/note/2019-06-11-javanote/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Java笔记</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/post/java_skill/2019-06-20-docker_gui_win10/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Windows 10 Docker &amp; GUI</p></a>
+	</div>
+</nav>
+
+	
+<div class="comments">
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guodonghu" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://gdhucoder.github.io/" />
+	</form>
+</div>
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/java_skill/2019-06-20-run-intellij-in-container/">win10如何在Docer容器中运行IntelliJ？</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/java_skill/2019-06-20-docker_gui_win10/">Windows 10 Docker &amp; GUI</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/note/2019-06-17-docker/">什么是Docker？</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/note/2019-06-11-javanote/">Java笔记</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/alg4/booknote/2_4_priorityqueues/">Priority Queue</a></li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/%e5%bd%92%e6%a1%a3">归档</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e6%80%9d%e8%80%83">思考</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e6%8a%80%e6%9c%af">技术</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e8%af%bb%e4%b9%a6">读书</a></li>
+		</ul>
+	</div>
+</div>
+	
+	
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget__link widget__link--taglist" href="/tags/alg" title="alg">alg</a>
+		<a class="widget__link widget__link--taglist" href="/tags/book" title="book">book</a>
+		<a class="widget__link widget__link--taglist" href="/tags/books" title="books">books</a>
+		<a class="widget__link widget__link--taglist" href="/tags/docker" title="docker">docker</a>
+		<a class="widget__link widget__link--taglist" href="/tags/git" title="git">git</a>
+		<a class="widget__link widget__link--taglist" href="/tags/go" title="go">go</a>
+		<a class="widget__link widget__link--taglist" href="/tags/java" title="java">java</a>
+		<a class="widget__link widget__link--taglist" href="/tags/latex" title="latex">latex</a>
+		<a class="widget__link widget__link--taglist" href="/tags/markdown" title="markdown">markdown</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mathjax" title="mathjax">mathjax</a>
+		<a class="widget__link widget__link--taglist" href="/tags/matplotlib" title="matplotlib">matplotlib</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mc" title="mc">mc</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mind" title="mind">mind</a>
+		<a class="widget__link widget__link--taglist" href="/tags/ml" title="ml">ml</a>
+		<a class="widget__link widget__link--taglist" href="/tags/planing" title="planing">planing</a>
+		<a class="widget__link widget__link--taglist" href="/tags/planning" title="planning">planning</a>
+		<a class="widget__link widget__link--taglist" href="/tags/python" title="python">python</a>
+		<a class="widget__link widget__link--taglist" href="/tags/rddl" title="rddl">rddl</a>
+		<a class="widget__link widget__link--taglist" href="/tags/rl" title="rl">rl</a>
+		<a class="widget__link widget__link--taglist" href="/tags/seaborn" title="seaborn">seaborn</a>
+		<a class="widget__link widget__link--taglist" href="/tags/tag" title="tag">tag</a>
+		<a class="widget__link widget__link--taglist" href="/tags/tech" title="tech">tech</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e5%88%86%e4%ba%ab" title="分享">分享</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e5%a4%87%e4%bb%bd" title="备份">备份</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e6%80%9d%e8%80%83" title="思考">思考</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e6%8a%80%e6%9c%af" title="技术">技术</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e6%95%b0%e6%8d%ae%e5%8f%af%e8%a7%86%e5%8c%96" title="数据可视化">数据可视化</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%ae%97%e6%b3%95" title="算法">算法</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e8%af%ad%e8%a8%80" title="语言">语言</a>
+	</div>
+</div>
+</aside>
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2019 Huguodong. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+</body>
+</html>

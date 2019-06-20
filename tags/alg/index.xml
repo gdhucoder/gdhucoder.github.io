@@ -6,10 +6,23 @@
     <description>Recent content in Alg on Huguodong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Wed, 03 Apr 2019 16:25:34 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 May 2019 21:58:01 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/tags/alg/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Priority Queue</title>
+      <link>https://gdhucoder.github.io/post/alg4/booknote/2_4_priorityqueues/</link>
+      <pubDate>Thu, 30 May 2019 21:58:01 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/alg4/booknote/2_4_priorityqueues/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;介绍优先队列。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Huffman Compression</title>

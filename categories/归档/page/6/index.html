@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-10-19T08:00:00&#43;08:00"/>
+<meta property="og:updated_time" content="2018-10-31T06:00:00&#43;08:00"/>
 
 
 
@@ -78,6 +78,130 @@ MathJax.Hub.Config({
 		<header class="page-header">
 			<h1 class="page-header__title">归档</h1>
 		</header><article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_21/" rel="bookmark">算法4 Java解答 2.4.21</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-31T06:00:00">October 31, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.21 问题： 2.4.21 Elementary data structures. Explain how to use a priority queue to implement the stack, queue, and randomized queue data types from Chapter 1
+分析： 题目要求使一个优先队列。
+假设使用MaxPQ优先队列的操作有 insert delMax isEmpty size
+Stack：
+那么对于Stack LIFO 的实现我们需要指定被后插入的元素的priority比之前插入的元素priority大。
+Queue:
+对于Queue FIFO 的实现，需要后插入元素的priority小于之前插入元素的priority。
+randomized queue：
+随机队列需要指定一个随机的priority，其余实现和处理Queue的方法一样。
+问题是怎么样生成一个不重复的随机数呢？我的思路是使用一个Set保存随机数。
+public int random() { int num = 0; while (!numSet.contains(num)) { num = StdRandom.uniform(1, Integer.MAX_VALUE); numSet.add(num); break; } return num; }  另外要提到的是对于使用MaxPQ实现的Stack和Queue，插入删除元素的时间复杂度都是lgN。
+class IKey implements Comparable&lt;IKey&gt;{ Key value; int priority; @Override public int compareTo(IKey another) { return compare(this.
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_20/" rel="bookmark">算法4 Java解答 2.4.20</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-29T19:10:00">October 29, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.20 问题： Prove that sink-based heap construction uses fewer than 2N compares and fewer than N exchanges.
+证明基于下沉方法建立堆使用少于2N次的比较和N次交换。
+分析： 官方网站解答：https://algs4.cs.princeton.edu/24pq/
+假设为堆是完美的。
+我们将树中节点的高度定义为以该节点为根的子树的高度。
+一个高度为k的节点，下沉最多交换k次，对于每一层，有：
+$$ \begin{eqnarray} h + 2(h-1) + 4(h-2) + 8(h-3) + \ldots + 2^h (0) &amp; = &amp; 2^{h+1} - h - 2 &amp; = &amp; n - (h+1) &amp; \le &amp; n \end{eqnarray} $$
+第一项使用等比数列求和公式，第二项错位相减法。
+参考： 沈星繁
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_19/" rel="bookmark">算法4 Java解答 2.4.19</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-28T05:30:00">October 28, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.19 问题： 2.4.19 Implement the constructor for MaxPQ that takes an array of items as argument, using the bottom-up heap construction method described on page 323 in the text.
+实现一个MaxPQ的构造函数，接受一个数组做为参数，使用323页中描述的自底向上的方法构建堆。
+分析： 将数组做为参数构建堆，可以选择从左到右扫描，使用swim()方法。 但更明智的方法是使用从右往左扫描的方式，sink()。 这个方法的想法是如果一个结点的两个子结点的树都是堆的话，sink(k)之后，两个子树就合并成了以k为根结点的子树
+public MaxPQ(Key[] a){ N = a.length; pq = (Key[]) new Comparable[N+1]; for(int i=0; i&lt;a.length; i++){ pq[i+1] = a[i]; } int k = N / 2; while (k &gt;= 1){ sink(k); k --; } assert isMaxHeap(); show(); }  参考： 课本官网的实现MaxPQ
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_18/" rel="bookmark">算法4 Java解答 2.4.18</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-27T06:00:00">October 27, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.18 问题： 2.4.18 In MaxPQ, suppose that a client calls insert() with an item that is larger than all items in the queue, and then immediately calls delMax(). Assume that there are no duplicate keys. Is the resulting heap identical to the heap as it was before these op- erations? Answer the same question for two insert() operations (the first with a key larger than all keys in the queue and the second for a key larger than that one) followed by two delMax() operations.
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_17/" rel="bookmark">算法4习题 2.4.17</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-26T06:00:00">October 26, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.17 问题： 2.4.17 Prove that building a minimum-oriented priority queue of size k then doing N - k replace the minimum (insert followed by remove the minimum) operations leaves the k largest of the N items in the priority queue.
+分析： 题意是insert followed by remove the minimum，先插入后删除。
+例如
+N=10, 元素为：0,2,4,6,8,1,3,5,7,9 k=3， qp = 0 2 4 N-k = 10 - 3 = 7，将要进行7次操作 pq = 0 2 4 count = 1 insert 6, pq = 0 2 4 6 remove 0, pq = 2 4 6 count = 2 insert 8, pq = 2 4 6 8 remove 2, pq = 4 6 8 count =3 insert 1, pq = 1 4 6 8 remove 1, pq = 4 6 8 .
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_10/" rel="bookmark">算法4习题 2.4.10</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-20T08:00:00">October 20, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			 2.4.10 问题： 2.4.10 Suppose that we wish to avoid wasting one position in a heap-ordered array pq[], putting the largest value in pq[0], its children in pq[1] and pq[2], and so forth, proceeding in level order. Where are the parents and children of pq[k]?
+分析： 略
+答案： 子节点：$ 2k+1, 2k+2 $，父节点： $ \lfloor \frac{k-1}{2} \rfloor $
+参考： 
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
@@ -177,132 +301,12 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 		</div>
 	</div>
 </article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-05-15/" rel="bookmark">java问题</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-05-15T07:00:00">May 15, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-
-<p>学习过程中遇到的一些技术问题。</p>
-
-<p></p>
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-05-10-note/" rel="bookmark">java问题</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-05-14T07:00:00">May 14, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-
-<p>学习过程中遇到的一些技术问题。</p>
-
-<p></p>
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-04-06-rl-note/" rel="bookmark">Optimistic Initial Values</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-06T07:00:00">April 06, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-
-<p>Multi-armed Bandits 本篇主要介绍多臂赌博机问题的相关算法。</p>
-
-<p></p>
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/markdown-preview-mathjax/" rel="bookmark">MarkDown Preview MathJax</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-05T07:00:00">April 05, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-
-<h1 id="关于markdown中的公式">关于MarkDown中的公式</h1>
-
-<p></p>
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/tech_details/gitee_as_pic_storage/" rel="bookmark">如何使用gitee作为免费图床</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-04T21:25:07">April 04, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-
-<p>本篇文章是一个启发，介绍如何使用gitee作为免费图床。
-没有使用github的原因是github国内访问有些慢。
-另外，还有其他优秀的云存储，例如7niu，朋友们也可以试一下。</p>
-
-<p></p>
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/how-to-add-table-of-contents-in-hugo/" rel="bookmark">HuGo中文章加入目录</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-04T09:00:00">April 04, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>本文介绍如何在template中加入TOC目录。</p>
-
-<p></p>
-		</div>
-	</div>
-</article>
 
 
 		
 <div class="pagination clearfix">
 	<a class="pagination__item pagination__item--prev" href="/categories/%E5%BD%92%E6%A1%A3/page/5/">«</a>
-	<span class="pagination__item pagination__item--current">6/8</span>
+	<span class="pagination__item pagination__item--current">6/9</span>
 	<a class="pagination__item pagination__item--next" href="/categories/%E5%BD%92%E6%A1%A3/page/7/">»</a>
 </div>
 
@@ -325,11 +329,11 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/29_heapapplication/">堆的应用：如何快速获取到Top 10最热门的搜索关键词？</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2019-05-18-bitter-lesson/">The Bitter Lesson</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/note/2019-05-02-kafka/">Kafa介绍</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/24_binarytree_part2/">二叉树(2):有了如此高效的散列表，为什么还需要二叉树？</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/alg4/geekbang/23_binarytree/">二叉树</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/java_skill/2019-06-20-run-intellij-in-container/">win10如何在Docer容器中运行IntelliJ？</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/java_skill/2019-06-20-docker_gui_win10/">Windows 10 Docker &amp; GUI</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/note/2019-06-17-docker/">什么是Docker？</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/note/2019-06-11-javanote/">Java笔记</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/alg4/booknote/2_4_priorityqueues/">Priority Queue</a></li>
 		</ul>
 	</div>
 </div>
@@ -354,6 +358,7 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 		<a class="widget__link widget__link--taglist" href="/tags/alg" title="alg">alg</a>
 		<a class="widget__link widget__link--taglist" href="/tags/book" title="book">book</a>
 		<a class="widget__link widget__link--taglist" href="/tags/books" title="books">books</a>
+		<a class="widget__link widget__link--taglist" href="/tags/docker" title="docker">docker</a>
 		<a class="widget__link widget__link--taglist" href="/tags/git" title="git">git</a>
 		<a class="widget__link widget__link--taglist" href="/tags/go" title="go">go</a>
 		<a class="widget__link widget__link--taglist" href="/tags/java" title="java">java</a>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Huguodong</title>
+    <link>https://gdhucoder.github.io/tags/docker/</link>
+    <description>Recent content in Docker on Huguodong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cmn-Hans</language>
+    <lastBuildDate>Thu, 20 Jun 2019 20:17:20 +0800</lastBuildDate>
+    
+	<atom:link href="https://gdhucoder.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>win10如何在Docer容器中运行IntelliJ？</title>
+      <link>https://gdhucoder.github.io/post/java_skill/2019-06-20-run-intellij-in-container/</link>
+      <pubDate>Thu, 20 Jun 2019 20:17:20 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/java_skill/2019-06-20-run-intellij-in-container/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;本文讲win10如何在Docer容器中运行IntelliJ&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
