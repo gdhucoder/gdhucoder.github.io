@@ -105,6 +105,7 @@ MathJax.Hub.Config({
 <ul>
 <li><a href="#derived-predicates-1">Derived Predicates</a></li>
 <li><a href="#timed-initial-literals">Timed Initial Literals</a></li>
+<li><a href="#ref">REF</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -131,10 +132,16 @@ MathJax.Hub.Config({
 
 <h2 id="timed-initial-literals">Timed Initial Literals</h2>
 
-<p>时间初始文字。</p>
+<p>Timed initial literals are a syntactically very simple way of expressing a certain restricted form of exogenous events: facts that will become TRUE or FALSE at time points that are known to the planner in advance, independently of the actions that the planner chooses to execute. Timed initial literals are thus deterministic unconditional exogenous events. Syntactically, we simply allow the initial state to specify &ndash; beside the usual facts that are true at time point 0 &ndash; literals that will become true at time points greater than 0. For example:</p>
 
 <pre><code>(:init (at 9 (shop-open)) (at 20 (not (shop-open))))
 </code></pre>
+
+<p>Timed initial literals are practically very relevant: in the real world, deterministic unconditional exogenous events are very common, typically in the form of time windows (within which a shop has opened, within which humans work, within which traffic is slow, within which there is daylight, within which a seminar room is occupied, within which nobody answers their mail because they are all at conferences, etc.).</p>
+
+<p>时间初始文字。</p>
+
+<h2 id="ref">REF</h2>
 
 <p><a href="http://idm-lab.org/wiki/icaps/ipc2004/deterministic/pddl.html">ref-1</a></p>
 		</div>
