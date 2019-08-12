@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Markdown on Huguodong</title>
+    <title>Markdown on CoderPunk</title>
     <link>https://gdhucoder.github.io/tags/markdown/</link>
-    <description>Recent content in Markdown on Huguodong</description>
+    <description>Recent content in Markdown on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Sat, 02 Mar 2019 19:26:09 +0800</lastBuildDate>

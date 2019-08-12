@@ -488,6 +488,12 @@
   </url>
   
   <url>
+    <loc>https://gdhucoder.github.io/</loc>
+    <lastmod>2019-08-01T08:30:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://gdhucoder.github.io/tags/docker/</loc>
     <lastmod>2019-06-20T20:17:20+08:00</lastmod>
     <priority>0</priority>
@@ -502,12 +508,6 @@
   <url>
     <loc>https://gdhucoder.github.io/tags/go/</loc>
     <lastmod>2019-03-11T21:02:15+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://gdhucoder.github.io/</loc>
-    <lastmod>2019-08-01T08:30:01+08:00</lastmod>
     <priority>0</priority>
   </url>
   
