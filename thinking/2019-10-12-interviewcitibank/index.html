@@ -3,21 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>规划中的宏动作</title>
+<title>中信银行信用卡中心面试</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="规划中的宏动作" />
-<meta property="og:description" content="本文介绍如何在经典规划中的宏动作。
+<meta property="og:title" content="中信银行信用卡中心面试" />
+<meta property="og:description" content="[TOC]
+
+今天参加了中信银行信用卡中心的面试。
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/note/2018-04-04/" />
+<meta property="og:url" content="https://gdhucoder.github.io/thinking/2019-10-12-interviewcitibank/" />
 
 
 
-<meta property="article:published_time" content="2018-04-03T21:00:00&#43;08:00"/>
+<meta property="article:published_time" content="2019-10-12T13:40:23&#43;08:00"/>
 
-<meta property="article:modified_time" content="2018-04-03T21:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-10-12T13:40:23&#43;08:00"/>
 
 
 
@@ -82,10 +84,10 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">规划中的宏动作</h1>
+			<h1 class="post__title">中信银行信用卡中心面试</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2018-04-03T21:00:00">April 03, 2018</time>
+				<time class="post__meta-date" datetime="2019-10-12T13:40:23">October 12, 2019</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
@@ -93,45 +95,25 @@ MathJax.Hub.Config({
 		</header>
 		<div class="post__content clearfix">
 			
-<aside>
-    <header>
-    <h2>规划中的宏动作</h2>
-    </header>
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#macro-actions-in-planning">Macro-Actions in Planning</a></li>
-<li><a href="#macro-actions-in-planning-英文描述">Macro-Actions in Planning 英文描述</a></li>
-</ul>
-</nav>
-</aside>
+			<p>[TOC]</p>
 
-			<p>本文介绍如何在经典规划中的宏动作。</p>
+<p>今天参加了中信银行信用卡中心的面试。</p>
 
 <p></p>
 
-<h1 id="macro-actions-in-planning">Macro-Actions in Planning</h1>
+<p>应聘的是开发岗，面试问了一些关于开发的问题。很多问题我都没有答上来，面试后1分钟就给了通知，说没有通过。</p>
 
-<p>宏动作是由一些列动作步骤构成的元动作（meta-action），对一个状态使用宏动作可以产生应用一系列动作的效果，可以用来改善规划器的表现。</p>
+<p>当时有点失望，但想想也是必然的。关于面试我也没有怎么准备。</p>
 
-<p>Macro-FF：从规划解以及定义静态抽象连通图中提取宏动作。</p>
+<p>面试后我记录了一下我没有回答上来的问题，可以为后续的面试做准备。</p>
 
-<p>Learning Macro-Actions for Arbitrary Planners and Domains：使用遗传算法产生宏动作，不依赖于领域或者规划器。</p>
-
-<p>参考链接：<a href="https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume28/coles07a-html/node8.html">Macro-Actions in Planning</a></p>
-
-<h1 id="macro-actions-in-planning-英文描述">Macro-Actions in Planning 英文描述</h1>
-
-<p>A macro-action, as used in planning, is a meta-action built from a sequence of action steps. In forward-chaining planning, applying a macro-action to a state produces a successor corresponding to the application of a series of actions. In this way, the use of macro-actions can be thought of as extending the neighbourhood of successors visible from each state to selectively introduce states which hitherto would only have been visible after the application of several steps. If the additional states introduced are chosen effectively, an increase in planner performance can be realised; whereas if the additional states are chosen poorly, the performance of the planner decreases due to the increased branching factor.</p>
-
-<p>The use of macro-actions in planning has been widely explored. Most techniques use an off-line learning approach to generate and filter macro-actions before using them in search. Early work on macro-actions began with a version of the STRIPS planner&ndash;known as ABSTRIPS [Fikes &amp; Nilsson 1971]&ndash;which used previous solution plans (and segments thereof) as macro-actions in solving subsequent problems. MORRIS [Minton 1985] later extended this approach by adding some filtering heuristics to prune the generated set of macro-actions. Two distinct types of macro-actions were identified in this approach: S-macros&ndash;those that occur frequently during search&ndash;and T-macros&ndash;those that occur less often but model some weakness in the heuristic. Minton observed that the T-macros, although used less frequently, offered a greater improvement in search performance. The REFLECT system [Dawson &amp; Siklossy 1977] took the alternative approach of forming macro-actions based on preprocessing of the domain. All sound pairwise combinations of actions were considered as macro-actions and filtered through some basic pruning rules. Due to the small size of the domains with which the planner was reasoning, the number of macro-actions remaining following this process was sufficiently small to use in planning.</p>
-
-<p>More recent work on macro-actions includes that on Macro-FF [Botea et al. 2005]. Macro-actions are extracted in two ways: from solution plans; and by the identification of statically connected abstract components. An offline filtering technique is used to prune the list of macro-actions. Another recent approach to macro-action generation [Newton et al. 2005] uses a genetic algorithm to generate a collection of macro-actions, and then filters this collection through an offline filtering technique similar to that used by Macro-FF.</p>
+<p>想想这段时间应该每周至少一次参加面试，同时花些时间准备相关的知识。</p>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/planing/" rel="tag">PLANING</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/tag/" rel="tag">TAG</a></li>
 	</ul>
 </div>
 
@@ -151,10 +133,7 @@ MathJax.Hub.Config({
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/note/2018-03-29/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">废弃不用的链接</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/note/how-to-add-table-of-contents-in-hugo/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">HuGo中文章加入目录</p></a>
+		<a class="post-nav__link" href="/thinking/2019-10-10-trip2us_part1/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">美国纽约之行（一）</p></a>
 	</div>
 </nav>
 
