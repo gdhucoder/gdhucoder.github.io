@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Priority Queues</title>
+<title>做事情的设计模式</title>
 <meta name="description" content="博客">
 <meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="Priority Queues" />
+<meta property="og:title" content="做事情的设计模式" />
 <meta property="og:description" content="[TOC]
 
-本篇文章主要介绍优先队列(Priority Queue)和嵌套类(nested class)的基本用法。
-接下来的文章会介绍在实现例如Greedy Best First Search和AStar搜索算法中使用priority queue。
+昨天听了梁宁老师的做事情设计模式的文章。
+发现自己总是做事情经常三分钟热度。最近发现自己健身又没有什么乐趣了。刚开始的一段时间每天都很兴奋。从美国回来后，就没那么兴奋了。这个要警惕。
 
 " />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://gdhucoder.github.io/post/java_skill/20171024-priority_queue/" />
+<meta property="og:url" content="https://gdhucoder.github.io/thinking/2019-10-15-designpatternaboutdoingthings/" />
 
 
 
-<meta property="article:published_time" content="2017-10-24T21:25:07&#43;08:00"/>
+<meta property="article:published_time" content="2019-10-15T13:40:23&#43;08:00"/>
 
-<meta property="article:modified_time" content="2017-10-24T21:25:07&#43;08:00"/>
+<meta property="article:modified_time" content="2019-10-15T13:40:23&#43;08:00"/>
 
 
 
@@ -85,10 +85,10 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title">Priority Queues</h1>
+			<h1 class="post__title">做事情的设计模式</h1>
 			<p class="post__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-10-24T21:25:07">October 24, 2017</time>
+				<time class="post__meta-date" datetime="2019-10-15T13:40:23">October 15, 2019</time>
 				<span class="post__meta-categories meta-categories">
 					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
 					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
@@ -98,19 +98,16 @@ MathJax.Hub.Config({
 			
 <aside>
     <header>
-    <h2>Priority Queues</h2>
+    <h2>做事情的设计模式</h2>
     </header>
     <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#做事情的设计模式">做事情的设计模式</a></li>
+<li><a href="#如何继续搞科研设计个模式">如何继续搞科研设计个模式</a>
 <ul>
-<li>
-<ul>
-<li><a href="#priority-queue">Priority Queue</a></li>
-<li><a href="#nested-class-java嵌套类">Nested Class: Java嵌套类</a></li>
-<li><a href="#example-1-without-nested-class">Example 1 (without nested class)</a></li>
-<li><a href="#example-2-nested-class">Example 2 (nested class)</a></li>
-</ul></li>
+<li><a href="#增强回路">增强回路</a></li>
+<li><a href="#滞后反馈">滞后反馈</a></li>
+<li><a href="#调节回路">调节回路</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -118,156 +115,73 @@ MathJax.Hub.Config({
 
 			<p>[TOC]</p>
 
-<p>本篇文章主要介绍优先队列(Priority Queue)和嵌套类(nested class)的基本用法。
-接下来的文章会介绍在实现例如Greedy Best First Search和AStar搜索算法中使用priority queue。</p>
+<p>昨天听了梁宁老师的做事情设计模式的文章。
+发现自己总是做事情经常三分钟热度。最近发现自己健身又没有什么乐趣了。刚开始的一段时间每天都很兴奋。从美国回来后，就没那么兴奋了。这个要警惕。</p>
 
 <p></p>
 
-<h3 id="priority-queue">Priority Queue</h3>
+<h1 id="做事情的设计模式">做事情的设计模式</h1>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-10-15-002.jpg" alt="Hard" /></p>
+
+<p>做一件事情有四种连接：
+因果链，增强回路，调节回路，滞后反馈。</p>
+
+<p>增强回路上不断有正反馈，调节回路就是不断减弱正反馈的大脑刺激，使增强回路失去作用。</p>
+
+<p>如果依赖意志力和调节回路做抗衡，必然是会输的，因为调节回路是生物为了降低能耗的本能。</p>
+
+<p>学习这个东西，你可能提升自己，进而升职加薪，获得更大的空间，这也是刚需，但是就没那么强烈了。你在存量里生活，也是一种生活。</p>
+
+<p>纯粹的刚需，解决的是我们的生存和温饱问题，反而是那些不那么刚需的事情，能够真正让我们上一个台阶，是需要我们坚持去做的事情。</p>
+
+<h1 id="如何继续搞科研设计个模式">如何继续搞科研设计个模式</h1>
+
+<h2 id="增强回路">增强回路</h2>
+
+<p><font color="green"><strong>通过日常工作和责任心</strong></font></p>
 
 <ul>
-<li><p>In priority queue:</p></li>
+<li><p>赋予做的事情重大意义</p></li>
 
-<li><p>The order of the queue is controlled by implementing <strong>Comparable</strong>.</p></li>
+<li><p>每周向老师汇报科研进展</p></li>
+
+<li><p>每周写读论文分享</p></li>
+
+<li><p>每周写算法笔记</p></li>
+
+<li><p>写准备面试的笔记</p></li>
+
+<li><p>定期去健身房</p></li>
 </ul>
 
-<h3 id="nested-class-java嵌套类">Nested Class: Java嵌套类</h3>
+<p>得到赞扬，并且当做一项任务。</p>
+
+<h2 id="滞后反馈">滞后反馈</h2>
 
 <ul>
-<li><p>if you make an inner class <strong>static</strong>, this is commonly called <strong>a nested class</strong>.</p></li>
+<li><p>短期内可能看不到效果</p></li>
 
-<li><p>create an inner class, you don&rsquo;t need an outer-class object.</p></li>
-
-<li><p>you can not access a non-static outer-class object from an object of a nested class.</p></li>
+<li><p>没人点赞</p></li>
 </ul>
 
-<h3 id="example-1-without-nested-class">Example 1 (without nested class)</h3>
+<h2 id="调节回路">调节回路</h2>
 
 <ul>
-<li>Here is an example to show how we can specify order using Priority Queue.</li>
+<li><p>项目遇到问题，进展不下去。</p></li>
+
+<li><p>遇到困难心情差，不想往下做。</p></li>
+
+<li><p>事情忙的时候，没坚持做下去。</p></li>
 </ul>
 
-<!--more-->
-
-<pre><code class="language-java">
-/**
- * an example of Priority Queue
- * Created by HuGuodong on 2017/10/25.
- */
-
-public class ToDoList extends PriorityQueue&lt;ToDoList.ToDoItem&gt;{
-     class ToDoItem implements Comparable&lt;ToDoItem&gt; {
-            private char primary;
-            private int secondary;
-            private String item;
-            public ToDoItem(char pri, int sec, String i) {
-                this.primary = pri;
-                this.secondary = sec;
-                this.item = i;
-            }
-
-         /**
-          * order by the first arg, then the second arg
-          * @param o
-          * @return
-          */
-         @Override
-            public int compareTo(ToDoItem o) {
-                if (primary &gt; o.primary) {
-                    return 1;
-                }
-                if (primary == o.primary) {
-                    if (secondary &gt; o.secondary) {
-
-                        return 1;
-                    } else if (secondary == o.secondary) {
-                        return 0;
-                    }
-                }
-                return -1;
-            }
-            public String toString() {
-                return Character.toString(primary) + secondary + &quot;: &quot; + item;
-            }
-        }
-        public void add(char pri, int sec, String item){
-            super.add(new ToDoItem(pri, sec, item));
-        }
-
-    public static void main(String[] args){
-        ToDoList toDoList = new ToDoList();
-        toDoList.add('c', 16,&quot;Fog&quot;);
-        toDoList.add('c', 3,&quot;Dog&quot;);
-        toDoList.add('a', 2,&quot;Aog&quot;);
-        while(!toDoList.isEmpty()){
-            // remove is the same as poll, except its throw Exception, when it's empty.
-            System.out.println(toDoList.remove());
-            //System.out.println(toDoList.poll());
-        }
-//            result:
-//            a2: Aog
-//            c3: Dog
-//            c16: Fog
-    }
-}
-
-</code></pre>
-
-<h3 id="example-2-nested-class">Example 2 (nested class)</h3>
-
-<ul>
-<li>Here is an example of using static inner class to implement PriorityQueue.</li>
-</ul>
-
-<pre><code class="language-java">public class MyPriorityQueue extends PriorityQueue&lt;MyPriorityQueue.Student&gt;{
-
-    public static void main(String[] args){
-        MyPriorityQueue que = new MyPriorityQueue();
-        que.add(new Student(100, &quot;guodong_hu&quot;));
-        que.add(new Student(99, &quot;xie&quot;));
-        que.add(new Student(1, &quot;lin&quot;));
-        while (!que.isEmpty()){
-            System.out.println(que.poll());
-        }
-    }
-
-    static class Student implements Comparable&lt;Student&gt;{
-        Integer no;
-        String name;
-        public Student(Integer no, String name){
-            this.no = no;
-            this.name = name;
-        }
-
-        @Override
-        public int compareTo(Student stu) {
-            int result;
-            if(no &gt; stu.no){
-                result = 1;
-            }else if(no == stu.no){
-                result = 0;
-            }else{
-                result = -1;
-            }
-            return result;
-        }
-
-        @Override
-        public String toString() {
-            return &quot;Student{&quot; +
-                    &quot;no=&quot; + no +
-                    &quot;, name='&quot; + name + '\'' +
-                    '}';
-        }
-    }
-}
-</code></pre>
+<p>嗯，现在我要去健身了。</p>
 		</div>
 		
 <div class="post__tags tags clearfix">
 	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/java/" rel="tag">JAVA</a></li>
+		<li class="tags__item"><a class="tags__link" href="/tags/tag/" rel="tag">TAG</a></li>
 	</ul>
 </div>
 
@@ -287,10 +201,7 @@ public class ToDoList extends PriorityQueue&lt;ToDoList.ToDoItem&gt;{
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/planning/pln_1/pln_1/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">贝叶斯引论（一）</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/java_skill/20171025-heuristic_search_gbfs/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Heuristic Search之Greedy Best First Search</p></a>
+		<a class="post-nav__link" href="/thinking/2019-10-12-interviewcitibank/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">中信银行信用卡中心面试</p></a>
 	</div>
 </nav>
 
