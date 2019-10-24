@@ -6,10 +6,23 @@
     <description>Recent content in Thinkings on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Tue, 15 Oct 2019 13:40:23 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 Oct 2019 13:04:37 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/thinking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>关于深度工作</title>
+      <link>https://gdhucoder.github.io/thinking/2019-10-24-deepwork/</link>
+      <pubDate>Thu, 24 Oct 2019 13:04:37 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/2019-10-24-deepwork/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;每天听本书中听了关于《深度工作的内容》感到很有帮助。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>做事情的设计模式</title>
