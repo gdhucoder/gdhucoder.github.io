@@ -6,10 +6,36 @@
     <description>Recent content on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Thu, 31 Oct 2019 08:14:40 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 Nov 2019 15:51:17 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>为减肥设计一个模式</title>
+      <link>https://gdhucoder.github.io/thinking/2019-11-17-designapatternforloosingweight/</link>
+      <pubDate>Sun, 17 Nov 2019 15:51:17 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/2019-11-17-designapatternforloosingweight/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;今天思考一下如何为自己减肥设计一个模式。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>一周总结</title>
+      <link>https://gdhucoder.github.io/thinking/2019-11-16-reviewlastweek/</link>
+      <pubDate>Sun, 17 Nov 2019 15:35:20 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/2019-11-16-reviewlastweek/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;来自下午的思考。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>window file transfer between host and virtualbox linux</title>
