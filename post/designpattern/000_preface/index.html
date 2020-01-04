@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>设计模式</title>
+<meta name="description" content="博客">
+<meta name="generator" content="Hugo 0.37" />
+<meta property="og:title" content="设计模式" />
+<meta property="og:description" content="[TOC]
+
+Brief introduction about Design Pattern.
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/000_preface/" />
+
+
+
+<meta property="article:published_time" content="2020-01-04T10:02:03&#43;08:00"/>
+
+<meta property="article:modified_time" content="2020-01-04T10:02:03&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+<script type="text/javascript" src="/js/scripts.js"></script>
+<link rel="shortcut icon" href="/favicon.ico">
+
+</head>
+<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+	<div class="container container-outer">
+		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+			<div class="container container-inner clearfix">
+				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
+					<a class="logo__link" href="/" title="CoderPunk" rel="home">
+						<h1 class="logo__title">CoderPunk</h1>
+						<h2 class="logo__tagline">A Programmer&#39;s self-cultivation</h2>
+					</a>
+				</div>
+			</div>
+			
+<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<ul class="menu__list">
+		<li class="menu__item "><a class="menu__link" href="/post">技术文章</a></li>
+		<li class="menu__item "><a class="menu__link" href="/reading">读书</a></li>
+		<li class="menu__item "><a class="menu__link" href="/thinking">思考</a></li>
+		<li class="menu__item "><a class="menu__link" href="/about">关于我</a></li>
+		<li class="menu__item "><a class="menu__link" href="https://github.com/gdhucoder">TOMYGIT</a></li>
+	</ul>
+</nav>
+
+		</header>
+		<div class="wrapper clearfix">
+
+<div class="main-content content" role="main" itemprop="mainContentOfPage">
+	<article class="post">
+		<header class="post__header clearfix">
+			<h1 class="post__title">设计模式</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2020-01-04T10:02:03">January 04, 2020</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+			</p>
+		</header>
+		<div class="post__content clearfix">
+			
+<aside>
+    <header>
+    <h2>设计模式</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#fire-手绘设计模式-fire">:fire: 手绘设计模式 :fire:</a>
+<ul>
+<li><a href="#preface">Preface</a></li>
+<li><a href="#目录-content">目录 Content</a>
+<ul>
+<li><a href="#创建型模式">创建型模式</a></li>
+<li><a href="#结构型模式">结构型模式</a></li>
+<li><a href="#行为模式">行为模式：</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</aside>
+
+			<p>[TOC]</p>
+
+<p>Brief introduction about Design Pattern.</p>
+
+<p></p>
+
+<h1 id="fire-手绘设计模式-fire">:fire: 手绘设计模式 :fire:</h1>
+
+<h2 id="preface">Preface</h2>
+
+<p>Design patterns represent the best practices used by experienced object-oriented software
+developers. Design patterns are solutions to general problems that software developers
+faced during software development.
+These solutions were obtained by trial and error by numerous
+software developers over quite a substantial period of time.</p>
+
+<p>This tutorial will take you through step by step
+approach and examples using Java while learning Design Pattern concepts.</p>
+
+<p>BTW, I have drawn all UMLs by hand. :smiley:</p>
+
+<p>Enjoy! Happy Learning!</p>
+
+<p>Features:</p>
+
+<ul>
+<li>:white_check_mark: Based on Java</li>
+<li>:white_check_mark: Hand-Drawn UML</li>
+<li>:white_check_mark: 23 common design patterns</li>
+<li>:white_check_mark: <strong>SOLID</strong></li>
+</ul>
+
+<p>Currently this repo is under heavy development. Keep an eye on it!.</p>
+
+<h2 id="目录-content">目录 Content</h2>
+
+<h3 id="创建型模式">创建型模式</h3>
+
+<ol>
+<li><p><a href="015_AbstractPattern.md">抽象工厂模式</a> :提供一个创建一系列或相关依赖对象的接口，而无需指定他们的具体实现类。</p></li>
+
+<li><p><a href="013_BuilderPattern.md">建造者模式</a>：将一个复杂对象的构建和它的表示分离，是的统一的创建过程可以创建不同的表示。</p></li>
+
+<li><p><a href="008_FactoryMethodPattern.md">工厂方法</a>：定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类。</p></li>
+
+<li><p><a href="009_PrototypePattern.md">原型模式</a>：用原型实例指定创建对象的种类，并且通过考虑这些圆形穿件新的对象。</p></li>
+
+<li><p><a href="021_SingletonPattern.md">单例模式</a>：保证一个类仅有一个实例，并提供一个访问它的全局访问点。</p></li>
+</ol>
+
+<h3 id="结构型模式">结构型模式</h3>
+
+<ol>
+<li><p><a href="017_AdapterPattern.md">适配器模式</a>：将一个类的接口转换成客户希望的另一个接口。适配器模式使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。</p></li>
+
+<li><p><a href="022_BrigePattern.md">桥接模式</a>：将抽象部分与它的实现部分分离，使他们可以独立于变化。</p></li>
+
+<li><p><a href="019_CompositePattern.md">组合模式</a>：将对象组合成树型🌲结构可以表示“部分-整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。</p></li>
+
+<li><p><a href="006_DecoratorPattern.md">装饰器模式</a>：动态地给一个对象增加一些额外的职责。就增加功能来说，装饰模式相比生成子类更加灵活。为已有的功能动态增加功能。</p></li>
+
+<li><p><a href="012_FacadePattern.md">外观模式</a>：为子系统种的一组接口提供一个一致的界面，外观模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。</p></li>
+
+<li><p><a href="026_FlyweightPattern.md">享元模式</a>：运用共享技术有效地支持大量细粒度的对象。</p></li>
+
+<li><p><a href="007_ProxyPattern.md">代理模式</a>：为其他对象提供一种代理以控制对这个对象的访问。</p></li>
+</ol>
+
+<h3 id="行为模式">行为模式：</h3>
+
+<ol>
+<li><p><a href="014_ObserverPattern.md">观察者模式</a>：定义对象间的一种多对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并自动更新。</p></li>
+
+<li><p><a href="010_TemplateMethodPattern.md">模板方法模式</a>：定义一个操作的算法骨架，而将一些步骤延迟到子类中，模板方法使得子类可以不改变一个算法的结构即可以重定义该算法的某些特定步骤。 这个比较容易理解。</p></li>
+
+<li><p><a href="023_CommandPattern.md">命令模式</a>：将一个请求封装成为一个对象，从而你可以用不同的请求对客户进行参数化；可以对请求排队或记录请求日志，以及支持可以撤销的操作。</p></li>
+
+<li><p><a href="016_StatePattern.md">状态模式</a>：允许一个对象在其内部状态改变时改变它的行为，让对象看起来似乎改变了它的类。</p></li>
+
+<li><p><a href="024_ChainOfResponsibility.md">职责链模式</a>：使多个对象有机会处理请求，从而避免请求的发送者和接收者之间的耦合关系。将这些对象连成一条链，并沿着这条链传递该请求，直到有一个对象处理它为止。</p></li>
+
+<li><p><a href="027_InterpreterPattern.md">解释器模式</a>：给定一个语言，定义它的文法的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子。</p></li>
+
+<li><p><a href="025_MediatorPattern.md">中介者模式</a>：用一个中介对象来封装一系列的对象交互。中介者使对象不需要显示的互相引用，从而使其耦合松散，而且可以独立滴改变它们之间的交互。</p></li>
+
+<li><p><a href="028_VisitorPattern.md">访问者模式</a>：表示一个作用于对象结构中的各元素的操作。它使你可以在不改变元素的类的前提下定义用于这些元素的新操作。</p></li>
+
+<li><p><a href="002_StrategyPattern.md">策略模式</a>：定义一系列算法，把它们一个个封装起来，并使它们可以相互替换。本模式可以使得算法独立于使用它的客户而变化。</p></li>
+
+<li><p><a href="018_MementoPattern.md">备忘录模式</a>：在不破坏封装的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后可以将对象恢复到原先保存的状态。</p></li>
+
+<li><p><a href="020_IteratorPattern.md">迭代器模式</a>：提供一种顺序访问一个聚合对象中各个元素，而又不需要暴露该对象的内部表示。</p></li>
+</ol>
+
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-27_001.jpg" alt="Fighting" /></p>
+
+<p>2020@辣么大 gdhu</p>
+		</div>
+		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/designpattern/" rel="tag">DesignPattern</a></li>
+	</ul>
+</div>
+
+	</article>
+	
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="HuGuoDong avatar" src="/img/head.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About HuGuoDong</span>
+	</div>
+	<div class="authorbox__description">
+		gdong.hu[at]gmail.com
+	</div>
+</div>
+	
+<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+	<div class="post-nav__item post-nav__item--prev col-1-2">
+		<a class="post-nav__link" href="/post/skill/2019-10-31-virtualboxsshtoubuntu/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">window file transfer between host and virtualbox linux</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next col-1-2">
+		<a class="post-nav__link" href="/post/designpattern/001_simplefactory/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Simple Factory Method</p></a>
+	</div>
+</nav>
+
+	
+<div class="comments">
+	<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "guodonghu" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+</div>
+
+<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
+	
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
+		<label>
+			<span class="screen-reader-text">Search for:</span>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://gdhucoder.github.io/" />
+	</form>
+</div>
+	
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/029_summary/">Summary all design patterns</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/028_visitorpattern/">Visitor Pattern</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/027_interpreterpattern/">Interpreer Pattern</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/026_flyweightpattern/">Flyweight Pattern</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/025_mediatorpattern/">Mediator Pattern</a></li>
+		</ul>
+	</div>
+</div>
+
+	
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/%e5%bd%92%e6%a1%a3">归档</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e6%80%9d%e8%80%83">思考</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e6%8a%80%e6%9c%af">技术</a></li>
+			<li class="widget__item"><a class="widget__link" href="/categories/%e8%af%bb%e4%b9%a6">读书</a></li>
+		</ul>
+	</div>
+</div>
+	
+	
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget__link widget__link--taglist" href="/tags/alg" title="alg">alg</a>
+		<a class="widget__link widget__link--taglist" href="/tags/arts" title="arts">arts</a>
+		<a class="widget__link widget__link--taglist" href="/tags/book" title="book">book</a>
+		<a class="widget__link widget__link--taglist" href="/tags/books" title="books">books</a>
+		<a class="widget__link widget__link--taglist" href="/tags/designpattern" title="designpattern">designpattern</a>
+		<a class="widget__link widget__link--taglist" href="/tags/docker" title="docker">docker</a>
+		<a class="widget__link widget__link--taglist" href="/tags/git" title="git">git</a>
+		<a class="widget__link widget__link--taglist" href="/tags/go" title="go">go</a>
+		<a class="widget__link widget__link--taglist" href="/tags/java" title="java">java</a>
+		<a class="widget__link widget__link--taglist" href="/tags/latex" title="latex">latex</a>
+		<a class="widget__link widget__link--taglist" href="/tags/markdown" title="markdown">markdown</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mathjax" title="mathjax">mathjax</a>
+		<a class="widget__link widget__link--taglist" href="/tags/matplotlib" title="matplotlib">matplotlib</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mc" title="mc">mc</a>
+		<a class="widget__link widget__link--taglist" href="/tags/mind" title="mind">mind</a>
+		<a class="widget__link widget__link--taglist" href="/tags/ml" title="ml">ml</a>
+		<a class="widget__link widget__link--taglist" href="/tags/planing" title="planing">planing</a>
+		<a class="widget__link widget__link--taglist" href="/tags/planning" title="planning">planning</a>
+		<a class="widget__link widget__link--taglist" href="/tags/python" title="python">python</a>
+		<a class="widget__link widget__link--taglist" href="/tags/rddl" title="rddl">rddl</a>
+		<a class="widget__link widget__link--taglist" href="/tags/rl" title="rl">rl</a>
+		<a class="widget__link widget__link--taglist" href="/tags/seaborn" title="seaborn">seaborn</a>
+		<a class="widget__link widget__link--taglist" href="/tags/tag" title="tag">tag</a>
+		<a class="widget__link widget__link--taglist" href="/tags/tech" title="tech">tech</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e5%88%86%e4%ba%ab" title="分享">分享</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e5%a4%87%e4%bb%bd" title="备份">备份</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e6%80%9d%e8%80%83" title="思考">思考</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e6%8a%80%e6%9c%af" title="技术">技术</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e6%95%b0%e6%8d%ae%e5%8f%af%e8%a7%86%e5%8c%96" title="数据可视化">数据可视化</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e7%ae%97%e6%b3%95" title="算法">算法</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e8%af%ad%e8%a8%80" title="语言">语言</a>
+		<a class="widget__link widget__link--taglist" href="/tags/%e8%af%bb%e4%b9%a6" title="读书">读书</a>
+	</div>
+</div>
+</aside>
+	</div>
+		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+			<div class="container container-inner">
+				<p class="footer__copyright">&copy; 2020 CoderPunk. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+			</div>
+		</footer>
+	</div>
+
+<script>
+	var navigation = responsiveNav(".menu", {
+		navClass: "menu--collapse",
+	});
+</script>
+</body>
+</html>

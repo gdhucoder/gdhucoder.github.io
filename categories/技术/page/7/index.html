@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-10-26T06:00:00&#43;08:00"/>
+<meta property="og:updated_time" content="2019-04-20T00:58:22&#43;08:00"/>
 
 
 
@@ -81,134 +81,17 @@ MathJax.Hub.Config({
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/alg4/chapter2/ex_2_4_17/" rel="bookmark">算法4习题 2.4.17</a>
+				<a href="/thinking/2019-04-20-aliinterview/" rel="bookmark">阿里电话面试</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-10-26T06:00:00">October 26, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			2.4.17 问题： 2.4.17 Prove that building a minimum-oriented priority queue of size k then doing N - k replace the minimum (insert followed by remove the minimum) operations leaves the k largest of the N items in the priority queue.
-分析： 题意是insert followed by remove the minimum，先插入后删除。
-例如
-N=10, 元素为：0,2,4,6,8,1,3,5,7,9 k=3， qp = 0 2 4 N-k = 10 - 3 = 7，将要进行7次操作 pq = 0 2 4 count = 1 insert 6, pq = 0 2 4 6 remove 0, pq = 2 4 6 count = 2 insert 8, pq = 2 4 6 8 remove 2, pq = 4 6 8 count =3 insert 1, pq = 1 4 6 8 remove 1, pq = 4 6 8 .
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/alg4/chapter2/ex_2_4_10/" rel="bookmark">算法4习题 2.4.10</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-10-20T08:00:00">October 20, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			 2.4.10 问题： 2.4.10 Suppose that we wish to avoid wasting one position in a heap-ordered array pq[], putting the largest value in pq[0], its children in pq[1] and pq[2], and so forth, proceeding in level order. Where are the parents and children of pq[k]?
-分析： 略
-答案： 子节点：$ 2k+1, 2k+2 $，父节点： $ \lfloor \frac{k-1}{2} \rfloor $
-参考： 
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/skill/2018-10-19/" rel="bookmark">2018-10-19 解决Markdown图片问题</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-10-19T03:00:00">October 19, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			[TOC]
-里程碑 今天是一个里程碑，断断续续一年多，自己搭建的博客遇到的各种问题基本得到解决。
-现在整理一下解决问题的思路：
-博客用到的东西：Github(托管静态网页)、Hugo、Sublime、Markdown、MathJax、免费图床(gitee)、留言(需要翻墙)
-遇到的问题主要有： 图床问题： 使用免费图床是个大问题：目前的解决方案是将图片上床到gitee上，这样国内访问图片速度较快。
-图片链接插入问题： 之前我写了自动生成链接的脚本，但是结果输出到了文本文件中，对于图片预览实时性的要求就无法满足。
-平台不通用问题： 通用性的问题一直没有解决：对于Latex公式的支持，图床的支持
-以前由于各个平台不通用的问题，导致我们一直只能在一个平台上写作。而各大平台又各有优缺点，总有令人不满意的地方。
-这样下来在本地写的Markdown，不需要做修改可以支持CSDN博客（或者简书）了，直接复制过去就可以。
-在未来不久印象笔记windows版本也会支持Markdown，真是个令人振奋的消息。
-甚至我还使用过马克飞象，但是它只能配合印象笔记使用，对于跨平台的需求无法满足。
-我的github 页面托管到了github上，有兴趣的话可以试着自己搭建一个静态博客。
-https://gdhucoder.github.io/
-图片本地预览、链接 大家都知道Markdown使用图片需要插入图片链接。
-我们使用python写了个脚本，生成文件的缩略图，自动上传gitee，点击图片缩略图，获取链接到剪切板。
-接下来我又添加的每次打开Helper时，自动提交git，得到最新的图片
-然后点击图片缩略图，图片的git地址（可供外网访问的地址）就被拷贝到了剪切板中，在使用的时候我们直接Ctrl+V就可以复制地址到Markdown文档中。
-这个脚本还支持子目录的打开预览。
-因为如果我们只用一个文件夹管理所有的博客图片势必会没有层级结构，导致最后图片混乱。
-我们可以建立子文件夹，存放各个主题的图片文件。
-Picture Helper使用方法：  upload your pictures to github or gitee this script can generate latest 100 picture links click the thumb picture, then the link is clipped into you clipboard then use Ctrl+V in your own Markdown Enjoy!  另附代码 主要参考了PP4E的pyphoto的代码。
-各位改改可以用到的地方： 1、自动提交git脚本 2、生成缩略图（PIL的使用）
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/alg4/chapter2/chapter2-1-12/" rel="bookmark">算法4习题 2.1.12</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-08-06T08:00:00">August 06, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			算法4习题 2.1.12 问题 Instrument shellsort to print the number of compares divided by the array size for each increment. Write a test client that tests the hypothesis that this number is a small constant, by sorting arrays of random Double values, using array sizes that are increasing powers of 10, starting at 100.
-打印希尔排序中每个增量带来的比较次数和数组大小的比值。 验证该值是一个小常数。
-思路 统计每个增量对应的比较次数。
-private static boolean less(Comparable v, Comparable w) { count ++ ; return v.
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/alg4/chapter1/chapter1-1/" rel="bookmark">算法4 chp 1-1</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-05-15T08:00:00">May 15, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			1.1.1 7, 200.0000002, true
-1.1.2 a. double 1.618 b. double 10.0 c. boolean true d. String &ldquo;33&rdquo;
-执行Java 采用输入命令的形式：
-目录：
-E:\GDUT\Dropbox\Alg4\algs4\target\classes
-执行：
-java edu.princeton.cs.myalg.u1.Ex_1_1_3 1 1 2
-$ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-05-15/" rel="bookmark">java问题</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-05-15T07:00:00">May 15, 2018</time>
+				<time class="list__meta-date" datetime="2019-04-20T00:58:22">April 20, 2019</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
 			<p>[TOC]</p>
 
-<p>学习过程中遇到的一些技术问题。</p>
+<p>总结一下今天阿里电话面试。</p>
 
 <p></p>
 		</div>
@@ -218,17 +101,17 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-05-10-note/" rel="bookmark">java问题</a>
+				<a href="/thinking/2019-04-16-success-exp/" rel="bookmark">如何学好一项技能</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-05-14T07:00:00">May 14, 2018</time>
+				<time class="list__meta-date" datetime="2019-04-16T10:03:33">April 16, 2019</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
 			<p>[TOC]</p>
 
-<p>学习过程中遇到的一些技术问题。</p>
+<p>回顾一下过往的经历，总结对当下有帮助的经验</p>
 
 <p></p>
 		</div>
@@ -238,17 +121,17 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-04-06-rl-note/" rel="bookmark">Optimistic Initial Values</a>
+				<a href="/thinking/2019-04-12-ali-onlie-test/" rel="bookmark">阿里在线笔试</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-06T07:00:00">April 06, 2018</time>
+				<time class="list__meta-date" datetime="2019-04-12T21:52:51">April 12, 2019</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
 			<p>[TOC]</p>
 
-<p>Multi-armed Bandits 本篇主要介绍多臂赌博机问题的相关算法。</p>
+<p>阿里在线笔试总结。</p>
 
 <p></p>
 		</div>
@@ -258,17 +141,17 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/note/markdown-preview-mathjax/" rel="bookmark">MarkDown Preview MathJax</a>
+				<a href="/thinking/2019-04-11-clever-and-stupid/" rel="bookmark">聪明人和笨人</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-05T07:00:00">April 05, 2018</time>
+				<time class="list__meta-date" datetime="2019-04-11T20:17:54">April 11, 2019</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
 			<p>[TOC]</p>
 
-<h1 id="关于markdown中的公式">关于MarkDown中的公式</h1>
+<p>什么是聪明人，什么是笨人？你是要做聪明人还是做一个笨人</p>
 
 <p></p>
 		</div>
@@ -278,19 +161,119 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/tech_details/gitee_as_pic_storage/" rel="bookmark">如何使用gitee作为免费图床</a>
+				<a href="/thinking/2019-04-09-selling-anxiety/" rel="bookmark">谁在向我贩卖焦虑</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-04T21:25:07">April 04, 2018</time>
+				<time class="list__meta-date" datetime="2019-04-09T05:19:56">April 09, 2019</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
 			<p>[TOC]</p>
 
-<p>本篇文章是一个启发，介绍如何使用gitee作为免费图床。
-没有使用github的原因是github国内访问有些慢。
-另外，还有其他优秀的云存储，例如7niu，朋友们也可以试一下。</p>
+<p>娃娃前天提出了谁在向我们贩卖焦虑？</p>
+
+<p></p>
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter5/huffmancompression/" rel="bookmark">Huffman Compression</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2019-04-03T16:25:34">April 03, 2019</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			<p>[TOC]</p>
+
+<p>总结霍夫曼压缩的相关重点。</p>
+
+<p></p>
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/thinking/2019-04-01-hwgame/" rel="bookmark">华为软件精英挑战赛总结</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2019-04-01T05:17:05">April 01, 2019</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			<p>[TOC]</p>
+
+<p>2019华为软件精英挑战赛结束了。我们队伍排名第70，遗憾没有进入前32强，参赛的预定目标都达到了，也没什么遗憾的了。实力不济，没有办法的事。</p>
+
+<p></p>
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/geekbang/12_mergeandquicksort/" rel="bookmark">12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2019-03-20T23:38:56">March 20, 2019</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			<p>[TOC]</p>
+
+<p>12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？</p>
+
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-006.png" alt="2019-03-06-006" /></p>
+
+<p></p>
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/reading/a-book-one-day/2019-03-20beautyofalgo/" rel="bookmark">算法之美</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2019-03-20T19:55:41">March 20, 2019</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			<p>[TOC]</p>
+
+<p>我们所有人的生活都受到有限空间和有限时间的限制，因此常常面临一系列难以抉择的问题。</p>
+
+<p></p>
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/note/2019-03-14/" rel="bookmark">图相关的算法</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2019-03-16T06:02:06">March 16, 2019</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			<p>[TOC]</p>
+
+<p>突击学习一下。</p>
 
 <p></p>
 		</div>
@@ -301,7 +284,7 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 		
 <div class="pagination clearfix">
 	<a class="pagination__item pagination__item--prev" href="/categories/%E6%8A%80%E6%9C%AF/page/6/">«</a>
-	<span class="pagination__item pagination__item--current">7/9</span>
+	<span class="pagination__item pagination__item--current">7/12</span>
 	<a class="pagination__item pagination__item--next" href="/categories/%E6%8A%80%E6%9C%AF/page/8/">»</a>
 </div>
 
@@ -324,11 +307,11 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/thinking/2019-11-17-designapatternforloosingweight/">为减肥设计一个模式</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2019-11-16-reviewlastweek/">一周总结</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/skill/2019-10-31-virtualboxsshtoubuntu/">window file transfer between host and virtualbox linux</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2019-10-24-deepwork/">关于深度工作</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2019-10-20-arts-001/">本周分享(2019-10-20)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/029_summary/">Summary all design patterns</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/028_visitorpattern/">Visitor Pattern</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/027_interpreterpattern/">Interpreer Pattern</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/026_flyweightpattern/">Flyweight Pattern</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/025_mediatorpattern/">Mediator Pattern</a></li>
 		</ul>
 	</div>
 </div>
@@ -354,6 +337,7 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 		<a class="widget__link widget__link--taglist" href="/tags/arts" title="arts">arts</a>
 		<a class="widget__link widget__link--taglist" href="/tags/book" title="book">book</a>
 		<a class="widget__link widget__link--taglist" href="/tags/books" title="books">books</a>
+		<a class="widget__link widget__link--taglist" href="/tags/designpattern" title="designpattern">designpattern</a>
 		<a class="widget__link widget__link--taglist" href="/tags/docker" title="docker">docker</a>
 		<a class="widget__link widget__link--taglist" href="/tags/git" title="git">git</a>
 		<a class="widget__link widget__link--taglist" href="/tags/go" title="go">go</a>
@@ -387,7 +371,7 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 	</div>
 		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 			<div class="container container-inner">
-				<p class="footer__copyright">&copy; 2019 CoderPunk. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+				<p class="footer__copyright">&copy; 2020 CoderPunk. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
 			</div>
 		</footer>
 	</div>

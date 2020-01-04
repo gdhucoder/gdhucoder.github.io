@@ -13,7 +13,7 @@
 
 
 
-<meta property="og:updated_time" content="2018-03-29T21:00:00&#43;08:00"/>
+<meta property="og:updated_time" content="2019-03-02T19:31:55&#43;08:00"/>
 
 
 
@@ -78,37 +78,21 @@ MathJax.Hub.Config({
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-03-29/" rel="bookmark">废弃不用的链接</a>
+				<a href="/post/alg4/geekbang/11/" rel="bookmark">11 | 排序（上）：为什么插入排序比冒泡排序更受欢迎？</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-03-29T21:00:00">March 29, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			废弃不用的链接 https://my.oschina.net/leonhu/blog
-http://gdhu.oschina.io/blog/
-https://git.oschina.net/gdhu
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-01-05/" rel="bookmark">基于试验的启发式树搜索</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-01-04T21:25:07">January 04, 2018</time>
+				<time class="list__meta-date" datetime="2019-03-02T19:31:55">March 02, 2019</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
 			<p>[TOC]</p>
 
-<h3 id="概念">概念</h3>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-04-003.png" alt="2019-03-04-003" /></p>
 
-<p>给定一个MDP，一个agent可以访问：</p>
+<p>本节主要介绍排序算法。</p>
+
+<p>首先思考一个问题：为什么插入排序比冒泡排序更受欢迎？</p>
 
 <p></p>
 		</div>
@@ -118,21 +102,17 @@ https://git.oschina.net/gdhu
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/planning/montecarlo/monte_carlo/" rel="bookmark">什么是蒙特卡罗</a>
+				<a href="/post/tech_details/markdown_use/" rel="bookmark">MarkDown内嵌标签</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-11-26T21:25:07">November 26, 2017</time>
+				<time class="list__meta-date" datetime="2019-03-02T19:26:09">March 02, 2019</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
 			<p>[TOC]</p>
 
-<p>乍一听“蒙特卡罗”这个词，完全不知所云，我感到很奇怪，一个搜索算法Monte Carlo Tree Search为什么叫蒙特卡罗。
-于是，就有了下面的文字。</p>
-
-<p>本篇文章主要介绍MonteCarlo方法的由来，及简单的一个应用-求π的值。
-下篇将会介绍：什么是Monte Carlo Tree Search算法。</p>
+<p>关于Markdown支持html标签</p>
 
 <p></p>
 		</div>
@@ -142,18 +122,19 @@ https://git.oschina.net/gdhu
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/java_skill/20171025-heuristic_search_gbfs/" rel="bookmark">Heuristic Search之Greedy Best First Search</a>
+				<a href="/post/alg4/geekbang/10/" rel="bookmark">10 | 递归：如何用三行代码找到“最终推荐人”？</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-10-25T21:25:07">October 25, 2017</time>
+				<time class="list__meta-date" datetime="2019-03-02T09:39:55">March 02, 2019</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
 			<p>[TOC]</p>
 
-<p>本篇文章介绍Greedy Best Fisrt Search算法。实现GBFS算法时使用了上篇文章介绍的优先队列。
-下篇文章将尝试介绍著名的A star算法。</p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-02-003.png" alt="2019-03-02-003" /></p>
+
+<p>推荐注册返佣金这个功能一般来说不陌生吧？用户A推荐用户B来注册，用户B又推荐了用户C来注册。我们可以说C的“最终推荐人”为用户A，B的“最终推荐人”也为用户A，而用户A没有“最终推荐人”。</p>
 
 <p></p>
 		</div>
@@ -163,18 +144,21 @@ https://git.oschina.net/gdhu
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/java_skill/20171024-priority_queue/" rel="bookmark">Priority Queues</a>
+				<a href="/post/timefriend/ten-years/" rel="bookmark">用十年时间自学编程</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-10-24T21:25:07">October 24, 2017</time>
+				<time class="list__meta-date" datetime="2019-02-17T21:26:41">February 17, 2019</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
 			<p>[TOC]</p>
 
-<p>本篇文章主要介绍优先队列(Priority Queue)和嵌套类(nested class)的基本用法。
-接下来的文章会介绍在实现例如Greedy Best First Search和AStar搜索算法中使用priority queue。</p>
+<p>业余时间翻译经典的博文。</p>
+
+<p>Teach yourself programming in ten years</p>
+
+<p>原文链接：<a href="http://norvig.com/21-days.html">ten years</a></p>
 
 <p></p>
 		</div>
@@ -184,21 +168,17 @@ https://git.oschina.net/gdhu
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/planning/pln_1/pln_1/" rel="bookmark">贝叶斯引论（一）</a>
+				<a href="/post/alg4/geekbang/04/" rel="bookmark">04 | 复杂度分析（下）：浅析最好、最坏、平均、均摊时间复杂度</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-10-20T21:25:07">October 20, 2017</time>
+				<time class="list__meta-date" datetime="2019-02-03T09:50:04">February 03, 2019</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
 			<p>[TOC]</p>
 
-<p>本篇开始，逐一介绍一些概率编程相关内容。首先介绍贝叶斯网的相关基础知识和应用。</p>
-
-<p>本篇导读：</p>
-
-<p>本篇主要介绍了贝叶斯定理，贝叶斯网以及相关应用：</p>
+<p>浅析最好、最坏、平均、均摊时间复杂度</p>
 
 <p></p>
 		</div>
@@ -208,90 +188,107 @@ https://git.oschina.net/gdhu
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
-				<a href="/post/ml/20170905/" rel="bookmark">关于logistic regression</a>
+				<a href="/post/alg4/chapter5/stringsortssummary/" rel="bookmark">String SortsSummary 字符串排序总结</a>
 			</h3>
 			<div class="list__meta meta">
 				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-09-07T21:25:07">September 07, 2017</time>
+				<time class="list__meta-date" datetime="2019-02-01T13:32:20">February 01, 2019</time>
 			</div>
 		</header>
 		<div class="list__excerpt">
-			逻辑回归适用于Binary Classification, Multi-class Classification问题。
-例如判断是否是垃圾邮件就属于Binary Classification问题； 手写数字识别属于Multi-class Classification问题。
-one-vs-all分类器的选择，选出可信度最高的，那么就认为是正确的分类。
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/ml/20170907/" rel="bookmark">机器学习的一些概念</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-09-07T21:25:07">September 07, 2017</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			中英文对照
-neural networks 神经网络
-activation function 激活函数
-hyperbolic tangent 双曲正切函数
-bias units 偏置项
-activation 激活值
-forward propagation 前向传播
-feedforward neural network 前馈神经网络(参照Mitchell的《机器学习》的翻译)
-Unsupervised Feature Learning and Deep Learning
-深度学习的入门知识介绍 http://deeplearning.stanford.edu/wiki/index.php/Main_Page
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/ml_ex1/ex1/" rel="bookmark">Mechine Learning：线性回归</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-08-24T16:50:30">August 24, 2017</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			前些天开始学习机器学习相关的基础知识。 首先我们要问的问题就是机器学习是什么： Tom Mitchell提出： 一个程序能被认为从经验E中学习，解决任务T，达到性能度量值P，当且仅当，有了经验E后，经过P评判，程序在处理T时系能有所提升。 监督学习 无监督学习
-单变量线性回归 多变量线性回归 多项式回归也可以转化为线性回归 梯度下降 特征缩放 学习率 正规方程
-Octatve代码实现
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/sns_2/seaborn_2_color_palettes/" rel="bookmark">Seaborn使用(2)：Choosing color palettes</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2017-08-14T18:44:30">August 14, 2017</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<h1 id="调色板">调色板</h1>
+			<p>[TOC]</p>
 
-<p>颜色很重要，如果使用的好，就会帮助你突出数据的特征。</p>
-
-<ul>
-<li>color_palette()能传入任何Matplotlib所支持的颜色</li>
-<li>color_palette()不写参数则默认颜色</li>
-<li>set_palette()设置所有图的颜色</li>
-</ul>
-
-<p>下面是使用seaborn的color palettes的一些例子，这些例子官网上面都已经有详细的介绍。</p>
-
-<p>网址为：<a href="http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial">http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial</a></p>
+<p>整理字符串排序的知识点。</p>
 
 <p></p>
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/timefriend/2019-01-30/" rel="bookmark">Problems</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2019-01-30T21:08:33">January 30, 2019</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			<p>[TOC]</p>
+
+<p>Today let&rsquo;s talk about our problems.</p>
+
+<p></p>
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/reading/time_is_your_friend/" rel="bookmark">把时间当做朋友</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2019-01-27T07:00:00">January 27, 2019</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			生命中，我们经常会有这样的时刻，在某个时候脑中&rdquo;叮&rdquo;的一声，那时你发现自己之前浪费了很多时光。
+时间的流逝是单向的。
+这周末看了李笑来的《把时间当做朋友》，里面讲了做事情不要着急，要相信时间的力量。
+其实我就是一个做事情很急的人。由于这种心态导致很多事情没有做好。接下来自己要做出一些改变。
+关于&rdquo;规划&rdquo;和&rdquo;计划&rdquo;的区别：我是一个做事情之前要做好计划的人。实际执行过程中，发现&rdquo;计划赶不上变化&rdquo;，那计划和现实冲突时我们怎么办呢？是根据现实改变还是坚持计划？ 坚持计划的话，那么按照我的&rdquo;职业规划&rdquo; 我应该是一名石油工程师。而我现在是一名程序猿。我时常为坚持计划还是调整计划而苦恼。
+plan在Collins词典中的解释是：A plan is a method of achieving something that you have worked out in detail beforehand. 计划按照应该是一些列详细的解决问题的步骤，最后达到目标。
+但在我学了MDP（马尔可夫决策过程）后，深刻的体会到了世界是动态的，概率的。面对概率的世界，我们应该怎么办呢？有一个plan，这个plan的目标和人生幸福有关，但能根据现实的情形（世界）做出不同的反应，这就是规划！
+2019-01-27
+于深圳市人民医院病理科
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/thinking/2019-01-26/" rel="bookmark">用10年自学编程</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2019-01-26T08:00:00">January 26, 2019</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			&ldquo;坚持&rdquo; &ldquo;努力&rdquo; 今年希望把 &ldquo;坚持&rdquo; &ldquo;努力&rdquo; 这两个词从我的字典中删掉。
+通过坚持和努力才能做的事情是做不好的。因为需要坚持的事情，我们从心里是不愿意做的。 不愿意做的事情怎么能够做的好呢？
+解决这个问题的技巧有三个：
+1、 赋予这件事崇高的意义
+2、如果不做这件事，我会失去什么
+3、加入一个社群
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter5/ex_5_1_02/" rel="bookmark">算法4 Java解答 5.1.2</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2019-01-24T06:00:00">January 24, 2019</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			5.1.2 问题： 给出使用地位优先的字符串排序算法处理下面这些键的轨迹
+no is th ti fo al go pe to co to th ai of th pa
+Give a trace for LSD string sort for the keys:
+no is th ti fo al go pe to co to th ai of th pa
+分析： LSD 适用于字符等长的数组排序。
+从右往左，依次数组中每个元素对位置d的字符使用key-indexed counting排序。
+平均数组访问次数7WN+3WR。额外空间N+R。 N 对应aux数组，R对应count数组。 对于一般的应用LSD线性时间复杂度。
+public static void sort(String[] a, int w) { int N = a.length; int R = 256; String[] aux = new String[N]; for (int d = w - 1; d &gt;= 0; d--) { // sort by key-indexed counting on dth char show(a); int[] count = new int[R + 1]; for (int i = 0; i &lt; N; i++) { count[a[i].
 		</div>
 	</div>
 </article>
@@ -301,7 +298,7 @@ Octatve代码实现
 		
 <div class="pagination clearfix">
 	<a class="pagination__item pagination__item--prev" href="/page/8/">«</a>
-	<span class="pagination__item pagination__item--current">9/11</span>
+	<span class="pagination__item pagination__item--current">9/14</span>
 	<a class="pagination__item pagination__item--next" href="/page/10/">»</a>
 </div>
 
@@ -324,11 +321,11 @@ Octatve代码实现
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/thinking/2019-11-17-designapatternforloosingweight/">为减肥设计一个模式</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2019-11-16-reviewlastweek/">一周总结</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/skill/2019-10-31-virtualboxsshtoubuntu/">window file transfer between host and virtualbox linux</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2019-10-24-deepwork/">关于深度工作</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2019-10-20-arts-001/">本周分享(2019-10-20)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/029_summary/">Summary all design patterns</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/028_visitorpattern/">Visitor Pattern</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/027_interpreterpattern/">Interpreer Pattern</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/026_flyweightpattern/">Flyweight Pattern</a></li>
+			<li class="widget__item"><a class="widget__link" href="/post/designpattern/025_mediatorpattern/">Mediator Pattern</a></li>
 		</ul>
 	</div>
 </div>
@@ -354,6 +351,7 @@ Octatve代码实现
 		<a class="widget__link widget__link--taglist" href="/tags/arts" title="arts">arts</a>
 		<a class="widget__link widget__link--taglist" href="/tags/book" title="book">book</a>
 		<a class="widget__link widget__link--taglist" href="/tags/books" title="books">books</a>
+		<a class="widget__link widget__link--taglist" href="/tags/designpattern" title="designpattern">designpattern</a>
 		<a class="widget__link widget__link--taglist" href="/tags/docker" title="docker">docker</a>
 		<a class="widget__link widget__link--taglist" href="/tags/git" title="git">git</a>
 		<a class="widget__link widget__link--taglist" href="/tags/go" title="go">go</a>
@@ -387,7 +385,7 @@ Octatve代码实现
 	</div>
 		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 			<div class="container container-inner">
-				<p class="footer__copyright">&copy; 2019 CoderPunk. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
+				<p class="footer__copyright">&copy; 2020 CoderPunk. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
 			</div>
 		</footer>
 	</div>

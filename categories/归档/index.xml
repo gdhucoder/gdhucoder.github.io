@@ -6,10 +6,400 @@
     <description>Recent content in 归档 on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sun, 17 Nov 2019 15:51:17 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jan 2020 10:26:04 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Summary all design patterns</title>
+      <link>https://gdhucoder.github.io/post/designpattern/029_summary/</link>
+      <pubDate>Sat, 04 Jan 2020 10:26:04 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/029_summary/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief summary all design patterns.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Visitor Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/028_visitorpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:26:04 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/028_visitorpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Visitor Pattern&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Interpreer Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/027_interpreterpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:25:04 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/027_interpreterpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Interpreter Pattern&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Flyweight Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/026_flyweightpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:24:04 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/026_flyweightpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Flyweight Pattern&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mediator Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/025_mediatorpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:24:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/025_mediatorpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Mediator Pattern&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Bridge Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/022_brigepattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:23:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/022_brigepattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Bridge Pattern&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chain of Responsibility Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/024_chainofresponsibility/</link>
+      <pubDate>Sat, 04 Jan 2020 10:23:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/024_chainofresponsibility/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Chain of Responsibility Pattern&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Command Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/023_commandpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:23:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/023_commandpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Command Pattern&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Singleton Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/021_singletonpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:22:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/021_singletonpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Singleton Pattern&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Adapter Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/017_adapterpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:19:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/017_adapterpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Adapter Pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Memento Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/018_mementopattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:19:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/018_mementopattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Memento Pattern&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>State Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/016_statepattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:18:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/016_statepattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about State Pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Abstract Factory Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/015_abstractpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:17:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/015_abstractpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Abstract Factory Pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Observer Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/014_observerpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:16:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/014_observerpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Observer Pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Builder Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/013_builderpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:15:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/013_builderpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Builder Pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Facade Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/012_facadepattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:14:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/012_facadepattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Facade Pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Template Method</title>
+      <link>https://gdhucoder.github.io/post/designpattern/010_templatemethodpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:13:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/010_templatemethodpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Template Method.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Prototype Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/009_prototypepattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:12:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/009_prototypepattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about prototype pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Factory Method</title>
+      <link>https://gdhucoder.github.io/post/designpattern/008_factorymethodpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:11:04 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/008_factorymethodpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Factory Method.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Decorator</title>
+      <link>https://gdhucoder.github.io/post/designpattern/006_decoratorpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:11:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/006_decoratorpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Decorator.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Proxy Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/007_proxypattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:11:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/007_proxypattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Proxy Pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ISP</title>
+      <link>https://gdhucoder.github.io/post/designpattern/005_isp/</link>
+      <pubDate>Sat, 04 Jan 2020 10:09:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/005_isp/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about ISP.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LSP</title>
+      <link>https://gdhucoder.github.io/post/designpattern/005_lsp/</link>
+      <pubDate>Sat, 04 Jan 2020 10:09:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/005_lsp/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about LSP.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DRY</title>
+      <link>https://gdhucoder.github.io/post/designpattern/005_dry/</link>
+      <pubDate>Sat, 04 Jan 2020 10:08:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/005_dry/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about DRY.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DIP</title>
+      <link>https://gdhucoder.github.io/post/designpattern/005_dip/</link>
+      <pubDate>Sat, 04 Jan 2020 10:07:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/005_dip/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about DIP.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>OCP</title>
+      <link>https://gdhucoder.github.io/post/designpattern/004_ocp/</link>
+      <pubDate>Sat, 04 Jan 2020 10:06:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/004_ocp/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about OCP.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SRP</title>
+      <link>https://gdhucoder.github.io/post/designpattern/003_srp/</link>
+      <pubDate>Sat, 04 Jan 2020 10:05:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/003_srp/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about SRP.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Strategy Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/002_strategypattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:04:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/002_strategypattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Strategy Pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Simple Factory Method</title>
+      <link>https://gdhucoder.github.io/post/designpattern/001_simplefactory/</link>
+      <pubDate>Sat, 04 Jan 2020 10:03:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/001_simplefactory/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Simple Factory Method.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>设计模式</title>
+      <link>https://gdhucoder.github.io/post/designpattern/000_preface/</link>
+      <pubDate>Sat, 04 Jan 2020 10:02:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/000_preface/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;p&gt;Brief introduction about Design Pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>为减肥设计一个模式</title>
