@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on CoderPunk</title>
@@ -6,6 +6,7 @@
     <description>Recent content in Categories on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
+    <lastBuildDate>Sun, 09 Feb 2020 15:51:17 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,20 +21,20 @@
     </item>
     
     <item>
-      <title>思考</title>
-      <link>https://gdhucoder.github.io/categories/%E6%80%9D%E8%80%83/</link>
-      <pubDate>Mon, 27 Jan 2020 09:42:29 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/categories/%E6%80%9D%E8%80%83/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>技术</title>
       <link>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Sun, 09 Feb 2020 15:51:17 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/categories/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>思考</title>
+      <link>https://gdhucoder.github.io/categories/%E6%80%9D%E8%80%83/</link>
+      <pubDate>Mon, 27 Jan 2020 09:42:29 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/categories/%E6%80%9D%E8%80%83/</guid>
       <description></description>
     </item>
     

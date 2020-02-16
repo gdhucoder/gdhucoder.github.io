@@ -3,43 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+<title>Iterator Pattern</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="&ndash;
-title: &ldquo;Iterator Pattern&rdquo;
-date: 2020-01-04T10:21:03&#43;08:00
-draft: false
-tags:
-   - DesignPattern
-categories:
-  - 技术
-
-- 归档
-
-[TOC]
-
-Brief introduction about Iterator Pattern
-
-" />
+<meta name="generator" content="Hugo 0.64.0" />
+<meta property="og:title" content="Iterator Pattern" />
+<meta property="og:description" content="[TOC]
+Brief introduction about Iterator Pattern" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/020_iteratorpattern/" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:21:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:21:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -94,113 +67,88 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title"></h1>
+			<h1 class="post__title">Iterator Pattern</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2020-01-04T10:21:03">January 04, 2020</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+			</p>
 		</header>
 		<div class="post__content clearfix">
 			
 <aside>
     <header>
-    <h2></h2>
+    <h2>Iterator Pattern</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#归档">- 归档</a></li>
-</ul></li>
-<li><a href="#迭代器模式">迭代器模式</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#类图">类图</a></li>
-<li><a href="#用例">用例</a></li>
-<li><a href="#实际应用">实际应用</a></li>
-<li><a href="#注意">注意</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#类图">类图</a></li>
+    <li><a href="#用例">用例</a></li>
+    <li><a href="#实际应用">实际应用</a></li>
+    <li><a href="#注意">注意</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
-			<p>&ndash;
-title: &ldquo;Iterator Pattern&rdquo;
-date: 2020-01-04T10:21:03+08:00
-draft: false
-tags:
-   - DesignPattern
-categories:
-  - 技术</p>
-
-<h2 id="归档">- 归档</h2>
-
-<p>[TOC]</p>
-
+			<p>[TOC]</p>
 <p>Brief introduction about Iterator Pattern</p>
-
-<p></p>
-
 <h1 id="迭代器模式">迭代器模式</h1>
-
 <h2 id="定义">定义</h2>
-
 <p>迭代器模式提供一种方法顺序访问聚合对象中各个元素，而又不暴露该对象的内部表示。</p>
-
 <h2 id="类图">类图</h2>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-01_017.jpg" alt="iterator-pattern" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-01_017.jpg" alt="iterator-pattern"></p>
 <h2 id="用例">用例</h2>
-
 <p>迭代器模式已经在编程语言内部中实现了。</p>
-
 <p>样例见代码。<a href="./code/u020">code example</a></p>
-
 <h2 id="实际应用">实际应用</h2>
-
 <p>例如我们听音乐的app中的播放列表。我们可以选择顺序播放，或者随机播放。</p>
-
 <h2 id="注意">注意</h2>
-
 <blockquote>
 <p>A collection is only useful when it’s provides a way to access its elements without exposing its internal structure. The iterators bear this responsibility.</p>
-
+</blockquote>
+<blockquote>
 <p>So any time, we have collection of objects and clients need a way to iterate over each collection elements in some proper sequence, we must use iterator pattern to design the solution.</p>
 </blockquote>
-
 <p>当要遍历集合内部对象的时候就可以使用迭代器模式。</p>
-
 <p>实现可以参考Java中的<code>List</code>抽象类中会创建一个<code>Iterator</code>, <code>Iterator</code>接口中有抽象方法例如<code>hasNext()</code>,<code>next()</code>,<code>remove</code>.
 <code>ArrayList</code>继承<code>List</code>，其中会创建一个<code>ArrayItr</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ArrayItr</span><span style="color:#f92672">&lt;</span>E<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">implements</span> Iterator<span style="color:#f92672">&lt;</span>E<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> cursor<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> E<span style="color:#f92672">[</span><span style="color:#f92672">]</span> a<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">private static class ArrayItr&lt;E&gt; implements Iterator&lt;E&gt; {
-        private int cursor;
-        private final E[] a;
+        ArrayItr<span style="color:#f92672">(</span>E<span style="color:#f92672">[</span><span style="color:#f92672">]</span> a<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> a<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        ArrayItr(E[] a) {
-            this.a = a;
-        }
+        <span style="color:#a6e22e">@Override</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">hasNext</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> cursor <span style="color:#f92672">&lt;</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        @Override
-        public boolean hasNext() {
-            return cursor &lt; a.length;
-        }
-
-        @Override
-        public E next() {
-            int i = cursor;
-            if (i &gt;= a.length) {
-                throw new NoSuchElementException();
-            }
-            cursor = i + 1;
-            return a[i];
-        }
-    }
-</code></pre>
-
-<h2 id="参考">参考</h2>
-
+        <span style="color:#a6e22e">@Override</span>
+        <span style="color:#66d9ef">public</span> E <span style="color:#a6e22e">next</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> cursor<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> NoSuchElementException<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            cursor <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">return</span> a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><h2 id="参考">参考</h2>
 <p><a href="https://howtodoinjava.com/design-patterns/behavioral/iterator-design-pattern/">howtodo-iterator-pattern</a></p>
 		</div>
 		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/designpattern/" rel="tag">DesignPattern</a></li>
+	</ul>
+</div>
 
 	</article>
 	
@@ -218,17 +166,17 @@ categories:
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/note/2019-03-13/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title"></p></a>
+		<a class="post-nav__link" href="/post/designpattern/019_compositepattern/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Composite Pattern</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/designpattern/019_compositepattern/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title"></p></a>
+		<a class="post-nav__link" href="/post/designpattern/021_singletonpattern/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Singleton Pattern</p></a>
 	</div>
 </nav>
 
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>win10如何在Docer容器中运行IntelliJ？</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="win10如何在Docer容器中运行IntelliJ？" />
 <meta property="og:description" content="[TOC]
-
-本文讲win10如何在Docer容器中运行IntelliJ
-
-" />
+本文讲win10如何在Docer容器中运行IntelliJ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/java_skill/2019-06-20-run-intellij-in-container/" />
-
-
-
-<meta property="article:published_time" content="2019-06-20T20:17:20&#43;08:00"/>
-
-<meta property="article:modified_time" content="2019-06-20T20:17:20&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-06-20T20:17:20+08:00" />
+<meta property="article:modified_time" content="2019-06-20T20:17:20+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,135 +83,98 @@ MathJax.Hub.Config({
     <h2>win10如何在Docer容器中运行IntelliJ？</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#win10-intellij-docker">win10 intelliJ docker</a>
-<ul>
-<li><a href="#只需要几个步骤">只需要几个步骤</a></li>
-<li><a href="#dockerfile">Dockerfile</a></li>
-<li><a href="#docker-run">docker run</a></li>
-<li><a href="#dockerhub">DockerHub</a></li>
-<li><a href="#scala-spark">scala &amp; spark</a></li>
-<li><a href="#试验一下开发环境">试验一下开发环境</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#只需要几个步骤">只需要几个步骤</a></li>
+    <li><a href="#dockerfile">Dockerfile</a></li>
+    <li><a href="#docker-run">docker run</a></li>
+    <li><a href="#dockerhub">DockerHub</a></li>
+    <li><a href="#scala--spark">scala & spark</a></li>
+    <li><a href="#试验一下开发环境">试验一下开发环境</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>本文讲win10如何在Docer容器中运行IntelliJ</p>
-
-<p></p>
-
 <h1 id="win10-intellij-docker">win10 intelliJ docker</h1>
-
 <h2 id="只需要几个步骤">只需要几个步骤</h2>
-
 <ul>
-<li><p>安装docker</p></li>
-
-<li><p>注册docker hub id</p></li>
-
-<li><p>执行</p></li>
+<li>
+<p>安装docker</p>
+</li>
+<li>
+<p>注册docker hub id</p>
+</li>
+<li>
+<p>执行</p>
+</li>
 </ul>
-
 <pre><code>docker pull guodonghu/ideaj:v1.1
-</code></pre>
-
-<ul>
-<li><p>windows10系统下载xming，并安装</p></li>
-
-<li><p>启动container</p></li>
+</code></pre><ul>
+<li>
+<p>windows10系统下载xming，并安装</p>
+</li>
+<li>
+<p>启动container</p>
+</li>
 </ul>
-
 <pre><code>docker run ... 
-</code></pre>
+</code></pre><h2 id="dockerfile">Dockerfile</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">FROM adoptopenjdk/openjdk8
 
-<h2 id="dockerfile">Dockerfile</h2>
+LABEL maintainer <span style="color:#e6db74">&#34;Viktor Adam &lt;rycus86@gmail.com&gt;&#34;</span>
 
-<pre><code class="language-sh">FROM adoptopenjdk/openjdk8
+RUN  <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  apt-get update <span style="color:#f92672">&amp;&amp;</span> apt-get install --no-install-recommends -y <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  gcc git openssh-client less <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  libxtst-dev libxext-dev libxrender-dev libfreetype6-dev <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  libfontconfig1 libgtk2.0-0 libxslt1.1 libxxf86vm1 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  <span style="color:#f92672">&amp;&amp;</span> rm -rf /var/lib/apt/lists/* <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  <span style="color:#f92672">&amp;&amp;</span> useradd -ms /bin/bash developer
 
-LABEL maintainer &quot;Viktor Adam &lt;rycus86@gmail.com&gt;&quot;
-
-RUN  \
-  apt-get update &amp;&amp; apt-get install --no-install-recommends -y \
-  gcc git openssh-client less \
-  libxtst-dev libxext-dev libxrender-dev libfreetype6-dev \
-  libfontconfig1 libgtk2.0-0 libxslt1.1 libxxf86vm1 \
-  &amp;&amp; rm -rf /var/lib/apt/lists/* \
-  &amp;&amp; useradd -ms /bin/bash developer
-
-ARG idea_source=https://download.jetbrains.com/idea/ideaIC-192.5118.30.tar.gz
-ARG idea_local_dir=.IdeaIC2019.2
+ARG idea_source<span style="color:#f92672">=</span>https://download.jetbrains.com/idea/ideaIC-192.5118.30.tar.gz
+ARG idea_local_dir<span style="color:#f92672">=</span>.IdeaIC2019.2
 
 WORKDIR /opt/idea
 
-RUN curl -fsSL $idea_source -o /opt/idea/installer.tgz \
-  &amp;&amp; tar --strip-components=1 -xzf installer.tgz \
-  &amp;&amp; rm installer.tgz
+RUN curl -fsSL $idea_source -o /opt/idea/installer.tgz <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  <span style="color:#f92672">&amp;&amp;</span> tar --strip-components<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> -xzf installer.tgz <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  <span style="color:#f92672">&amp;&amp;</span> rm installer.tgz
 
 USER developer
 ENV HOME /home/developer
 
-RUN mkdir /home/developer/.Idea \
-  &amp;&amp; ln -sf /home/developer/.Idea /home/developer/$idea_local_dir
+RUN mkdir /home/developer/.Idea <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>  <span style="color:#f92672">&amp;&amp;</span> ln -sf /home/developer/.Idea /home/developer/$idea_local_dir
 
-CMD [ &quot;/opt/idea/bin/idea.sh&quot; ]
-</code></pre>
-
-<h2 id="docker-run">docker run</h2>
-
-<pre><code class="language-sh">docker run --rm -e DISPLAY=$DISPLAY -v e:GDUT/dockerdev/X11-unix:/tmp/.X11-unix -v e:/GDUT/dockerdev/Idea:/home/developer/.Idea -v e:/GDUT/dockerdev/java:/home/developer/.java -v e:/GDUT/dockerdev/maven:/home/developer/.m2 -v e:/GDUT/dockerdev/gradle:/home/developer/.gradle -v e:/GDUT/dockerdev/IdeaIC2019:/home/developer/.IdeaIC2019.2 -v e:/GDUT/dockerdev/share:/home/developer/.local/share/JetBrains -v e:/GDUT/dockerdev/Project:/home/developer/Project guodonghu/ideaj:v1.1
-</code></pre>
-
-<p>其中<code>-v 后面的是本地与container共享的文件目录</code></p>
-
+CMD <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;/opt/idea/bin/idea.sh&#34;</span> <span style="color:#f92672">]</span>
+</code></pre></div><h2 id="docker-run">docker run</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker run --rm -e DISPLAY<span style="color:#f92672">=</span>$DISPLAY -v e:GDUT/dockerdev/X11-unix:/tmp/.X11-unix -v e:/GDUT/dockerdev/Idea:/home/developer/.Idea -v e:/GDUT/dockerdev/java:/home/developer/.java -v e:/GDUT/dockerdev/maven:/home/developer/.m2 -v e:/GDUT/dockerdev/gradle:/home/developer/.gradle -v e:/GDUT/dockerdev/IdeaIC2019:/home/developer/.IdeaIC2019.2 -v e:/GDUT/dockerdev/share:/home/developer/.local/share/JetBrains -v e:/GDUT/dockerdev/Project:/home/developer/Project guodonghu/ideaj:v1.1
+</code></pre></div><p>其中<code>-v 后面的是本地与container共享的文件目录</code></p>
 <h2 id="dockerhub">DockerHub</h2>
-
-<pre><code class="language-sh"># 镜像
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># 镜像</span>
 docker pull guodonghu/ideaj:v1.1
 
-# 运行
+<span style="color:#75715e"># 运行</span>
 docker run ...
-</code></pre>
-
-<h2 id="scala-spark">scala &amp; spark</h2>
-
+</code></pre></div><h2 id="scala--spark">scala &amp; spark</h2>
 <p>成功打开intellij后，选择插件，安装scala插件。</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-004.jpg" alt="2019-06-20-004" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-004.jpg" alt="2019-06-20-004"></p>
 <p>在v1.1中，我下载好了scala2.11 和spark 2.4.3在镜像中。直接配置依赖即可。</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-005.jpg" alt="2019-06-20-005" /></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-006.jpg" alt="2019-06-20-006" /></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-007.jpg" alt="2019-06-20-007" /></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-008.jpg" alt="2019-06-20-008" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-005.jpg" alt="2019-06-20-005"></p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-006.jpg" alt="2019-06-20-006"></p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-007.jpg" alt="2019-06-20-007"></p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-008.jpg" alt="2019-06-20-008"></p>
 <h2 id="试验一下开发环境">试验一下开发环境</h2>
-
 <p>在powershell中输入：</p>
-
-<pre><code class="language-sh">set-variable -name DISPLAY -value 192.168.31.224:0.0
-</code></pre>
-
-<p>接着输入：</p>
-
-<pre><code class="language-sh">docker run...
-</code></pre>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-016.jpg" alt="2019-06-20-016" /></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">set-variable -name DISPLAY -value 192.168.31.224:0.0
+</code></pre></div><p>接着输入：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">docker run...
+</code></pre></div><p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-016.jpg" alt="2019-06-20-016"></p>
 <p>图形界面已经启动成功了。</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-017.jpg" alt="2019-06-20-017" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-017.jpg" alt="2019-06-20-017"></p>
 <p>在IDE中运行样例代码也成功了。</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-018.jpg" alt="2019-06-20-018" /></p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-018.jpg" alt="2019-06-20-018"></p>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -264,7 +210,7 @@ docker run ...
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

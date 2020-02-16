@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>java问题</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="java问题" />
 <meta property="og:description" content="[TOC]
-
-学习过程中遇到的一些技术问题。
-
-" />
+学习过程中遇到的一些技术问题。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/note/2018-05-10-note/" />
-
-
-
-<meta property="article:published_time" content="2018-05-14T07:00:00&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-05-14T07:00:00&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2018-05-14T07:00:00+08:00" />
+<meta property="article:modified_time" content="2018-05-14T07:00:00+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,51 +83,32 @@ MathJax.Hub.Config({
     <h2>java问题</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#string-interning">String interning</a></li>
-<li><a href="#关于java程序种的内存">关于java程序种的内存</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#string-interning">String interning</a></li>
+    <li><a href="#关于java程序种的内存">关于java程序种的内存</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>学习过程中遇到的一些技术问题。</p>
-
-<p></p>
-
 <h2 id="string-interning">String interning</h2>
-
 <p>String interning <strong>keeps every String only once in memory</strong>.</p>
-
 <p><a href="https://en.wikipedia.org/wiki/String_interning">https://en.wikipedia.org/wiki/String_interning</a></p>
-
 <h2 id="关于java程序种的内存">关于java程序种的内存</h2>
-
 <p>Total designated memory, this will equal the configured -Xmx value:
 Runtime.getRuntime().maxMemory();</p>
-
 <p>Current allocated free memory, is the current allocated space ready for new objects. Caution this is not the total free available memory:
 Runtime.getRuntime().freeMemory();</p>
-
 <p>Total allocated memory, is the total allocated space reserved for the java process:
 Runtime.getRuntime().totalMemory();</p>
-
 <p>Used memory, has to be calculated:</p>
-
 <p>usedMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();</p>
-
 <p>Total free memory, has to be calculated:
 freeMemory = Runtime.getRuntime().maxMemory() - usedMemory;</p>
-
 <p>如图所示：
-<img src="https://gitee.com/gdhu/prvpic/raw/master/Image_584.png" alt="Image_584" /></p>
-
+<img src="https://gitee.com/gdhu/prvpic/raw/master/Image_584.png" alt="Image_584"></p>
 <p>参考链接：</p>
-
 <p><a href="https://stackoverflow.com/questions/3571203/what-are-runtime-getruntime-totalmemory-and-freememory">https://stackoverflow.com/questions/3571203/what-are-runtime-getruntime-totalmemory-and-freememory</a></p>
 		</div>
 		
@@ -181,7 +145,7 @@ freeMemory = Runtime.getRuntime().maxMemory() - usedMemory;</p>
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

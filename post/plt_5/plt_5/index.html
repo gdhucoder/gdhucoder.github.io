@@ -5,32 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>matplot的使用之四:细节设置(2/2)</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="matplot的使用之四:细节设置(2/2)" />
-<meta property="og:description" content="#Color
-import pandas as pd
-import matplotlib.pyplot as plt
-
-women_degrees = pd.read_csv(&#39;percent-bachelors-degrees-women-usa.csv&#39;)
-major_cats = [&#39;Biology&#39;, &#39;Computer Science&#39;, &#39;Engineering&#39;, &#39;Math and Statistics&#39;]" />
+<meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/plt_5/plt_5/" />
-
-
-
-<meta property="article:published_time" content="2017-08-09T21:44:30&#43;08:00"/>
-
-<meta property="article:modified_time" content="2017-08-09T21:44:30&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2017-08-09T21:44:30+08:00" />
+<meta property="article:modified_time" content="2017-08-09T21:44:30+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,131 +81,88 @@ MathJax.Hub.Config({
     <header>
     <h2>matplot的使用之四:细节设置(2/2)</h2>
     </header>
-    
+    <nav id="TableOfContents"></nav>
 </aside>
 
-			<pre><code class="language-python">#Color
-import pandas as pd
-import matplotlib.pyplot as plt
+			<div class="highlight">e></div><p><img src="../output_0_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Setting Line Width</span>
+cb_dark_blue <span style="color:#f92672">=</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">107</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">164</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>)
+cb_orange <span style="color:#f92672">=</span> (<span style="color:#ae81ff">255</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">128</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">14</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>)
 
-women_degrees = pd.read_csv('percent-bachelors-degrees-women-usa.csv')
-major_cats = ['Biology', 'Computer Science', 'Engineering', 'Math and Statistics']
+fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">12</span>))
 
+<span style="color:#66d9ef">for</span> sp <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span>):
+    ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,sp<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+    <span style="color:#75715e"># Set the line width when specifying how each line should look.</span>
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], women_degrees[major_cats[sp]], c<span style="color:#f92672">=</span>cb_dark_blue, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Women</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], <span style="color:#ae81ff">100</span><span style="color:#f92672">-</span>women_degrees[major_cats[sp]], c<span style="color:#f92672">=</span>cb_orange, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Men</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+    <span style="color:#66d9ef">for</span> key,spine <span style="color:#f92672">in</span> ax<span style="color:#f92672">.</span>spines<span style="color:#f92672">.</span>items():
+        spine<span style="color:#f92672">.</span>set_visible(False)
+    ax<span style="color:#f92672">.</span>set_xlim(<span style="color:#ae81ff">1968</span>, <span style="color:#ae81ff">2011</span>)
+    ax<span style="color:#f92672">.</span>set_ylim(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">100</span>)
+    ax<span style="color:#f92672">.</span>set_title(major_cats[sp])
+    ax<span style="color:#f92672">.</span>tick_params(bottom<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, top<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, left<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, right<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>)
 
+plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">upper right</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="../output_1_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">stem_cats <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Engineering</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Computer Science</span><span style="color:#e6db74">&#39;</span>,<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Physical Sciences</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Math and Statistics</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Biology</span><span style="color:#e6db74">&#39;</span> , <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Psychology</span><span style="color:#e6db74">&#39;</span>]
+fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">3</span>))
 
-# RGB颜色的写法
-# 关于颜色可以去其他网站上面找
-cb_dark_blue = (0/255, 107/255, 164/255)
-cb_orange = (255/255, 128/255, 14/255)
+<span style="color:#66d9ef">for</span> sp <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>):
+    ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>,sp<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_dark_blue, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Women</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], <span style="color:#ae81ff">100</span><span style="color:#f92672">-</span>women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_orange, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Men</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+    <span style="color:#66d9ef">for</span> key,spine <span style="color:#f92672">in</span> ax<span style="color:#f92672">.</span>spines<span style="color:#f92672">.</span>items():
+        spine<span style="color:#f92672">.</span>set_visible(False)
+    ax<span style="color:#f92672">.</span>set_xlim(<span style="color:#ae81ff">1968</span>, <span style="color:#ae81ff">2011</span>)
+    ax<span style="color:#f92672">.</span>set_ylim(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">100</span>)
+    ax<span style="color:#f92672">.</span>set_title(stem_cats[sp])
+    ax<span style="color:#f92672">.</span>tick_params(bottom<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, top<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, left<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, right<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>)
 
-fig = plt.figure(figsize=(12, 12))
+plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">upper right</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="../output_2_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">3</span>))
 
-for sp in range(0,4):
-    ax = fig.add_subplot(2,2,sp+1)
-    # The color for each line is assigned here.
-    ax.plot(women_degrees['Year'], women_degrees[major_cats[sp]], c=cb_dark_blue, label='Women')
-    ax.plot(women_degrees['Year'], 100-women_degrees[major_cats[sp]], c=cb_orange, label='Men')
-    for key,spine in ax.spines.items():
-        spine.set_visible(False)
-    ax.set_xlim(1968, 2011)
-    ax.set_ylim(0,100)
-    ax.set_title(major_cats[sp])
-    ax.tick_params(bottom=&quot;off&quot;, top=&quot;off&quot;, left=&quot;off&quot;, right=&quot;off&quot;)
+<span style="color:#66d9ef">for</span> sp <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>):
+    ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>,sp<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_dark_blue, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Women</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], <span style="color:#ae81ff">100</span><span style="color:#f92672">-</span>women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_orange, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Men</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+    <span style="color:#66d9ef">for</span> key,spine <span style="color:#f92672">in</span> ax<span style="color:#f92672">.</span>spines<span style="color:#f92672">.</span>items():
+        spine<span style="color:#f92672">.</span>set_visible(False)
+    ax<span style="color:#f92672">.</span>set_xlim(<span style="color:#ae81ff">1968</span>, <span style="color:#ae81ff">2011</span>)
+    ax<span style="color:#f92672">.</span>set_ylim(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">100</span>)
+    ax<span style="color:#f92672">.</span>set_title(stem_cats[sp])
+    ax<span style="color:#f92672">.</span>tick_params(bottom<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, top<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, left<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, right<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>)
+plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">upper right</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">3</span>))
 
-plt.legend(loc='upper right')
-plt.show()
-</code></pre>
-
-<p><img src="../output_0_0.png" alt="png" /></p>
-
-<pre><code class="language-python">#Setting Line Width
-cb_dark_blue = (0/255, 107/255, 164/255)
-cb_orange = (255/255, 128/255, 14/255)
-
-fig = plt.figure(figsize=(12, 12))
-
-for sp in range(0,4):
-    ax = fig.add_subplot(2,2,sp+1)
-    # Set the line width when specifying how each line should look.
-    ax.plot(women_degrees['Year'], women_degrees[major_cats[sp]], c=cb_dark_blue, label='Women', linewidth=10)
-    ax.plot(women_degrees['Year'], 100-women_degrees[major_cats[sp]], c=cb_orange, label='Men', linewidth=10)
-    for key,spine in ax.spines.items():
-        spine.set_visible(False)
-    ax.set_xlim(1968, 2011)
-    ax.set_ylim(0,100)
-    ax.set_title(major_cats[sp])
-    ax.tick_params(bottom=&quot;off&quot;, top=&quot;off&quot;, left=&quot;off&quot;, right=&quot;off&quot;)
-
-plt.legend(loc='upper right')
-plt.show()
-</code></pre>
-
-<p><img src="../output_1_0.png" alt="png" /></p>
-
-<pre><code class="language-python">stem_cats = ['Engineering', 'Computer Science','Physical Sciences', 'Math and Statistics', 'Biology' , 'Psychology']
-fig = plt.figure(figsize=(18, 3))
-
-for sp in range(0,6):
-    ax = fig.add_subplot(1,6,sp+1)
-    ax.plot(women_degrees['Year'], women_degrees[stem_cats[sp]], c=cb_dark_blue, label='Women', linewidth=3)
-    ax.plot(women_degrees['Year'], 100-women_degrees[stem_cats[sp]], c=cb_orange, label='Men', linewidth=3)
-    for key,spine in ax.spines.items():
-        spine.set_visible(False)
-    ax.set_xlim(1968, 2011)
-    ax.set_ylim(0,100)
-    ax.set_title(stem_cats[sp])
-    ax.tick_params(bottom=&quot;off&quot;, top=&quot;off&quot;, left=&quot;off&quot;, right=&quot;off&quot;)
-
-plt.legend(loc='upper right')
-plt.show()
-</code></pre>
-
-<p><img src="../output_2_0.png" alt="png" /></p>
-
-<pre><code class="language-python">fig = plt.figure(figsize=(18, 3))
-
-for sp in range(0,6):
-    ax = fig.add_subplot(1,6,sp+1)
-    ax.plot(women_degrees['Year'], women_degrees[stem_cats[sp]], c=cb_dark_blue, label='Women', linewidth=3)
-    ax.plot(women_degrees['Year'], 100-women_degrees[stem_cats[sp]], c=cb_orange, label='Men', linewidth=3)
-    for key,spine in ax.spines.items():
-        spine.set_visible(False)
-    ax.set_xlim(1968, 2011)
-    ax.set_ylim(0,100)
-    ax.set_title(stem_cats[sp])
-    ax.tick_params(bottom=&quot;off&quot;, top=&quot;off&quot;, left=&quot;off&quot;, right=&quot;off&quot;)
-plt.legend(loc='upper right')
-plt.show()
-fig = plt.figure(figsize=(18, 3))
-
-# add text
-for sp in range(0,6):
-    ax = fig.add_subplot(1,6,sp+1)
-    ax.plot(women_degrees['Year'], women_degrees[stem_cats[sp]], c=cb_dark_blue, label='Women', linewidth=3)
-    ax.plot(women_degrees['Year'], 100-women_degrees[stem_cats[sp]], c=cb_orange, label='Men', linewidth=3)
-    for key,spine in ax.spines.items():
-        spine.set_visible(False)
-    ax.set_xlim(1968, 2011)
-    ax.set_ylim(0,100)
-    ax.set_title(stem_cats[sp])
-    ax.tick_params(bottom=&quot;off&quot;, top=&quot;off&quot;, left=&quot;off&quot;, right=&quot;off&quot;)
+<span style="color:#75715e"># add text</span>
+<span style="color:#66d9ef">for</span> sp <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>):
+    ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>,sp<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_dark_blue, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Women</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], <span style="color:#ae81ff">100</span><span style="color:#f92672">-</span>women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_orange, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Men</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+    <span style="color:#66d9ef">for</span> key,spine <span style="color:#f92672">in</span> ax<span style="color:#f92672">.</span>spines<span style="color:#f92672">.</span>items():
+        spine<span style="color:#f92672">.</span>set_visible(False)
+    ax<span style="color:#f92672">.</span>set_xlim(<span style="color:#ae81ff">1968</span>, <span style="color:#ae81ff">2011</span>)
+    ax<span style="color:#f92672">.</span>set_ylim(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">100</span>)
+    ax<span style="color:#f92672">.</span>set_title(stem_cats[sp])
+    ax<span style="color:#f92672">.</span>tick_params(bottom<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, top<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, left<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, right<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>)
     
-    # 给线添加注释
-    if sp == 0:
-        ax.text(2005, 87, 'Men')
-        ax.text(2002, 8, 'Women')
-    elif sp == 5:
-        ax.text(2005, 62, 'Men')
-        ax.text(2001, 35, 'Women')
-plt.show()
-</code></pre>
-
-<p><img src="../output_3_0.png" alt="png" /></p>
-
-<p><img src="../output_3_1.png" alt="png" /></p>
-
-<pre><code class="language-python">
-</code></pre>
+    <span style="color:#75715e"># 给线添加注释</span>
+    <span style="color:#66d9ef">if</span> sp <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        ax<span style="color:#f92672">.</span>text(<span style="color:#ae81ff">2005</span>, <span style="color:#ae81ff">87</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Men</span><span style="color:#e6db74">&#39;</span>)
+        ax<span style="color:#f92672">.</span>text(<span style="color:#ae81ff">2002</span>, <span style="color:#ae81ff">8</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Women</span><span style="color:#e6db74">&#39;</span>)
+    <span style="color:#66d9ef">elif</span> sp <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span>:
+        ax<span style="color:#f92672">.</span>text(<span style="color:#ae81ff">2005</span>, <span style="color:#ae81ff">62</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Men</span><span style="color:#e6db74">&#39;</span>)
+        ax<span style="color:#f92672">.</span>text(<span style="color:#ae81ff">2001</span>, <span style="color:#ae81ff">35</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Women</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="../output_3_0.png" alt="png"></p>
+<p><img src="../output_3_1.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+</code></pre></div>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -262,7 +200,7 @@ plt.show()
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

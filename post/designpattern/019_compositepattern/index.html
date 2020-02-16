@@ -3,43 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+<title>Composite Pattern</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
-<meta property="og:title" content="" />
-<meta property="og:description" content="&ndash;
-title: &ldquo;Composite Pattern&rdquo;
-date: 2020-01-04T10:20:03&#43;08:00
-draft: false
-tags:
-   - DesignPattern
-categories:
-  - 技术
-
-- 归档
-
-[TOC]
-
-Brief introduction about Composite Pattern
-
-" />
+<meta name="generator" content="Hugo 0.64.0" />
+<meta property="og:title" content="Composite Pattern" />
+<meta property="og:description" content="[TOC]
+Brief introduction about Composite Pattern" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/019_compositepattern/" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:20:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:20:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -94,87 +67,64 @@ MathJax.Hub.Config({
 <div class="main-content content" role="main" itemprop="mainContentOfPage">
 	<article class="post">
 		<header class="post__header clearfix">
-			<h1 class="post__title"></h1>
+			<h1 class="post__title">Composite Pattern</h1>
+			<p class="post__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="post__meta-date" datetime="2020-01-04T10:20:03">January 04, 2020</time>
+				<span class="post__meta-categories meta-categories">
+					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
+			</p>
 		</header>
 		<div class="post__content clearfix">
 			
 <aside>
     <header>
-    <h2></h2>
+    <h2>Composite Pattern</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#归档">- 归档</a></li>
-</ul></li>
-<li><a href="#组合模式-composite-pattern">组合模式（Composite Pattern）</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#类图">类图</a></li>
-<li><a href="#用例">用例</a></li>
-<li><a href="#实际应用">实际应用</a></li>
-<li><a href="#什么时候使用">什么时候使用</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#类图">类图</a></li>
+    <li><a href="#用例">用例</a></li>
+    <li><a href="#实际应用">实际应用</a></li>
+    <li><a href="#什么时候使用">什么时候使用</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
-			<p>&ndash;
-title: &ldquo;Composite Pattern&rdquo;
-date: 2020-01-04T10:20:03+08:00
-draft: false
-tags:
-   - DesignPattern
-categories:
-  - 技术</p>
-
-<h2 id="归档">- 归档</h2>
-
-<p>[TOC]</p>
-
+			<p>[TOC]</p>
 <p>Brief introduction about Composite Pattern</p>
-
-<p></p>
-
-<h1 id="组合模式-composite-pattern">组合模式（Composite Pattern）</h1>
-
+<h1 id="组合模式composite-pattern">组合模式（Composite Pattern）</h1>
 <h2 id="定义">定义</h2>
-
 <p>Composite design pattern compose objects into tree structures to represent whole-part hierarchies.
 Composite lets clients treat individual objects and compositions of objects uniformly.</p>
-
 <p>将对象组合成树状结构以表示整体的层次结构。
 使得用户对单个对象和组合对象的使用，具有一致性。</p>
-
 <h2 id="类图">类图</h2>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-01_016.jpg" alt="composite pattern" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-01_016.jpg" alt="composite pattern"></p>
 <h2 id="用例">用例</h2>
-
 <p>举的例子是小菜写公司OA系统遇到的困难。详细见代码。</p>
-
 <p><a href="./code/u019">code example</a></p>
-
 <h2 id="实际应用">实际应用</h2>
-
 <ul>
 <li>公司员工之间的上下级关系。</li>
 <li>GUI</li>
 <li>文件系统</li>
 </ul>
-
 <h2 id="什么时候使用">什么时候使用</h2>
-
 <p>层级结构，组件功能类似，可以很容易新增组件，组件间可以组合。</p>
-
 <h2 id="参考">参考</h2>
-
 <p><a href="https://howtodoinjava.com/design-patterns/structural/composite-design-pattern/">howtodo-composite-patterns</a></p>
 		</div>
 		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link" href="/tags/designpattern/" rel="tag">DesignPattern</a></li>
+	</ul>
+</div>
 
 	</article>
 	
@@ -192,17 +142,17 @@ Composite lets clients treat individual objects and compositions of objects unif
 	
 <nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/designpattern/020_iteratorpattern/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title"></p></a>
+		<a class="post-nav__link" href="/post/designpattern/017_adapterpattern/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Adapter Pattern</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/aima/chp2/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title"></p></a>
+		<a class="post-nav__link" href="/post/designpattern/020_iteratorpattern/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Iterator Pattern</p></a>
 	</div>
 </nav>
 
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

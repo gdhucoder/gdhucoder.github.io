@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Planning on CoderPunk</title>
+    <title>PLANNING on CoderPunk</title>
     <link>https://gdhucoder.github.io/tags/planning/</link>
-    <description>Recent content in Planning on CoderPunk</description>
+    <description>Recent content in PLANNING on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Wed, 21 Aug 2019 16:24:46 +0800</lastBuildDate>
@@ -18,10 +18,7 @@
       
       <guid>https://gdhucoder.github.io/post/planning/automatedplanning/2019-08-21-a2c-plan/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;IPC 2018 中的A2C Plan&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;IPC 2018 中的A2C Plan&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,10 +28,7 @@
       
       <guid>https://gdhucoder.github.io/post/planning/2019-06-22-derivedpredicate/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Derived Predicates.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Derived Predicates.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -44,12 +38,8 @@
       
       <guid>https://gdhucoder.github.io/post/note/2018-01-05/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;h3 id=&#34;概念&#34;&gt;概念&lt;/h3&gt;
-
-&lt;p&gt;给定一个MDP，一个agent可以访问：&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给定一个MDP，一个agent可以访问：&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -59,14 +49,10 @@
       
       <guid>https://gdhucoder.github.io/post/planning/montecarlo/monte_carlo/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;乍一听“蒙特卡罗”这个词，完全不知所云，我感到很奇怪，一个搜索算法Monte Carlo Tree Search为什么叫蒙特卡罗。
 于是，就有了下面的文字。&lt;/p&gt;
-
 &lt;p&gt;本篇文章主要介绍MonteCarlo方法的由来，及简单的一个应用-求π的值。
-下篇将会介绍：什么是Monte Carlo Tree Search算法。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+下篇将会介绍：什么是Monte Carlo Tree Search算法。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -76,14 +62,9 @@
       
       <guid>https://gdhucoder.github.io/post/planning/pln_1/pln_1/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;本篇开始，逐一介绍一些概率编程相关内容。首先介绍贝叶斯网的相关基础知识和应用。&lt;/p&gt;
-
 &lt;p&gt;本篇导读：&lt;/p&gt;
-
-&lt;p&gt;本篇主要介绍了贝叶斯定理，贝叶斯网以及相关应用：&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;本篇主要介绍了贝叶斯定理，贝叶斯网以及相关应用：&lt;/p&gt;</description>
     </item>
     
   </channel>

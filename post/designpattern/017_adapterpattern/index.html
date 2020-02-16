@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adapter Pattern</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Adapter Pattern" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about Adapter Pattern.
-
-" />
+Brief introduction about Adapter Pattern." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/017_adapterpattern/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:19:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:19:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:19:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:19:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,63 +83,40 @@ MathJax.Hub.Config({
     <h2>Adapter Pattern</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#适配器模式-adapter-pattern">适配器模式 Adapter Pattern</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#类图">类图</a></li>
-<li><a href="#用例">用例</a></li>
-<li><a href="#实际应用">实际应用</a></li>
-<li><a href="#注意">注意</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#类图">类图</a></li>
+    <li><a href="#用例">用例</a></li>
+    <li><a href="#实际应用">实际应用</a></li>
+    <li><a href="#注意">注意</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about Adapter Pattern.</p>
-
-<p></p>
-
 <h1 id="适配器模式-adapter-pattern">适配器模式 Adapter Pattern</h1>
-
 <h2 id="定义">定义</h2>
-
 <p>Convert the interface of a class into another interface clients expect.
 Adapter lets classes work together that couldn&rsquo;t otherwise because of
 incompatible interfaces.</p>
-
 <p>把一个类的接口转换为客户需要的另外一个接口。使得因不兼容接口而不能一起工作的类一起工作。</p>
-
 <h2 id="类图">类图</h2>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-29_014.jpg" alt="Adapter Pattern" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-29_014.jpg" alt="Adapter Pattern"></p>
 <h2 id="用例">用例</h2>
-
 <p>《大话设计模式》中讲了姚明刚到美国打球🏀需要翻译的例子。翻译就是适配器，姚明就是需要适配的对象。详细请看代码。</p>
-
 <p><a href="./code/u017">code example</a></p>
-
 <h2 id="实际应用">实际应用</h2>
-
 <p>生活中的例子：电源转换插头，就是适配器。</p>
-
-<pre><code class="language-java">    // System.in inputstream
-    // BufferedReader &lt;--&gt; character
-    // InputStream &lt;--&gt; bytes stream
-    // InputStreamReader: Adapter (bytes stream to character)
-    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-</code></pre>
-
-<h2 id="注意">注意</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#75715e">// System.in inputstream
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// BufferedReader &lt;--&gt; character
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// InputStream &lt;--&gt; bytes stream
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// InputStreamReader: Adapter (bytes stream to character)
+</span><span style="color:#75715e"></span>    BufferedReader bufferedReader <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> InputStreamReader<span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">in</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+</code></pre></div><h2 id="注意">注意</h2>
 <p>Adapter Pattern只是一个妥协，应当提前在设计方面避免使用adapter pattern。</p>
-
 <h2 id="参考">参考</h2>
-
 <p><a href="https://howtodoinjava.com/design-patterns/structural/adapter-design-pattern-in-java/">howtodo-adapter-pattern</a></p>
 		</div>
 		
@@ -186,14 +146,14 @@ incompatible interfaces.</p>
 		<a class="post-nav__link" href="/post/designpattern/018_mementopattern/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Memento Pattern</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/designpattern/021_singletonpattern/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Singleton Pattern</p></a>
+		<a class="post-nav__link" href="/post/designpattern/019_compositepattern/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Composite Pattern</p></a>
 	</div>
 </nav>
 
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

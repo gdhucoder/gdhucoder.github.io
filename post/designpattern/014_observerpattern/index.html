@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Observer Pattern</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Observer Pattern" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about Observer Pattern.
-
-" />
+Brief introduction about Observer Pattern." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/014_observerpattern/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:16:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:16:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:16:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:16:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,55 +83,33 @@ MathJax.Hub.Config({
     <h2>Observer Pattern</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#观察者模式-发布-订阅模式">观察者模式（发布-订阅模式）</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#用例">用例</a></li>
-<li><a href="#实际应用">实际应用</a></li>
-<li><a href="#观察者模式的不足">观察者模式的不足</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#用例">用例</a></li>
+    <li><a href="#实际应用">实际应用</a></li>
+    <li><a href="#观察者模式的不足">观察者模式的不足</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about Observer Pattern.</p>
-
-<p></p>
-
-<h1 id="观察者模式-发布-订阅模式">观察者模式（发布-订阅模式）</h1>
-
+<h1 id="观察者模式发布-订阅模式">观察者模式（发布-订阅模式）</h1>
 <h2 id="定义">定义</h2>
-
 <p>Define a one-to-many dependency between objects so that when one object changes state,
 all its dependents are notified and updated automatically.</p>
-
 <p>定义一种一对多的依赖关系，一个对象发生改变时，所有依赖于它的都会自动通知和更新。</p>
-
 <p>类图：</p>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-26_006.jpg" alt="ObserverPattern" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-26_006.jpg" alt="ObserverPattern"></p>
 <p><a href="https://www.youtube.com/watch?v=WRkw0l72BL4">youtube-observer-pattern</a></p>
-
 <h2 id="用例">用例</h2>
-
 <p>前台通知办公室的小伙伴们老板要回来啦！</p>
-
 <p><a href="./code/u014">code example</a></p>
-
 <h2 id="实际应用">实际应用</h2>
-
 <p>当一个对象的状态改变需要通知其他对象的时候考虑使用观察者模式。让双方都依赖于抽象。</p>
-
 <h2 id="观察者模式的不足">观察者模式的不足</h2>
-
 <p>可能没有办法让每个类都实现Observer接口。实际使用事件委托机制EventHandler。下篇文章讲EventHandler。</p>
-
 <p>埋下一个坑，什么是事件委托机制？ 2019-12-27</p>
-
 <p>2019-11-26</p>
 		</div>
 		
@@ -185,7 +146,7 @@ all its dependents are notified and updated automatically.</p>
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

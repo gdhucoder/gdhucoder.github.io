@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seaborn on CoderPunk</title>
@@ -18,20 +18,14 @@
       
       <guid>https://gdhucoder.github.io/post/sns_2/seaborn_2_color_palettes/</guid>
       <description>&lt;h1 id=&#34;调色板&#34;&gt;调色板&lt;/h1&gt;
-
 &lt;p&gt;颜色很重要，如果使用的好，就会帮助你突出数据的特征。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;color_palette()能传入任何Matplotlib所支持的颜色&lt;/li&gt;
 &lt;li&gt;color_palette()不写参数则默认颜色&lt;/li&gt;
 &lt;li&gt;set_palette()设置所有图的颜色&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;下面是使用seaborn的color palettes的一些例子，这些例子官网上面都已经有详细的介绍。&lt;/p&gt;
-
-&lt;p&gt;网址为：&lt;a href=&#34;http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial&#34;&gt;http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;网址为：http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -41,10 +35,7 @@
       
       <guid>https://gdhucoder.github.io/post/sns_1/seaborn_1/</guid>
       <description>&lt;h1 id=&#34;风格设置&#34;&gt;风格设置&lt;/h1&gt;
-
-&lt;p&gt;Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.&lt;/p&gt;</description>
     </item>
     
   </channel>

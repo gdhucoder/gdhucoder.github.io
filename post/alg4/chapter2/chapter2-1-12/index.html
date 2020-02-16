@@ -5,30 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>算法4习题 2.1.12</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="算法4习题 2.1.12" />
 <meta property="og:description" content="算法4习题 2.1.12 问题 Instrument shellsort to print the number of compares divided by the array size for each increment. Write a test client that tests the hypothesis that this number is a small constant, by sorting arrays of random Double values, using array sizes that are increasing powers of 10, starting at 100.
 打印希尔排序中每个增量带来的比较次数和数组大小的比值。 验证该值是一个小常数。
 思路 统计每个增量对应的比较次数。
-private static boolean less(Comparable v, Comparable w) { count &#43;&#43; ; return v." />
+private static boolean less(Comparable v, Comparable w) { count &#43;&#43; ; return v.compareTo(w) &lt; 0; } 解答 Extensive experiments suggest that the average number of compares per increment might be N^(1/5) 大量实验表明每个增量的比较次数约为N的1/5次方。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter2/chapter2-1-12/" />
-
-
-
-<meta property="article:published_time" content="2018-08-06T08:00:00&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-08-06T08:00:00&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2018-08-06T08:00:00+08:00" />
+<meta property="article:modified_time" content="2018-08-06T08:00:00+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -99,93 +85,76 @@ MathJax.Hub.Config({
     <h2>算法4习题 2.1.12</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#算法4习题-2-1-12">算法4习题 2.1.12</a>
-<ul>
-<li><a href="#问题">问题</a></li>
-<li><a href="#思路">思路</a></li>
-<li><a href="#解答">解答</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#问题">问题</a></li>
+    <li><a href="#思路">思路</a></li>
+    <li><a href="#解答">解答</a></li>
+  </ul>
 </nav>
 </aside>
 
-			
-
-<h1 id="算法4习题-2-1-12">算法4习题 2.1.12</h1>
-
+			<h1 id="算法4习题-2112">算法4习题 2.1.12</h1>
 <h2 id="问题">问题</h2>
-
 <p>Instrument shellsort to print the number of compares divided by the array size for each increment. Write a test client that tests the hypothesis that this number is a small constant, by sorting arrays of random Double values, using array sizes that are increasing powers of 10, starting at 100.</p>
-
 <p>打印希尔排序中每个增量带来的比较次数和数组大小的比值。
 验证该值是一个小常数。</p>
-
 <h2 id="思路">思路</h2>
-
 <p>统计每个增量对应的比较次数。</p>
-
-<pre><code class="language-java">  private static boolean less(Comparable v, Comparable w) {
-    count ++ ;
-    return v.compareTo(w) &lt; 0;
-  }
-</code></pre>
-
-<h2 id="解答">解答</h2>
-
-<p>Extensive experiments suggest that the average number of compares per increment might be N^(<sup>1</sup>&frasl;<sub>5</sub>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">less</span><span style="color:#f92672">(</span>Comparable v<span style="color:#f92672">,</span> Comparable w<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    count <span style="color:#f92672">+</span><span style="color:#f92672">+</span> <span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> v<span style="color:#f92672">.</span><span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>w<span style="color:#f92672">)</span> <span style="color:#f92672">&lt;</span> 0<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+</code></pre></div><h2 id="解答">解答</h2>
+<p>Extensive experiments suggest that the average number of compares per increment might be N^(1/5)
 大量实验表明每个增量的比较次数约为N的1/5次方。</p>
-
 <p>这个结果，我觉得是有点怪的。题目中说是一个小常数，我理解是不变的常数。但是结果看下来，发现数值是变的。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">For array length <span style="color:#f92672">=</span>       1000<span style="color:#f92672">,</span> N<span style="color:#f92672">^</span><span style="color:#f92672">(</span>1<span style="color:#f92672">/</span>5<span style="color:#f92672">)</span><span style="color:#f92672">:</span> 3<span style="color:#f92672">.</span><span style="color:#a6e22e">98</span> 
+h:        364 	       0<span style="color:#f92672">.</span><span style="color:#a6e22e">81</span> 
+h:        121 	       1<span style="color:#f92672">.</span><span style="color:#a6e22e">67</span> 
+h:         40 	       2<span style="color:#f92672">.</span><span style="color:#a6e22e">26</span> 
+h:         13 	       2<span style="color:#f92672">.</span><span style="color:#a6e22e">80</span> 
+h:          4 	       3<span style="color:#f92672">.</span><span style="color:#a6e22e">57</span> 
+h:          1 	       2<span style="color:#f92672">.</span><span style="color:#a6e22e">70</span> 
 
-<pre><code class="language-java">For array length =       1000, N^(1/5): 3.98 
-h:        364          0.81 
-h:        121          1.67 
-h:         40          2.26 
-h:         13          2.80 
-h:          4          3.57 
-h:          1          2.70 
+For array length <span style="color:#f92672">=</span>      10000<span style="color:#f92672">,</span> N<span style="color:#f92672">^</span><span style="color:#f92672">(</span>1<span style="color:#f92672">/</span>5<span style="color:#f92672">)</span><span style="color:#f92672">:</span> 6<span style="color:#f92672">.</span><span style="color:#a6e22e">31</span> 
+h:       9841 	       0<span style="color:#f92672">.</span><span style="color:#a6e22e">02</span> 
+h:       3280 	       0<span style="color:#f92672">.</span><span style="color:#a6e22e">90</span> 
+h:       1093 	       1<span style="color:#f92672">.</span><span style="color:#a6e22e">71</span> 
+h:        364 	       2<span style="color:#f92672">.</span><span style="color:#a6e22e">36</span> 
+h:        121 	       2<span style="color:#f92672">.</span><span style="color:#a6e22e">96</span> 
+h:         40 	       3<span style="color:#f92672">.</span><span style="color:#a6e22e">70</span> 
+h:         13 	       4<span style="color:#f92672">.</span><span style="color:#a6e22e">35</span> 
+h:          4 	       3<span style="color:#f92672">.</span><span style="color:#a6e22e">75</span> 
+h:          1 	       2<span style="color:#f92672">.</span><span style="color:#a6e22e">74</span> 
 
-For array length =      10000, N^(1/5): 6.31 
-h:       9841          0.02 
-h:       3280          0.90 
-h:       1093          1.71 
-h:        364          2.36 
-h:        121          2.96 
-h:         40          3.70 
-h:         13          4.35 
-h:          4          3.75 
-h:          1          2.74 
+For array length <span style="color:#f92672">=</span>     100000<span style="color:#f92672">,</span> N<span style="color:#f92672">^</span><span style="color:#f92672">(</span>1<span style="color:#f92672">/</span>5<span style="color:#f92672">)</span><span style="color:#f92672">:</span> 10<span style="color:#f92672">.</span><span style="color:#a6e22e">00</span> 
+h:      88573 	       0<span style="color:#f92672">.</span><span style="color:#a6e22e">11</span> 
+h:      29524 	       0<span style="color:#f92672">.</span><span style="color:#a6e22e">98</span> 
+h:       9841 	       1<span style="color:#f92672">.</span><span style="color:#a6e22e">76</span> 
+h:       3280 	       2<span style="color:#f92672">.</span><span style="color:#a6e22e">40</span> 
+h:       1093 	       2<span style="color:#f92672">.</span><span style="color:#a6e22e">98</span> 
+h:        364 	       3<span style="color:#f92672">.</span><span style="color:#a6e22e">67</span> 
+h:        121 	       4<span style="color:#f92672">.</span><span style="color:#a6e22e">98</span> 
+h:         40 	       6<span style="color:#f92672">.</span><span style="color:#a6e22e">49</span> 
+h:         13 	       8<span style="color:#f92672">.</span><span style="color:#a6e22e">70</span> 
+h:          4 	       4<span style="color:#f92672">.</span><span style="color:#a6e22e">72</span> 
+h:          1 	       2<span style="color:#f92672">.</span><span style="color:#a6e22e">74</span> 
 
-For array length =     100000, N^(1/5): 10.00 
-h:      88573          0.11 
-h:      29524          0.98 
-h:       9841          1.76 
-h:       3280          2.40 
-h:       1093          2.98 
-h:        364          3.67 
-h:        121          4.98 
-h:         40          6.49 
-h:         13          8.70 
-h:          4          4.72 
-h:          1          2.74 
-
-For array length =    1000000, N^(1/5): 15.85 
-h:     797161          0.20 
-h:     265720          1.05 
-h:      88573          1.83 
-h:      29524          2.45 
-h:       9841          3.07 
-h:       3280          3.84 
-h:       1093          5.00 
-h:        364          6.48 
-h:        121          8.78 
-h:         40         13.68 
-h:         13         10.22 
-h:          4          4.85 
-h:          1          2.75 
-</code></pre>
-
+For array length <span style="color:#f92672">=</span>    1000000<span style="color:#f92672">,</span> N<span style="color:#f92672">^</span><span style="color:#f92672">(</span>1<span style="color:#f92672">/</span>5<span style="color:#f92672">)</span><span style="color:#f92672">:</span> 15<span style="color:#f92672">.</span><span style="color:#a6e22e">85</span> 
+h:     797161 	       0<span style="color:#f92672">.</span><span style="color:#a6e22e">20</span> 
+h:     265720 	       1<span style="color:#f92672">.</span><span style="color:#a6e22e">05</span> 
+h:      88573 	       1<span style="color:#f92672">.</span><span style="color:#a6e22e">83</span> 
+h:      29524 	       2<span style="color:#f92672">.</span><span style="color:#a6e22e">45</span> 
+h:       9841 	       3<span style="color:#f92672">.</span><span style="color:#a6e22e">07</span> 
+h:       3280 	       3<span style="color:#f92672">.</span><span style="color:#a6e22e">84</span> 
+h:       1093 	       5<span style="color:#f92672">.</span><span style="color:#a6e22e">00</span> 
+h:        364 	       6<span style="color:#f92672">.</span><span style="color:#a6e22e">48</span> 
+h:        121 	       8<span style="color:#f92672">.</span><span style="color:#a6e22e">78</span> 
+h:         40 	      13<span style="color:#f92672">.</span><span style="color:#a6e22e">68</span> 
+h:         13 	      10<span style="color:#f92672">.</span><span style="color:#a6e22e">22</span> 
+h:          4 	       4<span style="color:#f92672">.</span><span style="color:#a6e22e">85</span> 
+h:          1 	       2<span style="color:#f92672">.</span><span style="color:#a6e22e">75</span> 
+</code></pre></div>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -221,7 +190,7 @@ h:          1          2.75
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

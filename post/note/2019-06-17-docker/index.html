@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>什么是Docker？</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="什么是Docker？" />
 <meta property="og:description" content="[TOC]
-
-关于Docker。
-
-" />
+关于Docker。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/note/2019-06-17-docker/" />
-
-
-
-<meta property="article:published_time" content="2019-06-18T08:10:35&#43;08:00"/>
-
-<meta property="article:modified_time" content="2019-06-18T08:10:35&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-06-18T08:10:35+08:00" />
+<meta property="article:modified_time" content="2019-06-18T08:10:35+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,116 +83,96 @@ MathJax.Hub.Config({
     <h2>什么是Docker？</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#what-is-docker">What is docker?</a>
-<ul>
-<li><a href="#1-1-docker-images">1.1 Docker Images</a></li>
-<li><a href="#1-2-container-isolation">1.2 Container Isolation</a></li>
-<li><a href="#1-3-terminology">1.3 Terminology</a></li>
-<li><a href="#1-4-image-creation">1.4 Image Creation</a>
-<ul>
-<li><a href="#what-just-happend">what just happend?</a></li>
-<li><a href="#terminology">Terminology</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#11-docker-images">1.1 Docker Images</a></li>
+    <li><a href="#12-container-isolation">1.2 Container Isolation</a></li>
+    <li><a href="#13-terminology">1.3 Terminology</a></li>
+    <li><a href="#14-image-creation">1.4 Image Creation</a>
+      <ul>
+        <li><a href="#what-just-happend">what just happend?</a></li>
+        <li><a href="#terminology">Terminology</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>关于Docker。</p>
-
-<p></p>
-
 <h1 id="what-is-docker">What is docker?</h1>
-
-<h2 id="1-1-docker-images">1.1 Docker Images</h2>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-001.jpg" alt="2019-06-18-001" /></p>
-
-<h2 id="1-2-container-isolation">1.2 Container Isolation</h2>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-002.jpg" alt="2019-06-18-002" /></p>
-
+<h2 id="11-docker-images">1.1 Docker Images</h2>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-001.jpg" alt="2019-06-18-001"></p>
+<h2 id="12-container-isolation">1.2 Container Isolation</h2>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-002.jpg" alt="2019-06-18-002"></p>
 <p>container id 可以简写前几个字母 只要唯一即可。</p>
-
-<h2 id="1-3-terminology">1.3 Terminology</h2>
-
+<h2 id="13-terminology">1.3 Terminology</h2>
 <ul>
-<li><p>Images - the file system and configuration of our application.</p></li>
-
-<li><p>Containers - Running instances of Dokcer images. Containers run the actual applications. A container includes an application and all of its dependencies. It shares the kernel wiht other containers, and run as isolated process in user space on the host OS. <code>docker container ls</code> a list of running containers.</p></li>
-
-<li><p>Docker caemon - the background service running on the host that manages building, running and distributing Docker containers.</p></li>
-
-<li><p>Docker client - command line tool that allows the user to interact with the Docker daemon.</p></li>
-
-<li><p>Docker Store - a directory of all availiable Docker images.</p></li>
+<li>
+<p>Images - the file system and configuration of our application.</p>
+</li>
+<li>
+<p>Containers - Running instances of Dokcer images. Containers run the actual applications. A container includes an application and all of its dependencies. It shares the kernel wiht other containers, and run as isolated process in user space on the host OS. <code>docker container ls</code> a list of running containers.</p>
+</li>
+<li>
+<p>Docker caemon - the background service running on the host that manages building, running and distributing Docker containers.</p>
+</li>
+<li>
+<p>Docker client - command line tool that allows the user to interact with the Docker daemon.</p>
+</li>
+<li>
+<p>Docker Store - a directory of all availiable Docker images.</p>
+</li>
 </ul>
-
-<h2 id="1-4-image-creation">1.4 Image Creation</h2>
-
-<pre><code class="language-shell">running an interative shell in a ubuntu container
+<h2 id="14-image-creation">1.4 Image Creation</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">running an interative shell in a ubuntu container
 docker container run -ti ubuntu bash
-</code></pre>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-003.jpg" alt="2019-06-18-003" /></p>
-
+</code></pre></div><p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-003.jpg" alt="2019-06-18-003"></p>
 <p>新建一个文件 index.js</p>
-
-<pre><code class="language-js">var os = require(&quot;os&quot;);
-var hostname = os.hostname();
-console.log(&quot;hello from &quot; + hostname);
-</code></pre>
-
-<p>建立一个Dockerfile文件</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">os</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;os&#34;</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">hostname</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">os</span>.<span style="color:#a6e22e">hostname</span>();
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;hello from &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">hostname</span>);
+</code></pre></div><p>建立一个Dockerfile文件</p>
 <pre><code>FROM alpine
 RUN apk update &amp;&amp; apk add nodejs
 COPY . /app
 WORKDIR /app
 CMD [&quot;node&quot;,&quot;index.js&quot;]
-</code></pre>
-
-<p>构建镜像</p>
-
+</code></pre><p>构建镜像</p>
 <pre><code>docker image build -t hello:v0.1 .
-</code></pre>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-005.jpg" alt="2019-06-18-005" /></p>
-
+</code></pre><p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-005.jpg" alt="2019-06-18-005"></p>
 <p>启动容器</p>
-
 <pre><code>docker container run hello:v0.1
-</code></pre>
-
-<h3 id="what-just-happend">what just happend?</h3>
-
+</code></pre><h3 id="what-just-happend">what just happend?</h3>
 <ol>
-<li><p><code>FROM alpine</code>specifies a base image to pull <font color="green"><strong>FROM</strong></font> alpine image we used in earlier labs.</p></li>
-
-<li><p><code>RUN apk update &amp;&amp; apk add nodejs</code> <font color="green"><strong>RUN</strong></font> two commands(apk update and apk add) inside that container which installs the Node.js server.</p></li>
-
-<li><p><code>COPY . /app</code> <font color="green"><strong>COPY</strong></font> files from our dircetory in to the container. e.g. index.js we just created.</p></li>
-
-<li><p><code>WORKDIR /app</code> <font color="green"><strong>WORKDIR</strong></font> specify the WORKDIR the directory the container should use when it starts up.</p></li>
-
-<li><p>And finally, we gave our container a command(<font color="green"><strong>CMD</strong></font>) to run when the container starts.</p></li>
+<li>
+<p><code>FROM alpine</code>specifies a base image to pull <!-- raw HTML omitted --><strong>FROM</strong><!-- raw HTML omitted --> alpine image we used in earlier labs.</p>
+</li>
+<li>
+<p><code>RUN apk update &amp;&amp; apk add nodejs</code> <!-- raw HTML omitted --><strong>RUN</strong><!-- raw HTML omitted --> two commands(apk update and apk add) inside that container which installs the Node.js server.</p>
+</li>
+<li>
+<p><code>COPY . /app</code> <!-- raw HTML omitted --><strong>COPY</strong><!-- raw HTML omitted --> files from our dircetory in to the container. e.g. index.js we just created.</p>
+</li>
+<li>
+<p><code>WORKDIR /app</code> <!-- raw HTML omitted --><strong>WORKDIR</strong><!-- raw HTML omitted --> specify the WORKDIR the directory the container should use when it starts up.</p>
+</li>
+<li>
+<p>And finally, we gave our container a command(<!-- raw HTML omitted --><strong>CMD</strong><!-- raw HTML omitted -->) to run when the container starts.</p>
+</li>
 </ol>
-
-<p>With <font color="Darkorange"><strong>Dockerfile</strong></font> we can specify preceise commands to run for everyone who uses this container.  Other users do not have to build the container themselves once you push your container up to a repository (which we will cover later) or even know what commands are used.</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-006.jpg" alt="2019-06-18-006" /></p>
-
+<p>With <!-- raw HTML omitted --><strong>Dockerfile</strong><!-- raw HTML omitted --> we can specify preceise commands to run for everyone who uses this container.  Other users do not have to build the container themselves once you push your container up to a repository (which we will cover later) or even know what commands are used.</p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-18-006.jpg" alt="2019-06-18-006"></p>
 <h3 id="terminology">Terminology</h3>
-
 <ul>
-<li><p>Layers - A Docker image is built up a series of layers.</p></li>
-
-<li><p>Dockerfile - A text file contains all the commands, in order, needed to build a given image.</p></li>
-
-<li><p>Volumes - A special Docker container layer that allows data to persist and be shared separately from container itself.</p></li>
+<li>
+<p>Layers - A Docker image is built up a series of layers.</p>
+</li>
+<li>
+<p>Dockerfile - A text file contains all the commands, in order, needed to build a given image.</p>
+</li>
+<li>
+<p>Volumes - A special Docker container layer that allows data to persist and be shared separately from container itself.</p>
+</li>
 </ul>
 		</div>
 		
@@ -246,7 +209,7 @@ CMD [&quot;node&quot;,&quot;index.js&quot;]
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Windows 10 Docker &amp; GUI</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Windows 10 Docker &amp; GUI" />
 <meta property="og:description" content="[TOC]
-
-win10安装docker启动容器调用图形界面报错。
-
-" />
+win10安装docker启动容器调用图形界面报错。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/java_skill/2019-06-20-docker_gui_win10/" />
-
-
-
-<meta property="article:published_time" content="2019-06-20T20:04:38&#43;08:00"/>
-
-<meta property="article:modified_time" content="2019-06-20T20:04:38&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-06-20T20:04:38+08:00" />
+<meta property="article:modified_time" content="2019-06-20T20:04:38+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,72 +83,41 @@ MathJax.Hub.Config({
     <h2>Windows 10 Docker &amp; GUI</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#windows-10-docker-gui">Windows 10 Docker &amp; GUI</a>
-<ul>
-<li><a href="#下载安装xming">下载安装xming</a></li>
-<li><a href="#启动powershell">启动powershell</a></li>
-<li><a href="#运行docker">运行docker</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#下载安装xming">下载安装xming</a></li>
+    <li><a href="#启动powershell">启动powershell</a></li>
+    <li><a href="#运行docker">运行docker</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>win10安装docker启动容器调用图形界面报错。</p>
-
-<p></p>
-
-<h1 id="windows-10-docker-gui">Windows 10 Docker &amp; GUI</h1>
-
+<h1 id="windows-10-docker--gui">Windows 10 Docker &amp; GUI</h1>
 <h2 id="下载安装xming">下载安装xming</h2>
-
 <p><a href="https://sourceforge.net/projects/xming/">xming download</a></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-010.jpg" alt="2019-06-20-010" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-010.jpg" alt="2019-06-20-010"></p>
 <p>修改xming安装目录中的X0.hosts 。</p>
-
 <p>配置xming，新增本地ip，并保存。</p>
-
 <pre><code>localhost
 192.168.31.224
-</code></pre>
-
-<p>启动XLaunch.ext</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-011.jpg" alt="2019-06-20-011" /></p>
-
+</code></pre><p>启动XLaunch.ext</p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-011.jpg" alt="2019-06-20-011"></p>
 <p>按如下配置：</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-011.jpg" alt="2019-06-20-011" /></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-012.jpg" alt="2019-06-20-012" /></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-013.jpg" alt="2019-06-20-013" /></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-014.jpg" alt="2019-06-20-014" /></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-015.jpg" alt="2019-06-20-015" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-011.jpg" alt="2019-06-20-011"></p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-012.jpg" alt="2019-06-20-012"></p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-013.jpg" alt="2019-06-20-013"></p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-014.jpg" alt="2019-06-20-014"></p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-06-20-015.jpg" alt="2019-06-20-015"></p>
 <p>保存配置到，%appdata%目录，例如我的C:\Users\x1c\AppData\Roaming</p>
-
 <h2 id="启动powershell">启动powershell</h2>
-
 <p>PowerShell设定本地ip，
 set-variable -name DISPLAY -value 192.168.31.224:0.0</p>
-
 <h2 id="运行docker">运行docker</h2>
-
 <pre><code>docker run --rm -e DISPLAY=$DISPLAY ...
-</code></pre>
-
-<h2 id="参考">参考</h2>
-
+</code></pre><h2 id="参考">参考</h2>
 <p><a href="https://dev.to/darksmile92/run-gui-app-in-linux-docker-container-on-windows-host-4kde">ref-1</a></p>
-
 <p><a href="https://blogs.msdn.microsoft.com/jamiedalton/2018/05/17/windows-10-docker-gui/">ref-2</a></p>
 		</div>
 		
@@ -202,7 +154,7 @@ set-variable -name DISPLAY -value 192.168.31.224:0.0</p>
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

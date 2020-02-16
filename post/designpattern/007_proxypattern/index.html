@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Proxy Pattern</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Proxy Pattern" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about Proxy Pattern.
-
-" />
+Brief introduction about Proxy Pattern." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/007_proxypattern/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:11:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:11:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:11:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:11:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,119 +83,97 @@ MathJax.Hub.Config({
     <h2>Proxy Pattern</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#proxy-pattern">Proxy Pattern</a>
-<ul>
-<li><a href="#代理模式">代理模式：</a></li>
-<li><a href="#场景">场景：</a></li>
-<li><a href="#代理模式-proxy-和装饰器模式-decorator-模式有啥区别呢">代理模式（Proxy）和装饰器模式（Decorator）模式有啥区别呢？</a></li>
-<li><a href="#代码">代码</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#代理模式">代理模式：</a></li>
+    <li><a href="#场景">场景：</a></li>
+    <li><a href="#代理模式proxy和装饰器模式decorator模式有啥区别呢">代理模式（Proxy）和装饰器模式（Decorator）模式有啥区别呢？</a></li>
+    <li><a href="#代码">代码</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about Proxy Pattern.</p>
-
-<p></p>
-
 <h1 id="proxy-pattern">Proxy Pattern</h1>
-
 <h2 id="代理模式">代理模式：</h2>
-
 <p>定义：为其他对象提供一种代理以控制对这个对象的访问。</p>
-
 <h2 id="场景">场景：</h2>
-
 <p>小明喜欢小红，却不敢向小红献殷勤。小明找他的好朋友小刚（代理）帮忙，给小红送洋娃娃、送花、送巧克力。</p>
-
 <p>故事的结局是：来来去去日久生情，代送礼物的小刚（代理）和小红好上了，小明还是单身狗🐶。</p>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-19-001.png" alt="proxy pattern" /></p>
-
-<h2 id="代理模式-proxy-和装饰器模式-decorator-模式有啥区别呢">代理模式（Proxy）和装饰器模式（Decorator）模式有啥区别呢？</h2>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-19-001.png" alt="proxy pattern"></p>
+<h2 id="代理模式proxy和装饰器模式decorator模式有啥区别呢">代理模式（Proxy）和装饰器模式（Decorator）模式有啥区别呢？</h2>
 <p>代理模型是控制Client对真实对象的访问，而装饰器模式是给原有的类增加功能。</p>
-
 <h2 id="代码">代码</h2>
-
 <p><a href="./code/u007">code example</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Client</span> <span style="color:#f92672">{</span>
 
-<pre><code class="language-java">public class Client {
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      Proxy xiao_gang <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy<span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Pursuit<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Lovely Girl&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      xiao_gang<span style="color:#f92672">.</span><span style="color:#a6e22e">sendFlower</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      xiao_gang<span style="color:#f92672">.</span><span style="color:#a6e22e">sendChocolate</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+      xiao_gang<span style="color:#f92672">.</span><span style="color:#a6e22e">sendDoll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#75715e">//    Lovely Girl, here is your flower.
+</span><span style="color:#75715e"></span><span style="color:#75715e">//    Lovely Girl, here is your chocolate.
+</span><span style="color:#75715e"></span><span style="color:#75715e">//    Lovely Girl, here is your doll.
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ISendPresents</span> <span style="color:#f92672">{</span>
 
-  public static void main(String[] args) {
-      Proxy xiao_gang = new Proxy(new Pursuit(&quot;Lovely Girl&quot;));
-      xiao_gang.sendFlower();
-      xiao_gang.sendChocolate();
-      xiao_gang.sendDoll();
-//    Lovely Girl, here is your flower.
-//    Lovely Girl, here is your chocolate.
-//    Lovely Girl, here is your doll.
-  }
-}
-</code></pre>
+  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendFlower</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-<pre><code class="language-java">public interface ISendPresents {
+  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendDoll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-  void sendFlower();
+  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendChocolate</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
 
-  void sendDoll();
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Pursuit</span> <span style="color:#66d9ef">implements</span> ISendPresents <span style="color:#f92672">{</span>
 
-  void sendChocolate();
-}
+  <span style="color:#66d9ef">private</span> String girlName<span style="color:#f92672">;</span>
 
-class Pursuit implements ISendPresents {
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Pursuit</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">girlName</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
 
-  private String girlName;
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendFlower</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%s, here is your flower.\n&#34;</span><span style="color:#f92672">,</span> girlName<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
 
-  public Pursuit(String name) {
-    this.girlName = name;
-  }
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendDoll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%s, here is your doll.\n&#34;</span><span style="color:#f92672">,</span> girlName<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
 
-  @Override
-  public void sendFlower() {
-    System.out.printf(&quot;%s, here is your flower.\n&quot;, girlName);
-  }
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendChocolate</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;%s, here is your.\n&#34;</span><span style="color:#f92672">,</span> girlName<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-  @Override
-  public void sendDoll() {
-    System.out.printf(&quot;%s, here is your doll.\n&quot;, girlName);
-  }
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Proxy</span> <span style="color:#66d9ef">implements</span> ISendPresents <span style="color:#f92672">{</span>
 
-  @Override
-  public void sendChocolate() {
-    System.out.printf(&quot;%s, here is your.\n&quot;, girlName);
-  }
-}
+  <span style="color:#66d9ef">private</span> Pursuit p<span style="color:#f92672">;</span>
 
-class Proxy implements ISendPresents {
+  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Proxy</span><span style="color:#f92672">(</span>Pursuit p<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> p<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
 
-  private Pursuit p;
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendFlower</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    p<span style="color:#f92672">.</span><span style="color:#a6e22e">sendFlower</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
 
-  public Proxy(Pursuit p) {
-    this.p = p;
-  }
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendDoll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    p<span style="color:#f92672">.</span><span style="color:#a6e22e">sendDoll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
 
-  @Override
-  public void sendFlower() {
-    p.sendFlower();
-  }
-
-  @Override
-  public void sendDoll() {
-    p.sendDoll();
-  }
-
-  @Override
-  public void sendChocolate() {
-    p.sendFlower();
-  }
-}
-</code></pre>
-
-<p>2019-11-20</p>
+  <span style="color:#a6e22e">@Override</span>
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sendChocolate</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    p<span style="color:#f92672">.</span><span style="color:#a6e22e">sendFlower</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>2019-11-20</p>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -248,7 +209,7 @@ class Proxy implements ISendPresents {
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

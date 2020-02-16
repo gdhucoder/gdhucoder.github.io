@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Git on CoderPunk</title>
+    <title>GIT on CoderPunk</title>
     <link>https://gdhucoder.github.io/tags/git/</link>
-    <description>Recent content in Git on CoderPunk</description>
+    <description>Recent content in GIT on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Wed, 04 Apr 2018 21:25:07 +0800</lastBuildDate>
@@ -18,12 +18,9 @@
       
       <guid>https://gdhucoder.github.io/post/tech_details/gitee_as_pic_storage/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;本篇文章是一个启发，介绍如何使用gitee作为免费图床。
 没有使用github的原因是github国内访问有些慢。
-另外，还有其他优秀的云存储，例如7niu，朋友们也可以试一下。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+另外，还有其他优秀的云存储，例如7niu，朋友们也可以试一下。&lt;/p&gt;</description>
     </item>
     
   </channel>

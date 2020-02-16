@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tag on CoderPunk</title>
+    <title>TAG on CoderPunk</title>
     <link>https://gdhucoder.github.io/tags/tag/</link>
-    <description>Recent content in Tag on CoderPunk</description>
+    <description>Recent content in TAG on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Tue, 15 Oct 2019 13:40:23 +0800</lastBuildDate>
@@ -18,11 +18,8 @@
       
       <guid>https://gdhucoder.github.io/thinking/2019-10-15-designpatternaboutdoingthings/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;昨天听了梁宁老师的做事情设计模式的文章。
-发现自己总是做事情经常三分钟热度。最近发现自己健身又没有什么乐趣了。刚开始的一段时间每天都很兴奋。从美国回来后，就没那么兴奋了。这个要警惕。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+发现自己总是做事情经常三分钟热度。最近发现自己健身又没有什么乐趣了。刚开始的一段时间每天都很兴奋。从美国回来后，就没那么兴奋了。这个要警惕。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,10 +29,7 @@
       
       <guid>https://gdhucoder.github.io/thinking/2019-10-12-interviewcitibank/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;今天参加了中信银行信用卡中心的面试。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;今天参加了中信银行信用卡中心的面试。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -45,10 +39,7 @@
       
       <guid>https://gdhucoder.github.io/thinking/2019-10-10-trip2us_part2/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;记录纽约之行的见闻。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;记录纽约之行的见闻。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -58,10 +49,7 @@
       
       <guid>https://gdhucoder.github.io/thinking/2019-10-10-trip2us_part1/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;记录纽约之行的见闻。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;记录纽约之行的见闻。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -71,10 +59,7 @@
       
       <guid>https://gdhucoder.github.io/thinking/2019-10-10-trip2us_part3/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;记录纽约之行的见闻。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;记录纽约之行的见闻。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -84,10 +69,7 @@
       
       <guid>https://gdhucoder.github.io/post/java_skill/2019-06-20-docker_gui_win10/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;win10安装docker启动容器调用图形界面报错。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;win10安装docker启动容器调用图形界面报错。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -97,10 +79,7 @@
       
       <guid>https://gdhucoder.github.io/post/note/2019-04-30-hashing-with-salt/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;如何防止被&amp;rdquo;脱裤&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;如何防止被&amp;quot;脱裤&amp;rdquo;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -110,10 +89,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/04/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;浅析最好、最坏、平均、均摊时间复杂度&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;浅析最好、最坏、平均、均摊时间复杂度&lt;/p&gt;</description>
     </item>
     
   </channel>

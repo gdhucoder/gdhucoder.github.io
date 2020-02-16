@@ -5,33 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>13 | 线性排序：如何根据年龄给100万用户数据排序？</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="13 | 线性排序：如何根据年龄给100万用户数据排序？" />
 <meta property="og:description" content="[TOC]
-
 本篇介绍线性时间排序。
-
-
-
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/alg4/geekbang/13_radix_counting_bucket_sort/" />
-
-
-
-<meta property="article:published_time" content="2019-04-20T18:23:20&#43;08:00"/>
-
-<meta property="article:modified_time" content="2019-04-20T18:23:20&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-04-20T18:23:20+08:00" />
+<meta property="article:modified_time" content="2019-04-20T18:23:20+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -102,144 +84,113 @@ MathJax.Hub.Config({
     <h2>13 | 线性排序：如何根据年龄给100万用户数据排序？</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#线性时间排序">线性时间排序</a>
-<ul>
-<li><a href="#桶排序">桶排序</a></li>
-<li><a href="#计数排序">计数排序</a></li>
-<li><a href="#基数排序">基数排序</a></li>
-<li><a href="#问题">问题</a></li>
-<li><a href="#思考题">思考题</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#桶排序">桶排序</a></li>
+    <li><a href="#计数排序">计数排序</a></li>
+    <li><a href="#基数排序">基数排序</a></li>
+    <li><a href="#问题">问题</a></li>
+    <li><a href="#思考题">思考题</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>本篇介绍线性时间排序。</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-20-004.jpg" alt="2019-03-20-004" /></p>
-
-<p></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-09-001.png" alt="cover" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-20-004.jpg" alt="2019-03-20-004"></p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-09-001.png" alt="cover"></p>
 <p>前两节中，我们着重分析了集中常见排序算法的原理、时间复杂度、空间复杂度、稳定性等。今天介绍三种时间复杂度是O(n)的排序算法：桶排序，计数排序、基数排序。因为这些排序算法的时间复杂度是线性的，所以我们把这类排序算法叫做
-<font color="green"><strong>线性排序</strong></font>
+<!-- raw HTML omitted --><strong>线性排序</strong><!-- raw HTML omitted -->
 (Linear sort)。之所以能到线性时间的复杂度，主要原因是，这三个算法是非基于比较的排序算法，都不涉及元素之间的比较操作。</p>
-
 <h1 id="线性时间排序">线性时间排序</h1>
-
 <h2 id="桶排序">桶排序</h2>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-09-002.png" alt="桶排序" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-09-002.png" alt="桶排序"></p>
 <p>视频： <a href="https://www.youtube.com/watch?v=VuXbEb5ywrU">https://www.youtube.com/watch?v=VuXbEb5ywrU</a></p>
-
 <p>Wiki：
 <a href="https://en.wikipedia.org/wiki/Bucket_sort">https://en.wikipedia.org/wiki/Bucket_sort</a></p>
-
 <p>桶排序的的主要思想是将数组中的元素分配到桶中，然后分别对桶中的元素进行排序。</p>
-
 <p>桶排序的步骤是：</p>
-
 <ol>
-<li><p>首先初始化 <font color="Darkorange"><strong>空桶</strong></font></p></li>
-
-<li><p>分配：变量原始数组，将每个对象分配到对应的桶中</p></li>
-
-<li><p>每个桶中的元素进行排序。通常使用插入排序insertion sort</p></li>
-
-<li><p><font color="Darkorange"><strong>收集（gather)</strong></font>顺序访问每个桶，取出元素，放回到原始数组。</p></li>
+<li>
+<p>首先初始化 <!-- raw HTML omitted --><strong>空桶</strong><!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>分配：变量原始数组，将每个对象分配到对应的桶中</p>
+</li>
+<li>
+<p>每个桶中的元素进行排序。通常使用插入排序insertion sort</p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->**收集（gather)**<!-- raw HTML omitted -->顺序访问每个桶，取出元素，放回到原始数组。</p>
+</li>
 </ol>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-20-003.jpg" alt="2019-03-20-003" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-20-003.jpg" alt="2019-03-20-003"></p>
 <p>如果需要排序的数据有n个，将它们均匀的划分到m个桶内，每个桶有k=n/m个元素。每个桶内使用快排，时间复杂度为$O(klogk)$。m个桶排序的时间复杂度就是$O(nlog(n/m))$ 。 当桶的个数接近数据个数n时，$log(n/m)$就是一个非常小的常量，这个时候桶排序的时间复杂度接近$O(n)$。</p>
-
 <h2 id="计数排序">计数排序</h2>
-
 <p><a href="https://www.geeksforgeeks.org/counting-sort/">geeksforgeeks</a></p>
-
 <p><a href="https://en.wikipedia.org/wiki/Counting_sort">Counting sort wiki</a></p>
-
 <p>计数排序(counting sort)为什么叫计数排序呢？因为排序算法中使用了一个count数组，用于统计待排序数组中每个key出现的次数。</p>
-
 <p>这个算法也在《算法4》的第五章String出现了。</p>
-
 <p>适用场景：适用于数据范围不大的场景，如果数据范围要比要排序的数据n大太多，就不适合用计数排序了。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> a<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-<pre><code class="language-java">  public static void sort(int[] a) {
+    <span style="color:#66d9ef">int</span> N <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
 
-    int N = a.length;
+    <span style="color:#66d9ef">int</span> max <span style="color:#f92672">=</span> a<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> max<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        max <span style="color:#f92672">=</span> a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+      <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
 
-    int max = a[0];
-    for (int i = 1; i &lt; a.length; i++) {
-      if (a[i] &gt; max) {
-        max = a[i];
-      }
-    }
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> count <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>max <span style="color:#f92672">+</span> 1<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
 
-    int[] count = new int[max + 1];
+    <span style="color:#75715e">// compute frequency
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      count<span style="color:#f92672">[</span>a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">]</span><span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    // compute frequency
-    for (int i = 0; i &lt; N; i++) {
-      count[a[i]]++;
-    }
+    <span style="color:#75715e">// transform counts into indices
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> count<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      count<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">+</span><span style="color:#f92672">=</span> count<span style="color:#f92672">[</span>i <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    // transform counts into indices
-    for (int i = 1; i &lt; count.length; i++) {
-      count[i] += count[i - 1];
-    }
+    StdOut<span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;count: &#34;</span> <span style="color:#f92672">+</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>count<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-    StdOut.println(&quot;count: &quot; + Arrays.toString(count));
+    <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> res <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>N<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
 
-    int[] res = new int[N];
+    <span style="color:#75715e">// Build the output character array
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// To make it stable we are operating in reverse order
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//    for (int i = 0; i &lt; N; i++) { // unstable
+</span><span style="color:#75715e"></span><span style="color:#75715e">//      count[a[i]]--;
+</span><span style="color:#75715e"></span><span style="color:#75715e">//      res[count[a[i]]] = a[i];
+</span><span style="color:#75715e"></span><span style="color:#75715e">//    }
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> N <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      res<span style="color:#f92672">[</span>count<span style="color:#f92672">[</span>a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">]</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+      count<span style="color:#f92672">[</span>a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">]</span><span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-    // Build the output character array
-    // To make it stable we are operating in reverse order
+    <span style="color:#75715e">// copy back
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> N<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+      a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> res<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
-//    for (int i = 0; i &lt; N; i++) { // unstable
-//      count[a[i]]--;
-//      res[count[a[i]]] = a[i];
-//    }
+    StdOut<span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;sort: &#34;</span> <span style="color:#f92672">+</span> Arrays<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>a<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-    for (int i = N - 1; i &gt;= 0; i--) {
-      res[count[a[i]] - 1] = a[i];
-      count[a[i]]--;
-    }
-
-    // copy back
-    for (int i = 0; i &lt; N; i++) {
-      a[i] = res[i];
-    }
-
-    StdOut.println(&quot;sort: &quot; + Arrays.toString(a));
-
-  }
-</code></pre>
-
-<h2 id="基数排序">基数排序</h2>
-
+  <span style="color:#f92672">}</span>
+</code></pre></div><h2 id="基数排序">基数排序</h2>
 <p>如何给10万或者100万个手机号码进行排序？</p>
-
 <blockquote>
 <p>基数排序的方式可以采用LSD（Least significant digital）或MSD（Most significant digital），LSD的排序方式由键值的最右边开始，而MSD则相反，由键值的最左边开始。</p>
 </blockquote>
-
 <p>基数排序的时间复杂度是O(N)</p>
-
 <p>把数据按照
-<font color="Darkorange"><strong>位</strong></font>
+<!-- raw HTML omitted --><strong>位</strong><!-- raw HTML omitted -->
 排序。对于每一位使用线性排序算法。同时对于按位的排序应该是稳定的。</p>
-
 <h2 id="问题">问题</h2>
-
 <p>如何给100万用户按照年龄排序呢？ 答案是使用桶排序。将用户按照年龄1到120放到120个桶中，然后顺序遍历这120个桶中的元素，就完成了对100万用户按照年龄排序了。</p>
-
 <h2 id="思考题">思考题</h2>
-
 <p>假设我们现在需要对 D，a，F，B，c，A，z 这个字符串进行排序，要求将其中所有小写字母都排在大写字母的前面，但小写字母内部和大写字母内部不要求有序。比如经过排序之后为 a，c，z，D，F，B，A，这个如何来实现呢？如果字符串中存储的不仅有大小写字母，还有数字。要将小写字母的放到前面，大写字母放在最后，数字放在中间，不用排序算法，又该怎么解决呢？</p>
 		</div>
 		
@@ -276,7 +227,7 @@ MathJax.Hub.Config({
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

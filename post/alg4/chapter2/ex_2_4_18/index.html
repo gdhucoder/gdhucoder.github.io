@@ -5,27 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>算法4 Java解答 2.4.18</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="算法4 Java解答 2.4.18" />
 <meta property="og:description" content="2.4.18 问题： 2.4.18 In MaxPQ, suppose that a client calls insert() with an item that is larger than all items in the queue, and then immediately calls delMax(). Assume that there are no duplicate keys. Is the resulting heap identical to the heap as it was before these op- erations? Answer the same question for two insert() operations (the first with a key larger than all keys in the queue and the second for a key larger than that one) followed by two delMax() operations." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_18/" />
-
-
-
-<meta property="article:published_time" content="2018-10-27T06:00:00&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-10-27T06:00:00&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2018-10-27T06:00:00+08:00" />
+<meta property="article:modified_time" content="2018-10-27T06:00:00+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -96,38 +82,27 @@ MathJax.Hub.Config({
     <h2>算法4 Java解答 2.4.18</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#2-4-18">2.4.18</a>
-<ul>
-<li><a href="#问题">问题：</a></li>
-<li><a href="#分析">分析：</a></li>
-<li><a href="#参考">参考：</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#问题">问题：</a></li>
+    <li><a href="#分析">分析：</a></li>
+    <li><a href="#参考">参考：</a></li>
+  </ul>
 </nav>
 </aside>
 
-			
-
-<h1 id="2-4-18">2.4.18</h1>
-
+			<h1 id="2418">2.4.18</h1>
 <h2 id="问题">问题：</h2>
-
 <p>2.4.18 In MaxPQ, suppose that a client calls insert() with an item that is larger than all items in the queue, and then immediately calls delMax(). Assume that there are no duplicate keys. Is the resulting heap identical to the heap as it was before these op- erations? Answer the same question for two insert() operations (the first with a key larger than all keys in the queue and the second for a key larger than that one) followed by two delMax() operations.</p>
-
 <h2 id="分析">分析：</h2>
-
 <p>一、假设所有的Key都不相同
 对于insert, delMax
 元素的上升路径a1,a2,a3, &hellip; , ak. ak为待插入元素，a1为根节点。
 insert后以上元素的顺序变为 ak, a1, a2, a3, &hellip; , ak-1
 delMax，ak-1, a1, a2, &hellip;, ak-2
 由于ak-2大于ak-1，所以ak-1原路返回。</p>
-
 <p>对于insert,insert,delMax,delMax
 同理。
 堆不变。</p>
-
 <p>二、假设假设上升路径上有的元素Key相同。
 一个极端情况，假设堆在插入新元素之前所有的key都相同。
 元素的上升路径a1,a2,a3, &hellip; , ak. ak为待插入元素，a1为根节点。
@@ -135,9 +110,7 @@ insert后以上元素的顺序变为 ak, a1, a2, a3, &hellip; , ak-1
 delMax，ak-1, a1, a2, &hellip;, ak-2
 ak-1 = a1, a2, &hellip;
 所以ak-1的位置不会改变，那么结论是堆变了。</p>
-
 <h2 id="参考">参考：</h2>
-
 <p><a href="https://alg4.ikesnowy.com/2-4-18/">沈星繁-2.4.18</a></p>
 
 		</div>
@@ -175,7 +148,7 @@ ak-1 = a1, a2, &hellip;
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

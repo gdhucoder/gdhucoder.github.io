@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kafa介绍</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Kafa介绍" />
 <meta property="og:description" content="[TOC]
-
-玩玩Kafka。
-
-" />
+玩玩Kafka。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/note/2019-05-02-kafka/" />
-
-
-
-<meta property="article:published_time" content="2019-05-02T15:38:48&#43;08:00"/>
-
-<meta property="article:modified_time" content="2019-05-02T15:38:48&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-05-02T15:38:48+08:00" />
+<meta property="article:modified_time" content="2019-05-02T15:38:48+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,141 +83,102 @@ MathJax.Hub.Config({
     <h2>Kafa介绍</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#kafka分布式流平台">Kafka分布式流平台</a>
-<ul>
-<li><a href="#流平台有以下三个关键能力">流平台有以下三个关键能力：</a></li>
-<li><a href="#kafa有以下两个主要应用">Kafa有以下两个主要应用</a></li>
-<li><a href="#为什么kafka可以做到这些">为什么kafka可以做到这些？</a>
-<ul>
-<li><a href="#kafka包含4个核心api">Kafka包含4个核心API</a></li>
-</ul></li>
-<li><a href="#主题和日志">主题和日志</a></li>
-<li><a href="#分布式">分布式</a></li>
-<li><a href="#地域复制">地域复制</a></li>
-<li><a href="#kafka确保">Kafka确保</a></li>
-<li><a href="#kafka是一个消息系统">Kafka是一个消息系统</a></li>
-<li><a href="#kafka是一个文件存储系统">Kafka是一个文件存储系统</a></li>
-<li><a href="#kafka是一个流处理系统">Kafka是一个流处理系统</a></li>
-<li><a href="#整合到一起">整合到一起</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#流平台有以下三个关键能力">流平台有以下三个关键能力：</a></li>
+    <li><a href="#kafa有以下两个主要应用">Kafa有以下两个主要应用</a></li>
+    <li><a href="#为什么kafka可以做到这些">为什么kafka可以做到这些？</a>
+      <ul>
+        <li><a href="#kafka包含4个核心api">Kafka包含4个核心API</a></li>
+      </ul>
+    </li>
+    <li><a href="#主题和日志">主题和日志</a></li>
+    <li><a href="#分布式">分布式</a></li>
+    <li><a href="#地域复制">地域复制</a></li>
+    <li><a href="#kafka确保">Kafka确保</a></li>
+    <li><a href="#kafka是一个消息系统">Kafka是一个消息系统</a></li>
+    <li><a href="#kafka是一个文件存储系统">Kafka是一个文件存储系统</a></li>
+    <li><a href="#kafka是一个流处理系统">Kafka是一个流处理系统</a></li>
+    <li><a href="#整合到一起">整合到一起</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>玩玩Kafka。</p>
-
-<p></p>
-
 <h1 id="kafka分布式流平台">Kafka分布式流平台</h1>
-
 <h2 id="流平台有以下三个关键能力">流平台有以下三个关键能力：</h2>
-
 <ul>
-<li><p>发布订阅流记录。</p></li>
-
-<li><p>以容错(fault-tolerant)和持久(durable)的方式存储流记录(streaming records)。</p></li>
-
-<li><p>当记录出现时及时处理流记录。</p></li>
+<li>
+<p>发布订阅流记录。</p>
+</li>
+<li>
+<p>以容错(fault-tolerant)和持久(durable)的方式存储流记录(streaming records)。</p>
+</li>
+<li>
+<p>当记录出现时及时处理流记录。</p>
+</li>
 </ul>
-
 <h2 id="kafa有以下两个主要应用">Kafa有以下两个主要应用</h2>
-
 <p>构建系统或应用间获取数据的实时管道。</p>
-
 <p>构建可以转移或者相应流式数据的实时流应用。</p>
-
 <h2 id="为什么kafka可以做到这些">为什么kafka可以做到这些？</h2>
-
 <p>Kafka作为一个集群运行在一个或多个可跨多个数据中心的服务器上。</p>
-
 <p>Kafka集群以类别的方式存储流记录，类别叫做话题(topics)</p>
-
 <p>每条记录包含键、值、时间戳</p>
-
 <h3 id="kafka包含4个核心api">Kafka包含4个核心API</h3>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-05-02-003.jpg" alt="2019-05-02-003" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-05-02-003.jpg" alt="2019-05-02-003"></p>
 <p>生产者(Producer API)允许应用发布一个或者多个话题的流记录。</p>
-
 <p>消费者(Consumer API)允许一个应用定于一个或者多个话题，并且处理流记录。</p>
-
 <p>流(Streams API)允许一个应用做为流处理器(streaming processor)，消费来自一个或者多个话题的输入流，并且产生一个或者多个话题的输出流，高效地将输入流转换成输出流。</p>
-
 <p>连接器（Connector API）允许构建和运行将Kafka主题连接到现有应用程序或数据系统的可重用生产者或使用者。例如，关系数据库的连接器可能捕获对表的每个更改。</p>
-
 <p>在Kafka中，客户端和服务器之间的通信使用简单、高性能、语言无关的TCP协议完成。</p>
-
 <h2 id="主题和日志">主题和日志</h2>
-
 <blockquote>
 <p>A topic is a category or feed name to which records are published.</p>
 </blockquote>
-
 <p>对于每个主题Kafka集群维护一个分区日志。如下所示：</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-05-02-001.jpg" alt="2019-05-02-001" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-05-02-001.jpg" alt="2019-05-02-001"></p>
 <p>每个分区都是一个有序的，不可变的记录序列，不断附加到结构化的提交日志中。日志顺序写入，每个分区的记录都有一个唯一的顺序的id号码，叫做偏移量(offset)。</p>
-
 <p>消费者可以根据偏移量读取生产者产生的记录。集群中消费者增加或者减少，不会影响到其他消费者。</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-05-02-002.jpg" alt="2019-05-02-002" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-05-02-002.jpg" alt="2019-05-02-002"></p>
 <p>日志中的分区有多种用途。
 首先，它们允许日志扩展到超出适合单个服务器的大小。
 每个单独的分区必须适合托管它的服务器，但主题可能有许多分区，因此它可以处理任意数量的数据。
 其次，它们充当了并行性的单位 - 更多的是在一点上。</p>
-
 <h2 id="分布式">分布式</h2>
-
 <p>日志分布分布于Kafka集群中的服务器上，每个服务器做为分区的一部分处理数据和请求。</p>
-
 <p>每个分区都有一个服务器充当“领导者”，零个或多个服务器充当“追随者”。
 领导者处理分区的所有读取和写入请求，而关注者被动地复制领导者。
 如果领导者失败，其中一个粉丝将自动成为新的领导者。
 每个服务器都充当其某些分区的领导者和其他服务器的追随者，因此负载在群集中很平衡。</p>
-
 <h2 id="地域复制">地域复制</h2>
-
 <p>Kafka MirrorMaker为集群提供地理复制支持。使用MirrorMaker，消息可以跨多个数据中心或云区域复制。您可以在用于备份和恢复的active/passive场景中使用此功能;或者在active/passive场景中，将数据放置到离用户更近的位置，或者支持数据本地化需求。</p>
-
 <h2 id="kafka确保">Kafka确保</h2>
-
 <ul>
-<li><p>同一个生产者产生的消息写入日志是有序的</p></li>
-
-<li><p>消费者看到日志中的记录是有序的</p></li>
-
-<li><p>对于具有复制因子N的主题，我们将容忍最多N-1个服务器故障，而不会丢失提交到日志的任何记录。</p></li>
+<li>
+<p>同一个生产者产生的消息写入日志是有序的</p>
+</li>
+<li>
+<p>消费者看到日志中的记录是有序的</p>
+</li>
+<li>
+<p>对于具有复制因子N的主题，我们将容忍最多N-1个服务器故障，而不会丢失提交到日志的任何记录。</p>
+</li>
 </ul>
-
 <h2 id="kafka是一个消息系统">Kafka是一个消息系统</h2>
-
 <p>消息处理有两个经典模型：队列和发布-订阅。Kafka将二者结合。
 Kafka中的消费者组的概念概括了这两个概念。与队列一样，使用者组允许您将处理划分到一组进程(使用者组的成员)上。与发布-订阅一样，Kafka允许您向多个消费者组广播消息。</p>
-
 <h2 id="kafka是一个文件存储系统">Kafka是一个文件存储系统</h2>
-
 <p>Kafka使用的磁盘结构伸缩性很好，无论服务器上有50 KB还是50 TB的持久数据，Kafka表现一样。客户端控制读取文件的位置。
 可以将Kafka看作一种专用于高性能、低延迟提交日志存储、复制和传播的分布式文件系统。</p>
-
 <h2 id="kafka是一个流处理系统">Kafka是一个流处理系统</h2>
-
 <blockquote>
 <p>This facility helps solve the hard problems this type of application faces: handling out-of-order data, reprocessing input as code changes, performing stateful computations, etc.</p>
 </blockquote>
-
 <h2 id="整合到一起">整合到一起</h2>
-
 <p>Kafka扩展了流处理的概念，可以保存数据（文件系统），结合了消息系统（队列和发布-订阅）。Kafka可以用于流处理应用和流数据管道。</p>
-
 <h2 id="参考">参考</h2>
-
 <p><a href="https://kafka.apache.org/intro">Kafka官网Introduction</a></p>
 		</div>
 		
@@ -271,7 +215,7 @@ Kafka中的消费者组的概念概括了这两个概念。与队列一样，使
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

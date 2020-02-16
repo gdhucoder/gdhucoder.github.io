@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DIP</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="DIP" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about DIP.
-
-" />
+Brief introduction about DIP." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/005_dip/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:07:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:07:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:07:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:07:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,78 +83,56 @@ MathJax.Hub.Config({
     <h2>DIP</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#依赖倒转原则-dip">依赖倒转原则 DIP</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#类图">类图</a></li>
-<li><a href="#用例">用例</a></li>
-<li><a href="#注意">注意</a>
-<ul>
-<li><a href="#什么是控制反转-inversion-of-control">什么是控制反转 Inversion Of Control</a></li>
-<li><a href="#什么是依赖注入-dependency-injection">什么是依赖注入 Dependency Injection</a></li>
-<li><a href="#依赖注入框架-和-控制反转容器">依赖注入框架 和 控制反转容器</a></li>
-<li><a href="#小结">小结</a></li>
-</ul></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#类图">类图</a></li>
+    <li><a href="#用例">用例</a></li>
+    <li><a href="#注意">注意</a>
+      <ul>
+        <li><a href="#什么是控制反转-inversion-of-control">什么是控制反转 Inversion Of Control</a></li>
+        <li><a href="#什么是依赖注入-dependency-injection">什么是依赖注入 Dependency Injection</a></li>
+        <li><a href="#依赖注入框架-和-控制反转容器">依赖注入框架 和 控制反转容器</a></li>
+        <li><a href="#小结">小结</a></li>
+      </ul>
+    </li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about DIP.</p>
-
-<p></p>
-
 <h1 id="依赖倒转原则-dip">依赖倒转原则 DIP</h1>
-
 <h2 id="定义">定义</h2>
-
 <p>抽象不应该依赖细节，细节应该依赖于抽象。</p>
-
 <p>高层模块不应该依赖于低层模块，两个都应该依赖于抽象。</p>
-
 <p>说白了就是针对接口编程，不要对实现编程。</p>
-
 <h2 id="类图">类图</h2>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-16_032.jpg" alt="dip" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-16_032.jpg" alt="dip"></p>
 <h2 id="用例">用例</h2>
-
 <p>具体见代码 <a href="./code/u005">code example</a></p>
-
 <h2 id="注意">注意</h2>
-
 <h3 id="什么是控制反转-inversion-of-control">什么是控制反转 Inversion Of Control</h3>
-
 <p>把程序控制权交给第三方。</p>
-
 <h3 id="什么是依赖注入-dependency-injection">什么是依赖注入 Dependency Injection</h3>
-
 <p>不通过 new() 的方式在类内部创建依赖类对象，
 而是将依赖的类对象在外部创建好之后，通过构造函数、函数参数等方式传递（或注入）给类使用。</p>
-
 <h3 id="依赖注入框架-和-控制反转容器">依赖注入框架 和 控制反转容器</h3>
-
 <p>例如 Spring 框架</p>
-
 <h3 id="小结">小结</h3>
-
 <ul>
-<li><p>控制反转是一种编程思想，把控制权交给第三方。依赖注入是实现控制反转最典型的方法。</p></li>
-
-<li><p>依赖注入（对象）的方式要采用“基于接口而非实现编程”的原则，说白了就是依赖倒转。</p></li>
-
-<li><p>底层的实现要符合里氏替换原则。子类的可替换性，使得父类模块或依赖于抽象的高层模块无需修改，实现程序的可扩展性。</p></li>
+<li>
+<p>控制反转是一种编程思想，把控制权交给第三方。依赖注入是实现控制反转最典型的方法。</p>
+</li>
+<li>
+<p>依赖注入（对象）的方式要采用“基于接口而非实现编程”的原则，说白了就是依赖倒转。</p>
+</li>
+<li>
+<p>底层的实现要符合里氏替换原则。子类的可替换性，使得父类模块或依赖于抽象的高层模块无需修改，实现程序的可扩展性。</p>
+</li>
 </ul>
-
 <h2 id="参考">参考</h2>
-
 <p>《大话设计模式》</p>
-
 <p><a href="https://time.geekbang.org/column/article/177444">https://time.geekbang.org/column/article/177444</a></p>
 		</div>
 		
@@ -208,7 +169,7 @@ MathJax.Hub.Config({
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

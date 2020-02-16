@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MarkDown Preview MathJax</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="MarkDown Preview MathJax" />
 <meta property="og:description" content="[TOC]
-
-关于MarkDown中的公式
-
-" />
+关于MarkDown中的公式" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/note/markdown-preview-mathjax/" />
-
-
-
-<meta property="article:published_time" content="2018-04-05T07:00:00&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-04-05T07:00:00&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2018-04-05T07:00:00+08:00" />
+<meta property="article:modified_time" content="2018-04-05T07:00:00+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,27 +83,18 @@ MathJax.Hub.Config({
     <h2>MarkDown Preview MathJax</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#关于markdown中的公式">关于MarkDown中的公式</a>
-<ul>
-<li><a href="#显示latex公式">显示LaTeX公式</a></li>
-<li><a href="#markdownpad2-中显示公式">MarkDownPad2 中显示公式</a></li>
-<li><a href="#sublime-中显示公式">Sublime 中显示公式</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#显示latex公式">显示LaTeX公式</a></li>
+    <li><a href="#markdownpad2-中显示公式">MarkDownPad2 中显示公式</a></li>
+    <li><a href="#sublime-中显示公式">Sublime 中显示公式</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <h1 id="关于markdown中的公式">关于MarkDown中的公式</h1>
-
-<p></p>
-
 <h2 id="显示latex公式">显示LaTeX公式</h2>
-
 <p>例如我们要显示公式：</p>
-
 <pre><code>When \\( a \ne 0 \\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are:
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
@@ -134,49 +108,34 @@ $$
 $$
 a = b +  C + d
 $$
-</code></pre>
-
-<p>显示后的样子：</p>
-
+</code></pre><p>显示后的样子：</p>
 <p>When \( a \ne 0 \), there are two solutions to \(ax^2 + bx + c = 0\) and they are:
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$</p>
-
 <p>$$
 \begin{aligned}
-\dot{x} &amp; = \sigma(y-x) <br />
-\dot{y} &amp; = \rho x - y - xz <br />
+\dot{x} &amp; = \sigma(y-x) \<br>
+\dot{y} &amp; = \rho x - y - xz \<br>
 \dot{z} &amp; = -\beta z + xy
 \end{aligned}
 $$
 $$
 a = b +  C + d
 $$</p>
-
 <h2 id="markdownpad2-中显示公式">MarkDownPad2 中显示公式</h2>
-
 <p>可以选择在MarkDownPad2中设置：
 Options-&gt;Advanced-&gt;HTML Header Edit-&gt;保存-&gt;F6</p>
-
 <p>就可以在浏览器中显示公式了。但是有个问题：不能在LiveView中实时渲染公式。</p>
-
 <pre><code>&lt;!--
 &lt;script src='C:\Users\x1c\Downloads\MathJax-master\MathJax-master\MathJax.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt; 
 --&gt;
 
 &lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
-</code></pre>
-
-<p>下面是显示的情况：</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/Image_499.png" alt="Image_499" />
-<img src="https://gitee.com/gdhu/prvpic/raw/master/Image_501.png" alt="Image_501" /></p>
-
+</code></pre><p>下面是显示的情况：</p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/Image_499.png" alt="Image_499">
+<img src="https://gitee.com/gdhu/prvpic/raw/master/Image_501.png" alt="Image_501"></p>
 <h2 id="sublime-中显示公式">Sublime 中显示公式</h2>
-
 <p>下载并安装MarkDownPreView</p>
-
 <p>下面是一些设置：</p>
-
 <pre><code>{
     &quot;browser&quot;: &quot;chrome&quot;,//设置显示的浏览器
   
@@ -186,22 +145,16 @@ Options-&gt;Advanced-&gt;HTML Header Edit-&gt;保存-&gt;F6</p>
 
     &quot;enable_uml&quot;: true,//支持UML
 }
-</code></pre>
-
-<p>设置快捷键F6: keybindings</p>
-
+</code></pre><p>设置快捷键F6: keybindings</p>
 <pre><code>    { 
     &quot;keys&quot;: [&quot;f6&quot;], 
     &quot;command&quot;: &quot;markdown_preview&quot;, 
     &quot;args&quot;: { 
                 &quot;target&quot;: &quot;browser&quot;
             } 
-    }
-</code></pre>
-
-<p>点击F6之后，打开了Chrome浏览器</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/Image_500.png" alt="Image_500" /></p>
+	}
+</code></pre><p>点击F6之后，打开了Chrome浏览器</p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/Image_500.png" alt="Image_500"></p>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -238,7 +191,7 @@ Options-&gt;Advanced-&gt;HTML Header Edit-&gt;保存-&gt;F6</p>
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

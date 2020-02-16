@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tech on CoderPunk</title>
+    <title>TECH on CoderPunk</title>
     <link>https://gdhucoder.github.io/tags/tech/</link>
-    <description>Recent content in Tech on CoderPunk</description>
+    <description>Recent content in TECH on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Thu, 31 Oct 2019 08:14:40 +0800</lastBuildDate>
@@ -18,10 +18,7 @@
       
       <guid>https://gdhucoder.github.io/post/skill/2019-10-31-virtualboxsshtoubuntu/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Window10与虚拟机linux利用端口转发(port forwarding)使用WinSCP传输文件.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Window10与虚拟机linux利用端口转发(port forwarding)使用WinSCP传输文件.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,26 +28,15 @@
       
       <guid>https://gdhucoder.github.io/post/skill/2019-03-12-realtimethumb/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;最近一个问题一直困扰我：写博客时的截图生成图片链接的脚本不好用，没有实时性。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-12-001.jpg&#34; alt=&#34;我爱思考&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-12-001.jpg&#34; alt=&#34;我爱思考&#34;&gt;&lt;/p&gt;
 &lt;p&gt;每次都需要我重新关闭打开一下。&lt;/p&gt;
-
 &lt;p&gt;思路是&lt;/p&gt;
-
 &lt;p&gt;a.每次新截图，保存到指定文件夹&lt;/p&gt;
-
 &lt;p&gt;b.上传到git&lt;/p&gt;
-
 &lt;p&gt;c.显示缩略图&lt;/p&gt;
-
-&lt;p&gt;&lt;font color=&#34;Darkorange&#34;&gt;&lt;strong&gt;d.下次再截图，或者对图片有修改的时候。就需要我重新打开脚本文件。&lt;/strong&gt;&lt;/font&gt;&lt;/p&gt;
-
-&lt;p&gt;这个问题一直没解决&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;**d.下次再截图，或者对图片有修改的时候。就需要我重新打开脚本文件。**&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;这个问题一直没解决&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -89,9 +75,7 @@ Picture Helper使用方法：  upload your pictures to github or gitee this scri
       <pubDate>Wed, 04 Apr 2018 09:00:00 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/note/how-to-add-table-of-contents-in-hugo/</guid>
-      <description>&lt;p&gt;本文介绍如何在template中加入TOC目录。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;本文介绍如何在template中加入TOC目录。&lt;/p&gt;</description>
     </item>
     
   </channel>

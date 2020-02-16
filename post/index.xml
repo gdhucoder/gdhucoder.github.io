@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on CoderPunk</title>
@@ -18,10 +18,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/029_summary/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief summary all design patterns.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief summary all design patterns.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,10 +28,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/028_visitorpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Visitor Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Visitor Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -44,10 +38,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/027_interpreterpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Interpreter Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Interpreter Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -57,10 +48,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/026_flyweightpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Flyweight Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Flyweight Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -70,10 +58,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/025_mediatorpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Mediator Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Mediator Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -83,10 +68,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/022_brigepattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Bridge Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Bridge Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -96,10 +78,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/024_chainofresponsibility/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Chain of Responsibility Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Chain of Responsibility Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -109,10 +88,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/023_commandpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Command Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Command Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -122,10 +98,27 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/021_singletonpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Singleton Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Singleton Pattern&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Iterator Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/020_iteratorpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:21:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/020_iteratorpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;Brief introduction about Iterator Pattern&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Composite Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/019_compositepattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:20:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/019_compositepattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;Brief introduction about Composite Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -135,10 +128,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/017_adapterpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Adapter Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Adapter Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -148,10 +138,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/018_mementopattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Memento Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Memento Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -161,10 +148,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/016_statepattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about State Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about State Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -174,10 +158,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/015_abstractpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Abstract Factory Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Abstract Factory Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -187,10 +168,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/014_observerpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Observer Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Observer Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -200,10 +178,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/013_builderpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Builder Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Builder Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -213,10 +188,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/012_facadepattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Facade Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Facade Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -226,10 +198,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/010_templatemethodpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Template Method.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Template Method.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -239,10 +208,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/009_prototypepattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about prototype pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about prototype pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -252,10 +218,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/008_factorymethodpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Factory Method.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Factory Method.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -265,10 +228,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/006_decoratorpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Decorator.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Decorator.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -278,10 +238,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/007_proxypattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Proxy Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Proxy Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -291,10 +248,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/005_isp/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about ISP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about ISP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -304,10 +258,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/005_lsp/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about LSP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about LSP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -317,10 +268,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/005_dry/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about DRY.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about DRY.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -330,10 +278,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/005_dip/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about DIP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about DIP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -343,10 +288,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/004_ocp/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about OCP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about OCP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -356,10 +298,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/003_srp/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about SRP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about SRP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -369,10 +308,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/002_strategypattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Strategy Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Strategy Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -382,10 +318,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/001_simplefactory/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Simple Factory Method.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Simple Factory Method.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -395,10 +328,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/000_preface/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Design Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Design Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -408,10 +338,7 @@
       
       <guid>https://gdhucoder.github.io/post/skill/2019-10-31-virtualboxsshtoubuntu/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Window10与虚拟机linux利用端口转发(port forwarding)使用WinSCP传输文件.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Window10与虚拟机linux利用端口转发(port forwarding)使用WinSCP传输文件.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -421,10 +348,7 @@
       
       <guid>https://gdhucoder.github.io/post/planning/automatedplanning/2019-08-21-a2c-plan/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;IPC 2018 中的A2C Plan&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;IPC 2018 中的A2C Plan&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -433,9 +357,7 @@
       <pubDate>Thu, 01 Aug 2019 08:30:01 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/alg4/booknote/2019-07-31_alg4_interval2d/</guid>
-      <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -445,10 +367,7 @@
       
       <guid>https://gdhucoder.github.io/post/planning/2019-06-22-derivedpredicate/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Derived Predicates.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Derived Predicates.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -458,10 +377,7 @@
       
       <guid>https://gdhucoder.github.io/post/java_skill/2019-06-20-run-intellij-in-container/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;本文讲win10如何在Docer容器中运行IntelliJ&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;本文讲win10如何在Docer容器中运行IntelliJ&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -471,10 +387,7 @@
       
       <guid>https://gdhucoder.github.io/post/java_skill/2019-06-20-docker_gui_win10/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;win10安装docker启动容器调用图形界面报错。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;win10安装docker启动容器调用图形界面报错。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -484,10 +397,7 @@
       
       <guid>https://gdhucoder.github.io/post/note/2019-06-17-docker/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;关于Docker。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;关于Docker。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -497,10 +407,7 @@
       
       <guid>https://gdhucoder.github.io/post/note/2019-06-11-javanote/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Java笔记&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Java笔记&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -510,10 +417,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/booknote/2_4_priorityqueues/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;介绍优先队列。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;介绍优先队列。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -523,10 +427,7 @@
       
       <guid>https://gdhucoder.github.io/post/java_skill/2019-05-22interview/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;总结一下常见面试。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;总结一下常见面试。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -536,10 +437,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/29_heapapplication/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;堆的应用。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;堆的应用。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -549,10 +447,7 @@
       
       <guid>https://gdhucoder.github.io/post/note/2019-05-02-kafka/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;玩玩Kafka。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;玩玩Kafka。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -562,10 +457,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/24_binarytree_part2/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;二叉查找树，其最大的特点就是，支持动态数据集合的快速插入，删除，查找操作。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;二叉查找树，其最大的特点就是，支持动态数据集合的快速插入，删除，查找操作。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -575,10 +467,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/23_binarytree/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;介绍二叉树基础。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;介绍二叉树基础。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -588,10 +477,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/23_binarytree_part1/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;介绍二叉树基础。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;介绍二叉树基础。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -601,10 +487,7 @@
       
       <guid>https://gdhucoder.github.io/post/note/2019-04-30-hashing-with-salt/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;如何防止被&amp;rdquo;脱裤&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;如何防止被&amp;quot;脱裤&amp;rdquo;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -614,10 +497,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/18_hashmap_part1/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;介绍哈希表（散列表）&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;介绍哈希表（散列表）&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -627,10 +507,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/17_skip_list/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;介绍跳表&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;介绍跳表&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -640,10 +517,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/14_sortinjava/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;你所熟悉的语言中，排序算法是如何实现的？&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;你所熟悉的语言中，排序算法是如何实现的？&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -653,12 +527,8 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/13_radix_counting_bucket_sort/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;本篇介绍线性时间排序。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-20-004.jpg&#34; alt=&#34;2019-03-20-004&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-20-004.jpg&#34; alt=&#34;2019-03-20-004&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -668,10 +538,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/chapter5/huffmancompression/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;总结霍夫曼压缩的相关重点。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;总结霍夫曼压缩的相关重点。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -681,12 +548,8 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/12_mergeandquicksort/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;12 | 排序（下）：如何用快排思想在O(n)内查找第K大元素？&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-006.png&#34; alt=&#34;2019-03-06-006&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-06-006.png&#34; alt=&#34;2019-03-06-006&#34;&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -696,10 +559,7 @@
       
       <guid>https://gdhucoder.github.io/post/note/2019-03-14/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;突击学习一下。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;突击学习一下。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -709,10 +569,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/chapter5/note/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;介绍经典的数据压缩算法&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;介绍经典的数据压缩算法&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -722,26 +579,15 @@
       
       <guid>https://gdhucoder.github.io/post/skill/2019-03-12-realtimethumb/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;最近一个问题一直困扰我：写博客时的截图生成图片链接的脚本不好用，没有实时性。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-12-001.jpg&#34; alt=&#34;我爱思考&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-12-001.jpg&#34; alt=&#34;我爱思考&#34;&gt;&lt;/p&gt;
 &lt;p&gt;每次都需要我重新关闭打开一下。&lt;/p&gt;
-
 &lt;p&gt;思路是&lt;/p&gt;
-
 &lt;p&gt;a.每次新截图，保存到指定文件夹&lt;/p&gt;
-
 &lt;p&gt;b.上传到git&lt;/p&gt;
-
 &lt;p&gt;c.显示缩略图&lt;/p&gt;
-
-&lt;p&gt;&lt;font color=&#34;Darkorange&#34;&gt;&lt;strong&gt;d.下次再截图，或者对图片有修改的时候。就需要我重新打开脚本文件。&lt;/strong&gt;&lt;/font&gt;&lt;/p&gt;
-
-&lt;p&gt;这个问题一直没解决&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;**d.下次再截图，或者对图片有修改的时候。就需要我重新打开脚本文件。**&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;这个问题一直没解决&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -751,10 +597,7 @@
       
       <guid>https://gdhucoder.github.io/post/golang/04/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;GO简单用法&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;GO简单用法&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -764,10 +607,7 @@
       
       <guid>https://gdhucoder.github.io/post/golang/01/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Go语言深入学习。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Go语言深入学习。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -777,10 +617,7 @@
       
       <guid>https://gdhucoder.github.io/post/golang/03/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;读书笔记&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;读书笔记&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -790,10 +627,7 @@
       
       <guid>https://gdhucoder.github.io/post/golang/02/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Golang not highlighting?&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Golang not highlighting?&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -803,14 +637,9 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/11/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-04-003.png&#34; alt=&#34;2019-03-04-003&#34; /&gt;&lt;/p&gt;
-
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-04-003.png&#34; alt=&#34;2019-03-04-003&#34;&gt;&lt;/p&gt;
 &lt;p&gt;本节主要介绍排序算法。&lt;/p&gt;
-
-&lt;p&gt;首先思考一个问题：为什么插入排序比冒泡排序更受欢迎？&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;首先思考一个问题：为什么插入排序比冒泡排序更受欢迎？&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -820,10 +649,7 @@
       
       <guid>https://gdhucoder.github.io/post/tech_details/markdown_use/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;关于Markdown支持html标签&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;关于Markdown支持html标签&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -833,12 +659,8 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/10/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-02-003.png&#34; alt=&#34;2019-03-02-003&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;推荐注册返佣金这个功能一般来说不陌生吧？用户A推荐用户B来注册，用户B又推荐了用户C来注册。我们可以说C的“最终推荐人”为用户A，B的“最终推荐人”也为用户A，而用户A没有“最终推荐人”。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/gdhu/prvpic/raw/master/2019-03-02-003.png&#34; alt=&#34;2019-03-02-003&#34;&gt;&lt;/p&gt;
+&lt;p&gt;推荐注册返佣金这个功能一般来说不陌生吧？用户A推荐用户B来注册，用户B又推荐了用户C来注册。我们可以说C的“最终推荐人”为用户A，B的“最终推荐人”也为用户A，而用户A没有“最终推荐人”。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -848,14 +670,9 @@
       
       <guid>https://gdhucoder.github.io/post/timefriend/ten-years/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;业余时间翻译经典的博文。&lt;/p&gt;
-
 &lt;p&gt;Teach yourself programming in ten years&lt;/p&gt;
-
-&lt;p&gt;原文链接：&lt;a href=&#34;http://norvig.com/21-days.html&#34;&gt;ten years&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;原文链接：&lt;a href=&#34;http://norvig.com/21-days.html&#34;&gt;ten years&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -865,10 +682,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/geekbang/04/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;浅析最好、最坏、平均、均摊时间复杂度&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;浅析最好、最坏、平均、均摊时间复杂度&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -878,10 +692,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/chapter5/stringsortssummary/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;整理字符串排序的知识点。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;整理字符串排序的知识点。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -891,10 +702,7 @@
       
       <guid>https://gdhucoder.github.io/post/timefriend/2019-01-30/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Today let&amp;rsquo;s talk about our problems.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Today let&amp;rsquo;s talk about our problems.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -910,7 +718,7 @@ no is th ti fo al go pe to co to th ai of th pa
 分析： LSD 适用于字符等长的数组排序。
 从右往左，依次数组中每个元素对位置d的字符使用key-indexed counting排序。
 平均数组访问次数7WN+3WR。额外空间N+R。 N 对应aux数组，R对应count数组。 对于一般的应用LSD线性时间复杂度。
-public static void sort(String[] a, int w) { int N = a.length; int R = 256; String[] aux = new String[N]; for (int d = w - 1; d &amp;gt;= 0; d--) { // sort by key-indexed counting on dth char show(a); int[] count = new int[R + 1]; for (int i = 0; i &amp;lt; N; i++) { count[a[i].</description>
+public static void sort(String[] a, int w) { int N = a.length; int R = 256; String[] aux = new String[N]; for (int d = w - 1; d &amp;gt;= 0; d--) { // sort by key-indexed counting on dth char  show(a); int[] count = new int[R + 1]; for (int i = 0; i &amp;lt; N; i++) { count[a[i].</description>
     </item>
     
     <item>
@@ -933,7 +741,7 @@ public static void sort(String[] a, int w) { int N = a.length; int R = 256; Stri
       <description>2.4.2 问题： 2.4.22 Array resizing. Add array resizing to MaxPQ, and prove bounds like those of Proposition Q for array accesses, in an amortized sense.
 调整数组的大小。在MaxPQ中加入调整数组大小的代码，并和命题Q一样证明对于一般性长度为N的队列数组访问的上限。
 分析： 在MaxHeap类中新增方法 resize(int max)，当堆的中元素个数等于key数组容量满的时候，key数组增大两倍，当堆的元素个数等于key数组长度的1/4时，key数组长度变为原来的1/2.
-public _MaxMQ(){ this(1); } private void resize(int max){ assert max &amp;gt; N; Comparable[] temp = new Comparable[max]; for(int i=1; i&amp;lt;=N; i++){ temp[i] = pq[i]; } pq = (Key[]) temp; } public Key delMax(){ Key max = pq[1]; pq[1] = pq[N--]; // 使用 pq[N] 作为哨兵 sink(1); pq[N + 1] = null; if(N==(pq.</description>
+public _MaxMQ(){ this(1); } private void resize(int max){ assert max &amp;gt; N; Comparable[] temp = new Comparable[max]; for(int i=1; i&amp;lt;=N; i++){ temp[i] = pq[i]; } pq = (Key[]) temp; } public Key delMax(){ Key max = pq[1]; pq[1] = pq[N--]; // 使用 pq[N] 作为哨兵  sink(1); pq[N + 1] = null; if(N==(pq.</description>
     </item>
     
     <item>
@@ -952,7 +760,7 @@ Queue:
 randomized queue：
 随机队列需要指定一个随机的priority，其余实现和处理Queue的方法一样。
 问题是怎么样生成一个不重复的随机数呢？我的思路是使用一个Set保存随机数。
-public int random() { int num = 0; while (!numSet.contains(num)) { num = StdRandom.uniform(1, Integer.MAX_VALUE); numSet.add(num); break; } return num; }  另外要提到的是对于使用MaxPQ实现的Stack和Queue，插入删除元素的时间复杂度都是lgN。
+public int random() { int num = 0; while (!numSet.contains(num)) { num = StdRandom.uniform(1, Integer.MAX_VALUE); numSet.add(num); break; } return num; } 另外要提到的是对于使用MaxPQ实现的Stack和Queue，插入删除元素的时间复杂度都是lgN。
 class IKey implements Comparable&amp;lt;IKey&amp;gt;{ Key value; int priority; @Override public int compareTo(IKey another) { return compare(this.</description>
     </item>
     
@@ -968,7 +776,9 @@ class IKey implements Comparable&amp;lt;IKey&amp;gt;{ Key value; int priority; @
 假设为堆是完美的。
 我们将树中节点的高度定义为以该节点为根的子树的高度。
 一个高度为k的节点，下沉最多交换k次，对于每一层，有：
-$$ \begin{eqnarray} h + 2(h-1) + 4(h-2) + 8(h-3) + \ldots + 2^h (0) &amp;amp; = &amp;amp; 2^{h+1} - h - 2 &amp;amp; = &amp;amp; n - (h+1) &amp;amp; \le &amp;amp; n \end{eqnarray} $$
+$$ \begin{eqnarray} h + 2(h-1) + 4(h-2) + 8(h-3) + \ldots + 2^h (0) &amp;amp; = &amp;amp; 2^{h+1} - h - 2 \
+&amp;amp; = &amp;amp; n - (h+1) \
+&amp;amp; \le &amp;amp; n \end{eqnarray} $$
 第一项使用等比数列求和公式，第二项错位相减法。
 参考： 沈星繁</description>
     </item>
@@ -982,7 +792,7 @@ $$ \begin{eqnarray} h + 2(h-1) + 4(h-2) + 8(h-3) + \ldots + 2^h (0) &amp;amp; = 
       <description>2.4.19 问题： 2.4.19 Implement the constructor for MaxPQ that takes an array of items as argument, using the bottom-up heap construction method described on page 323 in the text.
 实现一个MaxPQ的构造函数，接受一个数组做为参数，使用323页中描述的自底向上的方法构建堆。
 分析： 将数组做为参数构建堆，可以选择从左到右扫描，使用swim()方法。 但更明智的方法是使用从右往左扫描的方式，sink()。 这个方法的想法是如果一个结点的两个子结点的树都是堆的话，sink(k)之后，两个子树就合并成了以k为根结点的子树
-public MaxPQ(Key[] a){ N = a.length; pq = (Key[]) new Comparable[N+1]; for(int i=0; i&amp;lt;a.length; i++){ pq[i+1] = a[i]; } int k = N / 2; while (k &amp;gt;= 1){ sink(k); k --; } assert isMaxHeap(); show(); }  参考： 课本官网的实现MaxPQ</description>
+public MaxPQ(Key[] a){ N = a.length; pq = (Key[]) new Comparable[N+1]; for(int i=0; i&amp;lt;a.length; i++){ pq[i+1] = a[i]; } int k = N / 2; while (k &amp;gt;= 1){ sink(k); k --; } assert isMaxHeap(); show(); } 参考： 课本官网的实现MaxPQ</description>
     </item>
     
     <item>
@@ -1012,7 +822,7 @@ N=10, 元素为：0,2,4,6,8,1,3,5,7,9 k=3， qp = 0 2 4 N-k = 10 - 3 = 7，将�
       <pubDate>Sat, 20 Oct 2018 08:00:00 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_10/</guid>
-      <description> 2.4.10 问题： 2.4.10 Suppose that we wish to avoid wasting one position in a heap-ordered array pq[], putting the largest value in pq[0], its children in pq[1] and pq[2], and so forth, proceeding in level order. Where are the parents and children of pq[k]?
+      <description>2.4.10 问题： 2.4.10 Suppose that we wish to avoid wasting one position in a heap-ordered array pq[], putting the largest value in pq[0], its children in pq[1] and pq[2], and so forth, proceeding in level order. Where are the parents and children of pq[k]?
 分析： 略
 答案： 子节点：$ 2k+1, 2k+2 $，父节点： $ \lfloor \frac{k-1}{2} \rfloor $
 参考： </description>
@@ -1057,7 +867,7 @@ Picture Helper使用方法：  upload your pictures to github or gitee this scri
       <description>算法4习题 2.1.12 问题 Instrument shellsort to print the number of compares divided by the array size for each increment. Write a test client that tests the hypothesis that this number is a small constant, by sorting arrays of random Double values, using array sizes that are increasing powers of 10, starting at 100.
 打印希尔排序中每个增量带来的比较次数和数组大小的比值。 验证该值是一个小常数。
 思路 统计每个增量对应的比较次数。
-private static boolean less(Comparable v, Comparable w) { count ++ ; return v.</description>
+private static boolean less(Comparable v, Comparable w) { count ++ ; return v.compareTo(w) &amp;lt; 0; } 解答 Extensive experiments suggest that the average number of compares per increment might be N^(1/5) 大量实验表明每个增量的比较次数约为N的1/5次方。</description>
     </item>
     
     <item>
@@ -1083,10 +893,7 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]</description>
       
       <guid>https://gdhucoder.github.io/post/note/2018-05-15/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;学习过程中遇到的一些技术问题。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;学习过程中遇到的一些技术问题。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1096,10 +903,7 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]</description>
       
       <guid>https://gdhucoder.github.io/post/note/2018-05-10-note/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;学习过程中遇到的一些技术问题。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;学习过程中遇到的一些技术问题。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1109,10 +913,7 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]</description>
       
       <guid>https://gdhucoder.github.io/post/note/2018-04-06-rl-note/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Multi-armed Bandits 本篇主要介绍多臂赌博机问题的相关算法。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Multi-armed Bandits 本篇主要介绍多臂赌博机问题的相关算法。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1122,10 +923,7 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]</description>
       
       <guid>https://gdhucoder.github.io/post/note/markdown-preview-mathjax/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;h1 id=&#34;关于markdown中的公式&#34;&gt;关于MarkDown中的公式&lt;/h1&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;h1 id=&#34;关于markdown中的公式&#34;&gt;关于MarkDown中的公式&lt;/h1&gt;</description>
     </item>
     
     <item>
@@ -1135,12 +933,9 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]</description>
       
       <guid>https://gdhucoder.github.io/post/tech_details/gitee_as_pic_storage/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;本篇文章是一个启发，介绍如何使用gitee作为免费图床。
 没有使用github的原因是github国内访问有些慢。
-另外，还有其他优秀的云存储，例如7niu，朋友们也可以试一下。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+另外，还有其他优秀的云存储，例如7niu，朋友们也可以试一下。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1149,9 +944,7 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]</description>
       <pubDate>Wed, 04 Apr 2018 09:00:00 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/note/how-to-add-table-of-contents-in-hugo/</guid>
-      <description>&lt;p&gt;本文介绍如何在template中加入TOC目录。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;本文介绍如何在template中加入TOC目录。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1160,9 +953,7 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]</description>
       <pubDate>Tue, 03 Apr 2018 21:00:00 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/note/2018-04-04/</guid>
-      <description>&lt;p&gt;本文介绍如何在经典规划中的宏动作。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;本文介绍如何在经典规划中的宏动作。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1183,12 +974,8 @@ https://git.oschina.net/gdhu</description>
       
       <guid>https://gdhucoder.github.io/post/note/2018-01-05/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;h3 id=&#34;概念&#34;&gt;概念&lt;/h3&gt;
-
-&lt;p&gt;给定一个MDP，一个agent可以访问：&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;给定一个MDP，一个agent可以访问：&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1198,14 +985,10 @@ https://git.oschina.net/gdhu</description>
       
       <guid>https://gdhucoder.github.io/post/planning/montecarlo/monte_carlo/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;乍一听“蒙特卡罗”这个词，完全不知所云，我感到很奇怪，一个搜索算法Monte Carlo Tree Search为什么叫蒙特卡罗。
 于是，就有了下面的文字。&lt;/p&gt;
-
 &lt;p&gt;本篇文章主要介绍MonteCarlo方法的由来，及简单的一个应用-求π的值。
-下篇将会介绍：什么是Monte Carlo Tree Search算法。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+下篇将会介绍：什么是Monte Carlo Tree Search算法。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1215,11 +998,8 @@ https://git.oschina.net/gdhu</description>
       
       <guid>https://gdhucoder.github.io/post/java_skill/20171025-heuristic_search_gbfs/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;本篇文章介绍Greedy Best Fisrt Search算法。实现GBFS算法时使用了上篇文章介绍的优先队列。
-下篇文章将尝试介绍著名的A star算法。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+下篇文章将尝试介绍著名的A star算法。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1229,11 +1009,8 @@ https://git.oschina.net/gdhu</description>
       
       <guid>https://gdhucoder.github.io/post/java_skill/20171024-priority_queue/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;本篇文章主要介绍优先队列(Priority Queue)和嵌套类(nested class)的基本用法。
-接下来的文章会介绍在实现例如Greedy Best First Search和AStar搜索算法中使用priority queue。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+接下来的文章会介绍在实现例如Greedy Best First Search和AStar搜索算法中使用priority queue。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1243,14 +1020,9 @@ https://git.oschina.net/gdhu</description>
       
       <guid>https://gdhucoder.github.io/post/planning/pln_1/pln_1/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
 &lt;p&gt;本篇开始，逐一介绍一些概率编程相关内容。首先介绍贝叶斯网的相关基础知识和应用。&lt;/p&gt;
-
 &lt;p&gt;本篇导读：&lt;/p&gt;
-
-&lt;p&gt;本篇主要介绍了贝叶斯定理，贝叶斯网以及相关应用：&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;本篇主要介绍了贝叶斯定理，贝叶斯网以及相关应用：&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1300,20 +1072,14 @@ Octatve代码实现</description>
       
       <guid>https://gdhucoder.github.io/post/sns_2/seaborn_2_color_palettes/</guid>
       <description>&lt;h1 id=&#34;调色板&#34;&gt;调色板&lt;/h1&gt;
-
 &lt;p&gt;颜色很重要，如果使用的好，就会帮助你突出数据的特征。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;color_palette()能传入任何Matplotlib所支持的颜色&lt;/li&gt;
 &lt;li&gt;color_palette()不写参数则默认颜色&lt;/li&gt;
 &lt;li&gt;set_palette()设置所有图的颜色&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;下面是使用seaborn的color palettes的一些例子，这些例子官网上面都已经有详细的介绍。&lt;/p&gt;
-
-&lt;p&gt;网址为：&lt;a href=&#34;http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial&#34;&gt;http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;网址为：http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1323,10 +1089,7 @@ Octatve代码实现</description>
       
       <guid>https://gdhucoder.github.io/post/sns_1/seaborn_1/</guid>
       <description>&lt;h1 id=&#34;风格设置&#34;&gt;风格设置&lt;/h1&gt;
-
-&lt;p&gt;Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1335,12 +1098,7 @@ Octatve代码实现</description>
       <pubDate>Wed, 09 Aug 2017 21:44:30 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/plt_5/plt_5/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#Color
-import pandas as pd
-import matplotlib.pyplot as plt
-
-women_degrees = pd.read_csv(&#39;percent-bachelors-degrees-women-usa.csv&#39;)
-major_cats = [&#39;Biology&#39;, &#39;Computer Science&#39;, &#39;Engineering&#39;, &#39;Math and Statistics&#39;]</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;</description>
     </item>
     
     <item>
@@ -1349,11 +1107,9 @@ major_cats = [&#39;Biology&#39;, &#39;Computer Science&#39;, &#39;Engineering&#3
       <pubDate>Wed, 09 Aug 2017 20:44:30 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/plt_4/plt_4/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-import matplotlib.pyplot as plt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; plt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1362,11 +1118,9 @@ import matplotlib.pyplot as plt
       <pubDate>Wed, 09 Aug 2017 19:44:30 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/plt_3/plt_3/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-import matplotlib.pyplot as plt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; plt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1375,14 +1129,12 @@ import matplotlib.pyplot as plt
       <pubDate>Tue, 08 Aug 2017 21:44:30 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/plt_2/plt_2/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-reviews = pd.read_csv(&#39;fandango_scores.csv&#39;)
-cols = [&#39;FILM&#39;, &#39;RT_user_norm&#39;, &#39;Metacritic_user_nom&#39;, &#39;IMDB_norm&#39;, &#39;Fandango_Ratingvalue&#39;, &#39;Fandango_Stars&#39;]
-norm_reviews = reviews[cols]
-print(norm_reviews[:1])
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+reviews &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;fandango_scores.csv&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+cols &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;FILM&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;RT_user_norm&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Metacritic_user_nom&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;IMDB_norm&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Fandango_Ratingvalue&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Fandango_Stars&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;]
+norm_reviews &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; reviews[cols]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(norm_reviews[:&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1391,24 +1143,11 @@ print(norm_reviews[:1])
       <pubDate>Thu, 03 Aug 2017 21:44:30 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/plt_1/plt_1/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;unrate = pd.read_csv(&#39;UNRATE.csv&#39;)
-unrate[&#39;DATE&#39;] = pd.to_datetime(unrate[&#39;DATE&#39;])
-print(unrate.head(12))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://gdhucoder.github.io/post/rl/rl-intro-ch5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/rl/rl-intro-ch5/</guid>
-      <description></description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;unrate &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;UNRATE.csv&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+unrate[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;DATE&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(unrate[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;DATE&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;])
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(unrate&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head(&lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -1423,54 +1162,6 @@ print(unrate.head(12))
     
     <item>
       <title></title>
-      <link>https://gdhucoder.github.io/post/designpattern/019_compositepattern/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/designpattern/019_compositepattern/</guid>
-      <description>&lt;p&gt;&amp;ndash;
-title: &amp;ldquo;Composite Pattern&amp;rdquo;
-date: 2020-01-04T10:20:03+08:00
-draft: false
-tags:
-   - DesignPattern
-categories:
-  - 技术&lt;/p&gt;
-
-&lt;h2 id=&#34;归档&#34;&gt;- 归档&lt;/h2&gt;
-
-&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Composite Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://gdhucoder.github.io/post/designpattern/020_iteratorpattern/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gdhucoder.github.io/post/designpattern/020_iteratorpattern/</guid>
-      <description>&lt;p&gt;&amp;ndash;
-title: &amp;ldquo;Iterator Pattern&amp;rdquo;
-date: 2020-01-04T10:21:03+08:00
-draft: false
-tags:
-   - DesignPattern
-categories:
-  - 技术&lt;/p&gt;
-
-&lt;h2 id=&#34;归档&#34;&gt;- 归档&lt;/h2&gt;
-
-&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Iterator Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://gdhucoder.github.io/post/note/2019-03-13/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -1478,11 +1169,19 @@ categories:
       <description>Roadmap $G=(V,E)$ 是一个有向图
 $\Gamma : R \rightarrow V $ ，汽车初始的位置
 $\Phi : R \rightarrow V ​$，汽车终止位置
-对于每个车$path_i &amp;copy; : Z \rightarrow E $，每个车的路线。
+对于每个车$path_i (c) : Z \rightarrow E $，每个车的路线。
 问题是：
 对于每个车$c_i (i=1,&amp;hellip;,n)$，找到可行的路线 $P={p_1,&amp;hellip;,p_n}$
-避免任意两条路线出现: 死锁。
-目标： 最小化系统调度时间，即每辆车到达终点的累计总用时。</description>
+**避免任意两条路线出现: 死锁。****目标： 最小化系统调度时间，即每辆车到达终点的累计总用时。**</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://gdhucoder.github.io/post/rl/rl-intro-ch5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/rl/rl-intro-ch5/</guid>
+      <description></description>
     </item>
     
     <item>

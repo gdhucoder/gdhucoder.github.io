@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2018-10-19 解决Markdown图片问题</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="2018-10-19 解决Markdown图片问题" />
 <meta property="og:description" content="[TOC]
 里程碑 今天是一个里程碑，断断续续一年多，自己搭建的博客遇到的各种问题基本得到解决。
@@ -31,22 +31,8 @@ Picture Helper使用方法：  upload your pictures to github or gitee this scri
 各位改改可以用到的地方： 1、自动提交git脚本 2、生成缩略图（PIL的使用）" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/skill/2018-10-19/" />
-
-
-
-<meta property="article:published_time" content="2018-10-19T03:00:00&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-10-19T03:00:00&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2018-10-19T03:00:00+08:00" />
+<meta property="article:modified_time" content="2018-10-19T03:00:00+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -117,88 +103,53 @@ MathJax.Hub.Config({
     <h2>2018-10-19 解决Markdown图片问题</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#里程碑">里程碑</a>
-<ul>
-<li><a href="#遇到的问题主要有">遇到的问题主要有：</a>
-<ul>
-<li><a href="#图床问题">图床问题：</a></li>
-<li><a href="#图片链接插入问题">图片链接插入问题：</a></li>
-<li><a href="#平台不通用问题">平台不通用问题：</a></li>
-</ul></li>
-<li><a href="#我的github">我的github</a></li>
-<li><a href="#图片本地预览-链接">图片本地预览、链接</a></li>
-<li><a href="#picture-helper使用方法">Picture Helper使用方法：</a></li>
-<li><a href="#另附代码">另附代码</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#遇到的问题主要有">遇到的问题主要有：</a>
+      <ul>
+        <li><a href="#图床问题">图床问题：</a></li>
+        <li><a href="#图片链接插入问题">图片链接插入问题：</a></li>
+        <li><a href="#平台不通用问题">平台不通用问题：</a></li>
+      </ul>
+    </li>
+    <li><a href="#我的github">我的github</a></li>
+    <li><a href="#图片本地预览链接">图片本地预览、链接</a></li>
+    <li><a href="#picture-helper使用方法">Picture Helper使用方法：</a></li>
+    <li><a href="#另附代码">另附代码</a></li>
+  </ul>
 </nav>
 </aside>
 
-			
-
-<p>[TOC]</p>
-
+			<p>[TOC]</p>
 <h1 id="里程碑">里程碑</h1>
-
 <p>今天是一个里程碑，断断续续一年多，自己搭建的博客遇到的各种问题基本得到解决。</p>
-
 <p>现在整理一下解决问题的思路：</p>
-
 <p>博客用到的东西：Github(托管静态网页)、Hugo、Sublime、Markdown、MathJax、免费图床(gitee)、留言(需要翻墙)</p>
-
 <h2 id="遇到的问题主要有">遇到的问题主要有：</h2>
-
 <h3 id="图床问题">图床问题：</h3>
-
 <p>使用免费图床是个大问题：目前的解决方案是将图片上床到gitee上，这样国内访问图片速度较快。</p>
-
 <h3 id="图片链接插入问题">图片链接插入问题：</h3>
-
 <p>之前我写了自动生成链接的脚本，但是结果输出到了文本文件中，对于图片预览实时性的要求就无法满足。</p>
-
 <h3 id="平台不通用问题">平台不通用问题：</h3>
-
 <p>通用性的问题一直没有解决：对于Latex公式的支持，图床的支持</p>
-
 <p>以前由于各个平台不通用的问题，导致我们一直只能在一个平台上写作。而各大平台又各有优缺点，总有令人不满意的地方。</p>
-
 <p>这样下来在本地写的Markdown，不需要做修改可以支持<strong>CSDN博客</strong>（或者<strong>简书</strong>）了，直接复制过去就可以。</p>
-
 <p>在未来不久<strong>印象笔记</strong>windows版本也会支持Markdown，真是个令人振奋的消息。</p>
-
 <p>甚至我还使用过<strong>马克飞象</strong>，但是它只能配合印象笔记使用，对于跨平台的需求无法满足。</p>
-
 <h2 id="我的github">我的github</h2>
-
 <p>页面托管到了github上，有兴趣的话可以试着自己搭建一个静态博客。</p>
-
 <p><a href="https://gdhucoder.github.io/">https://gdhucoder.github.io/</a></p>
-
-<h2 id="图片本地预览-链接">图片本地预览、链接</h2>
-
+<h2 id="图片本地预览链接">图片本地预览、链接</h2>
 <p>大家都知道Markdown使用图片需要插入图片链接。</p>
-
 <p>我们使用python写了个脚本，生成文件的缩略图，自动上传gitee，点击图片缩略图，获取链接到剪切板。</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2018-10-19-001.png" alt="2018-10-19-001" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2018-10-19-001.png" alt="2018-10-19-001"></p>
 <p>接下来我又添加的每次打开Helper时，自动提交git，得到最新的图片</p>
-
 <p>然后点击图片缩略图，图片的git地址（可供外网访问的地址）就被拷贝到了<strong>剪切板</strong>中，在使用的时候我们直接Ctrl+V就可以复制地址到Markdown文档中。</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2018-10-19-002.png" alt="2018-10-19-002" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2018-10-19-002.png" alt="2018-10-19-002"></p>
 <p>这个脚本还支持子目录的打开预览。</p>
-
 <p>因为如果我们只用一个文件夹管理所有的博客图片势必会没有层级结构，导致最后图片混乱。</p>
-
 <p>我们可以建立子文件夹，存放各个主题的图片文件。</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2018-10-19-003.png" alt="2018-10-19-003" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2018-10-19-003.png" alt="2018-10-19-003"></p>
 <h2 id="picture-helper使用方法">Picture Helper使用方法：</h2>
-
 <ol>
 <li>upload your pictures to github or gitee</li>
 <li>this script can generate latest 100 picture links</li>
@@ -206,223 +157,218 @@ MathJax.Hub.Config({
 <li>then use Ctrl+V in your own Markdown</li>
 <li>Enjoy!</li>
 </ol>
-
 <h2 id="另附代码">另附代码</h2>
-
 <p>主要参考了PP4E的pyphoto的代码。</p>
-
 <p>各位改改可以用到的地方：
 1、自动提交git脚本
 2、生成缩略图（PIL的使用）</p>
-
-<pre><code class="language-python">&quot;&quot;&quot;
-############################################################################
-Introduction:
-
-please upload your local picture folder as a repo in github or gitee(China).
-then we can use the image link in our own markdown file
-It's really helpful when you regularly write a blog use Markdown.
-
-1. upload your pictures to github or gitee
-2. this script can generate latest 100 picture links
-3. click the thumb picture, then the link is clipped into you clipboard
-4. then use Ctrl+V in your own Markdown
-5. Enjoy!
-
-Modify from PP4E: PyPhoto 1.1: thumbnail image viewer with resizing and saves.
-Features:
-1. support subdir in your local git folder
-2. Please modify some constance in the script
-
-huguodong
-gdong.hu[at]gmail
-2018-10-19
-############################################################################
-&quot;&quot;&quot;
-
-
-import sys, math, os
-from tkinter import *
-from tkinter.filedialog import SaveAs, Directory
-
-from PIL import Image                         # PIL Image: also in tkinter
-from PIL.ImageTk import PhotoImage            # PIL photo widget replacement
-
-# remember last dirs across all windows
-saveDialog = SaveAs(title='Save As (filename gives image type)')
-openDialog = Directory(title='Select Image Directory To Open')
-git_master = &quot;https://gitee.com/gdhu/prvpic/raw/master/&quot;
-local_git_root_folder = 'E:/gitpic/'
-thumb_dir='thumbs'
-
-trace = print  # or lambda *x: None
-appname = 'MarkDown Picture Helper: '
-
-class ScrolledCanvas(Canvas):
-    &quot;&quot;&quot;
-    a canvas in a container that automatically makes
-    vertical and horizontal scroll bars for itself
-    &quot;&quot;&quot;
-    def __init__(self, container):
-        Canvas.__init__(self, container)
-        self.config(borderwidth=0)
-        vbar = Scrollbar(container)
-        hbar = Scrollbar(container, orient='horizontal')
-
-        vbar.pack(side=RIGHT,  fill=Y)                 # pack canvas after bars
-        hbar.pack(side=BOTTOM, fill=X)                 # so clipped first
-        self.pack(side=TOP, fill=BOTH, expand=YES)
-
-        vbar.config(command=self.yview)                # call on scroll move
-        hbar.config(command=self.xview)
-        self.config(yscrollcommand=vbar.set)           # call on canvas move
-        self.config(xscrollcommand=hbar.set)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">############################################################################</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">Introduction:</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">please upload your local picture folder as a repo in github or gitee(China).</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">then we can use the image link in our own markdown file</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">It</span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">s really helpful when you regularly write a blog use Markdown.</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">1. upload your pictures to github or gitee</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">2. this script can generate latest 100 picture links</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">3. click the thumb picture, then the link is clipped into you clipboard</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">4. then use Ctrl+V in your own Markdown</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">5. Enjoy!</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">Modify from PP4E: PyPhoto 1.1: thumbnail image viewer with resizing and saves.</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">Features:</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">1. support subdir in your local git folder</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">2. Please modify some constance in the script</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">huguodong</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">gdong.hu[at]gmail</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">2018-10-19</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">############################################################################</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;</span>
 
 
-def onDirectoryOpen(event):
-    &quot;&quot;&quot;
-    open a new image directory in new pop up
-    available in both thumb and img windows
-    &quot;&quot;&quot;
-    dirname = openDialog.show()
-    if dirname:
-        if dirname != local_git_root_folder:
-            link = dirname
-            link = link.replace(local_git_root_folder, '')
-            link = link.replace(thumb_dir,'')
-            master = git_master+link
-            print(git_master+link)
-            viewThumbs(dirname, kind=Toplevel,numcols=5, git=master)
-        else:
-            viewThumbs(dirname, kind=Toplevel, numcols=5, git=git_master)
+<span style="color:#f92672">import</span> sys<span style="color:#f92672">,</span> math<span style="color:#f92672">,</span> os
+<span style="color:#f92672">from</span> tkinter <span style="color:#f92672">import</span> <span style="color:#f92672">*</span>
+<span style="color:#f92672">from</span> tkinter.filedialog <span style="color:#f92672">import</span> SaveAs, Directory
+
+<span style="color:#f92672">from</span> PIL <span style="color:#f92672">import</span> Image                         <span style="color:#75715e"># PIL Image: also in tkinter</span>
+<span style="color:#f92672">from</span> PIL.ImageTk <span style="color:#f92672">import</span> PhotoImage            <span style="color:#75715e"># PIL photo widget replacement</span>
+
+<span style="color:#75715e"># remember last dirs across all windows</span>
+saveDialog <span style="color:#f92672">=</span> SaveAs(title<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Save As (filename gives image type)</span><span style="color:#e6db74">&#39;</span>)
+openDialog <span style="color:#f92672">=</span> Directory(title<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Select Image Directory To Open</span><span style="color:#e6db74">&#39;</span>)
+git_master <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://gitee.com/gdhu/prvpic/raw/master/</span><span style="color:#e6db74">&#34;</span>
+local_git_root_folder <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">E:/gitpic/</span><span style="color:#e6db74">&#39;</span>
+thumb_dir<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">thumbs</span><span style="color:#e6db74">&#39;</span>
+
+trace <span style="color:#f92672">=</span> <span style="color:#66d9ef">print</span>  <span style="color:#75715e"># or lambda *x: None</span>
+appname <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">MarkDown Picture Helper: </span><span style="color:#e6db74">&#39;</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ScrolledCanvas</span>(Canvas):
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    a canvas in a container that automatically makes</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    vertical and horizontal scroll bars for itself</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    </span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">def</span> __init__(self, container):
+        Canvas<span style="color:#f92672">.</span>__init__(self, container)
+        self<span style="color:#f92672">.</span>config(borderwidth<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+        vbar <span style="color:#f92672">=</span> Scrollbar(container)
+        hbar <span style="color:#f92672">=</span> Scrollbar(container, orient<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">horizontal</span><span style="color:#e6db74">&#39;</span>)
+
+        vbar<span style="color:#f92672">.</span>pack(side<span style="color:#f92672">=</span>RIGHT,  fill<span style="color:#f92672">=</span>Y)                 <span style="color:#75715e"># pack canvas after bars</span>
+        hbar<span style="color:#f92672">.</span>pack(side<span style="color:#f92672">=</span>BOTTOM, fill<span style="color:#f92672">=</span>X)                 <span style="color:#75715e"># so clipped first</span>
+        self<span style="color:#f92672">.</span>pack(side<span style="color:#f92672">=</span>TOP, fill<span style="color:#f92672">=</span>BOTH, expand<span style="color:#f92672">=</span>YES)
+
+        vbar<span style="color:#f92672">.</span>config(command<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>yview)                <span style="color:#75715e"># call on scroll move</span>
+        hbar<span style="color:#f92672">.</span>config(command<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>xview)
+        self<span style="color:#f92672">.</span>config(yscrollcommand<span style="color:#f92672">=</span>vbar<span style="color:#f92672">.</span>set)           <span style="color:#75715e"># call on canvas move</span>
+        self<span style="color:#f92672">.</span>config(xscrollcommand<span style="color:#f92672">=</span>hbar<span style="color:#f92672">.</span>set)
 
 
-def viewThumbs(imgdir, kind=Toplevel, numcols=None, height=400, width=500, git=None):
-    &quot;&quot;&quot;
-    make main or pop-up thumbnail buttons window;
-    uses fixed-size buttons, scrollable canvas;
-    sets scrollable (full) size, and places
-    thumbs at abs x,y coordinates in canvas;
-    no longer assumes all thumbs are same size:
-    gets max of all (x,y), some may be smaller;
-    &quot;&quot;&quot;
-    win = kind()
-    helptxt = '(press D to open other)'
-    win.title(appname + imgdir + '  ' + helptxt)
-    quit = Button(win, text='Quit', command=win.quit, bg='beige')
-    quit.pack(side=BOTTOM, fill=X)
-    linkLabel = Label(win, text='click thumb to copy gitlink to clipboard')
-    linkLabel.pack(side=BOTTOM, fill=X)
-    canvas = ScrolledCanvas(win)
-    canvas.config(height=height, width=width)       # init viewable window size
-                                                    # changes if user resizes
-    thumbs = makeThumbs(imgdir)                     # [(imgfile, imgobj)]
-    numthumbs = len(thumbs)
-    if not numcols:
-        numcols = int(math.ceil(math.sqrt(numthumbs)))  # fixed or N x N
-    numrows = int(math.ceil(numthumbs / numcols))       # 3.x true div
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">onDirectoryOpen</span>(event):
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    open a new image directory in new pop up</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    available in both thumb and img windows</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    </span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+    dirname <span style="color:#f92672">=</span> openDialog<span style="color:#f92672">.</span>show()
+    <span style="color:#66d9ef">if</span> dirname:
+        <span style="color:#66d9ef">if</span> dirname <span style="color:#f92672">!=</span> local_git_root_folder:
+            link <span style="color:#f92672">=</span> dirname
+            link <span style="color:#f92672">=</span> link<span style="color:#f92672">.</span>replace(local_git_root_folder, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#39;</span>)
+            link <span style="color:#f92672">=</span> link<span style="color:#f92672">.</span>replace(thumb_dir,<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&#39;</span>)
+            master <span style="color:#f92672">=</span> git_master<span style="color:#f92672">+</span>link
+            <span style="color:#66d9ef">print</span>(git_master<span style="color:#f92672">+</span>link)
+            viewThumbs(dirname, kind<span style="color:#f92672">=</span>Toplevel,numcols<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, git<span style="color:#f92672">=</span>master)
+        <span style="color:#66d9ef">else</span>:
+            viewThumbs(dirname, kind<span style="color:#f92672">=</span>Toplevel, numcols<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>, git<span style="color:#f92672">=</span>git_master)
 
-    # max w|h: thumb=(name, obj), thumb.size=(width, height)
-    linksize = max(max(thumb[1].size) for thumb in thumbs)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">viewThumbs</span>(imgdir, kind<span style="color:#f92672">=</span>Toplevel, numcols<span style="color:#f92672">=</span>None, height<span style="color:#f92672">=</span><span style="color:#ae81ff">400</span>, width<span style="color:#f92672">=</span><span style="color:#ae81ff">500</span>, git<span style="color:#f92672">=</span>None):
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    make main or pop-up thumbnail buttons window;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    uses fixed-size buttons, scrollable canvas;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    sets scrollable (full) size, and places</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    thumbs at abs x,y coordinates in canvas;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    no longer assumes all thumbs are same size:</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    gets max of all (x,y), some may be smaller;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    </span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+    win <span style="color:#f92672">=</span> kind()
+    helptxt <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">(press D to open other)</span><span style="color:#e6db74">&#39;</span>
+    win<span style="color:#f92672">.</span>title(appname <span style="color:#f92672">+</span> imgdir <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">  </span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">+</span> helptxt)
+    quit <span style="color:#f92672">=</span> Button(win, text<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Quit</span><span style="color:#e6db74">&#39;</span>, command<span style="color:#f92672">=</span>win<span style="color:#f92672">.</span>quit, bg<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">beige</span><span style="color:#e6db74">&#39;</span>)
+    quit<span style="color:#f92672">.</span>pack(side<span style="color:#f92672">=</span>BOTTOM, fill<span style="color:#f92672">=</span>X)
+    linkLabel <span style="color:#f92672">=</span> Label(win, text<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">click thumb to copy gitlink to clipboard</span><span style="color:#e6db74">&#39;</span>)
+    linkLabel<span style="color:#f92672">.</span>pack(side<span style="color:#f92672">=</span>BOTTOM, fill<span style="color:#f92672">=</span>X)
+    canvas <span style="color:#f92672">=</span> ScrolledCanvas(win)
+    canvas<span style="color:#f92672">.</span>config(height<span style="color:#f92672">=</span>height, width<span style="color:#f92672">=</span>width)       <span style="color:#75715e"># init viewable window size</span>
+                                                    <span style="color:#75715e"># changes if user resizes</span>
+    thumbs <span style="color:#f92672">=</span> makeThumbs(imgdir)                     <span style="color:#75715e"># [(imgfile, imgobj)]</span>
+    numthumbs <span style="color:#f92672">=</span> len(thumbs)
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> numcols:
+        numcols <span style="color:#f92672">=</span> int(math<span style="color:#f92672">.</span>ceil(math<span style="color:#f92672">.</span>sqrt(numthumbs)))  <span style="color:#75715e"># fixed or N x N</span>
+    numrows <span style="color:#f92672">=</span> int(math<span style="color:#f92672">.</span>ceil(numthumbs <span style="color:#f92672">/</span> numcols))       <span style="color:#75715e"># 3.x true div</span>
+
+    <span style="color:#75715e"># max w|h: thumb=(name, obj), thumb.size=(width, height)</span>
+    linksize <span style="color:#f92672">=</span> max(max(thumb[<span style="color:#ae81ff">1</span>]<span style="color:#f92672">.</span>size) <span style="color:#66d9ef">for</span> thumb <span style="color:#f92672">in</span> thumbs)
     trace(linksize)
-    fullsize = (0, 0,                                   # upper left  X,Y
-        (linksize * numcols), (linksize * numrows) )    # lower right X,Y
-    canvas.config(scrollregion=fullsize)                # scrollable area size
+    fullsize <span style="color:#f92672">=</span> (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>,                                   <span style="color:#75715e"># upper left  X,Y</span>
+        (linksize <span style="color:#f92672">*</span> numcols), (linksize <span style="color:#f92672">*</span> numrows) )    <span style="color:#75715e"># lower right X,Y</span>
+    canvas<span style="color:#f92672">.</span>config(scrollregion<span style="color:#f92672">=</span>fullsize)                <span style="color:#75715e"># scrollable area size</span>
 
-    rowpos = 0
-    savephotos = []
-    if not git:
-        git = git_master
-    while thumbs:
-        thumbsrow, thumbs = thumbs[:numcols], thumbs[numcols:]
-        colpos = 0
-        for (imgfile, imgobj) in thumbsrow:
-            photo   = PhotoImage(imgobj)
-            link    = Button(canvas, image=photo)
-            text = Text()
-            def handler(f=imgfile, txt=text,label=linkLabel):
-                imglink = &quot;![&quot; + f.split('.')[0] + &quot;](&quot; + git + f + &quot;)&quot;;
-                txt.clipboard_clear()
-                txt.clipboard_append(imglink)
-                label.config(text=imglink)
-                print(imglink)
-            link.config(command=handler, width=linksize, height=linksize)
-            link.pack(side=LEFT, expand=YES)
-            canvas.create_window(colpos, rowpos, anchor=NW,
-                    window=link, width=linksize, height=linksize)
-            colpos += linksize
-            savephotos.append(photo)
-        rowpos += linksize
-    win.bind('&lt;KeyPress-d&gt;', onDirectoryOpen)
-    win.savephotos = savephotos
-    return win
+    rowpos <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    savephotos <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> git:
+        git <span style="color:#f92672">=</span> git_master
+    <span style="color:#66d9ef">while</span> thumbs:
+        thumbsrow, thumbs <span style="color:#f92672">=</span> thumbs[:numcols], thumbs[numcols:]
+        colpos <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">for</span> (imgfile, imgobj) <span style="color:#f92672">in</span> thumbsrow:
+            photo   <span style="color:#f92672">=</span> PhotoImage(imgobj)
+            link    <span style="color:#f92672">=</span> Button(canvas, image<span style="color:#f92672">=</span>photo)
+            text <span style="color:#f92672">=</span> Text()
+            <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">handler</span>(f<span style="color:#f92672">=</span>imgfile, txt<span style="color:#f92672">=</span>text,label<span style="color:#f92672">=</span>linkLabel):
+                imglink <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">![</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> f<span style="color:#f92672">.</span>split(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">.</span><span style="color:#e6db74">&#39;</span>)[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">](</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> git <span style="color:#f92672">+</span> f <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>;
+                txt<span style="color:#f92672">.</span>clipboard_clear()
+                txt<span style="color:#f92672">.</span>clipboard_append(imglink)
+                label<span style="color:#f92672">.</span>config(text<span style="color:#f92672">=</span>imglink)
+                <span style="color:#66d9ef">print</span>(imglink)
+            link<span style="color:#f92672">.</span>config(command<span style="color:#f92672">=</span>handler, width<span style="color:#f92672">=</span>linksize, height<span style="color:#f92672">=</span>linksize)
+            link<span style="color:#f92672">.</span>pack(side<span style="color:#f92672">=</span>LEFT, expand<span style="color:#f92672">=</span>YES)
+            canvas<span style="color:#f92672">.</span>create_window(colpos, rowpos, anchor<span style="color:#f92672">=</span>NW,
+                    window<span style="color:#f92672">=</span>link, width<span style="color:#f92672">=</span>linksize, height<span style="color:#f92672">=</span>linksize)
+            colpos <span style="color:#f92672">+</span><span style="color:#f92672">=</span> linksize
+            savephotos<span style="color:#f92672">.</span>append(photo)
+        rowpos <span style="color:#f92672">+</span><span style="color:#f92672">=</span> linksize
+    win<span style="color:#f92672">.</span>bind(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">&lt;KeyPress-d&gt;</span><span style="color:#e6db74">&#39;</span>, onDirectoryOpen)
+    win<span style="color:#f92672">.</span>savephotos <span style="color:#f92672">=</span> savephotos
+    <span style="color:#66d9ef">return</span> win
 
-def makeThumbs(imgdir, size=(100, 100), subdir='thumbs', latest=None):
-    &quot;&quot;&quot;
-    get thumbnail images for all images in a directory; for each image, create
-    and save a new thumb, or load and return an existing thumb;  makes thumb
-    dir if needed;  returns a list of (image filename, thumb image object);
-    caller can also run listdir on thumb dir to load;  on bad file types may
-    raise IOError, or other;  caveat: could also check file timestamps;
-    &quot;&quot;&quot;
-    thumbdir = os.path.join(imgdir, subdir)
-    if not os.path.exists(thumbdir):
-        os.mkdir(thumbdir)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">makeThumbs</span>(imgdir, size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>), subdir<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">thumbs</span><span style="color:#e6db74">&#39;</span>, latest<span style="color:#f92672">=</span>None):
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    get thumbnail images for all images in a directory; for each image, create</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    and save a new thumb, or load and return an existing thumb;  makes thumb</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    dir if needed;  returns a list of (image filename, thumb image object);</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    caller can also run listdir on thumb dir to load;  on bad file types may</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    raise IOError, or other;  caveat: could also check file timestamps;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    </span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+    thumbdir <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(imgdir, subdir)
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(thumbdir):
+        os<span style="color:#f92672">.</span>mkdir(thumbdir)
 
-    thumbs = []
-    file_list = os.listdir(imgdir)
-    file_list.sort(key=lambda x: os.stat(imgdir + &quot;/&quot; + x).st_mtime, reverse=True)
-    if not latest:
-        limit_num = 50
-    for imgfile in file_list[:limit_num]:
-        print(imgfile)
-        thumbpath = os.path.join(thumbdir, imgfile)
-        if os.path.exists(thumbpath):
-            thumbobj = Image.open(thumbpath)            # use already created
-            thumbs.append((imgfile, thumbobj))
-        else:
-            print('making', thumbpath)
-            imgpath = os.path.join(imgdir, imgfile)
-            try:
-                imgobj = Image.open(imgpath)            # make new thumb
-                imgobj.thumbnail(size, Image.ANTIALIAS) # best downsize filter
-                imgobj.save(thumbpath)                  # type via ext or passed
-                thumbs.append((imgfile, imgobj))
-            except:                                     # not always IOError
-                print(&quot;Skipping: &quot;, imgpath)
-    return thumbs
+    thumbs <span style="color:#f92672">=</span> []
+    file_list <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>listdir(imgdir)
+    file_list<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x: os<span style="color:#f92672">.</span>stat(imgdir <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">/</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> x)<span style="color:#f92672">.</span>st_mtime, reverse<span style="color:#f92672">=</span>True)
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> latest:
+        limit_num <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>
+    <span style="color:#66d9ef">for</span> imgfile <span style="color:#f92672">in</span> file_list[:limit_num]:
+        <span style="color:#66d9ef">print</span>(imgfile)
+        thumbpath <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(thumbdir, imgfile)
+        <span style="color:#66d9ef">if</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(thumbpath):
+            thumbobj <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(thumbpath)            <span style="color:#75715e"># use already created</span>
+            thumbs<span style="color:#f92672">.</span>append((imgfile, thumbobj))
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">making</span><span style="color:#e6db74">&#39;</span>, thumbpath)
+            imgpath <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>join(imgdir, imgfile)
+            <span style="color:#66d9ef">try</span>:
+                imgobj <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>open(imgpath)            <span style="color:#75715e"># make new thumb</span>
+                imgobj<span style="color:#f92672">.</span>thumbnail(size, Image<span style="color:#f92672">.</span>ANTIALIAS) <span style="color:#75715e"># best downsize filter</span>
+                imgobj<span style="color:#f92672">.</span>save(thumbpath)                  <span style="color:#75715e"># type via ext or passed</span>
+                thumbs<span style="color:#f92672">.</span>append((imgfile, imgobj))
+            <span style="color:#66d9ef">except</span>:                                     <span style="color:#75715e"># not always IOError</span>
+                <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Skipping: </span><span style="color:#e6db74">&#34;</span>, imgpath)
+    <span style="color:#66d9ef">return</span> thumbs
 
-def commitToGit():
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">commitToGit</span>():
 
-    # 执行提交代码到git操作
-    cmd = 'E:&amp;cd E:\gitpic&amp;git add --all&amp;git commit -m &quot;update&quot;&amp;git push -f origin master'
-    # cmd = 'ipconfig'
-    result = os.popen(cmd)
-    print(result.read())
+    <span style="color:#75715e"># 执行提交代码到git操作</span>
+    cmd <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">E:&amp;cd E:</span><span style="color:#e6db74">\</span><span style="color:#e6db74">gitpic&amp;git add --all&amp;git commit -m </span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">update</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">&amp;git push -f origin master</span><span style="color:#e6db74">&#39;</span>
+    <span style="color:#75715e"># cmd = &#39;ipconfig&#39;</span>
+    result <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>popen(cmd)
+    <span style="color:#66d9ef">print</span>(result<span style="color:#f92672">.</span>read())
 
 
 
-if __name__ == '__main__':
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">__main__</span><span style="color:#e6db74">&#39;</span>:
 
     commitToGit()
 
-    &quot;&quot;&quot;
-    open dir = default or cmdline arg
-    else show simple window to select
-    &quot;&quot;&quot;
-    imgdir = 'E:\gitpic'
-    if len(sys.argv) &gt; 1:
-        imgdir = sys.argv[1]
-    if os.path.exists(imgdir):
-        mainwin = viewThumbs(imgdir, kind=Tk,numcols=5)
-    else:
-        mainwin = Tk()
-        mainwin.title(appname + 'Open')
-        handler = lambda: onDirectoryOpen(None)
-        Button(mainwin, text='Open Image Directory', command=handler).pack()
-    mainwin.mainloop()
-</code></pre>
-
+    <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;&#34;</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    open dir = default or cmdline arg</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    else show simple window to select</span><span style="color:#e6db74">
+</span><span style="color:#e6db74"></span><span style="color:#e6db74">    </span><span style="color:#e6db74">&#34;&#34;&#34;</span>
+    imgdir <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">E:</span><span style="color:#e6db74">\</span><span style="color:#e6db74">gitpic</span><span style="color:#e6db74">&#39;</span>
+    <span style="color:#66d9ef">if</span> len(sys<span style="color:#f92672">.</span>argv) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>:
+        imgdir <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>argv[<span style="color:#ae81ff">1</span>]
+    <span style="color:#66d9ef">if</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>exists(imgdir):
+        mainwin <span style="color:#f92672">=</span> viewThumbs(imgdir, kind<span style="color:#f92672">=</span>Tk,numcols<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>)
+    <span style="color:#66d9ef">else</span>:
+        mainwin <span style="color:#f92672">=</span> Tk()
+        mainwin<span style="color:#f92672">.</span>title(appname <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Open</span><span style="color:#e6db74">&#39;</span>)
+        handler <span style="color:#f92672">=</span> <span style="color:#66d9ef">lambda</span>: onDirectoryOpen(None)
+        Button(mainwin, text<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Open Image Directory</span><span style="color:#e6db74">&#39;</span>, command<span style="color:#f92672">=</span>handler)<span style="color:#f92672">.</span>pack()
+    mainwin<span style="color:#f92672">.</span>mainloop()
+</code></pre></div>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -458,7 +404,7 @@ if __name__ == '__main__':
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

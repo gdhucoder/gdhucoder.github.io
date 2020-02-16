@@ -5,32 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Priority Queues</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Priority Queues" />
 <meta property="og:description" content="[TOC]
-
 本篇文章主要介绍优先队列(Priority Queue)和嵌套类(nested class)的基本用法。
-接下来的文章会介绍在实现例如Greedy Best First Search和AStar搜索算法中使用priority queue。
-
-" />
+接下来的文章会介绍在实现例如Greedy Best First Search和AStar搜索算法中使用priority queue。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/java_skill/20171024-priority_queue/" />
-
-
-
-<meta property="article:published_time" content="2017-10-24T21:25:07&#43;08:00"/>
-
-<meta property="article:modified_time" content="2017-10-24T21:25:07&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2017-10-24T21:25:07+08:00" />
+<meta property="article:modified_time" content="2017-10-24T21:25:07+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -101,167 +84,157 @@ MathJax.Hub.Config({
     <h2>Priority Queues</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#priority-queue">Priority Queue</a></li>
-<li><a href="#nested-class-java嵌套类">Nested Class: Java嵌套类</a></li>
-<li><a href="#example-1-without-nested-class">Example 1 (without nested class)</a></li>
-<li><a href="#example-2-nested-class">Example 2 (nested class)</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#priority-queue">Priority Queue</a></li>
+        <li><a href="#nested-class-java嵌套类">Nested Class: Java嵌套类</a></li>
+        <li><a href="#example-1-without-nested-class">Example 1 (without nested class)</a></li>
+        <li><a href="#example-2-nested-class">Example 2 (nested class)</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>本篇文章主要介绍优先队列(Priority Queue)和嵌套类(nested class)的基本用法。
 接下来的文章会介绍在实现例如Greedy Best First Search和AStar搜索算法中使用priority queue。</p>
-
-<p></p>
-
 <h3 id="priority-queue">Priority Queue</h3>
-
 <ul>
-<li><p>In priority queue:</p></li>
-
-<li><p>The order of the queue is controlled by implementing <strong>Comparable</strong>.</p></li>
+<li>
+<p>In priority queue:</p>
+</li>
+<li>
+<p>The order of the queue is controlled by implementing <strong>Comparable</strong>.</p>
+</li>
 </ul>
-
 <h3 id="nested-class-java嵌套类">Nested Class: Java嵌套类</h3>
-
 <ul>
-<li><p>if you make an inner class <strong>static</strong>, this is commonly called <strong>a nested class</strong>.</p></li>
-
-<li><p>create an inner class, you don&rsquo;t need an outer-class object.</p></li>
-
-<li><p>you can not access a non-static outer-class object from an object of a nested class.</p></li>
+<li>
+<p>if you make an inner class <strong>static</strong>, this is commonly called <strong>a nested class</strong>.</p>
+</li>
+<li>
+<p>create an inner class, you don&rsquo;t need an outer-class object.</p>
+</li>
+<li>
+<p>you can not access a non-static outer-class object from an object of a nested class.</p>
+</li>
 </ul>
-
 <h3 id="example-1-without-nested-class">Example 1 (without nested class)</h3>
-
 <ul>
 <li>Here is an example to show how we can specify order using Priority Queue.</li>
 </ul>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * an example of Priority Queue
+</span><span style="color:#75715e"> * Created by HuGuodong on 2017/10/25.
+</span><span style="color:#75715e"> */</span>
 
-<!--more-->
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ToDoList</span> <span style="color:#66d9ef">extends</span> PriorityQueue<span style="color:#f92672">&lt;</span>ToDoList<span style="color:#f92672">.</span><span style="color:#a6e22e">ToDoItem</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">{</span>
+     <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ToDoItem</span> <span style="color:#66d9ef">implements</span> Comparable<span style="color:#f92672">&lt;</span>ToDoItem<span style="color:#f92672">&gt;</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">char</span> primary<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> secondary<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">private</span> String item<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">ToDoItem</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> pri<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> sec<span style="color:#f92672">,</span> String i<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">primary</span> <span style="color:#f92672">=</span> pri<span style="color:#f92672">;</span>
+                <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">secondary</span> <span style="color:#f92672">=</span> sec<span style="color:#f92672">;</span>
+                <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">item</span> <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
 
-<pre><code class="language-java">
-/**
- * an example of Priority Queue
- * Created by HuGuodong on 2017/10/25.
- */
+         <span style="color:#75715e">/**
+</span><span style="color:#75715e">          * order by the first arg, then the second arg
+</span><span style="color:#75715e">          * @param o
+</span><span style="color:#75715e">          * @return
+</span><span style="color:#75715e">          */</span>
+         <span style="color:#a6e22e">@Override</span>
+            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>ToDoItem o<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>primary <span style="color:#f92672">&gt;</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">primary</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">return</span> 1<span style="color:#f92672">;</span>
+                <span style="color:#f92672">}</span>
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>primary <span style="color:#f92672">=</span><span style="color:#f92672">=</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">primary</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>secondary <span style="color:#f92672">&gt;</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">secondary</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
 
-public class ToDoList extends PriorityQueue&lt;ToDoList.ToDoItem&gt;{
-     class ToDoItem implements Comparable&lt;ToDoItem&gt; {
-            private char primary;
-            private int secondary;
-            private String item;
-            public ToDoItem(char pri, int sec, String i) {
-                this.primary = pri;
-                this.secondary = sec;
-                this.item = i;
-            }
+                        <span style="color:#66d9ef">return</span> 1<span style="color:#f92672">;</span>
+                    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>secondary <span style="color:#f92672">=</span><span style="color:#f92672">=</span> o<span style="color:#f92672">.</span><span style="color:#a6e22e">secondary</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                        <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+                    <span style="color:#f92672">}</span>
+                <span style="color:#f92672">}</span>
+                <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                <span style="color:#66d9ef">return</span> Character<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>primary<span style="color:#f92672">)</span> <span style="color:#f92672">+</span> secondary <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;: &#34;</span> <span style="color:#f92672">+</span> item<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">char</span> pri<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> sec<span style="color:#f92672">,</span> String item<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> ToDoItem<span style="color:#f92672">(</span>pri<span style="color:#f92672">,</span> sec<span style="color:#f92672">,</span> item<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-         /**
-          * order by the first arg, then the second arg
-          * @param o
-          * @return
-          */
-         @Override
-            public int compareTo(ToDoItem o) {
-                if (primary &gt; o.primary) {
-                    return 1;
-                }
-                if (primary == o.primary) {
-                    if (secondary &gt; o.secondary) {
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+        ToDoList toDoList <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ToDoList<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        toDoList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;c&#39;</span><span style="color:#f92672">,</span> 16<span style="color:#f92672">,</span><span style="color:#e6db74">&#34;Fog&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        toDoList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;c&#39;</span><span style="color:#f92672">,</span> 3<span style="color:#f92672">,</span><span style="color:#e6db74">&#34;Dog&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        toDoList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">,</span> 2<span style="color:#f92672">,</span><span style="color:#e6db74">&#34;Aog&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span><span style="color:#f92672">(</span><span style="color:#f92672">!</span>toDoList<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+            <span style="color:#75715e">// remove is the same as poll, except its throw Exception, when it&#39;s empty.
+</span><span style="color:#75715e"></span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>toDoList<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#75715e">//System.out.println(toDoList.poll());
+</span><span style="color:#75715e"></span>        <span style="color:#f92672">}</span>
+<span style="color:#75715e">//            result:
+</span><span style="color:#75715e"></span><span style="color:#75715e">//            a2: Aog
+</span><span style="color:#75715e"></span><span style="color:#75715e">//            c3: Dog
+</span><span style="color:#75715e"></span><span style="color:#75715e">//            c16: Fog
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-                        return 1;
-                    } else if (secondary == o.secondary) {
-                        return 0;
-                    }
-                }
-                return -1;
-            }
-            public String toString() {
-                return Character.toString(primary) + secondary + &quot;: &quot; + item;
-            }
-        }
-        public void add(char pri, int sec, String item){
-            super.add(new ToDoItem(pri, sec, item));
-        }
-
-    public static void main(String[] args){
-        ToDoList toDoList = new ToDoList();
-        toDoList.add('c', 16,&quot;Fog&quot;);
-        toDoList.add('c', 3,&quot;Dog&quot;);
-        toDoList.add('a', 2,&quot;Aog&quot;);
-        while(!toDoList.isEmpty()){
-            // remove is the same as poll, except its throw Exception, when it's empty.
-            System.out.println(toDoList.remove());
-            //System.out.println(toDoList.poll());
-        }
-//            result:
-//            a2: Aog
-//            c3: Dog
-//            c16: Fog
-    }
-}
-
-</code></pre>
-
-<h3 id="example-2-nested-class">Example 2 (nested class)</h3>
-
+</code></pre></div><h3 id="example-2-nested-class">Example 2 (nested class)</h3>
 <ul>
 <li>Here is an example of using static inner class to implement PriorityQueue.</li>
 </ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyPriorityQueue</span> <span style="color:#66d9ef">extends</span> PriorityQueue<span style="color:#f92672">&lt;</span>MyPriorityQueue<span style="color:#f92672">.</span><span style="color:#a6e22e">Student</span><span style="color:#f92672">&gt;</span><span style="color:#f92672">{</span>
 
-<pre><code class="language-java">public class MyPriorityQueue extends PriorityQueue&lt;MyPriorityQueue.Student&gt;{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+        MyPriorityQueue que <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MyPriorityQueue<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        que<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Student<span style="color:#f92672">(</span>100<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;guodong_hu&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        que<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Student<span style="color:#f92672">(</span>99<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;xie&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        que<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> Student<span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;lin&#34;</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span>que<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>que<span style="color:#f92672">.</span><span style="color:#a6e22e">poll</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
 
-    public static void main(String[] args){
-        MyPriorityQueue que = new MyPriorityQueue();
-        que.add(new Student(100, &quot;guodong_hu&quot;));
-        que.add(new Student(99, &quot;xie&quot;));
-        que.add(new Student(1, &quot;lin&quot;));
-        while (!que.isEmpty()){
-            System.out.println(que.poll());
-        }
-    }
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> <span style="color:#66d9ef">implements</span> Comparable<span style="color:#f92672">&lt;</span>Student<span style="color:#f92672">&gt;</span><span style="color:#f92672">{</span>
+        Integer no<span style="color:#f92672">;</span>
+        String name<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Student</span><span style="color:#f92672">(</span>Integer no<span style="color:#f92672">,</span> String name<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">no</span> <span style="color:#f92672">=</span> no<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-    static class Student implements Comparable&lt;Student&gt;{
-        Integer no;
-        String name;
-        public Student(Integer no, String name){
-            this.no = no;
-            this.name = name;
-        }
+        <span style="color:#a6e22e">@Override</span>
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">compareTo</span><span style="color:#f92672">(</span>Student stu<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">int</span> result<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>no <span style="color:#f92672">&gt;</span> stu<span style="color:#f92672">.</span><span style="color:#a6e22e">no</span><span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+                result <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span><span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>no <span style="color:#f92672">=</span><span style="color:#f92672">=</span> stu<span style="color:#f92672">.</span><span style="color:#a6e22e">no</span><span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+                result <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span><span style="color:#66d9ef">else</span><span style="color:#f92672">{</span>
+                result <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">return</span> result<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
 
-        @Override
-        public int compareTo(Student stu) {
-            int result;
-            if(no &gt; stu.no){
-                result = 1;
-            }else if(no == stu.no){
-                result = 0;
-            }else{
-                result = -1;
-            }
-            return result;
-        }
-
-        @Override
-        public String toString() {
-            return &quot;Student{&quot; +
-                    &quot;no=&quot; + no +
-                    &quot;, name='&quot; + name + '\'' +
-                    '}';
-        }
-    }
-}
-</code></pre>
+        <span style="color:#a6e22e">@Override</span>
+        <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Student{&#34;</span> <span style="color:#f92672">+</span>
+                    <span style="color:#e6db74">&#34;no=&#34;</span> <span style="color:#f92672">+</span> no <span style="color:#f92672">+</span>
+                    <span style="color:#e6db74">&#34;, name=&#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+                    <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -297,7 +270,7 @@ public class ToDoList extends PriorityQueue&lt;ToDoList.ToDoItem&gt;{
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

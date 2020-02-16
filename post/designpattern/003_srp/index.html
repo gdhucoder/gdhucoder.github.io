@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SRP</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="SRP" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about SRP.
-
-" />
+Brief introduction about SRP." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/003_srp/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:05:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:05:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:05:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:05:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,68 +83,54 @@ MathJax.Hub.Config({
     <h2>SRP</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#单一职责原则">单一职责原则</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#实际应用">实际应用</a></li>
-<li><a href="#注意">注意</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#实际应用">实际应用</a></li>
+    <li><a href="#注意">注意</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about SRP.</p>
-
-<p></p>
-
 <h1 id="单一职责原则">单一职责原则</h1>
-
 <h2 id="定义">定义</h2>
-
 <p>单一职责原则的英文是 Single Responsibility Principle，缩写为 SRP。这个原则的英文描述是这样的：A class or
 module should have a single responsibility。如果我们把它翻译成中文，那就是：一个类或者模块只负责完成一个职责（或者功能）。</p>
-
 <h2 id="实际应用">实际应用</h2>
-
 <blockquote>
 <p>设计你的系统，使得每个模块负责（响应）只满足一个业务功能需求。</p>
-
+</blockquote>
+<blockquote>
 <p>Design your systems such that each module is responsible (responds to) the needs of just that one business function. (Robert C. Martin)</p>
 </blockquote>
-
 <p>评价一个类的职责是否足够单一，我们并没有一个非常明确的、可以量化的标准。
 可以说，这是件非常主观、仁者见仁智者见智的事情。</p>
-
 <p>实际上，在真正的软件开发中，我们也没必要过于未雨绸缪，过度设计。
 所以，我们可以<strong>先写一个粗粒度的类，满足业务需求。
 随着业务的发展，如果粗粒度的类越来越庞大，代码越来越多，这个时候，
 我们就可以将这个粗粒度的类，拆分成几个更细粒度的类。这就是所谓的持续重构（后面的章节中我们会讲到）</strong>。</p>
-
 <h2 id="注意">注意</h2>
-
 <p>如何判断类的职责是否足够单一？</p>
-
 <p>不同的应用场景、不同阶段的需求背景、不同的业务层面，对同一个类的职责是否单一，可能会有不同的判定结果。
 实际上，一些侧面的判断指标更具有指导意义和可执行性，比如，出现下面这些情况就有可能说明这类的设计不满足单一职责原则：</p>
-
 <ul>
-<li><p>类中的代码行数、函数或者属性过多；</p></li>
-
-<li><p>类依赖的其他类过多，或者依赖类的其他类过多；</p></li>
-
-<li><p>私有方法过多；比较难给类起一个合适的名字；</p></li>
-
-<li><p>类中大量的方法都是集中操作类中的某几个属性。</p></li>
+<li>
+<p>类中的代码行数、函数或者属性过多；</p>
+</li>
+<li>
+<p>类依赖的其他类过多，或者依赖类的其他类过多；</p>
+</li>
+<li>
+<p>私有方法过多；比较难给类起一个合适的名字；</p>
+</li>
+<li>
+<p>类中大量的方法都是集中操作类中的某几个属性。</p>
+</li>
 </ul>
-
 <h2 id="参考">参考</h2>
-
 <p><a href="https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html">uncle bob</a></p>
-
 <p><a href="https://time.geekbang.org/column/article/171771">geekbang</a></p>
 		</div>
 		
@@ -198,7 +167,7 @@ module should have a single responsibility。如果我们把它翻译成中文�
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

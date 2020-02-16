@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Alg on CoderPunk</title>
+    <title>ALG on CoderPunk</title>
     <link>https://gdhucoder.github.io/tags/alg/</link>
-    <description>Recent content in Alg on CoderPunk</description>
+    <description>Recent content in ALG on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Thu, 01 Aug 2019 08:30:01 +0800</lastBuildDate>
@@ -17,9 +17,7 @@
       <pubDate>Thu, 01 Aug 2019 08:30:01 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/alg4/booknote/2019-07-31_alg4_interval2d/</guid>
-      <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,10 +27,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/booknote/2_4_priorityqueues/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;介绍优先队列。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;介绍优先队列。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -42,10 +37,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/chapter5/huffmancompression/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;总结霍夫曼压缩的相关重点。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;总结霍夫曼压缩的相关重点。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -55,10 +47,7 @@
       
       <guid>https://gdhucoder.github.io/post/note/2019-03-14/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;突击学习一下。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;突击学习一下。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -68,10 +57,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/chapter5/note/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;介绍经典的数据压缩算法&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;介绍经典的数据压缩算法&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -81,10 +67,7 @@
       
       <guid>https://gdhucoder.github.io/post/alg4/chapter5/stringsortssummary/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;整理字符串排序的知识点。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;整理字符串排序的知识点。&lt;/p&gt;</description>
     </item>
     
   </channel>

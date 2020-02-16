@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Go Basic</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Go Basic" />
 <meta property="og:description" content="[TOC]
-
-GO简单用法
-
-" />
+GO简单用法" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/golang/04/" />
-
-
-
-<meta property="article:published_time" content="2019-03-11T21:02:15&#43;08:00"/>
-
-<meta property="article:modified_time" content="2019-03-11T21:02:15&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-03-11T21:02:15+08:00" />
+<meta property="article:modified_time" content="2019-03-11T21:02:15+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,138 +83,100 @@ MathJax.Hub.Config({
     <h2>Go Basic</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#go-basics">GO Basics</a>
-<ul>
-<li><a href="#functions-continued">Functions continued</a></li>
-<li><a href="#multiple-results">Multiple results</a></li>
-<li><a href="#named-return-values-命名返回值">Named return values 命名返回值</a></li>
-<li><a href="#variables-变量">Variables 变量</a></li>
-<li><a href="#variables-with-initializers">Variables with initializers</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#functions-continued">Functions continued</a></li>
+    <li><a href="#multiple-results">Multiple results</a></li>
+    <li><a href="#named-return-values-命名返回值">Named return values 命名返回值</a></li>
+    <li><a href="#variables-变量">Variables 变量</a></li>
+    <li><a href="#variables-with-initializers">Variables with initializers</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>GO简单用法</p>
-
-<p></p>
-
 <h1 id="go-basics">GO Basics</h1>
-
 <h2 id="functions-continued">Functions continued</h2>
-
 <p>When two or more consecutive named function parameters share a type, you can omit the type from all but the last.</p>
-
 <p>In this example, we shortened</p>
-
 <p>x int, y int</p>
-
 <p>to</p>
-
 <p>x, y int</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
-<pre><code class="language-golang">package main
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 
-import &quot;fmt&quot;
-
-func add(a, b int) int {
-    return a + b
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>
 }
 
-func main(){
-    fmt.Println(add(42, 34))
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">42</span>, <span style="color:#ae81ff">34</span>))
 }
-</code></pre>
-
-<h2 id="multiple-results">Multiple results</h2>
-
+</code></pre></div><h2 id="multiple-results">Multiple results</h2>
 <p>a function can return any number of results</p>
-
 <p>a swap function returns two strings.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
-<pre><code class="language-golang">package main
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 
-import &quot;fmt&quot;
-
-func swap(x, y string) (string, string){
-    return y,x
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">swap</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">string</span>) (<span style="color:#66d9ef">string</span>, <span style="color:#66d9ef">string</span>){
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">y</span>,<span style="color:#a6e22e">x</span>
 }
 
-func main(){
-    fmt.Println(swap(&quot;hello&quot;, &quot;world&quot;))
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>(){
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">swap</span>(<span style="color:#e6db74">&#34;hello&#34;</span>, <span style="color:#e6db74">&#34;world&#34;</span>))
 }
-</code></pre>
-
-<h2 id="named-return-values-命名返回值">Named return values 命名返回值</h2>
-
+</code></pre></div><h2 id="named-return-values-命名返回值">Named return values 命名返回值</h2>
 <p>Go&rsquo;s return values may be named. If so, they are treated as variables defined at the top of the function.</p>
-
 <p>These names should be used to document the meaning of the return values.</p>
-
 <p>A return statement without arguments returns the named return values. This is known as a &ldquo;naked&rdquo; return.</p>
-
 <p>Naked return statements should be used only in short functions, as with the example shown here. They can harm readability in longer functions.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
-<pre><code class="language-golang">package main
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 
-import &quot;fmt&quot;
-
-func split(sum int) (x, y int) {
-    x = sum * 4 / 9
-    y = sum - x
-    return
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">split</span>(<span style="color:#a6e22e">sum</span> <span style="color:#66d9ef">int</span>) (<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span> <span style="color:#66d9ef">int</span>) {
+	<span style="color:#a6e22e">x</span> = <span style="color:#a6e22e">sum</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">9</span>
+	<span style="color:#a6e22e">y</span> = <span style="color:#a6e22e">sum</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">x</span>
+	<span style="color:#66d9ef">return</span>
 }
 
-func main() {
-    fmt.Println(split(17))
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">split</span>(<span style="color:#ae81ff">17</span>))
 }
 
-</code></pre>
-
-<h2 id="variables-变量">Variables 变量</h2>
-
+</code></pre></div><h2 id="variables-变量">Variables 变量</h2>
 <p>The <strong>var</strong> statement declares a list of variables; as in function argument list, the type is last.</p>
-
 <p>A <strong>var</strong> statement can be at the package or function level.We see both in this example.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
-<pre><code class="language-golang">package main
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 
-import &quot;fmt&quot;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span>, <span style="color:#a6e22e">python</span>, <span style="color:#a6e22e">java</span> <span style="color:#66d9ef">bool</span>
 
-var c, python, java bool
-
-func main() {
-    var i int
-    fmt.Println(i, c, python, java)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#66d9ef">int</span>
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">c</span>, <span style="color:#a6e22e">python</span>, <span style="color:#a6e22e">java</span>)
 }
 
-</code></pre>
-
-<h2 id="variables-with-initializers">Variables with initializers</h2>
-
+</code></pre></div><h2 id="variables-with-initializers">Variables with initializers</h2>
 <p>A var declaration can include initializers, one per varialbe.</p>
-
 <p>变量初始化，每个变量都要包含值。</p>
-
 <p>If an initializer is present, the type can be omitted; the variable will take the type of initializer.</p>
-
 <p>如果初始化变量了，可以省略类型。变量的类型会是初始值的类型。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
-<pre><code class="language-golang">package main
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
 
-import &quot;fmt&quot;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span> <span style="color:#66d9ef">int</span> = <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>
 
-var i, j int = 1, 2
-
-func main() {
-    var c, python, java = &quot;c&quot;, false, &quot;no!&quot;
-    fmt.Println(i, j, c, python, java)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span>, <span style="color:#a6e22e">python</span>, <span style="color:#a6e22e">java</span> = <span style="color:#e6db74">&#34;c&#34;</span>, <span style="color:#66d9ef">false</span>, <span style="color:#e6db74">&#34;no!&#34;</span>
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span>, <span style="color:#a6e22e">c</span>, <span style="color:#a6e22e">python</span>, <span style="color:#a6e22e">java</span>)
 }
 
-</code></pre>
+</code></pre></div>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -267,7 +212,7 @@ func main() {
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

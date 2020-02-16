@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Designpattern on CoderPunk</title>
+    <title>DesignPattern on CoderPunk</title>
     <link>https://gdhucoder.github.io/tags/designpattern/</link>
-    <description>Recent content in Designpattern on CoderPunk</description>
+    <description>Recent content in DesignPattern on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Sat, 04 Jan 2020 10:26:04 +0800</lastBuildDate>
@@ -18,10 +18,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/029_summary/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief summary all design patterns.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief summary all design patterns.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,10 +28,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/028_visitorpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Visitor Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Visitor Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -44,10 +38,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/027_interpreterpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Interpreter Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Interpreter Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -57,10 +48,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/026_flyweightpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Flyweight Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Flyweight Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -70,10 +58,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/025_mediatorpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Mediator Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Mediator Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -83,10 +68,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/022_brigepattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Bridge Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Bridge Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -96,10 +78,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/024_chainofresponsibility/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Chain of Responsibility Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Chain of Responsibility Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -109,10 +88,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/023_commandpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Command Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Command Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -122,10 +98,27 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/021_singletonpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Singleton Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Singleton Pattern&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Iterator Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/020_iteratorpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:21:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/020_iteratorpattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;Brief introduction about Iterator Pattern&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Composite Pattern</title>
+      <link>https://gdhucoder.github.io/post/designpattern/019_compositepattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:20:03 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/post/designpattern/019_compositepattern/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;Brief introduction about Composite Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -135,10 +128,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/017_adapterpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Adapter Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Adapter Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -148,10 +138,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/018_mementopattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Memento Pattern&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Memento Pattern&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -161,10 +148,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/016_statepattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about State Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about State Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -174,10 +158,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/015_abstractpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Abstract Factory Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Abstract Factory Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -187,10 +168,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/014_observerpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Observer Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Observer Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -200,10 +178,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/013_builderpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Builder Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Builder Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -213,10 +188,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/012_facadepattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Facade Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Facade Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -226,10 +198,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/010_templatemethodpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Template Method.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Template Method.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -239,10 +208,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/009_prototypepattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about prototype pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about prototype pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -252,10 +218,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/008_factorymethodpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Factory Method.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Factory Method.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -265,10 +228,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/006_decoratorpattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Decorator.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Decorator.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -278,10 +238,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/007_proxypattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Proxy Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Proxy Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -291,10 +248,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/005_isp/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about ISP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about ISP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -304,10 +258,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/005_lsp/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about LSP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about LSP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -317,10 +268,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/005_dry/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about DRY.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about DRY.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -330,10 +278,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/005_dip/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about DIP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about DIP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -343,10 +288,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/004_ocp/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about OCP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about OCP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -356,10 +298,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/003_srp/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about SRP.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about SRP.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -369,10 +308,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/002_strategypattern/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Strategy Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Strategy Pattern.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -382,10 +318,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/001_simplefactory/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Simple Factory Method.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Simple Factory Method.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -395,10 +328,7 @@
       
       <guid>https://gdhucoder.github.io/post/designpattern/000_preface/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Brief introduction about Design Pattern.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Brief introduction about Design Pattern.&lt;/p&gt;</description>
     </item>
     
   </channel>

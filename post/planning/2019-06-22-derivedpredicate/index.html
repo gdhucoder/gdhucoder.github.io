@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>衍生谓词</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="衍生谓词" />
 <meta property="og:description" content="[TOC]
-
-Derived Predicates.
-
-" />
+Derived Predicates." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/planning/2019-06-22-derivedpredicate/" />
-
-
-
-<meta property="article:published_time" content="2019-06-22T09:59:37&#43;08:00"/>
-
-<meta property="article:modified_time" content="2019-06-22T09:59:37&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-06-22T09:59:37+08:00" />
+<meta property="article:modified_time" content="2019-06-22T09:59:37+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,49 +83,28 @@ MathJax.Hub.Config({
     <h2>衍生谓词</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#derived-predicates">Derived Predicates</a>
-<ul>
-<li><a href="#derived-predicates-1">Derived Predicates</a></li>
-<li><a href="#timed-initial-literals">Timed Initial Literals</a></li>
-<li><a href="#ref">REF</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#derived-predicates-1">Derived Predicates</a></li>
+    <li><a href="#timed-initial-literals">Timed Initial Literals</a></li>
+    <li><a href="#ref">REF</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Derived Predicates.</p>
-
-<p></p>
-
 <h1 id="derived-predicates">Derived Predicates</h1>
-
 <p>在PDDL2.2中提出了衍生谓词</p>
-
 <h2 id="derived-predicates-1">Derived Predicates</h2>
-
 <p>Derived predicates have been implemented in several planning systems in the past, including e.g. UCPOP. They are predicates that are not affected by any of the actions available to the planner. Instead, the predicate&rsquo;s truth values are derived by a set of rules of the form if formula(x) then predicate(x). The semantics are, roughly, that an instance of a derived predicate (a derived predicate whose arguments are instantiated with constants; a fact, for short) is TRUE iff it can be derived using the available rules. An example for a derived predicate is an <code>above</code> predicate in the Blocksworld, which can be derived by the following rule:</p>
-
 <pre><code>if on(x,y) OR (exists z: on(x,z) AND above(z,y)) then above(x,y)
-</code></pre>
-
-<p>简单说，通过一个谓词on，衍生出另一个谓词above。</p>
-
+</code></pre><p>简单说，通过一个谓词on，衍生出另一个谓词above。</p>
 <h2 id="timed-initial-literals">Timed Initial Literals</h2>
-
 <p>Timed initial literals are a syntactically very simple way of expressing a certain restricted form of exogenous events: facts that will become TRUE or FALSE at time points that are known to the planner in advance, independently of the actions that the planner chooses to execute. Timed initial literals are thus deterministic unconditional exogenous events. Syntactically, we simply allow the initial state to specify &ndash; beside the usual facts that are true at time point 0 &ndash; literals that will become true at time points greater than 0. For example:</p>
-
 <pre><code>(:init (at 9 (shop-open)) (at 20 (not (shop-open))))
-</code></pre>
-
-<p>Timed initial literals are practically very relevant: in the real world, deterministic unconditional exogenous events are very common, typically in the form of time windows (within which a shop has opened, within which humans work, within which traffic is slow, within which there is daylight, within which a seminar room is occupied, within which nobody answers their mail because they are all at conferences, etc.).</p>
-
+</code></pre><p>Timed initial literals are practically very relevant: in the real world, deterministic unconditional exogenous events are very common, typically in the form of time windows (within which a shop has opened, within which humans work, within which traffic is slow, within which there is daylight, within which a seminar room is occupied, within which nobody answers their mail because they are all at conferences, etc.).</p>
 <p>时间初始文字。</p>
-
 <h2 id="ref">REF</h2>
-
 <p><a href="http://idm-lab.org/wiki/icaps/ipc2004/deterministic/pddl.html">ref-1</a></p>
 		</div>
 		
@@ -179,7 +141,7 @@ MathJax.Hub.Config({
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

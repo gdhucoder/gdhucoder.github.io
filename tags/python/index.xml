@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on CoderPunk</title>
@@ -18,20 +18,14 @@
       
       <guid>https://gdhucoder.github.io/post/sns_2/seaborn_2_color_palettes/</guid>
       <description>&lt;h1 id=&#34;调色板&#34;&gt;调色板&lt;/h1&gt;
-
 &lt;p&gt;颜色很重要，如果使用的好，就会帮助你突出数据的特征。&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;color_palette()能传入任何Matplotlib所支持的颜色&lt;/li&gt;
 &lt;li&gt;color_palette()不写参数则默认颜色&lt;/li&gt;
 &lt;li&gt;set_palette()设置所有图的颜色&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;下面是使用seaborn的color palettes的一些例子，这些例子官网上面都已经有详细的介绍。&lt;/p&gt;
-
-&lt;p&gt;网址为：&lt;a href=&#34;http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial&#34;&gt;http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;网址为：http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -41,10 +35,7 @@
       
       <guid>https://gdhucoder.github.io/post/sns_1/seaborn_1/</guid>
       <description>&lt;h1 id=&#34;风格设置&#34;&gt;风格设置&lt;/h1&gt;
-
-&lt;p&gt;Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Drawing attractive figures is important. When making figures for yourself, as you explore a dataset, it’s nice to have plots that are pleasant to look at. Visualizations are also central to communicating quantitative insights to an audience, and in that setting it’s even more necessary to have figures that catch the attention and draw a viewer in.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -53,12 +44,7 @@
       <pubDate>Wed, 09 Aug 2017 21:44:30 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/plt_5/plt_5/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#Color
-import pandas as pd
-import matplotlib.pyplot as plt
-
-women_degrees = pd.read_csv(&#39;percent-bachelors-degrees-women-usa.csv&#39;)
-major_cats = [&#39;Biology&#39;, &#39;Computer Science&#39;, &#39;Engineering&#39;, &#39;Math and Statistics&#39;]</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;</description>
     </item>
     
     <item>
@@ -67,11 +53,9 @@ major_cats = [&#39;Biology&#39;, &#39;Computer Science&#39;, &#39;Engineering&#3
       <pubDate>Wed, 09 Aug 2017 20:44:30 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/plt_4/plt_4/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-import matplotlib.pyplot as plt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; plt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -80,11 +64,9 @@ import matplotlib.pyplot as plt
       <pubDate>Wed, 09 Aug 2017 19:44:30 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/plt_3/plt_3/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-import matplotlib.pyplot as plt
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; matplotlib.pyplot &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; plt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -93,14 +75,12 @@ import matplotlib.pyplot as plt
       <pubDate>Tue, 08 Aug 2017 21:44:30 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/plt_2/plt_2/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-reviews = pd.read_csv(&#39;fandango_scores.csv&#39;)
-cols = [&#39;FILM&#39;, &#39;RT_user_norm&#39;, &#39;Metacritic_user_nom&#39;, &#39;IMDB_norm&#39;, &#39;Fandango_Ratingvalue&#39;, &#39;Fandango_Stars&#39;]
-norm_reviews = reviews[cols]
-print(norm_reviews[:1])
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+reviews &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;fandango_scores.csv&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+cols &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;FILM&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;RT_user_norm&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Metacritic_user_nom&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;IMDB_norm&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Fandango_Ratingvalue&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Fandango_Stars&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;]
+norm_reviews &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; reviews[cols]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(norm_reviews[:&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
@@ -109,15 +89,11 @@ print(norm_reviews[:1])
       <pubDate>Thu, 03 Aug 2017 21:44:30 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/post/plt_1/plt_1/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;unrate = pd.read_csv(&#39;UNRATE.csv&#39;)
-unrate[&#39;DATE&#39;] = pd.to_datetime(unrate[&#39;DATE&#39;])
-print(unrate.head(12))
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;unrate &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;UNRATE.csv&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
+unrate[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;DATE&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(unrate[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;DATE&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;])
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(unrate&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head(&lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;))
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
   </channel>

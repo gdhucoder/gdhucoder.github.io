@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>算法4习题 2.4.17</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="算法4习题 2.4.17" />
 <meta property="og:description" content="2.4.17 问题： 2.4.17 Prove that building a minimum-oriented priority queue of size k then doing N - k replace the minimum (insert followed by remove the minimum) operations leaves the k largest of the N items in the priority queue.
 分析： 题意是insert followed by remove the minimum，先插入后删除。
@@ -13,22 +13,8 @@
 N=10, 元素为：0,2,4,6,8,1,3,5,7,9 k=3， qp = 0 2 4 N-k = 10 - 3 = 7，将要进行7次操作 pq = 0 2 4 count = 1 insert 6, pq = 0 2 4 6 remove 0, pq = 2 4 6 count = 2 insert 8, pq = 2 4 6 8 remove 2, pq = 4 6 8 count =3 insert 1, pq = 1 4 6 8 remove 1, pq = 4 6 8 ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter2/ex_2_4_17/" />
-
-
-
-<meta property="article:published_time" content="2018-10-26T06:00:00&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-10-26T06:00:00&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2018-10-26T06:00:00+08:00" />
+<meta property="article:modified_time" content="2018-10-26T06:00:00+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -99,67 +85,49 @@ MathJax.Hub.Config({
     <h2>算法4习题 2.4.17</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#2-4-17">2.4.17</a>
-<ul>
-<li><a href="#问题">问题：</a></li>
-<li><a href="#分析">分析：</a></li>
-<li><a href="#参考">参考：</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#问题">问题：</a></li>
+    <li><a href="#分析">分析：</a></li>
+    <li><a href="#参考">参考：</a></li>
+  </ul>
 </nav>
 </aside>
 
-			
-
-<h1 id="2-4-17">2.4.17</h1>
-
+			<h1 id="2417">2.4.17</h1>
 <h2 id="问题">问题：</h2>
-
 <p>2.4.17 Prove that building a minimum-oriented priority queue of size k then doing N - k replace the minimum (insert followed by remove the minimum) operations leaves the k largest of the N items in the priority queue.</p>
-
 <h2 id="分析">分析：</h2>
-
 <p>题意是insert followed by remove the minimum，先插入后删除。</p>
-
 <p>例如</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">N<span style="color:#f92672">=</span>10<span style="color:#f92672">,</span> 元素为<span style="color:#960050;background-color:#1e0010">：</span>0<span style="color:#f92672">,</span>2<span style="color:#f92672">,</span>4<span style="color:#f92672">,</span>6<span style="color:#f92672">,</span>8<span style="color:#f92672">,</span>1<span style="color:#f92672">,</span>3<span style="color:#f92672">,</span>5<span style="color:#f92672">,</span>7<span style="color:#f92672">,</span>9
 
-<pre><code class="language-java">N=10, 元素为：0,2,4,6,8,1,3,5,7,9
+k<span style="color:#f92672">=</span>3<span style="color:#960050;background-color:#1e0010">，</span> qp <span style="color:#f92672">=</span> 0 2 4
+N<span style="color:#f92672">-</span>k <span style="color:#f92672">=</span> 10 <span style="color:#f92672">-</span> 3 <span style="color:#f92672">=</span> 7<span style="color:#960050;background-color:#1e0010">，</span>将要进行7次操作
 
-k=3， qp = 0 2 4
-N-k = 10 - 3 = 7，将要进行7次操作
+pq <span style="color:#f92672">=</span> 0 2 4
 
-pq = 0 2 4
+count <span style="color:#f92672">=</span> 1
+insert 6<span style="color:#f92672">,</span> pq <span style="color:#f92672">=</span> 0 2 4 6
+remove 0<span style="color:#f92672">,</span> pq <span style="color:#f92672">=</span> 2 4 6
 
-count = 1
-insert 6, pq = 0 2 4 6
-remove 0, pq = 2 4 6
+count <span style="color:#f92672">=</span> 2
+insert 8<span style="color:#f92672">,</span> pq <span style="color:#f92672">=</span> 2 4 6 8
+remove 2<span style="color:#f92672">,</span> pq <span style="color:#f92672">=</span> 4 6 8
 
-count = 2
-insert 8, pq = 2 4 6 8
-remove 2, pq = 4 6 8
+count <span style="color:#f92672">=</span>3
+insert 1<span style="color:#f92672">,</span> pq <span style="color:#f92672">=</span> 1 4 6 8
+remove 1<span style="color:#f92672">,</span> pq <span style="color:#f92672">=</span> 4 6 8
 
-count =3
-insert 1, pq = 1 4 6 8
-remove 1, pq = 4 6 8
+<span style="color:#f92672">.</span><span style="color:#f92672">.</span><span style="color:#f92672">.</span>
 
-...
-
-count = 7
-insert 9, pq = 6 7 8 9
-remove 6, pq = 7 8 9
-</code></pre>
-
-<p>最大的3个元素被保留了下来。</p>
-
+count <span style="color:#f92672">=</span> 7
+insert 9<span style="color:#f92672">,</span> pq <span style="color:#f92672">=</span> 6 7 8 9
+remove 6<span style="color:#f92672">,</span> pq <span style="color:#f92672">=</span> 7 8 9
+</code></pre></div><p>最大的3个元素被保留了下来。</p>
 <p>从上面的规律可以看出，若本次插入的元素在pq中为最小的元素，那么将会在remove时被删除。</p>
-
 <p>若本次插入的元素&gt;=当前pq中最小的元素，则插入的元素会被保留下来。</p>
-
 <p>如此往复，最终pq中保留了N个元素中前k个最大的元素。</p>
-
 <h2 id="参考">参考：</h2>
-
 <p><a href="https://alg4.ikesnowy.com/2-4-17/">沈星繁-2.4.17 </a></p>
 
 		</div>
@@ -197,7 +165,7 @@ remove 6, pq = 7 8 9
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

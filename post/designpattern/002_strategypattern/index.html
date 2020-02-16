@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Strategy Pattern</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Strategy Pattern" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about Strategy Pattern.
-
-" />
+Brief introduction about Strategy Pattern." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/002_strategypattern/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:04:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:04:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:04:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:04:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,49 +83,31 @@ MathJax.Hub.Config({
     <h2>Strategy Pattern</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#策略模式-strategy-pattern">策略模式（Strategy Pattern）</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#类图">类图</a></li>
-<li><a href="#用例">用例</a></li>
-<li><a href="#实际应用">实际应用</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#类图">类图</a></li>
+    <li><a href="#用例">用例</a></li>
+    <li><a href="#实际应用">实际应用</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about Strategy Pattern.</p>
-
-<p></p>
-
-<h1 id="策略模式-strategy-pattern">策略模式（Strategy Pattern）</h1>
-
+<h1 id="策略模式strategy-pattern">策略模式（Strategy Pattern）</h1>
 <h2 id="定义">定义</h2>
-
 <p>定义了算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化不影响到使用算法的客户。</p>
-
 <h2 id="类图">类图</h2>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-10_031.jpg" alt="strategy pattern" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-10_031.jpg" alt="strategy pattern"></p>
 <h2 id="用例">用例</h2>
-
 <p>《大话设计模式》中举了商场促销的例子。</p>
-
 <p>具体见代码 <a href="./code/u002">code example</a></p>
-
 <h2 id="实际应用">实际应用</h2>
-
 <p>Java <code>Collections.sort(list, comparator)</code> method where client actually passes suitable
 comparator based on the requirement in runtime to the method and the method is generic to accept any comparator type.
 Based on the comparator being passed, same collection can be sorted differently.</p>
-
 <h2 id="参考">参考</h2>
-
 <p><a href="https://howtodoinjava.com/design-patterns/behavioral/strategy-design-pattern/">howtodo-strategy-pattern</a></p>
 		</div>
 		
@@ -179,7 +144,7 @@ Based on the comparator being passed, same collection can be sorted differently.
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

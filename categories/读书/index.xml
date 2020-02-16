@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>读书 on CoderPunk</title>
@@ -18,10 +18,7 @@
       
       <guid>https://gdhucoder.github.io/reading/paper-book/2019-04-14-one-hundred-basics/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;100个基本&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;100个基本&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,10 +28,7 @@
       
       <guid>https://gdhucoder.github.io/reading/a-book-one-day/2019-04-02yenao/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;夜脑：在睡眠中自动学习的秘密&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;夜脑：在睡眠中自动学习的秘密&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -44,10 +38,7 @@
       
       <guid>https://gdhucoder.github.io/reading/a-book-one-day/2019-03-09-successluck/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;成功与运气&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;成功与运气&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -57,10 +48,7 @@
       
       <guid>https://gdhucoder.github.io/reading/a-book-one-day/2019-03-09-listrevolution/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;清单革命&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;清单革命&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -69,11 +57,11 @@
       <pubDate>Sun, 27 Jan 2019 07:00:00 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/reading/time_is_your_friend/</guid>
-      <description>生命中，我们经常会有这样的时刻，在某个时候脑中&amp;rdquo;叮&amp;rdquo;的一声，那时你发现自己之前浪费了很多时光。
+      <description>生命中，我们经常会有这样的时刻，在某个时候脑中&amp;quot;叮&amp;quot;的一声，那时你发现自己之前浪费了很多时光。
 时间的流逝是单向的。
 这周末看了李笑来的《把时间当做朋友》，里面讲了做事情不要着急，要相信时间的力量。
 其实我就是一个做事情很急的人。由于这种心态导致很多事情没有做好。接下来自己要做出一些改变。
-关于&amp;rdquo;规划&amp;rdquo;和&amp;rdquo;计划&amp;rdquo;的区别：我是一个做事情之前要做好计划的人。实际执行过程中，发现&amp;rdquo;计划赶不上变化&amp;rdquo;，那计划和现实冲突时我们怎么办呢？是根据现实改变还是坚持计划？ 坚持计划的话，那么按照我的&amp;rdquo;职业规划&amp;rdquo; 我应该是一名石油工程师。而我现在是一名程序猿。我时常为坚持计划还是调整计划而苦恼。
+关于&amp;quot;规划&amp;quot;和&amp;quot;计划&amp;quot;的区别：我是一个做事情之前要做好计划的人。实际执行过程中，发现&amp;quot;计划赶不上变化&amp;rdquo;，那计划和现实冲突时我们怎么办呢？是根据现实改变还是坚持计划？ 坚持计划的话，那么按照我的&amp;quot;职业规划&amp;rdquo; 我应该是一名石油工程师。而我现在是一名程序猿。我时常为坚持计划还是调整计划而苦恼。
 plan在Collins词典中的解释是：A plan is a method of achieving something that you have worked out in detail beforehand. 计划按照应该是一些列详细的解决问题的步骤，最后达到目标。
 但在我学了MDP（马尔可夫决策过程）后，深刻的体会到了世界是动态的，概率的。面对概率的世界，我们应该怎么办呢？有一个plan，这个plan的目标和人生幸福有关，但能根据现实的情形（世界）做出不同的反应，这就是规划！
 2019-01-27

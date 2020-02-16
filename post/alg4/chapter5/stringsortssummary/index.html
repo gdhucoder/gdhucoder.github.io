@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>String SortsSummary 字符串排序总结</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="String SortsSummary 字符串排序总结" />
 <meta property="og:description" content="[TOC]
-
-整理字符串排序的知识点。
-
-" />
+整理字符串排序的知识点。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter5/stringsortssummary/" />
-
-
-
-<meta property="article:published_time" content="2019-02-01T13:32:20&#43;08:00"/>
-
-<meta property="article:modified_time" content="2019-02-01T13:32:20&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-02-01T13:32:20+08:00" />
+<meta property="article:modified_time" content="2019-02-01T13:32:20+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,71 +83,52 @@ MathJax.Hub.Config({
     <h2>String SortsSummary 字符串排序总结</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#字符排序-string-sorts">字符排序 String Sorts</a>
-<ul>
-<li><a href="#key-indexed-counting-键索引计数法">Key-indexed counting 键索引计数法</a></li>
-<li><a href="#lsd-低位优先字符串排序法">LSD 低位优先字符串排序法</a></li>
-<li><a href="#msd">MSD</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#key-indexed-counting-键索引计数法">Key-indexed counting 键索引计数法</a></li>
+    <li><a href="#lsd-低位优先字符串排序法">LSD 低位优先字符串排序法</a></li>
+    <li><a href="#msd">MSD</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>整理字符串排序的知识点。</p>
-
-<p></p>
-
 <h1 id="字符排序-string-sorts">字符排序 String Sorts</h1>
-
 <h2 id="key-indexed-counting-键索引计数法">Key-indexed counting 键索引计数法</h2>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/算法P1.png" alt="算法P1" /></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/算法P2.png" alt="算法P2" /></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/算法P3.png" alt="算法P3" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/%E7%AE%97%E6%B3%95P1.png" alt="算法P1"></p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/%E7%AE%97%E6%B3%95P2.png" alt="算法P2"></p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/%E7%AE%97%E6%B3%95P3.png" alt="算法P3"></p>
 <h2 id="lsd-低位优先字符串排序法">LSD 低位优先字符串排序法</h2>
-
 <p>least-significant-digit first (LSD) string sort</p>
-
 <p>比较适用于固定宽度的字符串排序，从右向左，对于每个位置上的字符调用key-indexed counting算法</p>
-
 <p>时间复杂度O(NW)，忽略WR，线性级别</p>
-
 <p>伪代码如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> W<span style="color:#f92672">)</span>
+<span style="color:#f92672">{</span>
+	<span style="color:#66d9ef">int</span> N <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+	<span style="color:#66d9ef">int</span> R <span style="color:#f92672">=</span> 256<span style="color:#f92672">;</span>
+	String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> aux <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">[</span>N<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
 
-<pre><code class="language-java">
-public static void sort(String[] a, int W)
-{
-    int N = a.length;
-    int R = 256;
-    String[] aux = new String[N];
+	<span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> d<span style="color:#f92672">=</span>W<span style="color:#f92672">-</span>1<span style="color:#f92672">;</span> d<span style="color:#f92672">&gt;</span><span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> d<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">)</span>
+	<span style="color:#f92672">{</span>
+		<span style="color:#66d9ef">int</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> count <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>R<span style="color:#f92672">+</span>1<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i<span style="color:#f92672">&lt;</span>N<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			count<span style="color:#f92672">[</span>a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>d<span style="color:#f92672">)</span><span style="color:#f92672">+</span>1<span style="color:#f92672">]</span><span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> r<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> r<span style="color:#f92672">&lt;</span>R<span style="color:#f92672">;</span> r<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			count<span style="color:#f92672">[</span>r<span style="color:#f92672">+</span>1<span style="color:#f92672">]</span><span style="color:#f92672">+</span><span style="color:#f92672">=</span>count<span style="color:#f92672">[</span>r<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i<span style="color:#f92672">&lt;</span>N<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			aux<span style="color:#f92672">[</span>count<span style="color:#f92672">[</span>a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">.</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>d<span style="color:#f92672">)</span><span style="color:#f92672">]</span><span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span>
+		<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span>0<span style="color:#f92672">;</span> i<span style="color:#f92672">&lt;</span>N<span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+			a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> aux<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+		<span style="color:#f92672">}</span>
+	<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-    for(int d=W-1; d&gt;=0; d--)
-    {
-        int[] count = new int[R+1];
-        for (int i=0; i&lt;N; i++) {
-            count[a[i].charAt(d)+1]++;
-        }
-        for (int r=0; r&lt;R; r++) {
-            count[r+1]+=count[r];
-        }
-        for (int i=0; i&lt;N; i++) {
-            aux[count[a[i].charAt(d)]++] = a[i];
-        }
-        for (int i=0; i&lt;N; i++) {
-            a[i] = aux[i];
-        }
-    }
-}
-
-</code></pre>
-
-<h2 id="msd">MSD</h2>
+</code></pre></div><h2 id="msd">MSD</h2>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -200,7 +164,7 @@ public static void sort(String[] a, int W)
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

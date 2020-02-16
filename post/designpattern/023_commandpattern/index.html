@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Command Pattern</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Command Pattern" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about Command Pattern
-
-" />
+Brief introduction about Command Pattern" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/023_commandpattern/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:23:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:23:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:23:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:23:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,66 +83,43 @@ MathJax.Hub.Config({
     <h2>Command Pattern</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#命令模式-command">命令模式（Command）</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#类图">类图</a></li>
-<li><a href="#用例">用例</a></li>
-<li><a href="#实际应用">实际应用</a></li>
-<li><a href="#注意">注意</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#类图">类图</a></li>
+    <li><a href="#用例">用例</a></li>
+    <li><a href="#实际应用">实际应用</a></li>
+    <li><a href="#注意">注意</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about Command Pattern</p>
-
-<p></p>
-
-<h1 id="命令模式-command">命令模式（Command）</h1>
-
+<h1 id="命令模式command">命令模式（Command）</h1>
 <h2 id="定义">定义</h2>
-
 <p>Encapsulate a request as an object,
 thereby letting you parameterize clients with different requests,
 queue or log requests, and support undoable operations.</p>
-
 <p>将请求封装成对象，从而使你可用不同的请求对客户进行参数化；对请求排队或记录请求日志，以及支持可撤销的操作。</p>
-
 <h2 id="类图">类图</h2>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-06_020.jpg" alt="command pattern" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-06_020.jpg" alt="command pattern"></p>
 <h2 id="用例">用例</h2>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-07_021.jpg" alt="人生一串" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-07_021.jpg" alt="人生一串"></p>
 <p>《大话设计模式》中举的小菜和大鸟去吃羊肉串的例子。
 去串肉吃烧烤，和服务员下单，服务员告诉烤串师傅烤串。
 而不是自己去后厨告诉师傅说你要点啥。</p>
-
 <p>理解了这个例子就比较好理解命令模式。</p>
-
 <p><a href="./code/u023">code example</a></p>
-
 <h2 id="实际应用">实际应用</h2>
-
 <p>Java的Runnable接口是一种命令模式。</p>
-
 <h2 id="注意">注意</h2>
-
 <ul>
 <li>每个command都有指向receiver的引用</li>
 <li>command中的execute调用receiver中的具体逻辑方法</li>
 <li>receiver执行具体的业务逻辑</li>
 </ul>
-
 <h2 id="参考">参考</h2>
-
 <p><a href="https://howtodoinjava.com/design-patterns/behavioral/command-pattern/">howtodo-command-pattern</a></p>
 		</div>
 		
@@ -196,7 +156,7 @@ queue or log requests, and support undoable operations.</p>
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

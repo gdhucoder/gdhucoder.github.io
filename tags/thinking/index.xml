@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Thinking on CoderPunk</title>
+    <title>THINKING on CoderPunk</title>
     <link>https://gdhucoder.github.io/tags/thinking/</link>
-    <description>Recent content in Thinking on CoderPunk</description>
+    <description>Recent content in THINKING on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Mon, 27 Jan 2020 09:42:29 +0800</lastBuildDate>
@@ -18,10 +18,7 @@
       
       <guid>https://gdhucoder.github.io/thinking/2020-01-27-thinkabouttime/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;思考时间利用的问题。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;思考时间利用的问题。&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mediator Pattern</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Mediator Pattern" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about Mediator Pattern
-
-" />
+Brief introduction about Mediator Pattern" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/025_mediatorpattern/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:24:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:24:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:24:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:24:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,71 +83,47 @@ MathJax.Hub.Config({
     <h2>Mediator Pattern</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#中介者模式-mediator-pattern">中介者模式（Mediator Pattern）</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#类图">类图</a></li>
-<li><a href="#用例">用例</a></li>
-<li><a href="#实际应用">实际应用</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#类图">类图</a></li>
+    <li><a href="#用例">用例</a></li>
+    <li><a href="#实际应用">实际应用</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about Mediator Pattern</p>
-
-<p></p>
-
-<h1 id="中介者模式-mediator-pattern">中介者模式（Mediator Pattern）</h1>
-
+<h1 id="中介者模式mediator-pattern">中介者模式（Mediator Pattern）</h1>
 <h2 id="定义">定义</h2>
-
 <p>中介者模式一系列对象的对象的交互。使得对象间不需要显示的引用，使得耦合松散。
 可以独立改变他们之间的交互。</p>
-
 <p>mediator pattern defines an object that encapsulates
 how a set of objects interact. Mediator promotes loose
 coupling by keeping objects from referring to each other explicitly,
 and it lets us vary their interaction independently.</p>
-
 <p>Allows loose coupling by encapsulating the way disparate sets of objects
-interact and communicate with each other.<br />
+interact and communicate with each other.<br>
 Allows for the actions of each object set to vary independently of one another.</p>
-
 <h2 id="类图">类图</h2>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-07_023.jpg" alt="Mediator Pattern" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-07_023.jpg" alt="Mediator Pattern"></p>
 <h2 id="用例">用例</h2>
-
 <p>《大话设计模式》中举的例子是联合国安理会做为中介者，调节各国之间的关系。</p>
-
 <p>代码中的示例是聊天室的例子。</p>
-
 <p><a href="./code/u025">code example</a></p>
-
 <h2 id="实际应用">实际应用</h2>
-
 <ul>
 <li>现实生活中机场的航空管制。</li>
 <li>聊天室</li>
 </ul>
-
 <p>The following are the usages of the Mediator Pattern in JDK.</p>
-
-<pre><code class="language-java">java.util.concurrent.ScheduledExecutorService (all scheduleXXX() methods)
-java.util.concurrent.ExecutorService (the invokeXXX() and submit() methods)
-java.util.concurrent.Executor#execute()
-java.util.Timer (all scheduleXXX() methods)
-java.lang.reflect.Method#invoke()
-</code></pre>
-
-<h2 id="参考">参考</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">java<span style="color:#f92672">.</span><span style="color:#a6e22e">util</span><span style="color:#f92672">.</span><span style="color:#a6e22e">concurrent</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ScheduledExecutorService</span> <span style="color:#f92672">(</span>all <span style="color:#a6e22e">scheduleXXX</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> methods<span style="color:#f92672">)</span>
+java<span style="color:#f92672">.</span><span style="color:#a6e22e">util</span><span style="color:#f92672">.</span><span style="color:#a6e22e">concurrent</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ExecutorService</span> <span style="color:#f92672">(</span>the <span style="color:#a6e22e">invokeXXX</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> and <span style="color:#a6e22e">submit</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> methods<span style="color:#f92672">)</span>
+java<span style="color:#f92672">.</span><span style="color:#a6e22e">util</span><span style="color:#f92672">.</span><span style="color:#a6e22e">concurrent</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Executor</span><span style="color:#960050;background-color:#1e0010">#</span>execute<span style="color:#f92672">(</span><span style="color:#f92672">)</span>
+java<span style="color:#f92672">.</span><span style="color:#a6e22e">util</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Timer</span> <span style="color:#f92672">(</span>all <span style="color:#a6e22e">scheduleXXX</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> methods<span style="color:#f92672">)</span>
+java<span style="color:#f92672">.</span><span style="color:#a6e22e">lang</span><span style="color:#f92672">.</span><span style="color:#a6e22e">reflect</span><span style="color:#f92672">.</span><span style="color:#a6e22e">Method</span><span style="color:#960050;background-color:#1e0010">#</span>invoke<span style="color:#f92672">(</span><span style="color:#f92672">)</span>
+</code></pre></div><h2 id="参考">参考</h2>
 <p><a href="https://www.javacodegeeks.com/2015/09/mediator-design-pattern.html">mediator used in java</a></p>
 		</div>
 		
@@ -201,7 +160,7 @@ java.lang.reflect.Method#invoke()
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

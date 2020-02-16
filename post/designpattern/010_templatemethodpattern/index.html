@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Template Method</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Template Method" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about Template Method.
-
-" />
+Brief introduction about Template Method." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/010_templatemethodpattern/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:13:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:13:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:13:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:13:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,53 +83,35 @@ MathJax.Hub.Config({
     <h2>Template Method</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#模板方法模式">模板方法模式</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#注意的地方">注意的地方</a></li>
-<li><a href="#例子">例子</a></li>
-<li><a href="#应用">应用</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#注意的地方">注意的地方</a></li>
+    <li><a href="#例子">例子</a></li>
+    <li><a href="#应用">应用</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about Template Method.</p>
-
-<p></p>
-
 <h1 id="模板方法模式">模板方法模式</h1>
-
 <h2 id="定义">定义</h2>
-
 <p>Defines the skeleton of an algorithm in a method,
 deferring some steps to subclasses.
 Template Method lets subclasses redefine certain steps of
 an algorithm without changing the algorithms structure.</p>
-
 <p>定义算法骨架，将一些步骤推迟到子类中。模版方法可以不改变算法结构，重新定义一个算法的某些特定步骤。</p>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-22_009.jpg" alt="template method pattern" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-22_009.jpg" alt="template method pattern"></p>
 <h2 id="注意的地方">注意的地方</h2>
-
 <ul>
 <li>将模版方法标记为final</li>
 <li>子类相同的逻辑、代码方法，在抽象类中提供实现</li>
 <li>子类不同具体实现的方法，定义为abstract方法</li>
 </ul>
-
 <h2 id="例子">例子</h2>
-
 <p>一个跨平台的编译器，详见代码。</p>
-
 <p><a href="./code/u010">code example</a></p>
-
 <h2 id="应用">应用</h2>
-
 <p>Java InputStream中的read()方法</p>
 		</div>
 		
@@ -183,7 +148,7 @@ an algorithm without changing the algorithms structure.</p>
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

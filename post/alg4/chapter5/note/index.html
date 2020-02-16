@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>数据压缩算法</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="数据压缩算法" />
 <meta property="og:description" content="[TOC]
-
-介绍经典的数据压缩算法
-
-" />
+介绍经典的数据压缩算法" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter5/note/" />
-
-
-
-<meta property="article:published_time" content="2019-03-13T20:07:35&#43;08:00"/>
-
-<meta property="article:modified_time" content="2019-03-13T20:07:35&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-03-13T20:07:35+08:00" />
+<meta property="article:modified_time" content="2019-03-13T20:07:35+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,100 +83,69 @@ MathJax.Hub.Config({
     <h2>数据压缩算法</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#data-compression">Data Compression</a>
-<ul>
-<li><a href="#例子-基因组学">例子 基因组学</a></li>
-<li><a href="#runlength算法思想">RunLength算法思想</a>
-<ul>
-<li><a href="#算法实现">算法实现</a></li>
-<li><a href="#游程编码算法不明白的地方">游程编码算法不明白的地方：</a></li>
-<li><a href="#游程编码的问题">游程编码的问题</a></li>
-</ul></li>
-<li><a href="#huffman-compression">Huffman Compression</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#例子-基因组学">例子 基因组学</a></li>
+    <li><a href="#runlength算法思想">RunLength算法思想</a>
+      <ul>
+        <li><a href="#算法实现">算法实现</a></li>
+        <li><a href="#游程编码算法不明白的地方">游程编码算法不明白的地方：</a></li>
+        <li><a href="#游程编码的问题">游程编码的问题</a></li>
+      </ul>
+    </li>
+    <li><a href="#huffman-compression">Huffman Compression</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>介绍经典的数据压缩算法</p>
-
-<p></p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-006.jpg" alt="cover" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-006.jpg" alt="cover"></p>
 <h1 id="data-compression">Data Compression</h1>
-
 <h2 id="例子-基因组学">例子 基因组学</h2>
-
 <p>genomic data : ATCGATCGATCG&hellip;</p>
-
 <p>如果用字符表示的话，一个字符是8bit。但实际一个基因片段中只有四个字母出现。使用2个bit就能表示这四个字母。</p>
-
 <p>空字符为 &lsquo;\0&rsquo;, NUL</p>
-
 <h2 id="runlength算法思想">RunLength算法思想</h2>
-
 <p>算法介绍：</p>
-
 <blockquote>
 <p>runs of data (that is, sequences in which the same data value occurs in many consecutive data elements) are stored as a single data value and count, rather than as the original run.</p>
 </blockquote>
-
 <p><a href="https://en.wikipedia.org/wiki/Run-length_encoding">https://en.wikipedia.org/wiki/Run-length_encoding</a></p>
-
 <h3 id="算法实现">算法实现</h3>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-005.jpg" alt="2019-03-13-005" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-005.jpg" alt="2019-03-13-005"></p>
 <p>黑白图像素越高，压缩比例越高。</p>
-
 <p>最早用于传播电视信号。</p>
-
 <p>而图片压缩格式，例如JPEG，属于有损失的压缩。</p>
-
 <p><a href="https://en.wikipedia.org/wiki/JPEG">https://en.wikipedia.org/wiki/JPEG</a></p>
-
 <h3 id="游程编码算法不明白的地方">游程编码算法不明白的地方：</h3>
-
 <p>为什么要写一个重新计数0呢？</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-003.jpg" alt="2019-03-13-003" /></p>
-
-<pre><code class="language-java">    public static void compress() { 
-        char run = 0; 
-        boolean old = false;
-        while (!BinaryStdIn.isEmpty()) { 
-            boolean b = BinaryStdIn.readBoolean();
-            if (b != old) {
-                BinaryStdOut.write(run, LG_R);
-                run = 1;
-                old = !old;
-            }
-            else { 
-                if (run == R-1) { 
-                    BinaryStdOut.write(run, LG_R);
-                    run = 0;
-                    BinaryStdOut.write(run, LG_R); // 为什么要计数0呢？
-                }
-                run++;
-            } 
-        } 
-        BinaryStdOut.write(run, LG_R);
-        BinaryStdOut.close();
-    }
-</code></pre>
-
-<h3 id="游程编码的问题">游程编码的问题</h3>
-
-<p>尽管游程编码算法很高效，但是在处理<font color="Darkorange"><strong>文本压缩</strong></font>就没那么高效了。我们需要其他的算法。</p>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-007.jpg" alt="2019-03-13-007" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-003.jpg" alt="2019-03-13-003"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">compress</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+        <span style="color:#66d9ef">char</span> run <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> 
+        <span style="color:#66d9ef">boolean</span> old <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span><span style="color:#f92672">!</span>BinaryStdIn<span style="color:#f92672">.</span><span style="color:#a6e22e">isEmpty</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+            <span style="color:#66d9ef">boolean</span> b <span style="color:#f92672">=</span> BinaryStdIn<span style="color:#f92672">.</span><span style="color:#a6e22e">readBoolean</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>b <span style="color:#f92672">!</span><span style="color:#f92672">=</span> old<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                BinaryStdOut<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>run<span style="color:#f92672">,</span> LG_R<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+                run <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+                old <span style="color:#f92672">=</span> <span style="color:#f92672">!</span>old<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span> 
+                <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>run <span style="color:#f92672">=</span><span style="color:#f92672">=</span> R<span style="color:#f92672">-</span>1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span> 
+                    BinaryStdOut<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>run<span style="color:#f92672">,</span> LG_R<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+                    run <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+                    BinaryStdOut<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>run<span style="color:#f92672">,</span> LG_R<span style="color:#f92672">)</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 为什么要计数0呢？
+</span><span style="color:#75715e"></span>                <span style="color:#f92672">}</span>
+                run<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span> 
+        <span style="color:#f92672">}</span> 
+        BinaryStdOut<span style="color:#f92672">.</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span>run<span style="color:#f92672">,</span> LG_R<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        BinaryStdOut<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><h3 id="游程编码的问题">游程编码的问题</h3>
+<p>尽管游程编码算法很高效，但是在处理<!-- raw HTML omitted --><strong>文本压缩</strong><!-- raw HTML omitted -->就没那么高效了。我们需要其他的算法。</p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-13-007.jpg" alt="2019-03-13-007"></p>
 <p>从图中可以看出 416 / 96 = 433% ，文件越压缩越大了。</p>
-
 <h2 id="huffman-compression">Huffman Compression</h2>
 		</div>
 		
@@ -230,7 +182,7 @@ MathJax.Hub.Config({
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

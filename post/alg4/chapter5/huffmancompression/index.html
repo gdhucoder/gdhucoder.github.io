@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Huffman Compression</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Huffman Compression" />
 <meta property="og:description" content="[TOC]
-
-总结霍夫曼压缩的相关重点。
-
-" />
+总结霍夫曼压缩的相关重点。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/alg4/chapter5/huffmancompression/" />
-
-
-
-<meta property="article:published_time" content="2019-04-03T16:25:34&#43;08:00"/>
-
-<meta property="article:modified_time" content="2019-04-03T16:25:34&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-04-03T16:25:34+08:00" />
+<meta property="article:modified_time" content="2019-04-03T16:25:34+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,88 +83,58 @@ MathJax.Hub.Config({
     <h2>Huffman Compression</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#huffman-compression">Huffman Compression</a>
-<ul>
-<li><a href="#压缩">压缩</a>
-<ul>
-<li><a href="#压缩的步骤如下">压缩的步骤如下：</a></li>
-</ul></li>
-<li><a href="#展开">展开</a></li>
-<li><a href="#特殊字符含义">特殊字符含义</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#压缩">压缩</a>
+      <ul>
+        <li><a href="#压缩的步骤如下">压缩的步骤如下：</a></li>
+      </ul>
+    </li>
+    <li><a href="#展开">展开</a></li>
+    <li><a href="#特殊字符含义">特殊字符含义</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>总结霍夫曼压缩的相关重点。</p>
-
-<p></p>
-
 <h1 id="huffman-compression">Huffman Compression</h1>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-04-03-001.jpg" alt="构建霍夫曼树的过程" /></p>
-
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-04-03-001.jpg" alt="构建霍夫曼树的过程"></p>
 <h2 id="压缩">压缩</h2>
-
 <h3 id="压缩的步骤如下">压缩的步骤如下：</h3>
-
 <p>读取输入</p>
-
 <p>将输入中出现的每个char值的出现频率制成表格</p>
-
 <p>根据频率构造相应的霍夫曼编码树</p>
-
 <p>构造编译表，将输入中的每个char值和一个比特字符串相关联。</p>
-
 <p>将单词查找树编码为比特字符串并写入输出流</p>
-
 <p>将输入的字符总数做为比特字符串写入输出流</p>
-
 <p>使用编译表将输入的每个字符写入到输出流</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">例如<span style="color:#960050;background-color:#1e0010">：</span>ABRACADABRA<span style="color:#f92672">!</span>
 
-<pre><code class="language-java">例如：ABRACADABRA!
+<span style="color:#f92672">!</span> <span style="color:#f92672">:</span> 1010
+A <span style="color:#f92672">:</span> 0
+B <span style="color:#f92672">:</span> 111
+C <span style="color:#f92672">:</span> 1011
+D <span style="color:#f92672">:</span> 100
+R <span style="color:#f92672">:</span> 110
 
-! : 1010
-A : 0
-B : 111
-C : 1011
-D : 100
-R : 110
-
-单词查找树编码       :01010000010010100010001001000011010000110101010010101000010
-字符串长度12        :00000000000000000000000000001100
-霍夫曼编码对应的输入 :01111100101101000111110010100
+单词查找树编码       <span style="color:#f92672">:</span>01010000010010100010001001000011010000110101010010101000010
+字符串长度12        <span style="color:#f92672">:</span>00000000000000000000000000001100
+霍夫曼编码对应的输入 <span style="color:#f92672">:</span>01111100101101000111110010100
 
 
-</code></pre>
-
-<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-04-03-002.jpg" alt="2019-04-03-002" /></p>
-
+</code></pre></div><p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-04-03-002.jpg" alt="2019-04-03-002"></p>
 <h2 id="展开">展开</h2>
-
 <p>读取单词查找树（编码在比特流的开头）</p>
-
 <p>读取需要解码的字符个数</p>
-
 <p>使用单词查找树将比特流解码</p>
-
 <h2 id="特殊字符含义">特殊字符含义</h2>
-
-<pre><code class="language-code">ASCII码的含义
+<pre><code class="language-code" data-lang="code">ASCII码的含义
 \0 表示 NUL 字符串结束
 10 表示 LF line feed 换行键
 13 表示 CR  carriage return 回车键
-</code></pre>
-
-<p>Mac，以<CR>做为文本文件行尾的标识符</p>
-
-<p>UNIX，以<LF>做为文本文件行尾的标识符</p>
-
-<p>WINDOWS，以<CR><LF>为行尾的标志.</p>
-
+</code></pre><p>Mac，以<!-- raw HTML omitted -->做为文本文件行尾的标识符</p>
+<p>UNIX，以<!-- raw HTML omitted -->做为文本文件行尾的标识符</p>
+<p>WINDOWS，以<!-- raw HTML omitted --><!-- raw HTML omitted -->为行尾的标志.</p>
 <p><a href="https://baike.baidu.com/item/ASCII/309296?fromtitle=ASCII%E7%BC%96%E7%A0%81&amp;fromid=3712529">百度百科ASCII</a></p>
 		</div>
 		
@@ -218,7 +171,7 @@ R : 110
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

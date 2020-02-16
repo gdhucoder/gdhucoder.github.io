@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>语言 on CoderPunk</title>
@@ -18,10 +18,7 @@
       
       <guid>https://gdhucoder.github.io/about/about_me/</guid>
       <description>&lt;h3 id=&#34;about-me&#34;&gt;About Me&lt;/h3&gt;
-
-&lt;p&gt;在这里和您分享技术，记录成长。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;在这里和您分享技术，记录成长。&lt;/p&gt;</description>
     </item>
     
   </channel>

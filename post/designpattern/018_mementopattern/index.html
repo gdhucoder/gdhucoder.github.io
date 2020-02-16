@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Memento Pattern</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Memento Pattern" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about Memento Pattern
-
-" />
+Brief introduction about Memento Pattern" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/018_mementopattern/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:19:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:19:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:19:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:19:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,68 +83,46 @@ MathJax.Hub.Config({
     <h2>Memento Pattern</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#备忘录模式-memento-pattern">备忘录模式（Memento Pattern）</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#类图">类图</a></li>
-<li><a href="#用例">用例</a></li>
-<li><a href="#实际应用">实际应用</a></li>
-<li><a href="#注意">注意</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#类图">类图</a></li>
+    <li><a href="#用例">用例</a></li>
+    <li><a href="#实际应用">实际应用</a></li>
+    <li><a href="#注意">注意</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about Memento Pattern</p>
-
-<p></p>
-
-<h1 id="备忘录模式-memento-pattern">备忘录模式（Memento Pattern）</h1>
-
+<h1 id="备忘录模式memento-pattern">备忘录模式（Memento Pattern）</h1>
 <h2 id="定义">定义</h2>
-
 <p>在不破坏封装性的前提下，捕获一个对象的内部状态，并在这个对象之外保存这个状态。
 这样可以将对象恢复到原先保存的状态。</p>
-
 <p>The intent of memento pattern is to capture the internal state of an object
 without violating encapsulation and thus providing a mean for restoring the object
 into initial state when needed.</p>
-
 <h2 id="类图">类图</h2>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-30_015.jpg" alt="MementoPattern" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-30_015.jpg" alt="MementoPattern"></p>
 <h2 id="用例">用例</h2>
-
 <p>大鸟🐦和小菜讨论了游戏保存进度的例子。具体见代码。</p>
-
 <p><a href="./code/u018">code example</a></p>
-
 <h2 id="实际应用">实际应用</h2>
-
-<p>备忘录模式用于需要&rdquo;撤销&rdquo;，&rdquo;恢复&rdquo;或者&rdquo;回滚&rdquo;的情形。</p>
-
+<p>备忘录模式用于需要&quot;撤销&rdquo;，&ldquo;恢复&quot;或者&quot;回滚&quot;的情形。</p>
 <ul>
 <li>我们的编辑器<code>Ctrl-Z</code>的功能</li>
 <li>IDE关闭后的打开恢复状态</li>
 <li>等等</li>
 </ul>
-
 <h2 id="注意">注意</h2>
-
 <ul>
 <li>广义的讲：memento pattern，目的是保存状态、恢复状态，没有固定的实现规则。</li>
 <li>考虑对性能的影响</li>
 <li>多次回滚是否考虑用stack实现</li>
 <li><code>Ctrl-Y</code>的功能要如何实现呢？可以考虑再家一个stack</li>
 </ul>
-
 <h2 id="参考">参考</h2>
-
 <p><a href="https://howtodoinjava.com/design-patterns/behavioral/memento-design-pattern/">howtodo-memento-pattern</a></p>
 		</div>
 		
@@ -198,7 +159,7 @@ into initial state when needed.</p>
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

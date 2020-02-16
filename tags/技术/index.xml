@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>技术 on CoderPunk</title>
@@ -18,10 +18,7 @@
       
       <guid>https://gdhucoder.github.io/post/note/2019-06-17-docker/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;关于Docker。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;关于Docker。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -31,10 +28,7 @@
       
       <guid>https://gdhucoder.github.io/post/note/2019-05-02-kafka/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;玩玩Kafka。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;玩玩Kafka。&lt;/p&gt;</description>
     </item>
     
   </channel>

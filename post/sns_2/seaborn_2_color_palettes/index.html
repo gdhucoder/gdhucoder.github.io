@@ -5,41 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Seaborn使用(2)：Choosing color palettes</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Seaborn使用(2)：Choosing color palettes" />
 <meta property="og:description" content="调色板
-
 颜色很重要，如果使用的好，就会帮助你突出数据的特征。
-
 
 color_palette()能传入任何Matplotlib所支持的颜色
 color_palette()不写参数则默认颜色
 set_palette()设置所有图的颜色
 
-
 下面是使用seaborn的color palettes的一些例子，这些例子官网上面都已经有详细的介绍。
-
-网址为：http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial
-
-" />
+网址为：http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/sns_2/seaborn_2_color_palettes/" />
-
-
-
-<meta property="article:published_time" content="2017-08-14T18:44:30&#43;08:00"/>
-
-<meta property="article:modified_time" content="2017-08-14T18:44:30&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2017-08-14T18:44:30+08:00" />
+<meta property="article:modified_time" content="2017-08-14T18:44:30+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -109,96 +89,57 @@ MathJax.Hub.Config({
     <header>
     <h2>Seaborn使用(2)：Choosing color palettes</h2>
     </header>
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#调色板">调色板</a></li>
-</ul>
-</nav>
+    <nav id="TableOfContents"></nav>
 </aside>
 
 			<h1 id="调色板">调色板</h1>
-
 <p>颜色很重要，如果使用的好，就会帮助你突出数据的特征。</p>
-
 <ul>
 <li>color_palette()能传入任何Matplotlib所支持的颜色</li>
 <li>color_palette()不写参数则默认颜色</li>
 <li>set_palette()设置所有图的颜色</li>
 </ul>
-
 <p>下面是使用seaborn的color palettes的一些例子，这些例子官网上面都已经有详细的介绍。</p>
-
-<p>网址为：<a href="http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial">http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial</a></p>
-
-<p></p>
-
-<pre><code class="language-python">%matplotlib inline
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
+<p>网址为：http://seaborn.pydata.org/tutorial/color_palettes.html#palette-tutorial</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">%</span>matplotlib inline
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> seaborn <span style="color:#f92672">as</span> sns
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>set(rc<span style="color:#f92672">=</span>{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">figure.figsize</span><span style="color:#e6db74">&#34;</span>: (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">6</span>)})
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(sum(map(ord, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">palettes</span><span style="color:#e6db74">&#34;</span>)))
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">current_palette <span style="color:#f92672">=</span> sns<span style="color:#f92672">.</span>color_palette()
+sns<span style="color:#f92672">.</span>palplot(current_palette)
+</code></pre></div><p><img src="../output_3_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hls</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">8</span>))
+</code></pre></div><p><img src="../output_4_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">8</span>)) <span style="color:#f92672">+</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">8</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+sns<span style="color:#f92672">.</span>boxplot(data<span style="color:#f92672">=</span>data, palette<span style="color:#f92672">=</span>sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hls</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">8</span>))
+</code></pre></div><pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0xb1a9b70&gt;
 </code></pre>
+<p><img src="../output_5_1.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>husl_palette(<span style="color:#ae81ff">8</span>))
+</code></pre></div><p><img src="../output_6_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># l- lightness</span>
+<span style="color:#75715e"># s- saturation </span>
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>hls_palette(<span style="color:#ae81ff">8</span>, l<span style="color:#f92672">=</span><span style="color:#f92672">.</span><span style="color:#ae81ff">3</span>, s<span style="color:#f92672">=</span><span style="color:#f92672">.</span><span style="color:#ae81ff">8</span>))
+</code></pre></div><p><img src="../output_7_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Paired</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">10</span>))
+</code></pre></div><p><img src="../output_8_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Set2</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">10</span>))
+</code></pre></div><p><img src="../output_9_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">deep</span><span style="color:#e6db74">&#34;</span>))
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">muted</span><span style="color:#e6db74">&#34;</span>))
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">pastel</span><span style="color:#e6db74">&#34;</span>))
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">bright</span><span style="color:#e6db74">&#34;</span>))
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">dark</span><span style="color:#e6db74">&#34;</span>))
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">colorblind</span><span style="color:#e6db74">&#34;</span>))
 
-<pre><code class="language-python">sns.set(rc={&quot;figure.figsize&quot;: (6, 6)})
-np.random.seed(sum(map(ord, &quot;palettes&quot;)))
-</code></pre>
-
-<pre><code class="language-python">current_palette = sns.color_palette()
-sns.palplot(current_palette)
-</code></pre>
-
-<p><img src="../output_3_0.png" alt="png" /></p>
-
-<pre><code class="language-python">sns.palplot(sns.color_palette(&quot;hls&quot;, 8))
-</code></pre>
-
-<p><img src="../output_4_0.png" alt="png" /></p>
-
-<pre><code class="language-python">data = np.random.normal(size=(20, 8)) + np.arange(8) / 2
-sns.boxplot(data=data, palette=sns.color_palette(&quot;hls&quot;, 8))
-</code></pre>
-
-<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0xb1a9b70&gt;
-</code></pre>
-
-<p><img src="../output_5_1.png" alt="png" /></p>
-
-<pre><code class="language-python">sns.palplot(sns.husl_palette(8))
-</code></pre>
-
-<p><img src="../output_6_0.png" alt="png" /></p>
-
-<pre><code class="language-python"># l- lightness
-# s- saturation 
-sns.palplot(sns.hls_palette(8, l=.3, s=.8))
-</code></pre>
-
-<p><img src="../output_7_0.png" alt="png" /></p>
-
-<pre><code class="language-python">sns.palplot(sns.color_palette(&quot;Paired&quot;, 10))
-</code></pre>
-
-<p><img src="../output_8_0.png" alt="png" /></p>
-
-<pre><code class="language-python">sns.palplot(sns.color_palette(&quot;Set2&quot;, 10))
-</code></pre>
-
-<p><img src="../output_9_0.png" alt="png" /></p>
-
-<pre><code class="language-python">sns.palplot(sns.color_palette(&quot;deep&quot;))
-sns.palplot(sns.color_palette(&quot;muted&quot;))
-sns.palplot(sns.color_palette(&quot;pastel&quot;))
-sns.palplot(sns.color_palette(&quot;bright&quot;))
-sns.palplot(sns.color_palette(&quot;dark&quot;))
-sns.palplot(sns.color_palette(&quot;colorblind&quot;))
-
-# print(help(sns.color_palette))
-</code></pre>
-
-<pre><code>Help on function palplot in module seaborn.miscplot:
+<span style="color:#75715e"># print(help(sns.color_palette))</span>
+</code></pre></div><pre><code>Help on function palplot in module seaborn.miscplot:
 
 palplot(pal, size=1)
     Plot the values in a color palette as a horizontal array.
-
+    
     Parameters
     ----------
     pal : sequence of matplotlib colors
@@ -208,91 +149,47 @@ palplot(pal, size=1)
 
 None
 </code></pre>
-
-<p><img src="../output_10_1.png" alt="png" /></p>
-
-<p><img src="../output_10_2.png" alt="png" /></p>
-
-<p><img src="../output_10_3.png" alt="png" /></p>
-
-<p><img src="../output_10_4.png" alt="png" /></p>
-
-<p><img src="../output_10_5.png" alt="png" /></p>
-
-<p><img src="../output_10_6.png" alt="png" /></p>
-
-<pre><code class="language-python">flatui = [&quot;#9b59b6&quot;, &quot;#3498db&quot;, &quot;#95a5a6&quot;, &quot;#e74c3c&quot;, &quot;#34495e&quot;, &quot;#2ecc71&quot;]
-sns.palplot(sns.color_palette(flatui))
-</code></pre>
-
-<p><img src="../output_11_0.png" alt="png" /></p>
-
-<pre><code class="language-python">plt.plot([0, 1], [0, 1], sns.xkcd_rgb[&quot;pale red&quot;], lw=3)
-plt.plot([0, 1], [0, 2], sns.xkcd_rgb[&quot;medium green&quot;], lw=3)
-plt.plot([0, 1], [0, 3], sns.xkcd_rgb[&quot;denim blue&quot;], lw=3);
-</code></pre>
-
-<p><img src="../output_12_0.png" alt="png" /></p>
-
-<pre><code class="language-python">colors = [&quot;windows blue&quot;, &quot;amber&quot;, &quot;greyish&quot;, &quot;faded green&quot;, &quot;dusty purple&quot;]
-sns.palplot(sns.xkcd_palette(colors))
-</code></pre>
-
-<p><img src="../output_13_0.png" alt="png" /></p>
-
-<pre><code class="language-python">sns.palplot(sns.color_palette(&quot;Blues&quot;))
-</code></pre>
-
-<p><img src="../output_14_0.png" alt="png" /></p>
-
-<pre><code class="language-python">sns.palplot(sns.color_palette(&quot;BuGn_r&quot;))
-</code></pre>
-
-<p><img src="../output_15_0.png" alt="png" /></p>
-
-<pre><code class="language-python">x, y = np.random.multivariate_normal([0, 0], [[1, -.5], [-.5, 1]], size=300).T
-cmap = sns.cubehelix_palette(light=1, as_cmap=True)
-sns.kdeplot(x, y, cmap=cmap, shade=True);
-</code></pre>
-
-<p><img src="../output_16_0.png" alt="png" /></p>
-
-<pre><code class="language-python">sns.choose_cubehelix_palette()
-</code></pre>
-
-<p><img src="../output_17_0.png" alt="png" /></p>
-
-<pre><code class="language-python">sns.palplot(sns.light_palette(&quot;green&quot;))
-</code></pre>
-
-<p><img src="../output_18_0.png" alt="png" /></p>
-
-<pre><code class="language-python">sns.palplot(sns.dark_palette(&quot;purple&quot;))
-</code></pre>
-
-<p><img src="../output_19_0.png" alt="png" /></p>
-
-<pre><code class="language-python">sns.palplot(sns.color_palette(&quot;RdBu_r&quot;, 7))
-</code></pre>
-
-<p><img src="../output_20_0.png" alt="png" /></p>
-
-<pre><code class="language-python">sns.palplot(sns.diverging_palette(220, 20, n=7))
-</code></pre>
-
-<p><img src="../output_21_0.png" alt="png" /></p>
-
-<pre><code class="language-python">def sinplot(flip=1):
-    x = np.linspace(0, 14, 100)
-    for i in range(1, 7):
-        plt.plot(x, np.sin(x + i * .5) * (7 - i) * flip)
-</code></pre>
-
-<pre><code class="language-python">sns.set_palette(&quot;husl&quot;)
+<p><img src="../output_10_1.png" alt="png"></p>
+<p><img src="../output_10_2.png" alt="png"></p>
+<p><img src="../output_10_3.png" alt="png"></p>
+<p><img src="../output_10_4.png" alt="png"></p>
+<p><img src="../output_10_5.png" alt="png"></p>
+<p><img src="../output_10_6.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">flatui <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#9b59b6</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#3498db</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#95a5a6</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#e74c3c</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#34495e</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#2ecc71</span><span style="color:#e6db74">&#34;</span>]
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(flatui))
+</code></pre></div><p><img src="../output_11_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>plot([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], sns<span style="color:#f92672">.</span>xkcd_rgb[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">pale red</span><span style="color:#e6db74">&#34;</span>], lw<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+plt<span style="color:#f92672">.</span>plot([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>], sns<span style="color:#f92672">.</span>xkcd_rgb[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">medium green</span><span style="color:#e6db74">&#34;</span>], lw<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+plt<span style="color:#f92672">.</span>plot([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>], sns<span style="color:#f92672">.</span>xkcd_rgb[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">denim blue</span><span style="color:#e6db74">&#34;</span>], lw<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>);
+</code></pre></div><p><img src="../output_12_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">colors <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">windows blue</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">amber</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">greyish</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">faded green</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">dusty purple</span><span style="color:#e6db74">&#34;</span>]
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>xkcd_palette(colors))
+</code></pre></div><p><img src="../output_13_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Blues</span><span style="color:#e6db74">&#34;</span>))
+</code></pre></div><p><img src="../output_14_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">BuGn_r</span><span style="color:#e6db74">&#34;</span>))
+</code></pre></div><p><img src="../output_15_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x, y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>multivariate_normal([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>], [[<span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#f92672">.</span><span style="color:#ae81ff">5</span>], [<span style="color:#f92672">-</span><span style="color:#f92672">.</span><span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">1</span>]], size<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)<span style="color:#f92672">.</span>T
+cmap <span style="color:#f92672">=</span> sns<span style="color:#f92672">.</span>cubehelix_palette(light<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, as_cmap<span style="color:#f92672">=</span>True)
+sns<span style="color:#f92672">.</span>kdeplot(x, y, cmap<span style="color:#f92672">=</span>cmap, shade<span style="color:#f92672">=</span>True);
+</code></pre></div><p><img src="../output_16_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>choose_cubehelix_palette()
+</code></pre></div><p><img src="../output_17_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>light_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">green</span><span style="color:#e6db74">&#34;</span>))
+</code></pre></div><p><img src="../output_18_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>dark_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">purple</span><span style="color:#e6db74">&#34;</span>))
+</code></pre></div><p><img src="../output_19_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">RdBu_r</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">7</span>))
+</code></pre></div><p><img src="../output_20_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>diverging_palette(<span style="color:#ae81ff">220</span>, <span style="color:#ae81ff">20</span>, n<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>))
+</code></pre></div><p><img src="../output_21_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">sinplot</span>(flip<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>):
+    x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">100</span>)
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">7</span>):
+        plt<span style="color:#f92672">.</span>plot(x, np<span style="color:#f92672">.</span>sin(x <span style="color:#f92672">+</span> i <span style="color:#f92672">*</span> <span style="color:#f92672">.</span><span style="color:#ae81ff">5</span>) <span style="color:#f92672">*</span> (<span style="color:#ae81ff">7</span> <span style="color:#f92672">-</span> i) <span style="color:#f92672">*</span> flip)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>set_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">husl</span><span style="color:#e6db74">&#34;</span>)
 sinplot()
-</code></pre>
-
-<p><img src="../output_23_0.png" alt="png" /></p>
+</code></pre></div><p><img src="../output_23_0.png" alt="png"></p>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -330,7 +227,7 @@ sinplot()
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

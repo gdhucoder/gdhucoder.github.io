@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Builder Pattern</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Builder Pattern" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about Builder Pattern.
-
-" />
+Brief introduction about Builder Pattern." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/013_builderpattern/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:15:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:15:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:15:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:15:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,183 +83,152 @@ MathJax.Hub.Config({
     <h2>Builder Pattern</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#建造者模式-builder-pattern">建造者模式（Builder Pattern）</a>
-<ul>
-<li><a href="#类图">类图</a></li>
-<li><a href="#用例">用例</a></li>
-<li><a href="#实际应用">实际应用</a></li>
-<li><a href="#使用中注意的地方">使用中注意的地方</a></li>
-<li><a href="#好处">好处</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#类图">类图</a></li>
+    <li><a href="#用例">用例</a></li>
+    <li><a href="#实际应用">实际应用</a></li>
+    <li><a href="#使用中注意的地方">使用中注意的地方</a></li>
+    <li><a href="#好处">好处</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about Builder Pattern.</p>
-
-<p></p>
-
-<h1 id="建造者模式-builder-pattern">建造者模式（Builder Pattern）</h1>
-
+<h1 id="建造者模式builder-pattern">建造者模式（Builder Pattern）</h1>
 <p>定义</p>
-
 <p>The builder pattern is a design pattern that allows for the step-by-step creation of complex objects using the correct sequence of actions. The construction is controlled by a director object that only needs to know the type of object it is to create.</p>
-
 <p>建造者模式使用一些列动作一步步创建复杂对象。指挥者控制对象的创建，只需要知道它要创建对象的类型即可。</p>
-
 <h2 id="类图">类图</h2>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-24_001.jpg" alt="builder pattern" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-24_001.jpg" alt="builder pattern"></p>
 <h2 id="用例">用例</h2>
-
 <p>《大话设计模式》中举了一个画小人的例子。意思是说小人分胖子瘦子，但画的流程是一样的：脑袋、身子、胳膊和腿。所以可以使用Builder Pattern。</p>
-
 <p>具体实现见代码。</p>
-
 <p><a href="./code/u013">code example</a></p>
-
 <h2 id="实际应用">实际应用</h2>
-
 <p>建造者模式实际应用中往往不这么用：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> 
+<span style="color:#f92672">{</span>
+    <span style="color:#75715e">//All final attributes
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String firstName<span style="color:#f92672">;</span> <span style="color:#75715e">// required
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String lastName<span style="color:#f92672">;</span> <span style="color:#75715e">// required
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span> <span style="color:#75715e">// optional
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String phone<span style="color:#f92672">;</span> <span style="color:#75715e">// optional
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String address<span style="color:#f92672">;</span> <span style="color:#75715e">// optional
+</span><span style="color:#75715e"></span> 
+    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">User</span><span style="color:#f92672">(</span>UserBuilder builder<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> builder<span style="color:#f92672">.</span><span style="color:#a6e22e">firstName</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">lastName</span> <span style="color:#f92672">=</span> builder<span style="color:#f92672">.</span><span style="color:#a6e22e">lastName</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> builder<span style="color:#f92672">.</span><span style="color:#a6e22e">age</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">phone</span> <span style="color:#f92672">=</span> builder<span style="color:#f92672">.</span><span style="color:#a6e22e">phone</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">address</span> <span style="color:#f92672">=</span> builder<span style="color:#f92672">.</span><span style="color:#a6e22e">address</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+ 
+    <span style="color:#75715e">//All getter, and NO setter to provde immutability
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getFirstName</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> firstName<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getLastName</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> lastName<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getAge</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> age<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getPhone</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> phone<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getAddress</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> address<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+ 
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;User: &#34;</span><span style="color:#f92672">+</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">firstName</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">+</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">lastName</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">+</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">age</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">+</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">phone</span><span style="color:#f92672">+</span><span style="color:#e6db74">&#34;, &#34;</span><span style="color:#f92672">+</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">address</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+ 
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserBuilder</span> 
+    <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String firstName<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">final</span> String lastName<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">private</span> String phone<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">private</span> String address<span style="color:#f92672">;</span>
+ 
+        <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">UserBuilder</span><span style="color:#f92672">(</span>String firstName<span style="color:#f92672">,</span> String lastName<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">firstName</span> <span style="color:#f92672">=</span> firstName<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">lastName</span> <span style="color:#f92672">=</span> lastName<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">public</span> UserBuilder <span style="color:#a6e22e">age</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> age<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> age<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">public</span> UserBuilder <span style="color:#a6e22e">phone</span><span style="color:#f92672">(</span>String phone<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">phone</span> <span style="color:#f92672">=</span> phone<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">public</span> UserBuilder <span style="color:#a6e22e">address</span><span style="color:#f92672">(</span>String address<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">address</span> <span style="color:#f92672">=</span> address<span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">//Return the finally consrcuted User object
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">public</span> User <span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            User user <span style="color:#f92672">=</span>  <span style="color:#66d9ef">new</span> User<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            validateUserObject<span style="color:#f92672">(</span>user<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">return</span> user<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">validateUserObject</span><span style="color:#f92672">(</span>User user<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#75715e">//Do some basic validations to check 
+</span><span style="color:#75715e"></span>            <span style="color:#75715e">//if user object does not break any assumption of system
+</span><span style="color:#75715e"></span>        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+And below is the way<span style="color:#f92672">,</span> we will use the UserBuilder in our code<span style="color:#f92672">:</span>
 
-<pre><code class="language-java">public class User 
-{
-    //All final attributes
-    private final String firstName; // required
-    private final String lastName; // required
-    private final int age; // optional
-    private final String phone; // optional
-    private final String address; // optional
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    User user1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">.</span><span style="color:#a6e22e">UserBuilder</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Lokesh&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Gupta&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">.</span><span style="color:#a6e22e">age</span><span style="color:#f92672">(</span>30<span style="color:#f92672">)</span>
+    <span style="color:#f92672">.</span><span style="color:#a6e22e">phone</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;1234567&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">.</span><span style="color:#a6e22e">address</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Fake address 1234&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
  
-    private User(UserBuilder builder) {
-        this.firstName = builder.firstName;
-        this.lastName = builder.lastName;
-        this.age = builder.age;
-        this.phone = builder.phone;
-        this.address = builder.address;
-    }
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>user1<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
  
-    //All getter, and NO setter to provde immutability
-    public String getFirstName() {
-        return firstName;
-    }
-    public String getLastName() {
-        return lastName;
-    }
-    public int getAge() {
-        return age;
-    }
-    public String getPhone() {
-        return phone;
-    }
-    public String getAddress() {
-        return address;
-    }
+    User user2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">.</span><span style="color:#a6e22e">UserBuilder</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Jack&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Reacher&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#f92672">.</span><span style="color:#a6e22e">age</span><span style="color:#f92672">(</span>40<span style="color:#f92672">)</span>
+    <span style="color:#f92672">.</span><span style="color:#a6e22e">phone</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;5655&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#75715e">//no address
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
  
-    @Override
-    public String toString() {
-        return &quot;User: &quot;+this.firstName+&quot;, &quot;+this.lastName+&quot;, &quot;+this.age+&quot;, &quot;+this.phone+&quot;, &quot;+this.address;
-    }
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>user2<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
  
-    public static class UserBuilder 
-    {
-        private final String firstName;
-        private final String lastName;
-        private int age;
-        private String phone;
-        private String address;
+    User user3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">.</span><span style="color:#a6e22e">UserBuilder</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Super&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Man&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#75715e">//No age
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//No phone
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">//no address
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">.</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
  
-        public UserBuilder(String firstName, String lastName) {
-            this.firstName = firstName;
-            this.lastName = lastName;
-        }
-        public UserBuilder age(int age) {
-            this.age = age;
-            return this;
-        }
-        public UserBuilder phone(String phone) {
-            this.phone = phone;
-            return this;
-        }
-        public UserBuilder address(String address) {
-            this.address = address;
-            return this;
-        }
-        //Return the finally consrcuted User object
-        public User build() {
-            User user =  new User(this);
-            validateUserObject(user);
-            return user;
-        }
-        private void validateUserObject(User user) {
-            //Do some basic validations to check 
-            //if user object does not break any assumption of system
-        }
-    }
-}
-And below is the way, we will use the UserBuilder in our code:
-
-public static void main(String[] args) {
-    User user1 = new User.UserBuilder(&quot;Lokesh&quot;, &quot;Gupta&quot;)
-    .age(30)
-    .phone(&quot;1234567&quot;)
-    .address(&quot;Fake address 1234&quot;)
-    .build();
- 
-    System.out.println(user1);
- 
-    User user2 = new User.UserBuilder(&quot;Jack&quot;, &quot;Reacher&quot;)
-    .age(40)
-    .phone(&quot;5655&quot;)
-    //no address
-    .build();
- 
-    System.out.println(user2);
- 
-    User user3 = new User.UserBuilder(&quot;Super&quot;, &quot;Man&quot;)
-    //No age
-    //No phone
-    //no address
-    .build();
- 
-    System.out.println(user3);
-}
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>user3<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
  
 Output:
  
-User: Lokesh, Gupta, 30, 1234567, Fake address 1234
-User: Jack, Reacher, 40, 5655, null
-User: Super, Man, 0, null, null
-</code></pre>
-
-<p>例如Java的线程不安全的StringBuilder.append 和 线程安全的StringBurffer.append，实现了java.lang.Appendable接口。 代码中有类似的结构：</p>
-
-<pre><code class="language-java">    @Override
-    public StringBuilder append(boolean b) {
-        super.append(b);
-        return this;
-    }
-</code></pre>
-
-<h2 id="使用中注意的地方">使用中注意的地方</h2>
-
+User: Lokesh<span style="color:#f92672">,</span> Gupta<span style="color:#f92672">,</span> 30<span style="color:#f92672">,</span> 1234567<span style="color:#f92672">,</span> Fake address 1234
+User: Jack<span style="color:#f92672">,</span> Reacher<span style="color:#f92672">,</span> 40<span style="color:#f92672">,</span> 5655<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span>
+User: Super<span style="color:#f92672">,</span> Man<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span>
+</code></pre></div><p>例如Java的线程不安全的StringBuilder.append 和 线程安全的StringBurffer.append，实现了java.lang.Appendable接口。 代码中有类似的结构：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> StringBuilder <span style="color:#a6e22e">append</span><span style="color:#f92672">(</span><span style="color:#66d9ef">boolean</span> b<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">super</span><span style="color:#f92672">.</span><span style="color:#a6e22e">append</span><span style="color:#f92672">(</span>b<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+</code></pre></div><h2 id="使用中注意的地方">使用中注意的地方</h2>
 <p>建造者模式用于创建一些复杂对象，对象内部的构建过程顺序通常是稳定的，但内部的构建往往面临的变化。</p>
-
 <h2 id="好处">好处</h2>
-
 <p>代码易读</p>
-
 <p>构造方法参数比较少</p>
-
 <p>可以创建不可变类</p>
-
 <h2 id="参考">参考</h2>
-
 <ul>
 <li>大话设计模式</li>
 <li><a href="https://dzone.com/articles/design-patterns-builder">dzone-builder</a></li>
@@ -319,7 +271,7 @@ User: Super, Man, 0, null, null
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

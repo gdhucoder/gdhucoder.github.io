@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on CoderPunk</title>
@@ -6,229 +6,22 @@
     <description>Recent content in Tags on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Thu, 01 Aug 2019 08:30:01 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2020 15:51:17 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Alg</title>
-      <link>https://gdhucoder.github.io/tags/alg/</link>
-      <pubDate>Thu, 01 Aug 2019 08:30:01 +0800</pubDate>
+      <title>读书</title>
+      <link>https://gdhucoder.github.io/tags/%E8%AF%BB%E4%B9%A6/</link>
+      <pubDate>Sun, 09 Feb 2020 15:51:17 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/tags/alg/</guid>
+      <guid>https://gdhucoder.github.io/tags/%E8%AF%BB%E4%B9%A6/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Arts</title>
-      <link>https://gdhucoder.github.io/tags/arts/</link>
-      <pubDate>Sun, 20 Oct 2019 13:04:37 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/arts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Book</title>
-      <link>https://gdhucoder.github.io/tags/book/</link>
-      <pubDate>Sun, 14 Apr 2019 12:06:06 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/book/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Books</title>
-      <link>https://gdhucoder.github.io/tags/books/</link>
-      <pubDate>Sun, 27 Jan 2019 07:00:00 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/books/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Designpattern</title>
-      <link>https://gdhucoder.github.io/tags/designpattern/</link>
-      <pubDate>Sat, 04 Jan 2020 10:26:04 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/designpattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Docker</title>
-      <link>https://gdhucoder.github.io/tags/docker/</link>
-      <pubDate>Thu, 20 Jun 2019 20:17:20 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>https://gdhucoder.github.io/tags/git/</link>
-      <pubDate>Wed, 04 Apr 2018 21:25:07 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://gdhucoder.github.io/tags/go/</link>
-      <pubDate>Mon, 11 Mar 2019 21:02:15 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://gdhucoder.github.io/tags/java/</link>
-      <pubDate>Thu, 23 May 2019 20:44:58 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Latex</title>
-      <link>https://gdhucoder.github.io/tags/latex/</link>
-      <pubDate>Thu, 05 Apr 2018 07:00:00 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/latex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Markdown</title>
-      <link>https://gdhucoder.github.io/tags/markdown/</link>
-      <pubDate>Sat, 02 Mar 2019 19:26:09 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mathjax</title>
-      <link>https://gdhucoder.github.io/tags/mathjax/</link>
-      <pubDate>Fri, 06 Apr 2018 07:00:00 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/mathjax/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Matplotlib</title>
-      <link>https://gdhucoder.github.io/tags/matplotlib/</link>
-      <pubDate>Wed, 09 Aug 2017 21:44:30 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/matplotlib/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mc</title>
-      <link>https://gdhucoder.github.io/tags/mc/</link>
-      <pubDate>Sun, 26 Nov 2017 21:25:07 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/mc/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mind</title>
-      <link>https://gdhucoder.github.io/tags/mind/</link>
-      <pubDate>Mon, 14 Aug 2017 03:58:07 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/mind/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ml</title>
-      <link>https://gdhucoder.github.io/tags/ml/</link>
-      <pubDate>Thu, 07 Sep 2017 21:25:07 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/ml/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Planing</title>
-      <link>https://gdhucoder.github.io/tags/planing/</link>
-      <pubDate>Tue, 03 Apr 2018 21:00:00 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/planing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Planning</title>
-      <link>https://gdhucoder.github.io/tags/planning/</link>
-      <pubDate>Wed, 21 Aug 2019 16:24:46 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/planning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://gdhucoder.github.io/tags/python/</link>
-      <pubDate>Mon, 14 Aug 2017 18:44:30 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rddl</title>
-      <link>https://gdhucoder.github.io/tags/rddl/</link>
-      <pubDate>Mon, 14 May 2018 07:00:00 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/rddl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rl</title>
-      <link>https://gdhucoder.github.io/tags/rl/</link>
-      <pubDate>Fri, 06 Apr 2018 07:00:00 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/rl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Seaborn</title>
-      <link>https://gdhucoder.github.io/tags/seaborn/</link>
-      <pubDate>Mon, 14 Aug 2017 18:44:30 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/seaborn/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tag</title>
-      <link>https://gdhucoder.github.io/tags/tag/</link>
-      <pubDate>Tue, 15 Oct 2019 13:40:23 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/tag/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tech</title>
-      <link>https://gdhucoder.github.io/tags/tech/</link>
-      <pubDate>Thu, 31 Oct 2019 08:14:40 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/tech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Thinking</title>
+      <title>THINKING</title>
       <link>https://gdhucoder.github.io/tags/thinking/</link>
       <pubDate>Mon, 27 Jan 2020 09:42:29 +0800</pubDate>
       
@@ -237,29 +30,65 @@
     </item>
     
     <item>
-      <title>分享</title>
-      <link>https://gdhucoder.github.io/tags/%E5%88%86%E4%BA%AB/</link>
-      <pubDate>Sun, 19 May 2019 15:51:46 +0800</pubDate>
+      <title>DesignPattern</title>
+      <link>https://gdhucoder.github.io/tags/designpattern/</link>
+      <pubDate>Sat, 04 Jan 2020 10:26:04 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/tags/%E5%88%86%E4%BA%AB/</guid>
+      <guid>https://gdhucoder.github.io/tags/designpattern/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>备份</title>
-      <link>https://gdhucoder.github.io/tags/%E5%A4%87%E4%BB%BD/</link>
-      <pubDate>Thu, 29 Mar 2018 21:00:00 +0800</pubDate>
+      <title>TECH</title>
+      <link>https://gdhucoder.github.io/tags/tech/</link>
+      <pubDate>Thu, 31 Oct 2019 08:14:40 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/tags/%E5%A4%87%E4%BB%BD/</guid>
+      <guid>https://gdhucoder.github.io/tags/tech/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>思考</title>
-      <link>https://gdhucoder.github.io/tags/%E6%80%9D%E8%80%83/</link>
-      <pubDate>Sat, 20 Apr 2019 00:58:22 +0800</pubDate>
+      <title>ARTS</title>
+      <link>https://gdhucoder.github.io/tags/arts/</link>
+      <pubDate>Sun, 20 Oct 2019 13:04:37 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/tags/%E6%80%9D%E8%80%83/</guid>
+      <guid>https://gdhucoder.github.io/tags/arts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TAG</title>
+      <link>https://gdhucoder.github.io/tags/tag/</link>
+      <pubDate>Tue, 15 Oct 2019 13:40:23 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/tag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PLANNING</title>
+      <link>https://gdhucoder.github.io/tags/planning/</link>
+      <pubDate>Wed, 21 Aug 2019 16:24:46 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/planning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ALG</title>
+      <link>https://gdhucoder.github.io/tags/alg/</link>
+      <pubDate>Thu, 01 Aug 2019 08:30:01 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/alg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DOCKER</title>
+      <link>https://gdhucoder.github.io/tags/docker/</link>
+      <pubDate>Thu, 20 Jun 2019 20:17:20 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/docker/</guid>
       <description></description>
     </item>
     
@@ -273,6 +102,177 @@
     </item>
     
     <item>
+      <title>算法</title>
+      <link>https://gdhucoder.github.io/tags/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Tue, 11 Jun 2019 15:50:26 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JAVA</title>
+      <link>https://gdhucoder.github.io/tags/java/</link>
+      <pubDate>Thu, 23 May 2019 20:44:58 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>分享</title>
+      <link>https://gdhucoder.github.io/tags/%E5%88%86%E4%BA%AB/</link>
+      <pubDate>Sun, 19 May 2019 15:51:46 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/%E5%88%86%E4%BA%AB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>思考</title>
+      <link>https://gdhucoder.github.io/tags/%E6%80%9D%E8%80%83/</link>
+      <pubDate>Sat, 20 Apr 2019 00:58:22 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/%E6%80%9D%E8%80%83/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BOOK</title>
+      <link>https://gdhucoder.github.io/tags/book/</link>
+      <pubDate>Sun, 14 Apr 2019 12:06:06 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GO</title>
+      <link>https://gdhucoder.github.io/tags/go/</link>
+      <pubDate>Mon, 11 Mar 2019 21:02:15 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markdown</title>
+      <link>https://gdhucoder.github.io/tags/markdown/</link>
+      <pubDate>Sat, 02 Mar 2019 19:26:09 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Books</title>
+      <link>https://gdhucoder.github.io/tags/books/</link>
+      <pubDate>Sun, 27 Jan 2019 07:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RDDL</title>
+      <link>https://gdhucoder.github.io/tags/rddl/</link>
+      <pubDate>Mon, 14 May 2018 07:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/rddl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MATHJAX</title>
+      <link>https://gdhucoder.github.io/tags/mathjax/</link>
+      <pubDate>Fri, 06 Apr 2018 07:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/mathjax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RL</title>
+      <link>https://gdhucoder.github.io/tags/rl/</link>
+      <pubDate>Fri, 06 Apr 2018 07:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/rl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LATEX</title>
+      <link>https://gdhucoder.github.io/tags/latex/</link>
+      <pubDate>Thu, 05 Apr 2018 07:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GIT</title>
+      <link>https://gdhucoder.github.io/tags/git/</link>
+      <pubDate>Wed, 04 Apr 2018 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PLANING</title>
+      <link>https://gdhucoder.github.io/tags/planing/</link>
+      <pubDate>Tue, 03 Apr 2018 21:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/planing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>备份</title>
+      <link>https://gdhucoder.github.io/tags/%E5%A4%87%E4%BB%BD/</link>
+      <pubDate>Thu, 29 Mar 2018 21:00:00 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/%E5%A4%87%E4%BB%BD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MC</title>
+      <link>https://gdhucoder.github.io/tags/mc/</link>
+      <pubDate>Sun, 26 Nov 2017 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/mc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ML</title>
+      <link>https://gdhucoder.github.io/tags/ml/</link>
+      <pubDate>Thu, 07 Sep 2017 21:25:07 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://gdhucoder.github.io/tags/python/</link>
+      <pubDate>Mon, 14 Aug 2017 18:44:30 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seaborn</title>
+      <link>https://gdhucoder.github.io/tags/seaborn/</link>
+      <pubDate>Mon, 14 Aug 2017 18:44:30 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/seaborn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>数据可视化</title>
       <link>https://gdhucoder.github.io/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/</link>
       <pubDate>Mon, 14 Aug 2017 18:44:30 +0800</pubDate>
@@ -282,11 +282,11 @@
     </item>
     
     <item>
-      <title>算法</title>
-      <link>https://gdhucoder.github.io/tags/%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Tue, 11 Jun 2019 15:50:26 +0800</pubDate>
+      <title>Mind</title>
+      <link>https://gdhucoder.github.io/tags/mind/</link>
+      <pubDate>Mon, 14 Aug 2017 03:58:07 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/tags/%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://gdhucoder.github.io/tags/mind/</guid>
       <description></description>
     </item>
     
@@ -300,11 +300,11 @@
     </item>
     
     <item>
-      <title>读书</title>
-      <link>https://gdhucoder.github.io/tags/%E8%AF%BB%E4%B9%A6/</link>
-      <pubDate>Sun, 09 Feb 2020 15:51:17 +0800</pubDate>
+      <title>Matplotlib</title>
+      <link>https://gdhucoder.github.io/tags/matplotlib/</link>
+      <pubDate>Wed, 09 Aug 2017 21:44:30 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/tags/%E8%AF%BB%E4%B9%A6/</guid>
+      <guid>https://gdhucoder.github.io/tags/matplotlib/</guid>
       <description></description>
     </item>
     

@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DRY</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="DRY" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about DRY.
-
-" />
+Brief introduction about DRY." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/005_dry/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:08:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:08:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:08:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:08:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,78 +83,54 @@ MathJax.Hub.Config({
     <h2>DRY</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#关于dry原则">关于DRY原则</a>
-<ul>
-<li><a href="#违反dry的情况">违反DRY的情况</a></li>
-<li><a href="#注意">注意：</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#违反dry的情况">违反DRY的情况</a></li>
+    <li><a href="#注意">注意：</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about DRY.</p>
-
-<p></p>
-
 <h1 id="关于dry原则">关于DRY原则</h1>
-
 <p>Don&rsquo;t repeat yourself.</p>
-
 <h2 id="违反dry的情况">违反DRY的情况</h2>
-
 <ul>
 <li>代码重复</li>
 <li>注释或者文档违反DRY</li>
 <li>数据对象违反DRY</li>
 </ul>
-
 <p>例如一个方法。写了好多的注释解释代码的执行逻辑，后续修改的这个方法的时候可能忘记修改注释，
 造成对代码理解的困难。实际应用应该使用KISS原则，将方法写的见名知意，尽量容易阅读。注释不必过多。</p>
-
 <p>例如类:</p>
-
-<pre><code class="language-java">class User{
-  String id;
-  Date registerDate;
-  int age;
-  int registeredDays;
-}
-</code></pre>
-
-<p>其中 age可以由身份证号码算出来，而且每年都会递增。
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span><span style="color:#f92672">{</span>
+  String id<span style="color:#f92672">;</span>
+  Date registerDate<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">int</span> registeredDays<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>其中 age可以由身份证号码算出来，而且每年都会递增。
 注册会员多少天了，也可以算出来。所以是不是可以考虑数据字段只存储id和注册时间。其余两个字段可以算出来。</p>
-
-<pre><code class="language-java">class User{
-  String id;
-  Date registerDate;
-  int age;
-  int registeredDays;
-  User(String id, Date registerDate){
-    this.id = id;
-    this.registerDate = registerDate;
-    // age = calcAge();
-    // registerDate = calcRegisteredDays;
-  }
-}
-</code></pre>
-
-<h2 id="注意">注意：</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span><span style="color:#f92672">{</span>
+  String id<span style="color:#f92672">;</span>
+  Date registerDate<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
+  <span style="color:#66d9ef">int</span> registeredDays<span style="color:#f92672">;</span>
+  User<span style="color:#f92672">(</span>String id<span style="color:#f92672">,</span> Date registerDate<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> id<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">registerDate</span> <span style="color:#f92672">=</span> registerDate<span style="color:#f92672">;</span>
+    <span style="color:#75715e">// age = calcAge();
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// registerDate = calcRegisteredDays;
+</span><span style="color:#75715e"></span>  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="注意">注意：</h2>
 <p>DRY不是只代码重复，而是“知识”的重复，意思是指业务逻辑。例如由于沟通不足，两个程序员用两种不同的方法实现同样功能的校验。
 DRY is about the duplication of knowledge, of intent. It’s about expressing the same thing in two different places, possibly in two totally different ways.</p>
-
 <p>当代码的某些地方必须更改时，你是否发现自己在多个位置以多种不同格式进行了更改？ 你是否需要更改代码和文档，或更改包含其的数据库架构和结构，或者…？ 如果是这样，则您的代码不是DRY。</p>
-
 <p>when some single facet of the code has to change, do you find yourself making that change in multiple places, and in multiple different formats? Do you have to change code and documentation, or a database schema and a structure that holds it, or…? If so, your code isn’t DRY.</p>
-
 <h2 id="参考">参考</h2>
-
 <p>The Pragmatic Programmer: your journey to mastery, 20th Anniversary Edition (2nd Edition)</p>
-
 <p>TODO: 2019年9月份出的书，目前中文版还没有。找到英文版后放上来。</p>
 		</div>
 		
@@ -208,7 +167,7 @@ DRY is about the duplication of knowledge, of intent. It’s about expressing th
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hashing with Salt</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Hashing with Salt" />
 <meta property="og:description" content="[TOC]
-
-如何防止被&rdquo;脱裤&rdquo;
-
-" />
+如何防止被&quot;脱裤&rdquo;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/note/2019-04-30-hashing-with-salt/" />
-
-
-
-<meta property="article:published_time" content="2019-04-30T17:39:06&#43;08:00"/>
-
-<meta property="article:modified_time" content="2019-04-30T17:39:06&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-04-30T17:39:06+08:00" />
+<meta property="article:modified_time" content="2019-04-30T17:39:06+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,116 +83,91 @@ MathJax.Hub.Config({
     <h2>Hashing with Salt</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#加盐">&ldquo;加盐&rdquo;</a>
-<ul>
-<li><a href="#hashing-with-salt">Hashing with salt</a></li>
-<li><a href="#making-password-cracking-harder-slow-hash-functions">Making Password Cracking Harder: Slow Hash Functions</a></li>
-<li><a href="#what-hash-algorithm-should-i-use">What hash algorithm should I use?</a></li>
-<li><a href="#伪码">伪码</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#hashing-with-salt">Hashing with salt</a></li>
+    <li><a href="#making-password-cracking-harder-slow-hash-functions">Making Password Cracking Harder: Slow Hash Functions</a></li>
+    <li><a href="#what-hash-algorithm-should-i-use">What hash algorithm should I use?</a></li>
+    <li><a href="#伪码">伪码</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
-<p>如何防止被&rdquo;脱裤&rdquo;</p>
-
-<p></p>
-
+<p>如何防止被&quot;脱裤&rdquo;</p>
 <h1 id="加盐">&ldquo;加盐&rdquo;</h1>
-
-<p>在密码前面后者后面加一个随机字符串，叫做&rdquo;盐salt&rdquo;</p>
-
+<p>在密码前面后者后面加一个随机字符串，叫做&quot;盐salt&rdquo;</p>
 <h2 id="hashing-with-salt">Hashing with salt</h2>
-
 <p>Salt should be generated using a Cryptographically Secure Pseudo-Random Number Generator (CSPRNG).</p>
-
 <p>To Store a Password</p>
-
 <ul>
 <li>Generate a long random salt using a CSPRNG.</li>
 <li>Prepend the salt to the password and hash it with a standard password hashing function like Argon2, bcrypt, scrypt, or PBKDF2.</li>
 <li>Save both the salt and the hash in the user&rsquo;s database record.</li>
 </ul>
-
 <p>To Validate a Password</p>
-
 <ul>
 <li>Retrieve the user&rsquo;s salt and hash from the database.</li>
 <li>Prepend the salt to the given password and hash it using the same hash function.</li>
 <li>Compare the hash of the given password with the hash from the database. If they match, the password is correct. Otherwise, the password is incorrect.</li>
 </ul>
-
 <h2 id="making-password-cracking-harder-slow-hash-functions">Making Password Cracking Harder: Slow Hash Functions</h2>
-
 <p>增加hash函数计算的时间，例如0.5s计算一次hash值。以防止字典或者暴力破解。</p>
-
 <h2 id="what-hash-algorithm-should-i-use">What hash algorithm should I use?</h2>
-
 <p>使用<a href="https://en.wikipedia.org/wiki/PBKDF2">PBKDF2</a> 算法</p>
-
 <p>不要使用fast cryptographic hash functions such as MD5, SHA1, SHA256, SHA512, RipeMD, WHIRLPOOL, SHA3, etc.</p>
-
 <h2 id="伪码">伪码</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> geekbang.u17<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">package geekbang.u17;
+<span style="color:#f92672">import</span> edu.princeton.cs.algs4.StdOut<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.security.SecureRandom<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.util.Base64<span style="color:#f92672">;</span>
 
-import edu.princeton.cs.algs4.StdOut;
-import java.security.SecureRandom;
-import java.util.Base64;
+<span style="color:#75715e">/**
+</span><span style="color:#75715e"> * Created by HuGuodong on 2019/4/30.
+</span><span style="color:#75715e"> */</span>
 
-/**
- * Created by HuGuodong on 2019/4/30.
- */
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestSalt</span> <span style="color:#f92672">{</span>
 
-public class TestSalt {
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">int</span> SALT_BYTE_SIZE <span style="color:#f92672">=</span> 24<span style="color:#f92672">;</span>
 
-  public static final int SALT_BYTE_SIZE = 24;
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[</span><span style="color:#f92672">]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    SecureRandom random <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SecureRandom<span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> salt <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>SALT_BYTE_SIZE<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+    random<span style="color:#f92672">.</span><span style="color:#a6e22e">nextBytes</span><span style="color:#f92672">(</span>salt<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-  public static void main(String[] args) {
-    SecureRandom random = new SecureRandom();
-    byte[] salt = new byte[SALT_BYTE_SIZE];
-    random.nextBytes(salt);
+    String toBase64 <span style="color:#f92672">=</span> toBase64<span style="color:#f92672">(</span>salt<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+    StdOut<span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;toBase64Salt: %s\n&#34;</span><span style="color:#f92672">,</span> toBase64<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
 
-    String toBase64 = toBase64(salt);
-    StdOut.printf(&quot;toBase64Salt: %s\n&quot;, toBase64);
+  <span style="color:#f92672">}</span>
 
-  }
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> <span style="color:#a6e22e">fromBase64</span><span style="color:#f92672">(</span>String hex<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getDecoder</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">decode</span><span style="color:#f92672">(</span>hex<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
 
-  private static byte[] fromBase64(String hex){
-    return Base64.getDecoder().decode(hex);
-  }
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">toBase64</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> array<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">return</span> Base64<span style="color:#f92672">.</span><span style="color:#a6e22e">getEncoder</span><span style="color:#f92672">(</span><span style="color:#f92672">)</span><span style="color:#f92672">.</span><span style="color:#a6e22e">encodeToString</span><span style="color:#f92672">(</span>array<span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
 
-  private static String toBase64(byte[] array) {
-    return Base64.getEncoder().encodeToString(array);
-  }
+  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">verifyPassword</span><span style="color:#f92672">(</span>String testHash<span style="color:#f92672">,</span> String correctHash<span style="color:#f92672">)</span><span style="color:#f92672">{</span>
 
-  public boolean verifyPassword(String testHash, String correctHash){
+  <span style="color:#75715e">// testHash: password + hash(from database)
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// correctHash: hash
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">return</span> slowEquals<span style="color:#f92672">(</span>fromBase64<span style="color:#f92672">(</span>testHash<span style="color:#f92672">)</span><span style="color:#f92672">,</span> fromBase64<span style="color:#f92672">(</span>correctHash<span style="color:#f92672">)</span><span style="color:#f92672">)</span><span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
 
-  // testHash: password + hash(from database)
-  // correctHash: hash
+  <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">slowEquals</span><span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> a<span style="color:#f92672">,</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span><span style="color:#f92672">]</span> b<span style="color:#f92672">)</span>
+  <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">int</span> diff <span style="color:#f92672">=</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">^</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> a<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">&amp;</span><span style="color:#f92672">&amp;</span> i <span style="color:#f92672">&lt;</span> b<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">+</span><span style="color:#f92672">+</span><span style="color:#f92672">)</span>
+      diff <span style="color:#f92672">|</span><span style="color:#f92672">=</span> a<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">^</span> b<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> diff <span style="color:#f92672">=</span><span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+  <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
 
-    return slowEquals(fromBase64(testHash), fromBase64(correctHash));
-  }
-
-  private static boolean slowEquals(byte[] a, byte[] b)
-  {
-    int diff = a.length ^ b.length;
-    for(int i = 0; i &lt; a.length &amp;&amp; i &lt; b.length; i++)
-      diff |= a[i] ^ b[i];
-    return diff == 0;
-  }
-}
-
-</code></pre>
-
-<h2 id="参考">参考</h2>
-
+</code></pre></div><h2 id="参考">参考</h2>
 <p><a href="https://crackstation.net/hashing-security.htm">hashing-security</a></p>
-
 <p><a href="https://github.com/defuse/password-hashing">PBKDF2-github</a></p>
 		</div>
 		
@@ -246,7 +204,7 @@ public class TestSalt {
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

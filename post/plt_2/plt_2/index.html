@@ -5,34 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>matplot的使用之二:柱状图、散点图</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="matplot的使用之二:柱状图、散点图" />
 <meta property="og:description" content="import pandas as pd
 reviews = pd.read_csv(&#39;fandango_scores.csv&#39;)
 cols = [&#39;FILM&#39;, &#39;RT_user_norm&#39;, &#39;Metacritic_user_nom&#39;, &#39;IMDB_norm&#39;, &#39;Fandango_Ratingvalue&#39;, &#39;Fandango_Stars&#39;]
 norm_reviews = reviews[cols]
 print(norm_reviews[:1])
-
-
 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/plt_2/plt_2/" />
-
-
-
-<meta property="article:published_time" content="2017-08-08T21:44:30&#43;08:00"/>
-
-<meta property="article:modified_time" content="2017-08-08T21:44:30&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2017-08-08T21:44:30+08:00" />
+<meta property="article:modified_time" content="2017-08-08T21:44:30+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -102,115 +86,94 @@ MathJax.Hub.Config({
     <header>
     <h2>matplot的使用之二:柱状图、散点图</h2>
     </header>
-    
+    <nav id="TableOfContents"></nav>
 </aside>
 
-			<pre><code class="language-python">import pandas as pd
-reviews = pd.read_csv('fandango_scores.csv')
-cols = ['FILM', 'RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue', 'Fandango_Stars']
-norm_reviews = reviews[cols]
-print(norm_reviews[:1])
-</code></pre>
-
-<p></p>
-
-<pre><code>                             FILM  RT_user_norm  Metacritic_user_nom  \
-0  Avengers: Age of Ultron (2015)           4.3                 3.55   
-
-   IMDB_norm  Fandango_Ratingvalue  Fandango_Stars  
+			<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+reviews <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">fandango_scores.csv</span><span style="color:#e6db74">&#39;</span>)
+cols <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">FILM</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">RT_user_norm</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Metacritic_user_nom</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">IMDB_norm</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango_Ratingvalue</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango_Stars</span><span style="color:#e6db74">&#39;</span>]
+norm_reviews <span style="color:#f92672">=</span> reviews[cols]
+<span style="color:#66d9ef">print</span>(norm_reviews[:<span style="color:#ae81ff">1</span>])
+</code></pre></div><p>FILM  RT_user_norm  Metacritic_user_nom <br>
+0  Avengers: Age of Ultron (2015)           4.3                 3.55</p>
+<pre><code>   IMDB_norm  Fandango_Ratingvalue  Fandango_Stars  
 0        3.9                   4.5             5.0  
 </code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> arange
+<span style="color:#75715e">#The Axes.bar() method has 2 required parameters, left and height. </span>
+<span style="color:#75715e">#We use the left parameter to specify the x coordinates of the left sides of the bar. </span>
+<span style="color:#75715e">#We use the height parameter to specify the height of each bar</span>
+num_cols <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">RT_user_norm</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Metacritic_user_nom</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">IMDB_norm</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango_Ratingvalue</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango_Stars</span><span style="color:#e6db74">&#39;</span>]
+bar_heights <span style="color:#f92672">=</span> norm_reviews<span style="color:#f92672">.</span>ix[<span style="color:#ae81ff">0</span>, num_cols]<span style="color:#f92672">.</span>values
+<span style="color:#75715e">#print (norm_reviews.dtpye())</span>
+<span style="color:#75715e">#print(help(norm_reviews.dtpye))</span>
+bar_positions <span style="color:#f92672">=</span> arange(<span style="color:#ae81ff">5</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.75</span>
+<span style="color:#75715e">#print bar_positions</span>
+fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots()
+ax<span style="color:#f92672">.</span>bar(bar_positions, bar_heights, <span style="color:#ae81ff">0.5</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="../output_1_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#By default, matplotlib sets the x-axis tick labels to the integer values the bars </span>
+<span style="color:#75715e">#spanned on the x-axis (from 0 to 6). We only need tick labels on the x-axis where the bars are positioned. </span>
+<span style="color:#75715e">#We can use Axes.set_xticks() to change the positions of the ticks to [1, 2, 3, 4, 5]:</span>
 
-<pre><code class="language-python">import matplotlib.pyplot as plt
-from numpy import arange
-#The Axes.bar() method has 2 required parameters, left and height. 
-#We use the left parameter to specify the x coordinates of the left sides of the bar. 
-#We use the height parameter to specify the height of each bar
-num_cols = ['RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue', 'Fandango_Stars']
-bar_heights = norm_reviews.ix[0, num_cols].values
-#print (norm_reviews.dtpye())
-#print(help(norm_reviews.dtpye))
-bar_positions = arange(5) + 0.75
-#print bar_positions
-fig, ax = plt.subplots()
-ax.bar(bar_positions, bar_heights, 0.5)
-plt.show()
-</code></pre>
+num_cols <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">RT_user_norm</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Metacritic_user_nom</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">IMDB_norm</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango_Ratingvalue</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango_Stars</span><span style="color:#e6db74">&#39;</span>]
+bar_heights <span style="color:#f92672">=</span> norm_reviews<span style="color:#f92672">.</span>ix[<span style="color:#ae81ff">0</span>, num_cols]<span style="color:#f92672">.</span>values
+bar_positions <span style="color:#f92672">=</span> arange(<span style="color:#ae81ff">5</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.75</span>
+tick_positions <span style="color:#f92672">=</span> range(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>)
+fig, ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots()
 
-<p><img src="../output_1_0.png" alt="png" /></p>
+ax<span style="color:#f92672">.</span>bar(bar_positions, bar_heights, <span style="color:#ae81ff">0.5</span>)
+ax<span style="color:#f92672">.</span>set_xticks(tick_positions)
+ax<span style="color:#f92672">.</span>set_xticklabels(num_cols, rotation<span style="color:#f92672">=</span><span style="color:#ae81ff">90</span>)
 
-<pre><code class="language-python">#By default, matplotlib sets the x-axis tick labels to the integer values the bars 
-#spanned on the x-axis (from 0 to 6). We only need tick labels on the x-axis where the bars are positioned. 
-#We can use Axes.set_xticks() to change the positions of the ticks to [1, 2, 3, 4, 5]:
+ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Rating Source</span><span style="color:#e6db74">&#39;</span>)
+ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Average Rating</span><span style="color:#e6db74">&#39;</span>)
+ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Average User Rating For Avengers: Age of Ultron (2015)</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="../output_2_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">from</span> numpy <span style="color:#f92672">import</span> arange
+num_cols <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">RT_user_norm</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Metacritic_user_nom</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">IMDB_norm</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango_Ratingvalue</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango_Stars</span><span style="color:#e6db74">&#39;</span>]
 
-num_cols = ['RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue', 'Fandango_Stars']
-bar_heights = norm_reviews.ix[0, num_cols].values
-bar_positions = arange(5) + 0.75
-tick_positions = range(1,6)
-fig, ax = plt.subplots()
-
-ax.bar(bar_positions, bar_heights, 0.5)
-ax.set_xticks(tick_positions)
-ax.set_xticklabels(num_cols, rotation=90)
-
-ax.set_xlabel('Rating Source')
-ax.set_ylabel('Average Rating')
-ax.set_title('Average User Rating For Avengers: Age of Ultron (2015)')
-plt.show()
-</code></pre>
-
-<p><img src="../output_2_0.png" alt="png" /></p>
-
-<pre><code class="language-python">import matplotlib.pyplot as plt
-from numpy import arange
-num_cols = ['RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue', 'Fandango_Stars']
-
-bar_widths = norm_reviews.ix[0, num_cols].values
-bar_positions = arange(5)+0.75
-tick_positions = range(1,6)
-fig,ax = plt.subplots()
-ax.barh(bar_positions, bar_widths)
-ax.set_yticks(tick_positions)
-ax.set_yticklabels(num_cols)
-ax.set_ylabel('Rating Source')
-ax.set_xlabel('Average Rating')
-ax.set_title('Average User Rating For Avengers: Age of Ultron (2015)')
-plt.show()
-</code></pre>
-
-<p><img src="../output_3_0.png" alt="png" /></p>
-
-<pre><code class="language-python">#Let's look at a plot that can help us visualize many points.
-fig,ax = plt.subplots()
-ax.scatter(norm_reviews['Fandango_Ratingvalue'], norm_reviews['RT_user_norm'])
-ax.set_xlabel('Fandango')
-ax.set_ylabel('Rotten Tomatoes')
-plt.show()
-</code></pre>
-
-<p><img src="../output_4_0.png" alt="png" /></p>
-
-<pre><code class="language-python"># Switching Aixes
-fig = plt.figure(figsize=(5,10))
-ax1 = fig.add_subplot(2,1,1)
-ax2 = fig.add_subplot(2,1,2)
-ax1.scatter(norm_reviews['Fandango_Ratingvalue'], norm_reviews['RT_user_norm'],color='red')
-ax1.set_xlabel('Fandango')
-ax1.set_ylabel('Rotten Tomatoes')
-ax1.set_xticks(range(0,6))
-ax1.set_yticks(range(0,6))
-ax2.scatter(norm_reviews['RT_user_norm'], norm_reviews['Fandango_Ratingvalue'])
-ax2.set_xlabel('Fandango')
-ax2.set_ylabel('Rotten Tomatoes')
-ax2.set_xticks(range(0,6))
-ax2.set_yticks(range(0,6))
-plt.show()
-</code></pre>
-
-<p><img src="../output_5_0.png" alt="png" /></p>
-
-<pre><code class="language-python">
-</code></pre>
+bar_widths <span style="color:#f92672">=</span> norm_reviews<span style="color:#f92672">.</span>ix[<span style="color:#ae81ff">0</span>, num_cols]<span style="color:#f92672">.</span>values
+bar_positions <span style="color:#f92672">=</span> arange(<span style="color:#ae81ff">5</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">0.75</span>
+tick_positions <span style="color:#f92672">=</span> range(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>)
+fig,ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots()
+ax<span style="color:#f92672">.</span>barh(bar_positions, bar_widths)
+ax<span style="color:#f92672">.</span>set_yticks(tick_positions)
+ax<span style="color:#f92672">.</span>set_yticklabels(num_cols)
+ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Rating Source</span><span style="color:#e6db74">&#39;</span>)
+ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Average Rating</span><span style="color:#e6db74">&#39;</span>)
+ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Average User Rating For Avengers: Age of Ultron (2015)</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="../output_3_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Let&#39;s look at a plot that can help us visualize many points.</span>
+fig,ax <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>subplots()
+ax<span style="color:#f92672">.</span>scatter(norm_reviews[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango_Ratingvalue</span><span style="color:#e6db74">&#39;</span>], norm_reviews[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">RT_user_norm</span><span style="color:#e6db74">&#39;</span>])
+ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango</span><span style="color:#e6db74">&#39;</span>)
+ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Rotten Tomatoes</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="../output_4_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Switching Aixes</span>
+fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>))
+ax1 <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>)
+ax2 <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>)
+ax1<span style="color:#f92672">.</span>scatter(norm_reviews[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango_Ratingvalue</span><span style="color:#e6db74">&#39;</span>], norm_reviews[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">RT_user_norm</span><span style="color:#e6db74">&#39;</span>],color<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">red</span><span style="color:#e6db74">&#39;</span>)
+ax1<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango</span><span style="color:#e6db74">&#39;</span>)
+ax1<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Rotten Tomatoes</span><span style="color:#e6db74">&#39;</span>)
+ax1<span style="color:#f92672">.</span>set_xticks(range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>))
+ax1<span style="color:#f92672">.</span>set_yticks(range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>))
+ax2<span style="color:#f92672">.</span>scatter(norm_reviews[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">RT_user_norm</span><span style="color:#e6db74">&#39;</span>], norm_reviews[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango_Ratingvalue</span><span style="color:#e6db74">&#39;</span>])
+ax2<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Fandango</span><span style="color:#e6db74">&#39;</span>)
+ax2<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Rotten Tomatoes</span><span style="color:#e6db74">&#39;</span>)
+ax2<span style="color:#f92672">.</span>set_xticks(range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>))
+ax2<span style="color:#f92672">.</span>set_yticks(range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>))
+plt<span style="color:#f92672">.</span>show()
+</code></pre></div><p><img src="../output_5_0.png" alt="png"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+</code></pre></div>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -248,7 +211,7 @@ plt.show()
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

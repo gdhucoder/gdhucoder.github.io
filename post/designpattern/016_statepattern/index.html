@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>State Pattern</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="State Pattern" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about State Pattern.
-
-" />
+Brief introduction about State Pattern." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/016_statepattern/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:18:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:18:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:18:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:18:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,58 +83,35 @@ MathJax.Hub.Config({
     <h2>State Pattern</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#状态模式-state-pattern">状态模式（State Pattern）</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#类图">类图</a></li>
-<li><a href="#用例">用例</a></li>
-<li><a href="#实际应用">实际应用</a></li>
-<li><a href="#注意">注意</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#类图">类图</a></li>
+    <li><a href="#用例">用例</a></li>
+    <li><a href="#实际应用">实际应用</a></li>
+    <li><a href="#注意">注意</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about State Pattern.</p>
-
-<p></p>
-
-<h1 id="状态模式-state-pattern">状态模式（State Pattern）</h1>
-
+<h1 id="状态模式state-pattern">状态模式（State Pattern）</h1>
 <h2 id="定义">定义</h2>
-
 <p>Allows an object to alter its behaviour when its internal state changes. The object will appear to change its class.</p>
-
 <p>允许对象内部状态改变时，改变其行为。对象看起来像改变了其类。</p>
-
 <h2 id="类图">类图</h2>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-28_008.jpg" alt="2019-11-28_008.jpg" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-11-28_008.jpg" alt="2019-11-28_008.jpg"></p>
 <h2 id="用例">用例</h2>
-
 <p>小菜加班的例子。详细见代码。</p>
-
 <p>实际更好的例子是：网购。物品的状态依次是：下单，发货，物流公司收件，派件，签收。包裹的状态每个步骤都在改变。每个状态对应两个动作：处理包裹和改状态。</p>
-
 <p><a href="./code/u016">code example</a></p>
-
 <h2 id="实际应用">实际应用</h2>
-
 <p>消除庞大的分支语句。</p>
-
 <p>有点像状态机。</p>
-
 <h2 id="注意">注意</h2>
-
 <p>具体状态类中的状态变量可以设置为单例。</p>
-
 <h2 id="参考">参考</h2>
-
 <p><a href="https://howtodoinjava.com/design-patterns/behavioral/state-design-pattern/">how-to-do-state-pattern</a></p>
 		</div>
 		
@@ -188,7 +148,7 @@ MathJax.Hub.Config({
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

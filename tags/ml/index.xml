@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ml on CoderPunk</title>
+    <title>ML on CoderPunk</title>
     <link>https://gdhucoder.github.io/tags/ml/</link>
-    <description>Recent content in Ml on CoderPunk</description>
+    <description>Recent content in ML on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Thu, 07 Sep 2017 21:25:07 +0800</lastBuildDate>

@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chain of Responsibility Pattern</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Chain of Responsibility Pattern" />
 <meta property="og:description" content="[TOC]
-
-Brief introduction about Chain of Responsibility Pattern
-
-" />
+Brief introduction about Chain of Responsibility Pattern" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/designpattern/024_chainofresponsibility/" />
-
-
-
-<meta property="article:published_time" content="2020-01-04T10:23:03&#43;08:00"/>
-
-<meta property="article:modified_time" content="2020-01-04T10:23:03&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2020-01-04T10:23:03+08:00" />
+<meta property="article:modified_time" content="2020-01-04T10:23:03+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,54 +83,33 @@ MathJax.Hub.Config({
     <h2>Chain of Responsibility Pattern</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#职责链模式-chain-of-responsibility-pattern">职责链模式（Chain of Responsibility Pattern）</a>
-<ul>
-<li><a href="#定义">定义</a></li>
-<li><a href="#类图">类图</a></li>
-<li><a href="#用例">用例</a></li>
-<li><a href="#实际应用">实际应用</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#定义">定义</a></li>
+    <li><a href="#类图">类图</a></li>
+    <li><a href="#用例">用例</a></li>
+    <li><a href="#实际应用">实际应用</a></li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Brief introduction about Chain of Responsibility Pattern</p>
-
-<p></p>
-
-<h1 id="职责链模式-chain-of-responsibility-pattern">职责链模式（Chain of Responsibility Pattern）</h1>
-
+<h1 id="职责链模式chain-of-responsibility-pattern">职责链模式（Chain of Responsibility Pattern）</h1>
 <h2 id="定义">定义</h2>
-
 <p>将发送请求的处理连成一条链，沿着这条链传递请求，直到处理完成为止。</p>
-
 <h2 id="类图">类图</h2>
-
-<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-07_022.jpg" alt="Chain of Responsibility" /></p>
-
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2019-12-07_022.jpg" alt="Chain of Responsibility"></p>
 <h2 id="用例">用例</h2>
-
 <p>《大话设计模式》中讲了小菜申请加薪的例子。加薪需要总经理审批。</p>
-
 <p>生活中的例子是出去度假，可能要请10天假，这是就需要总监或者经理审批了。</p>
-
 <p><a href="./code/u024">code example</a></p>
-
 <h2 id="实际应用">实际应用</h2>
-
 <p><code>javax.servlet.Filter#doFilter()</code></p>
-
 <p><code>java.util.logging.Logger#log</code></p>
-
 <p>If the logger is currently enabled for the given message level
 then the given message is forwarded to all the registered output Handler objects.</p>
-
 <h2 id="参考">参考</h2>
-
 <p><a href="https://howtodoinjava.com/design-patterns/behavioral/chain-of-responsibility-design-pattern/">chain-of-responsibility</a></p>
 		</div>
 		
@@ -184,7 +146,7 @@ then the given message is forwarded to all the registered output Handler objects
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

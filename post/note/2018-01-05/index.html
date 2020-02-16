@@ -5,33 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>基于试验的启发式树搜索</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="基于试验的启发式树搜索" />
 <meta property="og:description" content="[TOC]
-
 概念
-
-给定一个MDP，一个agent可以访问：
-
-" />
+给定一个MDP，一个agent可以访问：" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/note/2018-01-05/" />
-
-
-
-<meta property="article:published_time" content="2018-01-04T21:25:07&#43;08:00"/>
-
-<meta property="article:modified_time" content="2018-01-04T21:25:07&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2018-01-04T21:25:07+08:00" />
+<meta property="article:modified_time" content="2018-01-04T21:25:07+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -102,79 +84,57 @@ MathJax.Hub.Config({
     <h2>基于试验的启发式树搜索</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#概念">概念</a></li>
-<li><a href="#多臂赌博机问题-mab">多臂赌博机问题（MAB）</a>
-<ul>
-<li><a href="#探索和获取收益的窘境-exploration-exploitation-dilemma">探索和获取收益的窘境（exploration-exploitation dilemma）</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#概念">概念</a></li>
+        <li><a href="#多臂赌博机问题mab">多臂赌博机问题（MAB）</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <h3 id="概念">概念</h3>
-
 <p>给定一个MDP，一个agent可以访问：</p>
-
-<p></p>
-
 <ul>
-<li><p>环境先验模型（a-priori model of environment）</p>
-
-<p>在agent与环境交互之前就呈现给他了。</p></li>
+<li>
+<p>环境先验模型（a-priori model of environment）</p>
+<p>在agent与环境交互之前就呈现给他了。</p>
+</li>
 </ul>
-
 <blockquote>
 <p>which is revealed to the agent before its interaction with the environment starts.</p>
 </blockquote>
-
 <ul>
-<li><p>生成模型（a generative model）</p>
-
-<p>输入一个状态和动作，输出奖励和根据转移函数的到的随机下一个状态。</p></li>
-
-<li><p>声明模型（a declarative model）</p>
-
-<p>声明模型提供了MDP的描述，对于所有的状态、后继状态和动作提供了概率转移和奖励函数。</p></li>
+<li>
+<p>生成模型（a generative model）</p>
+<p>输入一个状态和动作，输出奖励和根据转移函数的到的随机下一个状态。</p>
+</li>
+<li>
+<p>声明模型（a declarative model）</p>
+<p>声明模型提供了MDP的描述，对于所有的状态、后继状态和动作提供了概率转移和奖励函数。</p>
+</li>
 </ul>
-
 <p>我们在此处区分<strong>学习agents</strong> （未提供先验模型）和<strong>规划agents</strong>（可以访问生成模型或者声明模型）</p>
-
-<!--more-->
-
-<h3 id="多臂赌博机问题-mab">多臂赌博机问题（MAB）</h3>
-
+<!-- raw HTML omitted -->
+<h3 id="多臂赌博机问题mab">多臂赌博机问题（MAB）</h3>
 <blockquote>
 <p>Figuratively, the agent faces a slot machine (a bandit) with multiple arms, and it has to decide which arm to pull based only on the payouts it received so far. Each arm provides a random reward according to a probability distribution that is specific to the arm and constant over time, but the agent has no initial information on the distribution.</p>
 </blockquote>
-
-<h4 id="探索和获取收益的窘境-exploration-exploitation-dilemma">探索和获取收益的窘境（exploration-exploitation dilemma）</h4>
-
+<h4 id="探索和获取收益的窘境exploration-exploitation-dilemma">探索和获取收益的窘境（exploration-exploitation dilemma）</h4>
 <p>简单的说就是：agent要探索尝试各种动作，牺牲一部分收益来寻找到最好的动作，但又不能牺牲的太多。要平衡探索时牺牲的收益和获取最大的收益。</p>
-
 <blockquote>
 <p>on the one hand, since the agent has no a-priori knowledge of the environment, it has to explore its possibilities to learn from the feedback the environment provides. And on the other, since it aims to maximize the accumulated reward over all runs, it has an incentive to exploit the knowledge it has gathered by executing the action it believes to be best. In other words, the agent learns from its trial-and-error interaction with the environment, and it has to make sure that the balance between exploration and exploitation is such that it learns the best action without sacrificing too much reward in early decisions.</p>
 </blockquote>
-
-<p><img src="http://upload-images.jianshu.io/upload_images/4800606-33b52f5c1785e6ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png" /></p>
-
+<p><img src="http://upload-images.jianshu.io/upload_images/4800606-33b52f5c1785e6ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
 <p>一个三臂的例子MAB问题。 边缘用转移概率p和奖励r标记为p：r。</p>
-
 <p>一个MAB问题有三个拉杆al，am，ar（分别代表左、中、右拉杆）。拉动左拉杆可以获得20或者0的奖励，概率分别为0.5。拉动右拉杆分别或者70或者30的奖励，概率分别为0.5。拉动中间的拉杆，有0.1的概率获得100的奖励，0.5的概率获得60的奖励，0.4的概率获得30的奖励。我们可以通过访问声明模型计算出3个拉杆的期望奖励分别为：Q*(al) = 10, Q*(am) = 52, Q*(ar) = 50。最好的选择是拉动中间的拉杆。</p>
-
 <p>但是，即使模型可以被访问计算的期望值是微不足道的，因为agent没有关于定义回报的分布的先验知识，所以MAB是具有挑战性的问题。 因此，它必须探索机器的拉杆，以获得分布（或期望的奖励）的是什么样的，并在其信念充分确定的情况下利用其知识。 如果它放弃探索太早，它可能永远也找不到最好的拉杆 - 例如，考虑到中间选项在前几次运行中不能获得100的奖励的不太可能的情况。 在这种情况下，它的行动价值估计Qk（am）可以预计低于50，并且可能ar看起来更有前景。 因此，如果agent过早相信信念，即使am是更好的，也会继续选择右侧的拉杆。 另一方面，如果它继续探索太久，它往往会拉下左或者右拉杆更多次，牺牲的收益。</p>
-
 <p>ETE strategy: Explore-then-Exploit strategy 探索开发策略
 exploration phase of length <em>l</em>, aims to deciside the best arm with high probability.
-action selection: uniform action selection 一致动作选择，意思是随机选择一个拉杆*l*次。
+action selection: uniform action selection 一致动作选择，意思是随机选择一个拉杆<em>l</em>次。
 exploitation phase: greedy action, choose action with highest Q value</p>
 		</div>
 		
@@ -211,7 +171,7 @@ exploitation phase: greedy action, choose action with highest Q value</p>
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

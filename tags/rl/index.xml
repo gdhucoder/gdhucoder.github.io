@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rl on CoderPunk</title>
+    <title>RL on CoderPunk</title>
     <link>https://gdhucoder.github.io/tags/rl/</link>
-    <description>Recent content in Rl on CoderPunk</description>
+    <description>Recent content in RL on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
     <lastBuildDate>Fri, 06 Apr 2018 07:00:00 +0800</lastBuildDate>
@@ -18,10 +18,7 @@
       
       <guid>https://gdhucoder.github.io/post/note/2018-04-06-rl-note/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;p&gt;Multi-armed Bandits 本篇主要介绍多臂赌博机问题的相关算法。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;Multi-armed Bandits 本篇主要介绍多臂赌博机问题的相关算法。&lt;/p&gt;</description>
     </item>
     
   </channel>

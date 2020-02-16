@@ -5,31 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Go Programming Language</title>
 <meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.37" />
+<meta name="generator" content="Hugo 0.64.0" />
 <meta property="og:title" content="Go Programming Language" />
 <meta property="og:description" content="[TOC]
-
-Go语言深入学习。
-
-" />
+Go语言深入学习。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/golang/01/" />
-
-
-
-<meta property="article:published_time" content="2019-03-10T10:03:48&#43;08:00"/>
-
-<meta property="article:modified_time" content="2019-03-10T10:03:48&#43;08:00"/>
-
-
-
-
-
-
-
-
-
-
+<meta property="article:published_time" content="2019-03-10T10:03:48+08:00" />
+<meta property="article:modified_time" content="2019-03-10T10:03:48+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -100,203 +83,145 @@ MathJax.Hub.Config({
     <h2>Go Programming Language</h2>
     </header>
     <nav id="TableOfContents">
-<ul>
-<li><a href="#go-language-getting-started">Go Language Getting Started</a>
-<ul>
-<li><a href="#开发环境搭建">开发环境搭建</a></li>
-<li><a href="#调试工具">调试工具</a></li>
-<li><a href="#golang语言特性">golang语言特性</a>
-<ul>
-<li><a href="#1-垃圾回收">1、垃圾回收</a></li>
-<li><a href="#2-天然并发">2、天然并发</a></li>
-<li><a href="#3-channel-管道">3、channel 管道</a></li>
-<li><a href="#4-多返回值">4、多返回值</a></li>
-</ul></li>
-<li><a href="#包的概念">包的概念</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#开发环境搭建">开发环境搭建</a></li>
+    <li><a href="#调试工具">调试工具</a></li>
+    <li><a href="#golang语言特性">golang语言特性</a>
+      <ul>
+        <li><a href="#1垃圾回收">1、垃圾回收</a></li>
+        <li><a href="#2天然并发">2、天然并发</a></li>
+        <li><a href="#3channel-管道">3、channel 管道</a></li>
+        <li><a href="#4多返回值">4、多返回值</a></li>
+      </ul>
+    </li>
+    <li><a href="#包的概念">包的概念</a></li>
+  </ul>
 </nav>
 </aside>
 
 			<p>[TOC]</p>
-
 <p>Go语言深入学习。</p>
-
-<p></p>
-
 <h1 id="go-language-getting-started">Go Language Getting Started</h1>
-
 <h2 id="开发环境搭建">开发环境搭建</h2>
-
 <p>1、安装Go</p>
-
 <p>a.打开网址 <a href="https://golang.org/dl/">https://golang.org/dl/</a></p>
-
 <p>b.根据操作系统选择对应的安装包</p>
-
 <p>c.安装</p>
-
 <p>d.设置环境变量 linux</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+export GOROOT<span style="color:#f92672">=</span>$PATH<span style="color:#f92672">:</span><span style="color:#f92672">/</span>path<span style="color:#f92672">/</span>to<span style="color:#f92672">/</span>go<span style="color:#f92672">/</span>
 
-<pre><code class="language-java">
-export GOROOT=$PATH:/path/to/go/
+export PATH<span style="color:#f92672">=</span>$PATH<span style="color:#f92672">:</span>$GOROOT<span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span> 
 
-export PATH=$PATH:$GOROOT/bin/ 
+export GOPATH<span style="color:#f92672">=</span><span style="color:#f92672">/</span>home<span style="color:#f92672">/</span>user<span style="color:#f92672">/</span>project<span style="color:#f92672">/</span>go 
 
-export GOPATH=/home/user/project/go 
-
-</code></pre>
-
-<p>e.设置环境变量(window不用设置)</p>
-
+</code></pre></div><p>e.设置环境变量(window不用设置)</p>
 <p>vsCode安装go插件失败，到github上下载插件后自行安装。</p>
-
 <p><a href="https://github.com/golang/tools">https://github.com/golang/tools</a></p>
-
 <p>安装调试后，被360禁止权限。找了半天不知道如何恢复，看来我要卸载360了。（把360关了之后，可以正常调试程序了）</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
-<pre><code class="language-golang">package main
-
-import (
-    &quot;fmt&quot;
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
 )
 
-func add(a int, b int) int {
-    var sum int
-    sum = a + b
-    return sum
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">a</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">int</span> {
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#66d9ef">int</span>
+	<span style="color:#a6e22e">sum</span> = <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sum</span>
 }
 
-func main() {
-    fmt.Println(&quot;hello&quot;)
-    fmt.Println(&quot;你好！&quot;)
-    fmt.Println(add(15, 20))
-    var c int
-    c = add(100, 300)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;hello&#34;</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;你好！&#34;</span>)
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">20</span>))
+	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">c</span> <span style="color:#66d9ef">int</span>
+	<span style="color:#a6e22e">c</span> = <span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">300</span>)
 }
-</code></pre>
-
-<p>编译不会通过，因为go追求简洁，没有用到的变量c，不会编译通过。</p>
-
+</code></pre></div><p>编译不会通过，因为go追求简洁，没有用到的变量c，不会编译通过。</p>
 <h2 id="调试工具">调试工具</h2>
-
 <p>delve</p>
-
 <p><a href="https://github.com/derekparker/delve/tree/master/Documentation/installation">https://github.com/derekparker/delve/tree/master/Documentation/installation</a></p>
-
 <h2 id="golang语言特性">golang语言特性</h2>
-
-<h3 id="1-垃圾回收">1、垃圾回收</h3>
-
+<h3 id="1垃圾回收">1、垃圾回收</h3>
 <p>a.内存自动回收，再也不需要开发人员管理内存</p>
-
 <p>b.开发人员专注业务实现，降低了心智负担</p>
-
 <p>c.只需要new分配内存，不需要释放。</p>
-
-<h3 id="2-天然并发">2、天然并发</h3>
-
+<h3 id="2天然并发">2、天然并发</h3>
 <p>goroutine 轻量级线程，创建千万个goroutine可能。</p>
-
 <p>基于CSP (Communicating Sequential Process)模型成为可能</p>
-
 <p>通信序列进程。每个goroutine都是独立的单位。简单的理解是轻量级的线程。上万个goroutine是可能的。比操作系统的线程轻量。</p>
-
 <p>感觉一下并发^_^</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang">	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#ae81ff">100</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
+		<span style="color:#66d9ef">go</span> print(<span style="color:#a6e22e">i</span>) <span style="color:#75715e">// go routine
+</span><span style="color:#75715e"></span>	}
+	<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Sleep</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>)
 
-<pre><code class="language-golang">    for i := 0; i &lt; 100; i++ {
-        go print(i) // go routine
-    }
-    time.Sleep(time.Second)
-
-// API server listening at: 127.0.0.1:19386
-// 4
-// 0
-// 600
-// 2
-// 1
-// 9
-// 5
-// 6
-// 7
-// 8
-// 3
-// 12
-// 10
-// 11
-// 14
-// 13
-// 15
-// 16
-// 79
-// 59
-// 60   
-</code></pre>
-
-<p>启动100个并发的goroutine</p>
-
-<h3 id="3-channel-管道">3、channel 管道</h3>
-
+<span style="color:#75715e">// API server listening at: 127.0.0.1:19386
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 4
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 0
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 600
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 2
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 9
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 5
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 6
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 7
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 8
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 3
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 12
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 10
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 11
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 14
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 13
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 15
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 16
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 79
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 59
+</span><span style="color:#75715e"></span><span style="color:#75715e">// 60	
+</span></code></pre></div><p>启动100个并发的goroutine</p>
+<h3 id="3channel-管道">3、channel 管道</h3>
 <p>a. 管道，类似unix/linux中的pipe</p>
-
 <p>b. 多个goroutine之间通过channel通信</p>
-
 <p>c. 支持任何类型</p>
-
-<pre><code class="language-golang">pipe := make(chan int, 3)
-pipe &lt;- 100
-pipe &lt;- 87
-</code></pre>
-
-<h3 id="4-多返回值">4、多返回值</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#a6e22e">pipe</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">3</span>)
+<span style="color:#a6e22e">pipe</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">100</span>
+<span style="color:#a6e22e">pipe</span> <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">87</span>
+</code></pre></div><h3 id="4多返回值">4、多返回值</h3>
 <p>a.一个函数返回多个值</p>
-
-<pre><code class="language-golang">func calc(a int, b int) (int, int) {
-    sum := a + b
-    avg := sum / 2
-    return sum, avg
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">calc</span>(<span style="color:#a6e22e">a</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">int</span>) (<span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span>) {
+	<span style="color:#a6e22e">sum</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>
+	<span style="color:#a6e22e">avg</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sum</span>, <span style="color:#a6e22e">avg</span>
 }
-</code></pre>
-
-<h2 id="包的概念">包的概念</h2>
-
+</code></pre></div><h2 id="包的概念">包的概念</h2>
 <p>a.和Python的包概念差不多</p>
-
 <p>b.共外部使用的包中的函数名定义要
-<font color="Darkorange"><strong>大写</strong></font></p>
-
+<!-- raw HTML omitted --><strong>大写</strong><!-- raw HTML omitted --></p>
 <p>c.包可以被其他包引用</p>
-
 <p>d.main包是用来生成可执行文件，每个程序只有一个main包</p>
-
 <p>e.包的主要用途是提高代码的可复用性</p>
-
 <p>例如：</p>
-
 <p>main.go</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
-<pre><code class="language-golang">package main
-
-import (
-    &quot;fmt&quot;
-    &quot;go_dev/day1/goroutine_example/goroutine&quot;
+<span style="color:#f92672">import</span> (
+	<span style="color:#e6db74">&#34;fmt&#34;</span>
+	<span style="color:#e6db74">&#34;go_dev/day1/goroutine_example/goroutine&#34;</span>
 )
 
-func main() {
-    c := make(chan int, 1)
-    go goroutine.Add(10, 20, c)
-    num := &lt;-c
-    fmt.Println(num)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
+	<span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> make(<span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">1</span>)
+	<span style="color:#66d9ef">go</span> <span style="color:#a6e22e">goroutine</span>.<span style="color:#a6e22e">Add</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#a6e22e">c</span>)
+	<span style="color:#a6e22e">num</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&lt;-</span><span style="color:#a6e22e">c</span>
+	<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">num</span>)
 }
-</code></pre>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">goroutine</span>
 
-<pre><code class="language-golang">package goroutine
-
-func Add(a int, b int, c chan int) { // c为管道
-    c &lt;- (a + b)
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Add</span>(<span style="color:#a6e22e">a</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">b</span> <span style="color:#66d9ef">int</span>, <span style="color:#a6e22e">c</span> <span style="color:#66d9ef">chan</span> <span style="color:#66d9ef">int</span>) { <span style="color:#75715e">// c为管道
+</span><span style="color:#75715e"></span>	<span style="color:#a6e22e">c</span> <span style="color:#f92672">&lt;-</span> (<span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>)
 }
-</code></pre>
+</code></pre></div>
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -332,7 +257,7 @@ func Add(a int, b int, c chan int) { // c为管道
 	
 <div class="comments">
 	<div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
