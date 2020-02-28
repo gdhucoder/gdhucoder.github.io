@@ -6,10 +6,20 @@
     <description>Recent content in Thinkings on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sun, 16 Feb 2020 20:51:17 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 28 Feb 2020 15:51:17 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/thinking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>总结：一周都没有解决tf变换问题的原因</title>
+      <link>https://gdhucoder.github.io/thinking/2020-02-28-tf-problem/</link>
+      <pubDate>Fri, 28 Feb 2020 15:51:17 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/2020-02-28-tf-problem/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;一周都没解决tf问题，很是捉鸡，但也没有办法，还是要总结经验。避免再犯类似的错误。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>邻居家的猫</title>
