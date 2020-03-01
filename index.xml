@@ -6,10 +6,20 @@
     <description>Recent content on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Fri, 28 Feb 2020 15:51:17 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 01 Mar 2020 15:51:17 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to be productive?</title>
+      <link>https://gdhucoder.github.io/thinking/2020-03-01-high-light-spot/</link>
+      <pubDate>Sun, 01 Mar 2020 15:51:17 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/2020-03-01-high-light-spot/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;我问自己的一个问题，怎么样才能提高生产力？&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>总结：一周都没有解决tf变换问题的原因</title>
