@@ -10,7 +10,7 @@
 <meta property="og:description" content="博客" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/" />
-<meta property="og:updated_time" content="2020-03-01T15:51:17+08:00" />
+<meta property="og:updated_time" content="2020-03-03T15:51:17+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -66,6 +66,25 @@ MathJax.Hub.Config({
 		<header class="page-header">
 			<h1 class="page-header__title">归档</h1>
 		</header><article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/chapter2-1-12/" rel="bookmark">算法4习题 2.1.12</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-08-06T08:00:00">August 06, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			算法4习题 2.1.12 问题 Instrument shellsort to print the number of compares divided by the array size for each increment. Write a test client that tests the hypothesis that this number is a small constant, by sorting arrays of random Double values, using array sizes that are increasing powers of 10, starting at 100.
+打印希尔排序中每个增量带来的比较次数和数组大小的比值。 验证该值是一个小常数。
+思路 统计每个增量对应的比较次数。
+private static boolean less(Comparable v, Comparable w) { count ++ ; return v.compareTo(w) &lt; 0; } 解答 Extensive experiments suggest that the average number of compares per increment might be N^(1/5) 大量实验表明每个增量的比较次数约为N的1/5次方。
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
@@ -225,24 +244,6 @@ https://git.oschina.net/gdhu
 		</div>
 	</div>
 </article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-01-05/" rel="bookmark">基于试验的启发式树搜索</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-01-04T21:25:07">January 04, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-<h3 id="概念">概念</h3>
-<p>给定一个MDP，一个agent可以访问：</p>
-		</div>
-	</div>
-</article>
 
 
 		
@@ -271,11 +272,11 @@ https://git.oschina.net/gdhu
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/thinking/2020-03-03-write_a_letter/">给自己写封信</a></li>
 			<li class="widget__item"><a class="widget__link" href="/thinking/2020-03-01-high-light-spot/">How to be productive?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/thinking/2020-02-28-tf-problem/">总结：一周都没有解决tf变换问题的原因</a></li>
 			<li class="widget__item"><a class="widget__link" href="/thinking/2020-02-16-cat/">邻居家的猫</a></li>
 			<li class="widget__item"><a class="widget__link" href="/thinking/2020-02-16-tomac/">博客写作迁移至Mac</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-02-10-kaoyan/">如何边工作边考研</a></li>
 		</ul>
 	</div>
 </div>
