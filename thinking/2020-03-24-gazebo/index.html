@@ -90,7 +90,7 @@ MathJax.Hub.Config({
         <li><a href="#创建modelconfig">创建model.config</a></li>
         <li><a href="#创建chairsdf">创建chair.sdf</a></li>
         <li><a href="#定义my_worldworld文件">定义my_world.world文件</a></li>
-        <li><a href="#定义启动文件">定义启动文件，</a></li>
+        <li><a href="#定义启动文件">定义启动文件</a></li>
         <li><a href="#启动gazebo">启动gazebo</a></li>
         <li><a href="#组合起来">组合起来</a></li>
       </ul>
@@ -102,6 +102,9 @@ MathJax.Hub.Config({
 			<p>[TOC]</p>
 <p>如何创建一个gazebo world用于模拟呢？</p>
 <h1 id="如何创建gazebo-world">如何创建gazebo world？</h1>
+<p>先放一个效果图：</p>
+<p><img src="https://gitee.com/gdhu/testtingop/raw/master/2020-03-24_007.jpg" alt="2020-03-24_007.jpg"></p>
+<p>步骤如下：</p>
 <ul>
 <li>下载3D模型</li>
 <li>根据特定的目录结构创建需要的文件夹</li>
@@ -194,7 +197,7 @@ MathJax.Hub.Config({
   <span style="color:#f92672">&lt;/world&gt;</span>
 <span style="color:#f92672">&lt;/sdf&gt;</span>
 </code></pre></div><p>注意：name标签中的名字必须唯一（即使很多个物体都一样，也要定义不同的名字）</p>
-<h3 id="定义启动文件">定义启动文件，</h3>
+<h3 id="定义启动文件">定义启动文件</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;launch</span><span style="color:#f92672">&gt;</span>
     <span style="color:#f92672">&lt;include</span> <span style="color:#a6e22e">file=</span><span style="color:#e6db74">&#34;$(find gazebo_ros)/launch/empty_world.launch&#34;</span><span style="color:#f92672">&gt;</span>
         <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;world_name&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;$(find two_wheels_gazebo)/worlds/my_world.world&#34;</span><span style="color:#f92672">/&gt;</span>
@@ -294,8 +297,7 @@ MathJax.Hub.Config({
     <span style="color:#f92672">&lt;node</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;robot_state_publisher&#34;</span> <span style="color:#a6e22e">pkg=</span><span style="color:#e6db74">&#34;robot_state_publisher&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;state_publisher&#34;</span><span style="color:#f92672">/&gt;</span>
             
 <span style="color:#f92672">&lt;/launch&gt;</span>
-</code></pre></div><p><img src="https://gitee.com/gdhu/testtingop/raw/master/2020-03-24_007.jpg" alt="2020-03-24_007.jpg"></p>
-<p>其他3D模型资源：</p>
+</code></pre></div><p>其他3D模型资源：</p>
 <p><a href="http://data.nvision2.eecs.yorku.ca/3DGEMS/">3DGEMS</a> 10大类的270多个模型。</p>
 <p><a href="https://app.ignitionrobotics.org/fuel/models">IGNITION_FUEL</a> 有待深入看一下</p>
 <p><a href="https://ignitionrobotics.org/">ignitionrobotics</a> IGNITION_FUEL model开源官网</p>
