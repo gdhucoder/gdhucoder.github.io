@@ -6,10 +6,20 @@
     <description>Recent content in 思考 on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sun, 15 Mar 2020 08:51:17 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 06:51:17 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/categories/%E6%80%9D%E8%80%83/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何建立gazebo world model</title>
+      <link>https://gdhucoder.github.io/thinking/2020-03-24-gazebo/</link>
+      <pubDate>Tue, 24 Mar 2020 06:51:17 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/2020-03-24-gazebo/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;如何创建一个gazebo world用于模拟呢？&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>几张好照片</title>

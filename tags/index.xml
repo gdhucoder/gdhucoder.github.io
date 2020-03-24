@@ -6,10 +6,19 @@
     <description>Recent content in Tags on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sun, 15 Mar 2020 08:51:17 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 24 Mar 2020 06:51:17 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TECH</title>
+      <link>https://gdhucoder.github.io/tags/tech/</link>
+      <pubDate>Tue, 24 Mar 2020 06:51:17 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/tags/tech/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>写作</title>
@@ -44,15 +53,6 @@
       <pubDate>Sat, 04 Jan 2020 10:26:04 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/tags/designpattern/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TECH</title>
-      <link>https://gdhucoder.github.io/tags/tech/</link>
-      <pubDate>Thu, 31 Oct 2019 08:14:40 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/tags/tech/</guid>
       <description></description>
     </item>
     
