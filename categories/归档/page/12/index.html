@@ -10,7 +10,7 @@
 <meta property="og:description" content="博客" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/" />
-<meta property="og:updated_time" content="2020-03-24T06:51:17+08:00" />
+<meta property="og:updated_time" content="2020-05-29T05:51:17+08:00" />
 
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//fonts.gstatic.com" />
@@ -66,6 +66,60 @@ MathJax.Hub.Config({
 		<header class="page-header">
 			<h1 class="page-header__title">归档</h1>
 		</header><article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_19/" rel="bookmark">算法4 Java解答 2.4.19</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-28T05:30:00">October 28, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.19 问题： 2.4.19 Implement the constructor for MaxPQ that takes an array of items as argument, using the bottom-up heap construction method described on page 323 in the text.
+实现一个MaxPQ的构造函数，接受一个数组做为参数，使用323页中描述的自底向上的方法构建堆。
+分析： 将数组做为参数构建堆，可以选择从左到右扫描，使用swim()方法。 但更明智的方法是使用从右往左扫描的方式，sink()。 这个方法的想法是如果一个结点的两个子结点的树都是堆的话，sink(k)之后，两个子树就合并成了以k为根结点的子树
+public MaxPQ(Key[] a){ N = a.length; pq = (Key[]) new Comparable[N+1]; for(int i=0; i&lt;a.length; i++){ pq[i+1] = a[i]; } int k = N / 2; while (k &gt;= 1){ sink(k); k --; } assert isMaxHeap(); show(); } 参考： 课本官网的实现MaxPQ
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_18/" rel="bookmark">算法4 Java解答 2.4.18</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-27T06:00:00">October 27, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.18 问题： 2.4.18 In MaxPQ, suppose that a client calls insert() with an item that is larger than all items in the queue, and then immediately calls delMax(). Assume that there are no duplicate keys. Is the resulting heap identical to the heap as it was before these op- erations? Answer the same question for two insert() operations (the first with a key larger than all keys in the queue and the second for a key larger than that one) followed by two delMax() operations.
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
+	<div class="list__content clearfix">
+		<header class="list__header">
+			<h3 class="list__title post__title ">
+				<a href="/post/alg4/chapter2/ex_2_4_17/" rel="bookmark">算法4习题 2.4.17</a>
+			</h3>
+			<div class="list__meta meta">
+				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
+				<time class="list__meta-date" datetime="2018-10-26T06:00:00">October 26, 2018</time>
+			</div>
+		</header>
+		<div class="list__excerpt">
+			2.4.17 问题： 2.4.17 Prove that building a minimum-oriented priority queue of size k then doing N - k replace the minimum (insert followed by remove the minimum) operations leaves the k largest of the N items in the priority queue.
+分析： 题意是insert followed by remove the minimum，先插入后删除。
+例如
+N=10, 元素为：0,2,4,6,8,1,3,5,7,9 k=3， qp = 0 2 4 N-k = 10 - 3 = 7，将要进行7次操作 pq = 0 2 4 count = 1 insert 6, pq = 0 2 4 6 remove 0, pq = 2 4 6 count = 2 insert 8, pq = 2 4 6 8 remove 2, pq = 4 6 8 count =3 insert 1, pq = 1 4 6 8 remove 1, pq = 4 6 8 .
+		</div>
+	</div>
+</article>
+<article class="list__item post clearfix">
 	<div class="list__content clearfix">
 		<header class="list__header">
 			<h3 class="list__title post__title ">
@@ -218,59 +272,6 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 		</div>
 	</div>
 </article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/2018-04-06-rl-note/" rel="bookmark">Optimistic Initial Values</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-06T07:00:00">April 06, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-<p>Multi-armed Bandits 本篇主要介绍多臂赌博机问题的相关算法。</p>
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/note/markdown-preview-mathjax/" rel="bookmark">MarkDown Preview MathJax</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-05T07:00:00">April 05, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-<h1 id="关于markdown中的公式">关于MarkDown中的公式</h1>
-		</div>
-	</div>
-</article>
-<article class="list__item post clearfix">
-	<div class="list__content clearfix">
-		<header class="list__header">
-			<h3 class="list__title post__title ">
-				<a href="/post/tech_details/gitee_as_pic_storage/" rel="bookmark">如何使用gitee作为免费图床</a>
-			</h3>
-			<div class="list__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="list__meta-date" datetime="2018-04-04T21:25:07">April 04, 2018</time>
-			</div>
-		</header>
-		<div class="list__excerpt">
-			<p>[TOC]</p>
-<p>本篇文章是一个启发，介绍如何使用gitee作为免费图床。
-没有使用github的原因是github国内访问有些慢。
-另外，还有其他优秀的云存储，例如7niu，朋友们也可以试一下。</p>
-		</div>
-	</div>
-</article>
 
 
 		
@@ -299,11 +300,11 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/thinking/2020-05-29-thought/">关于工作</a></li>
+			<li class="widget__item"><a class="widget__link" href="/thinking/2020-04-25-graphical-card/">linux查看硬件信息</a></li>
+			<li class="widget__item"><a class="widget__link" href="/thinking/2020-04-24-kruskal/">如何建立gazebo world model</a></li>
 			<li class="widget__item"><a class="widget__link" href="/thinking/2020-03-24-gazebo/">如何建立gazebo world model</a></li>
 			<li class="widget__item"><a class="widget__link" href="/thinking/2020-03-15-goodmemories/">几张好照片</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-03-15-summary/">一周总结</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-03-03-write_a_letter/">给自己写封信</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-03-01-high-light-spot/">How to be productive?</a></li>
 		</ul>
 	</div>
 </div>
