@@ -4,46 +4,56 @@
   
   <url>
     <loc>https://gdhucoder.github.io/categories/</loc>
-    <lastmod>2020-05-29T05:51:17+08:00</lastmod>
+    <lastmod>2020-06-14T03:58:07+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/</loc>
-    <lastmod>2020-05-29T05:51:17+08:00</lastmod>
+    <lastmod>2020-06-14T03:58:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/tags/markdown/</loc>
+    <lastmod>2020-06-14T03:58:07+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/tags/</loc>
-    <lastmod>2020-05-29T05:51:17+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://gdhucoder.github.io/tags/tech/</loc>
-    <lastmod>2020-05-29T05:51:17+08:00</lastmod>
+    <lastmod>2020-06-14T03:58:07+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/thinking/</loc>
-    <lastmod>2020-05-29T05:51:17+08:00</lastmod>
+    <lastmod>2020-06-14T03:58:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/thinking/2020-05-29-thought/</loc>
-    <lastmod>2020-05-29T05:51:17+08:00</lastmod>
+    <loc>https://gdhucoder.github.io/thinking/resume/</loc>
+    <lastmod>2020-06-14T03:58:07+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/</loc>
-    <lastmod>2020-05-29T05:51:17+08:00</lastmod>
+    <lastmod>2020-06-14T03:58:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/categories/%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2020-05-29T05:51:17+08:00</lastmod>
+    <loc>https://gdhucoder.github.io/tags/%E8%AF%AD%E8%A8%80/</loc>
+    <lastmod>2020-06-14T03:58:07+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/thinking/2020-04-25-graphical-card/</loc>
+    <lastmod>2020-04-25T05:51:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/tags/tech/</loc>
+    <lastmod>2020-04-25T05:51:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://gdhucoder.github.io/categories/%E6%80%9D%E8%80%83/</loc>
     <lastmod>2020-04-25T05:51:17+08:00</lastmod>
   </url>
   
@@ -618,11 +628,6 @@
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/tags/markdown/</loc>
-    <lastmod>2019-03-02T19:26:09+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gdhucoder.github.io/post/tech_details/markdown_use/</loc>
     <lastmod>2019-03-02T19:26:09+08:00</lastmod>
   </url>
@@ -903,11 +908,6 @@
   </url>
   
   <url>
-    <loc>https://gdhucoder.github.io/tags/%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2017-08-14T03:58:07+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://gdhucoder.github.io/reading/rd_0/</loc>
     <lastmod>2017-08-14T03:58:07+08:00</lastmod>
   </url>
@@ -949,32 +949,22 @@
   
   <url>
     <loc>https://gdhucoder.github.io/post/aima/chp2/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/post/note/2019-03-13/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/post/rl/rl-intro-ch5/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/post/skill/how_to_use_virtualbox/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://gdhucoder.github.io/thinking/2020-02-05-renameremotegit/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://gdhucoder.github.io/thinking/2020-05-26/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

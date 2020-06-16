@@ -6,19 +6,19 @@
     <description>Recent content on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Fri, 29 May 2020 05:51:17 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2020 03:58:07 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>关于工作</title>
-      <link>https://gdhucoder.github.io/thinking/2020-05-29-thought/</link>
-      <pubDate>Fri, 29 May 2020 05:51:17 +0800</pubDate>
+      <title>个人简历</title>
+      <link>https://gdhucoder.github.io/thinking/resume/</link>
+      <pubDate>Sun, 14 Jun 2020 03:58:07 +0800</pubDate>
       
-      <guid>https://gdhucoder.github.io/thinking/2020-05-29-thought/</guid>
+      <guid>https://gdhucoder.github.io/thinking/resume/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;p&gt;昨晚感觉空调有点凉。&lt;/p&gt;</description>
+&lt;p&gt;个人简历&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -1558,8 +1558,8 @@ Octatve代码实现</description>
       
       <guid>https://gdhucoder.github.io/post/plt_2/plt_2/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
-reviews &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;fandango_scores.csv&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
-cols &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;FILM&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;RT_user_norm&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Metacritic_user_nom&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;IMDB_norm&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Fandango_Ratingvalue&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;Fandango_Stars&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;]
+reviews &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;fandango_scores.csv&amp;#39;&lt;/span&gt;)
+cols &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;FILM&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;RT_user_norm&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Metacritic_user_nom&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;IMDB_norm&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fandango_Ratingvalue&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fandango_Stars&amp;#39;&lt;/span&gt;]
 norm_reviews &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; reviews[cols]
 &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(norm_reviews[:&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
@@ -1572,8 +1572,8 @@ norm_reviews &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; reviews[co
       
       <guid>https://gdhucoder.github.io/post/plt_1/plt_1/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;unrate &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;UNRATE.csv&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;)
-unrate[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;DATE&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(unrate[&lt;span style=&#34;color:#e6db74&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;DATE&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt;])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;unrate &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;UNRATE.csv&amp;#39;&lt;/span&gt;)
+unrate[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;DATE&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(unrate[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;DATE&amp;#39;&lt;/span&gt;])
 &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(unrate&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head(&lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
@@ -1630,22 +1630,6 @@ $\Phi : R \rightarrow V ​$，汽车终止位置
       <description>How to rename remote git
 git remote set-url origin new_url ```shell $ git remote -v # View existing remotes &amp;gt; origin https://github.com/OWNER/REPOSITORY.git (fetch) &amp;gt; origin https://github.com/OWNER/REPOSITORY.git (push) $ git remote rename origin destination # Change remote name from &amp;#39;origin&amp;#39; to &amp;#39;destination&amp;#39; $ git remote -v # Verify remote&amp;#39;s new name &amp;gt; destination https://github.com/OWNER/REPOSITORY.git (fetch) &amp;gt; destination https://github.com/OWNER/REPOSITORY.git (push)  Written with StackEdit.
    </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://gdhucoder.github.io/thinking/2020-05-26/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gdhucoder.github.io/thinking/2020-05-26/</guid>
-      <description>思考
-学校的事情：
- 户口，档案和党组织关系毕业前想办法转到深圳  学位论文：
- 每周老师指导一次，再改改。  工作的选择
- 等老师帮安排也没个准信儿。 自己找也不太确定能找到啥样的，可以试试 家里蹲  家里蹲的好处：
- 时间自由，灵活可控 想做啥自己定 接送娃娃，陪猫咪  家里蹲的坏处：
- 太自由散漫 做事情缺少一个平台，自己的力量太小 不挣钱  6月底前完成的事：
- 户口档案之类的搞定 试着自己找工作，方向ROS程序员，先试试水（还是要有个工作吧，要不咱家咋换大房子？） 老师给安排问过NLP方向的，自己也学一点做做准备。 修改学位论文 第二篇论文推进一下。  这第二篇论文可能要做个几个月（甚至一年） 文献调研，做实验等等都要时间，不是想的那么简单的。    </description>
     </item>
     
   </channel>

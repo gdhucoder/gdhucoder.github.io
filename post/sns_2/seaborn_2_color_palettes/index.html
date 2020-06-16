@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html class="no-js" lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seaborn使用(2)：Choosing color palettes</title>
-<meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.64.0" />
-<meta property="og:title" content="Seaborn使用(2)：Choosing color palettes" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Seaborn使用(2)：Choosing color palettes - CoderPunk</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Seaborn使用(2)：Choosing color palettes" />
 <meta property="og:description" content="调色板
 颜色很重要，如果使用的好，就会帮助你突出数据的特征。
 
@@ -21,77 +22,82 @@ set_palette()设置所有图的颜色
 <meta property="article:published_time" content="2017-08-14T18:44:30+08:00" />
 <meta property="article:modified_time" content="2017-08-14T18:44:30+08:00" />
 
-<link rel="dns-prefetch" href="//fonts.googleapis.com" />
-<link rel="dns-prefetch" href="//fonts.gstatic.com" />
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-});
-</script>
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
-<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
-<script type="text/javascript" src="/js/scripts.js"></script>
-<link rel="shortcut icon" href="/favicon.ico">
-
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
 </head>
-<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
-	<div class="container container-outer">
-		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-			<div class="container container-inner clearfix">
-				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
-					<a class="logo__link" href="/" title="CoderPunk" rel="home">
-						<h1 class="logo__title">CoderPunk</h1>
-						<h2 class="logo__tagline">A Programmer&#39;s self-cultivation</h2>
-					</a>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="CoderPunk" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">CoderPunk</div>
+					<div class="logo__tagline">A Programmer&#39;s self-cultivation</div>
 				</div>
-			</div>
-			
-<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
 	<ul class="menu__list">
-		<li class="menu__item "><a class="menu__link" href="/post">技术文章</a></li>
-		<li class="menu__item "><a class="menu__link" href="/reading">读书</a></li>
-		<li class="menu__item "><a class="menu__link" href="/thinking">思考</a></li>
-		<li class="menu__item "><a class="menu__link" href="/about">关于我</a></li>
-		<li class="menu__item "><a class="menu__link" href="https://github.com/gdhucoder">TOMYGIT</a></li>
+		<li class="menu__item">
+			<a class="menu__link" href="/post">
+				
+				<span class="menu__text">技术文章</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/reading">
+				
+				<span class="menu__text">读书</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/thinking">
+				
+				<span class="menu__text">思考</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about">
+				
+				<span class="menu__text">关于我</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://github.com/gdhucoder">
+				
+				<span class="menu__text">ToMyGit</span>
+				
+			</a>
+		</li>
 	</ul>
 </nav>
 
-		</header>
-		<div class="wrapper clearfix">
-
-<div class="main-content content" role="main" itemprop="mainContentOfPage">
-	<article class="post">
-		<header class="post__header clearfix">
-			<h1 class="post__title">Seaborn使用(2)：Choosing color palettes</h1>
-			<p class="post__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-08-14T18:44:30">August 14, 2017</time>
-				<span class="post__meta-categories meta-categories">
-					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
-			</p>
-		</header>
-		<div class="post__content clearfix">
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
 			
-<aside>
-    <header>
-    <h2>Seaborn使用(2)：Choosing color palettes</h2>
-    </header>
-    <nav id="TableOfContents"></nav>
-</aside>
-
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Seaborn使用(2)：Choosing color palettes</h1>
+			
+		</header><div class="content post__content clearfix">
 			<h1 id="调色板">调色板</h1>
 <p>颜色很重要，如果使用的好，就会帮助你突出数据的特征。</p>
 <ul>
@@ -105,15 +111,15 @@ MathJax.Hub.Config({
 <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
 <span style="color:#f92672">import</span> seaborn <span style="color:#f92672">as</span> sns
 <span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>set(rc<span style="color:#f92672">=</span>{<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">figure.figsize</span><span style="color:#e6db74">&#34;</span>: (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">6</span>)})
-np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(sum(map(ord, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">palettes</span><span style="color:#e6db74">&#34;</span>)))
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>set(rc<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#34;figure.figsize&#34;</span>: (<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">6</span>)})
+np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(sum(map(ord, <span style="color:#e6db74">&#34;palettes&#34;</span>)))
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">current_palette <span style="color:#f92672">=</span> sns<span style="color:#f92672">.</span>color_palette()
 sns<span style="color:#f92672">.</span>palplot(current_palette)
 </code></pre></div><p><img src="../output_3_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hls</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">8</span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;hls&#34;</span>, <span style="color:#ae81ff">8</span>))
 </code></pre></div><p><img src="../output_4_0.png" alt="png"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>normal(size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">8</span>)) <span style="color:#f92672">+</span> np<span style="color:#f92672">.</span>arange(<span style="color:#ae81ff">8</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
-sns<span style="color:#f92672">.</span>boxplot(data<span style="color:#f92672">=</span>data, palette<span style="color:#f92672">=</span>sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">hls</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">8</span>))
+sns<span style="color:#f92672">.</span>boxplot(data<span style="color:#f92672">=</span>data, palette<span style="color:#f92672">=</span>sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;hls&#34;</span>, <span style="color:#ae81ff">8</span>))
 </code></pre></div><pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0xb1a9b70&gt;
 </code></pre>
 <p><img src="../output_5_1.png" alt="png"></p>
@@ -121,18 +127,18 @@ sns<span style="color:#f92672">.</span>boxplot(data<span style="color:#f92672">=
 </code></pre></div><p><img src="../output_6_0.png" alt="png"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># l- lightness</span>
 <span style="color:#75715e"># s- saturation </span>
-sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>hls_palette(<span style="color:#ae81ff">8</span>, l<span style="color:#f92672">=</span><span style="color:#f92672">.</span><span style="color:#ae81ff">3</span>, s<span style="color:#f92672">=</span><span style="color:#f92672">.</span><span style="color:#ae81ff">8</span>))
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>hls_palette(<span style="color:#ae81ff">8</span>, l<span style="color:#f92672">=.</span><span style="color:#ae81ff">3</span>, s<span style="color:#f92672">=.</span><span style="color:#ae81ff">8</span>))
 </code></pre></div><p><img src="../output_7_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Paired</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">10</span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;Paired&#34;</span>, <span style="color:#ae81ff">10</span>))
 </code></pre></div><p><img src="../output_8_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Set2</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">10</span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;Set2&#34;</span>, <span style="color:#ae81ff">10</span>))
 </code></pre></div><p><img src="../output_9_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">deep</span><span style="color:#e6db74">&#34;</span>))
-sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">muted</span><span style="color:#e6db74">&#34;</span>))
-sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">pastel</span><span style="color:#e6db74">&#34;</span>))
-sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">bright</span><span style="color:#e6db74">&#34;</span>))
-sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">dark</span><span style="color:#e6db74">&#34;</span>))
-sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">colorblind</span><span style="color:#e6db74">&#34;</span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;deep&#34;</span>))
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;muted&#34;</span>))
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;pastel&#34;</span>))
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;bright&#34;</span>))
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;dark&#34;</span>))
+sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;colorblind&#34;</span>))
 
 <span style="color:#75715e"># print(help(sns.color_palette))</span>
 </code></pre></div><pre><code>Help on function palplot in module seaborn.miscplot:
@@ -155,31 +161,31 @@ None
 <p><img src="../output_10_4.png" alt="png"></p>
 <p><img src="../output_10_5.png" alt="png"></p>
 <p><img src="../output_10_6.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">flatui <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#9b59b6</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#3498db</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#95a5a6</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#e74c3c</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#34495e</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#2ecc71</span><span style="color:#e6db74">&#34;</span>]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">flatui <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;#9b59b6&#34;</span>, <span style="color:#e6db74">&#34;#3498db&#34;</span>, <span style="color:#e6db74">&#34;#95a5a6&#34;</span>, <span style="color:#e6db74">&#34;#e74c3c&#34;</span>, <span style="color:#e6db74">&#34;#34495e&#34;</span>, <span style="color:#e6db74">&#34;#2ecc71&#34;</span>]
 sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(flatui))
 </code></pre></div><p><img src="../output_11_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>plot([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], sns<span style="color:#f92672">.</span>xkcd_rgb[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">pale red</span><span style="color:#e6db74">&#34;</span>], lw<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
-plt<span style="color:#f92672">.</span>plot([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>], sns<span style="color:#f92672">.</span>xkcd_rgb[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">medium green</span><span style="color:#e6db74">&#34;</span>], lw<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
-plt<span style="color:#f92672">.</span>plot([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>], sns<span style="color:#f92672">.</span>xkcd_rgb[<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">denim blue</span><span style="color:#e6db74">&#34;</span>], lw<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">plt<span style="color:#f92672">.</span>plot([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], sns<span style="color:#f92672">.</span>xkcd_rgb[<span style="color:#e6db74">&#34;pale red&#34;</span>], lw<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+plt<span style="color:#f92672">.</span>plot([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>], sns<span style="color:#f92672">.</span>xkcd_rgb[<span style="color:#e6db74">&#34;medium green&#34;</span>], lw<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+plt<span style="color:#f92672">.</span>plot([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>], [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>], sns<span style="color:#f92672">.</span>xkcd_rgb[<span style="color:#e6db74">&#34;denim blue&#34;</span>], lw<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>);
 </code></pre></div><p><img src="../output_12_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">colors <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">windows blue</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">amber</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">greyish</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">faded green</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">dusty purple</span><span style="color:#e6db74">&#34;</span>]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">colors <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;windows blue&#34;</span>, <span style="color:#e6db74">&#34;amber&#34;</span>, <span style="color:#e6db74">&#34;greyish&#34;</span>, <span style="color:#e6db74">&#34;faded green&#34;</span>, <span style="color:#e6db74">&#34;dusty purple&#34;</span>]
 sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>xkcd_palette(colors))
 </code></pre></div><p><img src="../output_13_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Blues</span><span style="color:#e6db74">&#34;</span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;Blues&#34;</span>))
 </code></pre></div><p><img src="../output_14_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">BuGn_r</span><span style="color:#e6db74">&#34;</span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;BuGn_r&#34;</span>))
 </code></pre></div><p><img src="../output_15_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x, y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>multivariate_normal([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>], [[<span style="color:#ae81ff">1</span>, <span style="color:#f92672">-</span><span style="color:#f92672">.</span><span style="color:#ae81ff">5</span>], [<span style="color:#f92672">-</span><span style="color:#f92672">.</span><span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">1</span>]], size<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)<span style="color:#f92672">.</span>T
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">x, y <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>multivariate_normal([<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>], [[<span style="color:#ae81ff">1</span>, <span style="color:#f92672">-.</span><span style="color:#ae81ff">5</span>], [<span style="color:#f92672">-.</span><span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">1</span>]], size<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>)<span style="color:#f92672">.</span>T
 cmap <span style="color:#f92672">=</span> sns<span style="color:#f92672">.</span>cubehelix_palette(light<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>, as_cmap<span style="color:#f92672">=</span>True)
 sns<span style="color:#f92672">.</span>kdeplot(x, y, cmap<span style="color:#f92672">=</span>cmap, shade<span style="color:#f92672">=</span>True);
 </code></pre></div><p><img src="../output_16_0.png" alt="png"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>choose_cubehelix_palette()
 </code></pre></div><p><img src="../output_17_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>light_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">green</span><span style="color:#e6db74">&#34;</span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>light_palette(<span style="color:#e6db74">&#34;green&#34;</span>))
 </code></pre></div><p><img src="../output_18_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>dark_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">purple</span><span style="color:#e6db74">&#34;</span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>dark_palette(<span style="color:#e6db74">&#34;purple&#34;</span>))
 </code></pre></div><p><img src="../output_19_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">RdBu_r</span><span style="color:#e6db74">&#34;</span>, <span style="color:#ae81ff">7</span>))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>color_palette(<span style="color:#e6db74">&#34;RdBu_r&#34;</span>, <span style="color:#ae81ff">7</span>))
 </code></pre></div><p><img src="../output_20_0.png" alt="png"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>palplot(sns<span style="color:#f92672">.</span>diverging_palette(<span style="color:#ae81ff">220</span>, <span style="color:#ae81ff">20</span>, n<span style="color:#f92672">=</span><span style="color:#ae81ff">7</span>))
 </code></pre></div><p><img src="../output_21_0.png" alt="png"></p>
@@ -187,22 +193,30 @@ sns<span style="color:#f92672">.</span>kdeplot(x, y, cmap<span style="color:#f92
     x <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linspace(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">14</span>, <span style="color:#ae81ff">100</span>)
     <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">7</span>):
         plt<span style="color:#f92672">.</span>plot(x, np<span style="color:#f92672">.</span>sin(x <span style="color:#f92672">+</span> i <span style="color:#f92672">*</span> <span style="color:#f92672">.</span><span style="color:#ae81ff">5</span>) <span style="color:#f92672">*</span> (<span style="color:#ae81ff">7</span> <span style="color:#f92672">-</span> i) <span style="color:#f92672">*</span> flip)
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>set_palette(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">husl</span><span style="color:#e6db74">&#34;</span>)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sns<span style="color:#f92672">.</span>set_palette(<span style="color:#e6db74">&#34;husl&#34;</span>)
 sinplot()
 </code></pre></div><p><img src="../output_23_0.png" alt="png"></p>
 		</div>
-		
+		<footer class="post__footer">
+			
 <div class="post__tags tags clearfix">
-	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/python/" rel="tag">Python</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/seaborn/" rel="tag">Seaborn</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">数据可视化</a></li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/python/" rel="tag">Python</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/seaborn/" rel="tag">Seaborn</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">数据可视化</a>
+		</li>
 	</ul>
 </div>
-
+		</footer>
 	</article>
-	
+</main>
+
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
 		<img alt="HuGuoDong avatar" src="/img/head.jpg" class="avatar" height="90" width="90">
@@ -214,18 +228,10 @@ sinplot()
 		gdong.hu[at]gmail.com
 	</div>
 </div>
-	
-<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/sns_1/seaborn_1/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">Seaborn使用(1)：Controlling figure aesthetics</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/ml_ex1/ex1/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Mechine Learning：线性回归</p></a>
-	</div>
-</nav>
 
-	
-<div class="comments">
+
+
+<section class="comments">
 	<div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
@@ -246,102 +252,22 @@ sinplot()
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
+</section>
 
-</div>
 
-<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
-	
-<div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
-		<label>
-			<span class="screen-reader-text">Search for:</span>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
-		</label>
-		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://gdhucoder.github.io/" />
-	</form>
-</div>
-	
-<div class="widget-recent widget">
-	<h4 class="widget__title">Recent Posts</h4>
-	<div class="widget__content">
-		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-05-29-thought/">关于工作</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-04-25-graphical-card/">linux查看硬件信息</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-04-24-kruskal/">如何建立gazebo world model</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-03-24-gazebo/">如何建立gazebo world model</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-03-15-goodmemories/">几张好照片</a></li>
-		</ul>
-	</div>
-</div>
-
-	
-<div class="widget-categories widget">
-	<h4 class="widget__title">Categories</h4>
-	<div class="widget__content">
-		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/categories/%e5%bd%92%e6%a1%a3">归档</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/%e6%80%9d%e8%80%83">思考</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/%e6%8a%80%e6%9c%af">技术</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/%e8%af%bb%e4%b9%a6">读书</a></li>
-		</ul>
-	</div>
-</div>
-	
-	
-<div class="widget-taglist widget">
-	<h4 class="widget__title">Tags</h4>
-	<div class="widget__content">
-		<a class="widget__link widget__link--taglist" href="/tags/alg" title="alg">alg</a>
-		<a class="widget__link widget__link--taglist" href="/tags/arts" title="arts">arts</a>
-		<a class="widget__link widget__link--taglist" href="/tags/book" title="book">book</a>
-		<a class="widget__link widget__link--taglist" href="/tags/books" title="books">books</a>
-		<a class="widget__link widget__link--taglist" href="/tags/designpattern" title="designpattern">designpattern</a>
-		<a class="widget__link widget__link--taglist" href="/tags/docker" title="docker">docker</a>
-		<a class="widget__link widget__link--taglist" href="/tags/git" title="git">git</a>
-		<a class="widget__link widget__link--taglist" href="/tags/go" title="go">go</a>
-		<a class="widget__link widget__link--taglist" href="/tags/java" title="java">java</a>
-		<a class="widget__link widget__link--taglist" href="/tags/latex" title="latex">latex</a>
-		<a class="widget__link widget__link--taglist" href="/tags/markdown" title="markdown">markdown</a>
-		<a class="widget__link widget__link--taglist" href="/tags/mathjax" title="mathjax">mathjax</a>
-		<a class="widget__link widget__link--taglist" href="/tags/matplotlib" title="matplotlib">matplotlib</a>
-		<a class="widget__link widget__link--taglist" href="/tags/mc" title="mc">mc</a>
-		<a class="widget__link widget__link--taglist" href="/tags/mind" title="mind">mind</a>
-		<a class="widget__link widget__link--taglist" href="/tags/ml" title="ml">ml</a>
-		<a class="widget__link widget__link--taglist" href="/tags/planing" title="planing">planing</a>
-		<a class="widget__link widget__link--taglist" href="/tags/planning" title="planning">planning</a>
-		<a class="widget__link widget__link--taglist" href="/tags/python" title="python">python</a>
-		<a class="widget__link widget__link--taglist" href="/tags/rddl" title="rddl">rddl</a>
-		<a class="widget__link widget__link--taglist" href="/tags/rl" title="rl">rl</a>
-		<a class="widget__link widget__link--taglist" href="/tags/seaborn" title="seaborn">seaborn</a>
-		<a class="widget__link widget__link--taglist" href="/tags/tag" title="tag">tag</a>
-		<a class="widget__link widget__link--taglist" href="/tags/tech" title="tech">tech</a>
-		<a class="widget__link widget__link--taglist" href="/tags/thinking" title="thinking">thinking</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e5%86%99%e4%bd%9c" title="写作">写作</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e5%88%86%e4%ba%ab" title="分享">分享</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e5%a4%87%e4%bb%bd" title="备份">备份</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e6%80%9d%e8%80%83" title="思考">思考</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e6%8a%80%e6%9c%af" title="技术">技术</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e6%95%b0%e6%8d%ae%e5%8f%af%e8%a7%86%e5%8c%96" title="数据可视化">数据可视化</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e7%ae%97%e6%b3%95" title="算法">算法</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e8%af%ad%e8%a8%80" title="语言">语言</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e8%af%bb%e4%b9%a6" title="读书">读书</a>
-	</div>
-</div>
-</aside>
-	</div>
-		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
-			<div class="container container-inner">
-				<p class="footer__copyright">&copy; 2020 CoderPunk. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
 			</div>
-		</footer>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 CoderPunk.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
 	</div>
-
-<script>
-	var navigation = responsiveNav(".menu", {
-		navClass: "menu--collapse",
-	});
-</script>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
 </body>
 </html>

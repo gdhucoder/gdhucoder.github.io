@@ -1,89 +1,95 @@
 <!DOCTYPE html>
-<html lang="zh-cmn-Hans">
+<html class="no-js" lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>matplot的使用之四:细节设置(2/2)</title>
-<meta name="description" content="博客">
-<meta name="generator" content="Hugo 0.64.0" />
-<meta property="og:title" content="matplot的使用之四:细节设置(2/2)" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>matplot的使用之四:细节设置(2/2) - CoderPunk</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="matplot的使用之四:细节设置(2/2)" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/plt_5/plt_5/" />
 <meta property="article:published_time" content="2017-08-09T21:44:30+08:00" />
 <meta property="article:modified_time" content="2017-08-09T21:44:30+08:00" />
 
-<link rel="dns-prefetch" href="//fonts.googleapis.com" />
-<link rel="dns-prefetch" href="//fonts.gstatic.com" />
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-});
-</script>
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" type="text/css" media="all" />
-<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
-<script type="text/javascript" src="/js/scripts.js"></script>
-<link rel="shortcut icon" href="/favicon.ico">
-
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+		
 </head>
-<body class="body body-right-sidebar mobile" itemscope="itemscope" itemtype="http://schema.org/WebPage">
-	<div class="container container-outer">
-		<header class="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-			<div class="container container-inner clearfix">
-				<div class="logo" role="banner" itemscope="itemscope" itemtype="http://schema.org/Brand">
-					<a class="logo__link" href="/" title="CoderPunk" rel="home">
-						<h1 class="logo__title">CoderPunk</h1>
-						<h2 class="logo__tagline">A Programmer&#39;s self-cultivation</h2>
-					</a>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="CoderPunk" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">CoderPunk</div>
+					<div class="logo__tagline">A Programmer&#39;s self-cultivation</div>
 				</div>
-			</div>
-			
-<nav class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
 	<ul class="menu__list">
-		<li class="menu__item "><a class="menu__link" href="/post">技术文章</a></li>
-		<li class="menu__item "><a class="menu__link" href="/reading">读书</a></li>
-		<li class="menu__item "><a class="menu__link" href="/thinking">思考</a></li>
-		<li class="menu__item "><a class="menu__link" href="/about">关于我</a></li>
-		<li class="menu__item "><a class="menu__link" href="https://github.com/gdhucoder">TOMYGIT</a></li>
+		<li class="menu__item">
+			<a class="menu__link" href="/post">
+				
+				<span class="menu__text">技术文章</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/reading">
+				
+				<span class="menu__text">读书</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/thinking">
+				
+				<span class="menu__text">思考</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about">
+				
+				<span class="menu__text">关于我</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="https://github.com/gdhucoder">
+				
+				<span class="menu__text">ToMyGit</span>
+				
+			</a>
+		</li>
 	</ul>
 </nav>
 
-		</header>
-		<div class="wrapper clearfix">
-
-<div class="main-content content" role="main" itemprop="mainContentOfPage">
-	<article class="post">
-		<header class="post__header clearfix">
-			<h1 class="post__title">matplot的使用之四:细节设置(2/2)</h1>
-			<p class="post__meta meta">
-				<svg class="icon icon-time" height="14" viewBox="0 0 16 16" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-				<time class="post__meta-date" datetime="2017-08-09T21:44:30">August 09, 2017</time>
-				<span class="post__meta-categories meta-categories">
-					<svg class="icon icon-category" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-					<a class="meta-categories__link" href="/categories/%e6%8a%80%e6%9c%af" rel="category">技术</a>, <a class="meta-categories__link" href="/categories/%e5%bd%92%e6%a1%a3" rel="category">归档</a></span>
-			</p>
-		</header>
-		<div class="post__content clearfix">
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
 			
-<aside>
-    <header>
-    <h2>matplot的使用之四:细节设置(2/2)</h2>
-    </header>
-    <nav id="TableOfContents"></nav>
-</aside>
-
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">matplot的使用之四:细节设置(2/2)</h1>
+			
+		</header><div class="content post__content clearfix">
 			<div class="highlight">e></div><p><img src="../output_0_0.png" alt="png"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Setting Line Width</span>
 cb_dark_blue <span style="color:#f92672">=</span> (<span style="color:#ae81ff">0</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">107</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">164</span><span style="color:#f92672">/</span><span style="color:#ae81ff">255</span>)
@@ -94,88 +100,96 @@ fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>
 <span style="color:#66d9ef">for</span> sp <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">4</span>):
     ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span>,sp<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
     <span style="color:#75715e"># Set the line width when specifying how each line should look.</span>
-    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], women_degrees[major_cats[sp]], c<span style="color:#f92672">=</span>cb_dark_blue, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Women</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
-    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], <span style="color:#ae81ff">100</span><span style="color:#f92672">-</span>women_degrees[major_cats[sp]], c<span style="color:#f92672">=</span>cb_orange, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Men</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74">&#39;Year&#39;</span>], women_degrees[major_cats[sp]], c<span style="color:#f92672">=</span>cb_dark_blue, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Women&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74">&#39;Year&#39;</span>], <span style="color:#ae81ff">100</span><span style="color:#f92672">-</span>women_degrees[major_cats[sp]], c<span style="color:#f92672">=</span>cb_orange, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Men&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>)
     <span style="color:#66d9ef">for</span> key,spine <span style="color:#f92672">in</span> ax<span style="color:#f92672">.</span>spines<span style="color:#f92672">.</span>items():
         spine<span style="color:#f92672">.</span>set_visible(False)
     ax<span style="color:#f92672">.</span>set_xlim(<span style="color:#ae81ff">1968</span>, <span style="color:#ae81ff">2011</span>)
     ax<span style="color:#f92672">.</span>set_ylim(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">100</span>)
     ax<span style="color:#f92672">.</span>set_title(major_cats[sp])
-    ax<span style="color:#f92672">.</span>tick_params(bottom<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, top<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, left<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, right<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>)
+    ax<span style="color:#f92672">.</span>tick_params(bottom<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>, top<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>, left<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>, right<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>)
 
-plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">upper right</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;upper right&#39;</span>)
 plt<span style="color:#f92672">.</span>show()
 </code></pre></div><p><img src="../output_1_0.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">stem_cats <span style="color:#f92672">=</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Engineering</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Computer Science</span><span style="color:#e6db74">&#39;</span>,<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Physical Sciences</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Math and Statistics</span><span style="color:#e6db74">&#39;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Biology</span><span style="color:#e6db74">&#39;</span> , <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Psychology</span><span style="color:#e6db74">&#39;</span>]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">stem_cats <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;Engineering&#39;</span>, <span style="color:#e6db74">&#39;Computer Science&#39;</span>,<span style="color:#e6db74">&#39;Physical Sciences&#39;</span>, <span style="color:#e6db74">&#39;Math and Statistics&#39;</span>, <span style="color:#e6db74">&#39;Biology&#39;</span> , <span style="color:#e6db74">&#39;Psychology&#39;</span>]
 fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">3</span>))
 
 <span style="color:#66d9ef">for</span> sp <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>):
     ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>,sp<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
-    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_dark_blue, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Women</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
-    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], <span style="color:#ae81ff">100</span><span style="color:#f92672">-</span>women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_orange, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Men</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74">&#39;Year&#39;</span>], women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_dark_blue, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Women&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74">&#39;Year&#39;</span>], <span style="color:#ae81ff">100</span><span style="color:#f92672">-</span>women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_orange, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Men&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
     <span style="color:#66d9ef">for</span> key,spine <span style="color:#f92672">in</span> ax<span style="color:#f92672">.</span>spines<span style="color:#f92672">.</span>items():
         spine<span style="color:#f92672">.</span>set_visible(False)
     ax<span style="color:#f92672">.</span>set_xlim(<span style="color:#ae81ff">1968</span>, <span style="color:#ae81ff">2011</span>)
     ax<span style="color:#f92672">.</span>set_ylim(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">100</span>)
     ax<span style="color:#f92672">.</span>set_title(stem_cats[sp])
-    ax<span style="color:#f92672">.</span>tick_params(bottom<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, top<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, left<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, right<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>)
+    ax<span style="color:#f92672">.</span>tick_params(bottom<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>, top<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>, left<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>, right<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>)
 
-plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">upper right</span><span style="color:#e6db74">&#39;</span>)
+plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;upper right&#39;</span>)
 plt<span style="color:#f92672">.</span>show()
 </code></pre></div><p><img src="../output_2_0.png" alt="png"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">3</span>))
 
 <span style="color:#66d9ef">for</span> sp <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>):
     ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>,sp<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
-    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_dark_blue, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Women</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
-    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], <span style="color:#ae81ff">100</span><span style="color:#f92672">-</span>women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_orange, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Men</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74">&#39;Year&#39;</span>], women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_dark_blue, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Women&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74">&#39;Year&#39;</span>], <span style="color:#ae81ff">100</span><span style="color:#f92672">-</span>women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_orange, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Men&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
     <span style="color:#66d9ef">for</span> key,spine <span style="color:#f92672">in</span> ax<span style="color:#f92672">.</span>spines<span style="color:#f92672">.</span>items():
         spine<span style="color:#f92672">.</span>set_visible(False)
     ax<span style="color:#f92672">.</span>set_xlim(<span style="color:#ae81ff">1968</span>, <span style="color:#ae81ff">2011</span>)
     ax<span style="color:#f92672">.</span>set_ylim(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">100</span>)
     ax<span style="color:#f92672">.</span>set_title(stem_cats[sp])
-    ax<span style="color:#f92672">.</span>tick_params(bottom<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, top<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, left<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, right<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>)
-plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">upper right</span><span style="color:#e6db74">&#39;</span>)
+    ax<span style="color:#f92672">.</span>tick_params(bottom<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>, top<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>, left<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>, right<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>)
+plt<span style="color:#f92672">.</span>legend(loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;upper right&#39;</span>)
 plt<span style="color:#f92672">.</span>show()
 fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">3</span>))
 
 <span style="color:#75715e"># add text</span>
 <span style="color:#66d9ef">for</span> sp <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">6</span>):
     ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">6</span>,sp<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>)
-    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_dark_blue, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Women</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
-    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Year</span><span style="color:#e6db74">&#39;</span>], <span style="color:#ae81ff">100</span><span style="color:#f92672">-</span>women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_orange, label<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Men</span><span style="color:#e6db74">&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74">&#39;Year&#39;</span>], women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_dark_blue, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Women&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+    ax<span style="color:#f92672">.</span>plot(women_degrees[<span style="color:#e6db74">&#39;Year&#39;</span>], <span style="color:#ae81ff">100</span><span style="color:#f92672">-</span>women_degrees[stem_cats[sp]], c<span style="color:#f92672">=</span>cb_orange, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Men&#39;</span>, linewidth<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
     <span style="color:#66d9ef">for</span> key,spine <span style="color:#f92672">in</span> ax<span style="color:#f92672">.</span>spines<span style="color:#f92672">.</span>items():
         spine<span style="color:#f92672">.</span>set_visible(False)
     ax<span style="color:#f92672">.</span>set_xlim(<span style="color:#ae81ff">1968</span>, <span style="color:#ae81ff">2011</span>)
     ax<span style="color:#f92672">.</span>set_ylim(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">100</span>)
     ax<span style="color:#f92672">.</span>set_title(stem_cats[sp])
-    ax<span style="color:#f92672">.</span>tick_params(bottom<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, top<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, left<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>, right<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">off</span><span style="color:#e6db74">&#34;</span>)
+    ax<span style="color:#f92672">.</span>tick_params(bottom<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>, top<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>, left<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>, right<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;off&#34;</span>)
     
     <span style="color:#75715e"># 给线添加注释</span>
     <span style="color:#66d9ef">if</span> sp <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-        ax<span style="color:#f92672">.</span>text(<span style="color:#ae81ff">2005</span>, <span style="color:#ae81ff">87</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Men</span><span style="color:#e6db74">&#39;</span>)
-        ax<span style="color:#f92672">.</span>text(<span style="color:#ae81ff">2002</span>, <span style="color:#ae81ff">8</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Women</span><span style="color:#e6db74">&#39;</span>)
+        ax<span style="color:#f92672">.</span>text(<span style="color:#ae81ff">2005</span>, <span style="color:#ae81ff">87</span>, <span style="color:#e6db74">&#39;Men&#39;</span>)
+        ax<span style="color:#f92672">.</span>text(<span style="color:#ae81ff">2002</span>, <span style="color:#ae81ff">8</span>, <span style="color:#e6db74">&#39;Women&#39;</span>)
     <span style="color:#66d9ef">elif</span> sp <span style="color:#f92672">==</span> <span style="color:#ae81ff">5</span>:
-        ax<span style="color:#f92672">.</span>text(<span style="color:#ae81ff">2005</span>, <span style="color:#ae81ff">62</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Men</span><span style="color:#e6db74">&#39;</span>)
-        ax<span style="color:#f92672">.</span>text(<span style="color:#ae81ff">2001</span>, <span style="color:#ae81ff">35</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Women</span><span style="color:#e6db74">&#39;</span>)
+        ax<span style="color:#f92672">.</span>text(<span style="color:#ae81ff">2005</span>, <span style="color:#ae81ff">62</span>, <span style="color:#e6db74">&#39;Men&#39;</span>)
+        ax<span style="color:#f92672">.</span>text(<span style="color:#ae81ff">2001</span>, <span style="color:#ae81ff">35</span>, <span style="color:#e6db74">&#39;Women&#39;</span>)
 plt<span style="color:#f92672">.</span>show()
 </code></pre></div><p><img src="../output_3_0.png" alt="png"></p>
 <p><img src="../output_3_1.png" alt="png"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 </code></pre></div>
 		</div>
-		
+		<footer class="post__footer">
+			
 <div class="post__tags tags clearfix">
-	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m4.73135 3.3795002q0-.5597-.39604-.9557-.39604-.3961-.95577-.3961-.55974 0-.95578.3961-.39604.396-.39604.9557 0 .5598.39604.9558.39604.3961.95578.3961.55973 0 .95577-.3961.39604-.396.39604-.9558zm11.26865 6.0832q0 .5596998-.39076.9504998l-5.18548 5.196q-.41188.3908-.9610504.3908-.55974 0-.9505-.3908l-7.5511496-7.5616998q-.40132-.3907-.68119-1.0666-.27987-.6759-.27987-1.2357v-4.3934q0-.54920004.40132-.95050004.40132-.4013.9505-.4013h4.39339q.55974 0 1.23565.2799.67591.2798 1.07723.6812l7.55115 7.54060004q.39076.4118.39076.961z"/></svg>
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link" href="/tags/python/" rel="tag">Python</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/matplotlib/" rel="tag">Matplotlib</a></li>
-		<li class="tags__item"><a class="tags__link" href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">数据可视化</a></li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/python/" rel="tag">Python</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/matplotlib/" rel="tag">Matplotlib</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">数据可视化</a>
+		</li>
 	</ul>
 </div>
-
+		</footer>
 	</article>
-	
+</main>
+
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
 		<img alt="HuGuoDong avatar" src="/img/head.jpg" class="avatar" height="90" width="90">
@@ -187,18 +201,10 @@ plt<span style="color:#f92672">.</span>show()
 		gdong.hu[at]gmail.com
 	</div>
 </div>
-	
-<nav class="post-nav row clearfix" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-	<div class="post-nav__item post-nav__item--prev col-1-2">
-		<a class="post-nav__link" href="/post/plt_4/plt_4/" rel="prev"><span class="post-nav__caption">«Previous</span><p class="post-nav__post-title">matplot的使用之四:细节设置(1/2)</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next col-1-2">
-		<a class="post-nav__link" href="/post/sns_1/seaborn_1/" rel="next"><span class="post-nav__caption">Next»</span><p class="post-nav__post-title">Seaborn使用(1)：Controlling figure aesthetics</p></a>
-	</div>
-</nav>
 
-	
-<div class="comments">
+
+
+<section class="comments">
 	<div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
@@ -219,102 +225,22 @@ plt<span style="color:#f92672">.</span>show()
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
+</section>
 
-</div>
 
-<aside class="sidebar" itemscope="itemscope" itemtype="http://schema.org/WPSideBar">
-	
-<div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="//google.com/search">
-		<label>
-			<span class="screen-reader-text">Search for:</span>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q">
-		</label>
-		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://gdhucoder.github.io/" />
-	</form>
-</div>
-	
-<div class="widget-recent widget">
-	<h4 class="widget__title">Recent Posts</h4>
-	<div class="widget__content">
-		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-05-29-thought/">关于工作</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-04-25-graphical-card/">linux查看硬件信息</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-04-24-kruskal/">如何建立gazebo world model</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-03-24-gazebo/">如何建立gazebo world model</a></li>
-			<li class="widget__item"><a class="widget__link" href="/thinking/2020-03-15-goodmemories/">几张好照片</a></li>
-		</ul>
-	</div>
-</div>
-
-	
-<div class="widget-categories widget">
-	<h4 class="widget__title">Categories</h4>
-	<div class="widget__content">
-		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/categories/%e5%bd%92%e6%a1%a3">归档</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/%e6%80%9d%e8%80%83">思考</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/%e6%8a%80%e6%9c%af">技术</a></li>
-			<li class="widget__item"><a class="widget__link" href="/categories/%e8%af%bb%e4%b9%a6">读书</a></li>
-		</ul>
-	</div>
-</div>
-	
-	
-<div class="widget-taglist widget">
-	<h4 class="widget__title">Tags</h4>
-	<div class="widget__content">
-		<a class="widget__link widget__link--taglist" href="/tags/alg" title="alg">alg</a>
-		<a class="widget__link widget__link--taglist" href="/tags/arts" title="arts">arts</a>
-		<a class="widget__link widget__link--taglist" href="/tags/book" title="book">book</a>
-		<a class="widget__link widget__link--taglist" href="/tags/books" title="books">books</a>
-		<a class="widget__link widget__link--taglist" href="/tags/designpattern" title="designpattern">designpattern</a>
-		<a class="widget__link widget__link--taglist" href="/tags/docker" title="docker">docker</a>
-		<a class="widget__link widget__link--taglist" href="/tags/git" title="git">git</a>
-		<a class="widget__link widget__link--taglist" href="/tags/go" title="go">go</a>
-		<a class="widget__link widget__link--taglist" href="/tags/java" title="java">java</a>
-		<a class="widget__link widget__link--taglist" href="/tags/latex" title="latex">latex</a>
-		<a class="widget__link widget__link--taglist" href="/tags/markdown" title="markdown">markdown</a>
-		<a class="widget__link widget__link--taglist" href="/tags/mathjax" title="mathjax">mathjax</a>
-		<a class="widget__link widget__link--taglist" href="/tags/matplotlib" title="matplotlib">matplotlib</a>
-		<a class="widget__link widget__link--taglist" href="/tags/mc" title="mc">mc</a>
-		<a class="widget__link widget__link--taglist" href="/tags/mind" title="mind">mind</a>
-		<a class="widget__link widget__link--taglist" href="/tags/ml" title="ml">ml</a>
-		<a class="widget__link widget__link--taglist" href="/tags/planing" title="planing">planing</a>
-		<a class="widget__link widget__link--taglist" href="/tags/planning" title="planning">planning</a>
-		<a class="widget__link widget__link--taglist" href="/tags/python" title="python">python</a>
-		<a class="widget__link widget__link--taglist" href="/tags/rddl" title="rddl">rddl</a>
-		<a class="widget__link widget__link--taglist" href="/tags/rl" title="rl">rl</a>
-		<a class="widget__link widget__link--taglist" href="/tags/seaborn" title="seaborn">seaborn</a>
-		<a class="widget__link widget__link--taglist" href="/tags/tag" title="tag">tag</a>
-		<a class="widget__link widget__link--taglist" href="/tags/tech" title="tech">tech</a>
-		<a class="widget__link widget__link--taglist" href="/tags/thinking" title="thinking">thinking</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e5%86%99%e4%bd%9c" title="写作">写作</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e5%88%86%e4%ba%ab" title="分享">分享</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e5%a4%87%e4%bb%bd" title="备份">备份</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e6%80%9d%e8%80%83" title="思考">思考</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e6%8a%80%e6%9c%af" title="技术">技术</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e6%95%b0%e6%8d%ae%e5%8f%af%e8%a7%86%e5%8c%96" title="数据可视化">数据可视化</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e7%ae%97%e6%b3%95" title="算法">算法</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e8%af%ad%e8%a8%80" title="语言">语言</a>
-		<a class="widget__link widget__link--taglist" href="/tags/%e8%af%bb%e4%b9%a6" title="读书">读书</a>
-	</div>
-</div>
-</aside>
-	</div>
-		<footer class="footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
-			<div class="container container-inner">
-				<p class="footer__copyright">&copy; 2020 CoderPunk. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad theme</a>.</span></p>
 			</div>
-		</footer>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 CoderPunk.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
 	</div>
-
-<script>
-	var navigation = responsiveNav(".menu", {
-		navClass: "menu--collapse",
-	});
-</script>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
 </body>
 </html>
