@@ -11,7 +11,7 @@
 <meta property="og:description" content="博客" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/" />
-<meta property="og:updated_time" content="2020-06-14T03:58:07+08:00" />
+<meta property="og:updated_time" content="2020-04-25T05:51:17+08:00" />
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -90,26 +90,17 @@
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/post/alg4/chapter2/ex_2_4_19/" rel="bookmark">
-			算法4 Java解答 2.4.19
-			</a>
-		</h3>
-		
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		2.4.19 问题： 2.4.19 Implement the constructor for MaxPQ that takes an array of items as argument, using the bottom-up heap construction method described on page 323 in the text.
-实现一个MaxPQ的构造函数，接受一个数组做为参数，使用323页中描述的自底向上的方法构建堆。
-分析： 将数组做为参数构建堆，可以选择从左到右扫描，使用swim()方法。 但更明智的方法是使用从右往左扫描的方式，sink()。 这个方法的想法是如果一个结点的两个子结点的树都是堆的话，sink(k)之后，两个子树就合并成了以k为根结点的子树
-public MaxPQ(Key[] a){ N = a.length; pq = (Key[]) new Comparable[N+1]; for(int i=0; i&lt;a.length; i++){ pq[i+1] = a[i]; } int k = N / 2; while (k &gt;= 1){ sink(k); k --; } assert isMaxHeap(); show(); } 参考： 课本官网的实现MaxPQ
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
 			<a href="/post/alg4/chapter2/ex_2_4_18/" rel="bookmark">
 			算法4 Java解答 2.4.18
 			</a>
 		</h3>
-		
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-10-27T06:00:00&#43;08:00">October 27, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		2.4.18 问题： 2.4.18 In MaxPQ, suppose that a client calls insert() with an item that is larger than all items in the queue, and then immediately calls delMax(). Assume that there are no duplicate keys. Is the resulting heap identical to the heap as it was before these op- erations? Answer the same question for two insert() operations (the first with a key larger than all keys in the queue and the second for a key larger than that one) followed by two delMax() operations.
@@ -121,7 +112,13 @@ public MaxPQ(Key[] a){ N = a.length; pq = (Key[]) new Comparable[N+1]; for(int i
 			算法4习题 2.4.17
 			</a>
 		</h3>
-		
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-10-26T06:00:00&#43;08:00">October 26, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		2.4.17 问题： 2.4.17 Prove that building a minimum-oriented priority queue of size k then doing N - k replace the minimum (insert followed by remove the minimum) operations leaves the k largest of the N items in the priority queue.
@@ -136,7 +133,13 @@ N=10, 元素为：0,2,4,6,8,1,3,5,7,9 k=3， qp = 0 2 4 N-k = 10 - 3 = 7，将�
 			算法4习题 2.4.10
 			</a>
 		</h3>
-		
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-10-20T08:00:00&#43;08:00">October 20, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		2.4.10 问题： 2.4.10 Suppose that we wish to avoid wasting one position in a heap-ordered array pq[], putting the largest value in pq[0], its children in pq[1] and pq[2], and so forth, proceeding in level order. Where are the parents and children of pq[k]?
@@ -151,7 +154,13 @@ N=10, 元素为：0,2,4,6,8,1,3,5,7,9 k=3， qp = 0 2 4 N-k = 10 - 3 = 7，将�
 			2018-10-19随笔
 			</a>
 		</h3>
-		
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-10-19T08:00:00&#43;08:00">October 19, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		随笔 已经有两个多月没有更新过博客了。
@@ -168,7 +177,13 @@ Hugo+Sublime
 			2018-10-19 解决Markdown图片问题
 			</a>
 		</h3>
-		
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-10-19T03:00:00&#43;08:00">October 19, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		[TOC]
@@ -201,7 +216,13 @@ Picture Helper使用方法：  upload your pictures to github or gitee this scri
 			算法4习题 2.1.12
 			</a>
 		</h3>
-		
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-08-06T08:00:00&#43;08:00">August 06, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		算法4习题 2.1.12 问题 Instrument shellsort to print the number of compares divided by the array size for each increment. Write a test client that tests the hypothesis that this number is a small constant, by sorting arrays of random Double values, using array sizes that are increasing powers of 10, starting at 100.
@@ -216,7 +237,13 @@ private static boolean less(Comparable v, Comparable w) { count ++ ; return v.co
 			算法4 chp 1-1
 			</a>
 		</h3>
-		
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-05-15T08:00:00&#43;08:00">May 15, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		1.1.1 7, 200.0000002, true
@@ -235,7 +262,13 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 			java问题
 			</a>
 		</h3>
-		
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-05-15T07:00:00&#43;08:00">May 15, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		<p>[TOC]</p>
@@ -248,11 +281,36 @@ $ab=bc$ $$ab=cd$$ [ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \]
 			java问题
 			</a>
 		</h3>
-		
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-05-14T07:00:00&#43;08:00">May 14, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		<p>[TOC]</p>
 <p>学习过程中遇到的一些技术问题。</p>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/note/2018-04-06-rl-note/" rel="bookmark">
+			Optimistic Initial Values
+			</a>
+		</h3>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-04-06T07:00:00&#43;08:00">April 06, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>[TOC]</p>
+<p>Multi-armed Bandits 本篇主要介绍多臂赌博机问题的相关算法。</p>
 	</div>
 </article>
 </main>
