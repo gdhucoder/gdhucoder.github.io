@@ -6,10 +6,20 @@
     <description>Recent content in 归档 on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Wed, 15 Jul 2020 05:51:17 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 15 Aug 2020 05:51:17 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/categories/%E5%BD%92%E6%A1%A3/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>物化视图</title>
+      <link>https://gdhucoder.github.io/thinking/2020-08-16/</link>
+      <pubDate>Sat, 15 Aug 2020 05:51:17 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/2020-08-16/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;总结一下目前项目用到的技术点。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>一周总结</title>
@@ -17,16 +27,6 @@
       <pubDate>Wed, 15 Jul 2020 05:51:17 +0800</pubDate>
       
       <guid>https://gdhucoder.github.io/thinking/2020-07-19-summary/</guid>
-      <description>&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;p&gt;总结一下目前项目用到的技术点。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>一周总结</title>
-      <link>https://gdhucoder.github.io/thinking/2020-08-16/</link>
-      <pubDate>Wed, 15 Jul 2020 05:51:17 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/thinking/2020-08-16/</guid>
       <description>&lt;p&gt;[TOC]&lt;/p&gt;
 &lt;p&gt;总结一下目前项目用到的技术点。&lt;/p&gt;</description>
     </item>
