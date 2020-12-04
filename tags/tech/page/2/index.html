@@ -4,18 +4,18 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>分享 - CoderPunk</title>
+	<title>TECH - CoderPunk</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="分享" />
+		<meta property="og:title" content="TECH" />
 <meta property="og:description" content="博客" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://gdhucoder.github.io/tags/%E5%88%86%E4%BA%AB/" />
-<meta property="og:updated_time" content="2019-05-19T15:51:46+08:00" />
+<meta property="og:url" content="https://gdhucoder.github.io/tags/tech/" />
+<meta property="og:updated_time" content="2020-10-21T05:51:17+08:00" />
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="alternate" type="application/rss+xml" href="/tags/%E5%88%86%E4%BA%AB/index.xml" title="CoderPunk">
+	<link rel="alternate" type="application/rss+xml" href="/tags/tech/index.xml" title="CoderPunk">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="/css/style.css">
 	
@@ -86,29 +86,98 @@
 			
 <main class="main list" role="main">
 	<header class="main__header">
-		<h1 class="main__title">分享</h1>
+		<h1 class="main__title">TECH</h1>
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/thinking/2019-05-18-bitter-lesson/" rel="bookmark">
-			The Bitter Lesson
+			<a href="/post/skill/2019-03-12-realtimethumb/" rel="bookmark">
+			写博客缩略图实时预览与上传
 			</a>
 		</h3>
 		<div class="list__meta meta"><div class="meta__item-author meta__item">
 	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
 </div>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-05-19T15:51:46&#43;08:00">May 19, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-03-12T10:50:18&#43;08:00">March 12, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
 	</span>
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		<p>[TOC]</p>
-<p>分享<a href="https://en.wikipedia.org/wiki/Richard_S._Sutton">Sutton</a>的一篇博客。</p>
+<p>最近一个问题一直困扰我：写博客时的截图生成图片链接的脚本不好用，没有实时性。</p>
+<p><img src="https://gitee.com/gdhu/prvpic/raw/master/2019-03-12-001.jpg" alt="我爱思考"></p>
+<p>每次都需要我重新关闭打开一下。</p>
+<p>思路是</p>
+<p>a.每次新截图，保存到指定文件夹</p>
+<p>b.上传到git</p>
+<p>c.显示缩略图</p>
+<p><!-- raw HTML omitted -->**d.下次再截图，或者对图片有修改的时候。就需要我重新打开脚本文件。**<!-- raw HTML omitted --></p>
+<p>这个问题一直没解决</p>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/skill/2018-10-19/" rel="bookmark">
+			2018-10-19 解决Markdown图片问题
+			</a>
+		</h3>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-10-19T03:00:00&#43;08:00">October 19, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		[TOC]
+里程碑 今天是一个里程碑，断断续续一年多，自己搭建的博客遇到的各种问题基本得到解决。
+现在整理一下解决问题的思路：
+博客用到的东西：Github(托管静态网页)、Hugo、Sublime、Markdown、MathJax、免费图床(gitee)、留言(需要翻墙)
+遇到的问题主要有： 图床问题： 使用免费图床是个大问题：目前的解决方案是将图片上床到gitee上，这样国内访问图片速度较快。
+图片链接插入问题： 之前我写了自动生成链接的脚本，但是结果输出到了文本文件中，对于图片预览实时性的要求就无法满足。
+平台不通用问题： 通用性的问题一直没有解决：对于Latex公式的支持，图床的支持
+以前由于各个平台不通用的问题，导致我们一直只能在一个平台上写作。而各大平台又各有优缺点，总有令人不满意的地方。
+这样下来在本地写的Markdown，不需要做修改可以支持CSDN博客（或者简书）了，直接复制过去就可以。
+在未来不久印象笔记windows版本也会支持Markdown，真是个令人振奋的消息。
+甚至我还使用过马克飞象，但是它只能配合印象笔记使用，对于跨平台的需求无法满足。
+我的github 页面托管到了github上，有兴趣的话可以试着自己搭建一个静态博客。
+https://gdhucoder.github.io/
+图片本地预览、链接 大家都知道Markdown使用图片需要插入图片链接。
+我们使用python写了个脚本，生成文件的缩略图，自动上传gitee，点击图片缩略图，获取链接到剪切板。
+接下来我又添加的每次打开Helper时，自动提交git，得到最新的图片
+然后点击图片缩略图，图片的git地址（可供外网访问的地址）就被拷贝到了剪切板中，在使用的时候我们直接Ctrl+V就可以复制地址到Markdown文档中。
+这个脚本还支持子目录的打开预览。
+因为如果我们只用一个文件夹管理所有的博客图片势必会没有层级结构，导致最后图片混乱。
+我们可以建立子文件夹，存放各个主题的图片文件。
+Picture Helper使用方法：  upload your pictures to github or gitee this script can generate latest 100 picture links click the thumb picture, then the link is clipped into you clipboard then use Ctrl+V in your own Markdown Enjoy!  另附代码 主要参考了PP4E的pyphoto的代码。
+各位改改可以用到的地方： 1、自动提交git脚本 2、生成缩略图（PIL的使用）
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/note/how-to-add-table-of-contents-in-hugo/" rel="bookmark">
+			HuGo中文章加入目录
+			</a>
+		</h3>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-04-04T09:00:00&#43;08:00">April 04, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>本文介绍如何在template中加入TOC目录。</p>
 	</div>
 </article>
 </main>
 
+<div class="pagination">
+	<a class="pagination__item pagination__item--prev btn" href="/tags/tech/">«</a>
+	<span class="pagination__item pagination__item--current">2/2</span>
+</div>
 
 			</div>
 			
