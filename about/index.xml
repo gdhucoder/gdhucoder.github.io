@@ -21,23 +21,5 @@
 &lt;p&gt;在这里和您分享技术，记录成长。&lt;/p&gt;</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://gdhucoder.github.io/about/resume/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://gdhucoder.github.io/about/resume/</guid>
-      <description>个人简历 胡国栋
-生日：1987年8月
-邮箱：guodong_hu[at]126.com
-微信：guodong-hu
-期望职位 Java开发，工作地点：深圳
-教育经历 广东工业大学｜2017.9-2020.7｜软件工程｜全日制硕士研究生
-东北石油大学｜2006.9-2010.6｜全日制本科
-专业技能  掌握Java，算法，数据结构，设计模式，多线程编程以及网络编程技术 熟悉机器人操作系统 ROS，Rviz，Gazebo，MoveIt!，强化学习在 ROS 上的应用。(硕 士研究生期间主要研究方向) 英语流利，无障碍听说读写，可作为工作语言 (CET-6:564分TOEFL-iBT:90分)  学术成果   D. Rao, G. Hu and Z. Jiang, &amp;ldquo;PRobPlan: A Framework of Integrating Probabilistic Planning into ROS,&amp;rdquo; in IEEE Access, doi: 10.1109/ACCESS.2020.3000293.，（二区，IF 4.098）。文章主要贡献：将概率任务规划与ROS整合，实现了高层的任务规划。code，video
-  专利：饶东宁，胡国栋，一种在ROS上利用非经典规划器实现任务规划的方法及系统，202010136167.6
-  D. Rao, G. Hu and Z. Jiang, &amp;ldquo;Evaluation of Different Algorithms on the RDDL Simulation Platform,&amp;rdquo; 2019 IEEE International Conference on Power, Intelligent Computing and Systems (ICPICS), Shenyang, China, 2019</description>
-    </item>
-    
   </channel>
 </rss>
