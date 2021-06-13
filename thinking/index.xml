@@ -6,10 +6,19 @@
     <description>Recent content in Thinkings on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Wed, 14 Oct 2020 05:51:17 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 12 Jun 2021 05:51:17 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/thinking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>刷题</title>
+      <link>https://gdhucoder.github.io/thinking/2021-06-13/</link>
+      <pubDate>Sat, 12 Jun 2021 05:51:17 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/2021-06-13/</guid>
+      <description>最近3个月以来，刷题的能力逐渐下降。 上周和这周开始周赛每次只能做出一个题了。</description>
+    </item>
     
     <item>
       <title>游北京</title>
