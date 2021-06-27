@@ -11,7 +11,7 @@
 <meta property="og:description" content="博客" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://gdhucoder.github.io/post/" />
-<meta property="og:updated_time" content="2021-06-18T05:51:17+08:00" />
+<meta property="og:updated_time" content="2021-06-27T05:51:17+08:00" />
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -88,6 +88,25 @@
 	<header class="main__header">
 		<h1 class="main__title">Posts</h1>
 	</header><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/post/golang/01/" rel="bookmark">
+			Go Programming Language
+			</a>
+		</h3>
+		<div class="list__meta meta"><div class="meta__item-author meta__item">
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
+</div>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-03-10T10:03:48&#43;08:00">March 10, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>[TOC]</p>
+<p>Go语言深入学习。</p>
+	</div>
+</article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
 			<a href="/post/golang/03/" rel="bookmark">
@@ -263,31 +282,6 @@
 		<p>[TOC]</p>
 <p>Today let&rsquo;s talk about our problems.</p>
 	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/post/alg4/chapter5/ex_5_1_02/" rel="bookmark">
-			算法4 Java解答 5.1.2
-			</a>
-		</h3>
-		<div class="list__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">HuGuoDong</span>
-</div>
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-01-24T06:00:00&#43;08:00">January 24, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/%E6%8A%80%E6%9C%AF/" rel="category">技术</a>, <a class="meta__link" href="/categories/%E5%BD%92%E6%A1%A3/" rel="category">归档</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		5.1.2 问题： 给出使用地位优先的字符串排序算法处理下面这些键的轨迹
-no is th ti fo al go pe to co to th ai of th pa
-Give a trace for LSD string sort for the keys:
-no is th ti fo al go pe to co to th ai of th pa
-分析： LSD 适用于字符等长的数组排序。
-从右往左，依次数组中每个元素对位置d的字符使用key-indexed counting排序。
-平均数组访问次数7WN+3WR。额外空间N+R。 N 对应aux数组，R对应count数组。 对于一般的应用LSD线性时间复杂度。
-public static void sort(String[] a, int w) { int N = a.length; int R = 256; String[] aux = new String[N]; for (int d = w - 1; d &gt;= 0; d--) { // sort by key-indexed counting on dth char  show(a); int[] count = new int[R + 1]; for (int i = 0; i &lt; N; i++) { count[a[i].
-	</div>
 </article>
 </main>
 
@@ -312,11 +306,11 @@ public static void sort(String[] a, int w) { int N = a.length; int R = 256; Stri
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/post/weeklysummary/2021-06-27/">周总结（2021第26周）</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/weeklysummary/2021-06-18/">周总结（2021第25周）</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/designpattern/029_summary/">Summary all design patterns</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/designpattern/028_visitorpattern/">Visitor Pattern</a></li>
 			<li class="widget__item"><a class="widget__link" href="/post/designpattern/027_interpreterpattern/">Interpreer Pattern</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/designpattern/026_flyweightpattern/">Flyweight Pattern</a></li>
 		</ul>
 	</div>
 </div>
