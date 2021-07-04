@@ -6,10 +6,20 @@
     <description>Recent content on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Sun, 27 Jun 2021 05:51:17 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 03 Jul 2021 05:51:17 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>周总结（2021第27周）</title>
+      <link>https://gdhucoder.github.io/thinking/2021-07-04/</link>
+      <pubDate>Sat, 03 Jul 2021 05:51:17 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/2021-07-04/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;找时间总结一周。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>周总结（2021第26周）</title>
