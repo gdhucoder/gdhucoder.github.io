@@ -6,10 +6,21 @@
     <description>Recent content on CoderPunk</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cmn-Hans</language>
-    <lastBuildDate>Thu, 03 Feb 2022 05:51:17 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 03 Mar 2022 05:51:17 +0800</lastBuildDate>
     
 	<atom:link href="https://gdhucoder.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>不要急</title>
+      <link>https://gdhucoder.github.io/thinking/2022-03-11/</link>
+      <pubDate>Thu, 03 Mar 2022 05:51:17 +0800</pubDate>
+      
+      <guid>https://gdhucoder.github.io/thinking/2022-03-11/</guid>
+      <description>&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/gdhucoder/blogimg/img/20220311085144.png&#34; alt=&#34;Fighting&#34;&gt;&lt;/p&gt;
+&lt;p&gt;近期的思考。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>实验室正式成立啦</title>
@@ -80,17 +91,6 @@
       
       <guid>https://gdhucoder.github.io/thinking/2021-06-13/</guid>
       <description>最近3个月以来，刷题的能力逐渐下降。 上周和这周开始周赛每次只能做出一个题了。</description>
-    </item>
-    
-    <item>
-      <title>不要急</title>
-      <link>https://gdhucoder.github.io/thinking/2022-03-11/</link>
-      <pubDate>Wed, 03 Mar 2021 05:51:17 +0800</pubDate>
-      
-      <guid>https://gdhucoder.github.io/thinking/2022-03-11/</guid>
-      <description>&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/gdhucoder/blogimg/img/20220311085144.png&#34; alt=&#34;Fighting&#34;&gt;&lt;/p&gt;
-&lt;p&gt;近期的思考。&lt;/p&gt;</description>
     </item>
     
     <item>
